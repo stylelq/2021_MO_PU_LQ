@@ -35,7 +35,8 @@ Array.prototype.forEach.call(menuBtn, function (btn) {
     e.preventDefault();
     menuActive();
   });
-});
+}); //gnb
+
 $('.gnb-body__link').off('click').on('click', function (e) {
   e.preventDefault();
   var dataPage = $(this).attr('data-page'); //3depth open/close

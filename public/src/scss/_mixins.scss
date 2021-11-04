@@ -51,17 +51,6 @@
 }
 
 
-@mixin tit-v1(){font-size:24px; line-height:1.5; letter-spacing: 2.4px;}
-@mixin tit-v2(){font-size:20px; line-height:1.8; letter-spacing: 1.6px;}
-
-@mixin txt-v1(){font-size:17px; line-height:1.59; letter-spacing: 1.7px;}
-@mixin txt-v2(){font-size:14px; line-height:2; letter-spacing: 1.6px;}
-@mixin txt-v3(){font-size:13px; line-height:1.85; letter-spacing: 1.3px;}
-@mixin txt-v4(){font-size:11px; line-height:1.81; letter-spacing: 1.1px;}
-@mixin txt-v5(){font-size:10px; line-height:1;}
-
-
-
 
 @function calcRem($size){
 	@return ($size/$defaultSize);

@@ -30,11 +30,13 @@ function menuActive(e) {
 }
 
 Array.prototype.forEach.call(menuBtn, function (btn) {
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    menuActive();
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      menuActive();
+  });
 });
-});
+
+//gnb
 $('.gnb-body__link').off('click').on('click', function (e) {
     e.preventDefault();
     var dataPage = $(this).attr('data-page');
