@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+
+//mixin
+@mixin background-image-retina($file, $type, $width, $height:null ) {
+	background-image: url($file + '.' + $type);
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx){
+		& {
+			background-image: url($file + '@2x.' + $type);
+			-webkit-background-size: $width $height;
+			-moz-background-size: $width $height;
+			-o-background-size: $width $height;
+			background-size: $width $height;
+		}
+	}
+}
+
+@mixin background($file, $backOption, $ver:190729 ) {
+	background: url('..'+$file + '?ver=' + $ver)+" "+$backOption
+}
+
+
+@mixin hidden { overflow:hidden; position:absolute; width:0; height:0; }
+@mixin block {
+	&:before,
+	&:after { clear:both; display:block; overflow:hidden; height:0; content:""; }
+}
+@mixin line-clamp($lines, $line-height) { display:block; display:-webkit-box; -webkit-box-orient:vertical; position:relative; text-overflow: ellipsis; -webkit-line-clamp:$lines; white-space:normal;
+	&:after { position:absolute; right:0; bottom:0; width:77px; height:$line-height+em; background:url(../images/common/line-clamp.png) repeat-y right bottom; content:''; pointer-events:none; }
+	@supports (-webkit-line-clamp: $lines) {
+		height:auto;
+		&:after { content:none}
+	}
+}
+
+@mixin img-wrap {
+	&__img-wrap { overflow:hidden; position:relative; }
+	&__img { position:absolute; top:0; left:0; right:0; bottom:0; margin:auto; max-width:100%; }
+}
+
+@mixin placeholder-color($place-color){
+	&:-ms-input-placeholder { color: $place-color;}
+	&::-webkit-input-placeholder { color: $place-color;}
+	&::-moz-placeholder { color: $place-color;}
+	&::-moz-placeholder { color: $place-color;}
+}
+
+
+@mixin tit-v1(){font-size:24px; line-height:1.5; letter-spacing: 2.4px;}
+@mixin tit-v2(){font-size:20px; line-height:1.8; letter-spacing: 1.6px;}
+
+@mixin txt-v1(){font-size:17px; line-height:1.59; letter-spacing: 1.7px;}
+@mixin txt-v2(){font-size:14px; line-height:2; letter-spacing: 1.6px;}
+@mixin txt-v3(){font-size:13px; line-height:1.85; letter-spacing: 1.3px;}
+@mixin txt-v4(){font-size:11px; line-height:1.81; letter-spacing: 1.1px;}
+@mixin txt-v5(){font-size:10px; line-height:1;}
+
+
+
+
+@function calcRem($size){
+	@return ($size/$defaultSize);
+}
+@function calclH($lh,$font){
+    @return ($lh/$font);
+}
+@mixin heading1(){font-size:calcRem(20rem); line-height:calclH(28,20); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
+
+@mixin title1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin title2(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$regular;}
+
+@mixin body1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body2(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin body3(){font-size:calcRem(12rem); line-height:calclH(18,12); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body4(){font-size:calcRem(10rem); line-height:calclH(16,10); letter-spacing: $defaultLetter; font-weight:$light;}
+
+
+
+
+
+

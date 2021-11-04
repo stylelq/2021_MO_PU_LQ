@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "variables";
+@import "mixins";
+.popup{display:none; position:fixed; top:0; left:0; right:0; min-height:100vh; background-color:#fff; z-index:$popupZindex;
+    &.is-active{display:block;}
+    &__header{position:relative;  display:flex; width:100%; height:calcRem(58rem); align-items: center; justify-content: center;}
+    &__tit{@include title1();}
+    &__close{overflow:hidden; position:absolute; display:block; top:0; right:calcRem($sitePadding); bottom:0; width:calcRem(14rem); height:calcRem(14rem); margin:auto 0; border:none; outline:none;
+        @include background('/images/common/close.svg','no-repeat center center / contain'); text-indent: -9999px;
+    }
+    &__body{overflow:auto; height:calc(100vh - #{calcRem(58rem)}); padding-bottom:calcRem(20rem); box-sizing: border-box;}
+}
+
+.etc{
+    $this:&;
+    &__dl{margin:0;}
+    &__dt{margin-bottom:calcRem(10rem); @include body2();
+    }
+    &__dd{margin:0; @include body3();
+        & + #{$this}__dt{margin-top:calcRem(20rem);}
+    }
+}

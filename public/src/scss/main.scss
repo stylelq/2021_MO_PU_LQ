@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import "variables";
+@import "mixins";
+//메인
+.page-main{
+	.header{
+		&:before{top:calcRem(-$headerHeight);}
+		&.is-active{
+			&:before{top:0;}
+		}
+	}
+}
