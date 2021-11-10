@@ -130,10 +130,6 @@ gulp.task('libs', function () {
 		.src([src+'/js/libs/**/*'])
 		.pipe(gulp.dest(dist+'/js/libs/'))
 		.pipe(browserSync.reload({stream:true}));
-	gulp
-		.src([src+'/css/libs/**/*'])
-		.pipe(gulp.dest(dist+'/css/libs/'))
-		.pipe(browserSync.reload({stream:true}));
 });
 
 // index
