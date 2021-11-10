@@ -4,6 +4,10 @@
 	background: url('..' + $file + '?ver=' + $ver)+" "+$backOption
 }
 
+@mixin pageBackground($file, $backOption, $ver:$ver ) {
+	background: url('../..' + $file + '?ver=' + $ver)+" "+$backOption
+}
+
 //Vender prefixes
 @mixin vendor-prefix($name, $value) {
 	@each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {

@@ -5,10 +5,10 @@
 	&__info{position:relative; display:inline-block; padding-left:calcRem(46rem); @include body3(); box-sizing: border-box; text-align: left;
 		&:before{display:block; position: absolute; top:0; bottom:0; left:0; width:calcRem(36rem); height:calcRem(36rem); margin:auto 0;  content:'';}
 		&.type-naver{
-			&:before{@include background('/images/join/naver_icon.png','no-repeat center center / contain')}
+			&:before{@include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')}
 		}
 		&.type-email{
-			&:before{@include background('/images/join/email_icon.png','no-repeat center center / contain')}
+			&:before{@include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')}
 		}
 	}
 	&__point{@include title1();}
@@ -74,7 +74,7 @@
 	}
 	&__depth2-link{position:absolute; top:0; right:0; @include body3();}
 	&__btn{overflow:hidden; display:block; position:absolute; width:calcRem(12rem); height:calcRem(24rem); top:calcRem(0rem); right:calcRem(-10rem);transform: rotate(180deg); text-indent: -999px;
-		padding:0 calcRem(15rem); @include background('/images/common/more.svg','no-repeat center center / #{calcRem(12rem)} #{calcRem(24rem)}'); 
+		padding:0 calcRem(15rem); @include pageBackground('/images/common/more.svg','no-repeat center center / #{calcRem(12rem)} #{calcRem(24rem)}');
 		content:'';
 		&.is-active{transform: rotate(0); }
 	}
@@ -86,13 +86,13 @@
 	&__item{display:flex; position: relative; padding:calcRem(20rem) 0 calcRem(20rem) calcRem(40rem); @include body2(); align-items: center; border-bottom:1px solid $lightgray1;
 		&:first-child{border-top:1px solid $lightgray1;}
 		&.type-coin{
-			&:before{width:calcRem(25rem); height:calcRem(27rem); @include background('/images/join/coin_icon.png','no-repeat center center / contain')}
+			&:before{width:calcRem(25rem); height:calcRem(27rem); @include pageBackground('/images/join/coin_icon.png','no-repeat center center / contain')}
 		}
 		&.type-coupon{
-			&:before{width:calcRem(28rem); height:calcRem(28rem); @include background('/images/join/coupon_icon.png','no-repeat center center / contain')}
+			&:before{width:calcRem(28rem); height:calcRem(28rem); @include pageBackground('/images/join/coupon_icon.png','no-repeat center center / contain')}
 		}
 		&.type-birth{
-			&:before{width:calcRem(30rem); height:calcRem(30rem); @include background('/images/join/birth_icon.png','no-repeat center center / contain')}
+			&:before{width:calcRem(30rem); height:calcRem(30rem); @include pageBackground('/images/join/birth_icon.png','no-repeat center center / contain')}
 		}
 		&:before{position: absolute; top:0; left:0; bottom:0;  margin:auto 0; content:'';}
 	}
