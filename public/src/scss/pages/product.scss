@@ -1,0 +1,131 @@
+@import "../base/variables";
+@import "../base/mixins";
+//product Post Layout
+.product-post{
+    $this:&;
+    overflow: hidden;
+    margin-top:calcRem($productTopMargin);
+
+    &__list{
+        overflow: hidden;
+        margin:calcRem(-20rem) 0;
+    }
+
+    &__item{
+        padding:calcRem(20rem) 0;
+        #{$this}--post &{
+            width:50%;
+            float:left;
+
+            &:nth-child(odd){
+                clear: both;
+            }
+        }
+
+        #{$this}--list &{
+            width:100%;
+        }
+    }
+}
+
+//product Post Item
+.product-item{
+    $this:&;
+
+    &__link{
+        position: relative;
+        display: block;
+    }
+
+    &__state{
+        font-size:calcRem(10rem);
+        line-height:calclH(16,10);
+        font-weight: $medium;
+        color:$point1;
+        position: absolute;
+        top:calcRem(20rem);
+        left:calcRem(20rem);
+        z-index: $childZindex;
+    }
+
+    &__thumb{
+        line-height:0;
+        position: relative;
+        overflow: hidden;
+
+        &:after{
+            content:"";
+            display: block;
+            padding-bottom:100%;
+        }
+    }
+
+    &__img{
+        position: absolute;
+        width:100%;
+        @include ab-center;
+    }
+
+    &__cont{
+        margin-top:calcRem(10rem);
+        padding:0 calcRem(20rem);
+        text-align: center;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        @include body3;
+    }
+
+    &__price{
+        margin-top:calcRem(10rem);
+
+        &--sale{
+            @include body3;
+            color:$throughColor;
+            text-decoration: line-through;
+            display:block;
+        }
+
+        &--current{
+            @include body2;
+            display:block;
+        }
+    }
+}
+
+//우측 하단 픽시드 컨텐츠
+.cart-fix{
+    position: fixed;
+    bottom:calcRem(27rem);
+    right:calcRem(20rem);
+    z-index: $fixBox;
+
+    &__add{
+        width:calcRem(36rem);
+        height:calcRem(30rem);
+        margin-top:calcRem(20rem);
+        @include pageBackground('/images/common/ico-card-fix.png','no-repeat center center / contain');
+        background-size: calcRem(36rem) calcRem(30rem);
+        position: relative;
+
+        &--count{
+            position: absolute;
+            left:0;
+            right:0;
+            text-align: center;
+            @include vertical-center;
+            font-size:calcRem(10rem);
+            color:$point1;
+            line-height:calclH(16,10);
+        }
+    }
+
+    &__top{
+        width:calcRem(30rem);
+        height:calcRem(30rem);
+        margin:calcRem(20rem) auto 0;
+        @include pageBackground('/images/common/ico_btn_top.png','no-repeat center center / contain');
+        background-size: calcRem(30rem) calcRem(30rem);
+    }
+}

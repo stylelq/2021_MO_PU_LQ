@@ -5,6 +5,7 @@ jQuery(function(){
             $('.gnb').removeClass('is-active');
             $('.dim').removeClass('is-active');
             $('.header').removeClass('type-bg');
+            $('html').removeClass('is-hidden');
 
             if($(window).scrollTop() == 0){
                 $('.header').removeClass('is-active');
@@ -14,6 +15,7 @@ jQuery(function(){
             $('.dim').addClass('is-active');
             $('.header').addClass('type-bg');
             $('.header').addClass('is-active');
+            $('html').addClass('is-hidden');
 
             if($(window).scrollTop() == 0){
                 $('.header').addClass('is-active');
@@ -52,12 +54,14 @@ jQuery(function(){
     $('.js-search-open').off('click').on('click',function(e){
         e.preventDefault();
         $('.search').addClass('is-active');
+        $('html').addClass('is-hidden');
     })
 
     //Search Close
     $('.js-search-close').off('click').on('click', function (e) {
         e.preventDefault();
         $('.search').removeClass('is-active');
+        $('html').removeClass('is-hidden');
     })
 
     //Gnb 2Depth Close
@@ -135,4 +139,26 @@ jQuery(function(){
         $('.lnb').removeClass('is-open');
     }
     $(document).on('click', '.js-lnb-close', depthMenuClose);
+
+    //Product List:Post Change
+    function productTypeChage() {
+        if($(this).hasClass('filter__link--list')){
+            $(this).removeClass('filter__link--list');
+            $(this).addClass('filter__link--post');
+            $('.product-post').removeClass('product-post--post');
+            $('.product-post').addClass('product-post--list');
+        }else {
+            $(this).removeClass('filter__link--post');
+            $(this).addClass('filter__link--list');
+            $('.product-post').removeClass('product-post--list');
+            $('.product-post').addClass('product-post--post');
+        }
+    }
+    $(document).on('click', '.js-layout-chage', productTypeChage);
+
+    //scrollTop Button
+    function scrollTopBtn() {
+        $('html, body').animate({scrollTop: '0'}, 340);
+    }
+    $(document).on('click', '.js-scrollTop', scrollTopBtn);
 });

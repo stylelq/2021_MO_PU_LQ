@@ -1,5 +1,5 @@
 //Search
-.search{position:fixed; top:-100%; left:0; width:100%; height:100%;  background:#fff; transition: top 0.5s; z-index:$searchZindex;
+.search{position:fixed; top:-100%; left:0; width:100%; height:100%;  background:#fff; transition: top 0.3s; z-index:$searchZindex;
     &.is-active{top:0;}
     &__wrap{overflow:auto; height:100%; padding:calcRem(60rem) calcRem(40rem); box-sizing:border-box;}
     &__btn{overflow:hidden; position:absolute; top:0; right:0; bottom:0; margin:auto 0; text-indent:-9999px;

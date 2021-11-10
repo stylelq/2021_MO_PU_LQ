@@ -48,3 +48,8 @@
         &:after{display:block; position: absolute; top:calcRem(-2rem); right:calcRem(-20rem); bottom:0; width:calcRem(14rem); height:calcRem(9rem); margin:auto 0; @include background('/images/common/icon_finish.svg','no-repeat center center / contain'); content:'';}
     }
 }
+
+//html hidden(popup, menu open)
+html.is-hidden{
+    overflow: hidden;
+}

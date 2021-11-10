@@ -1,19 +1,21 @@
 "use strict";
 
-//팝업닫기
-var popupCloseAll = document.querySelectorAll('.js-popup-close');
-var popupOpenAll = document.querySelectorAll('.js-popup-open');
-Array.prototype.forEach.call(popupCloseAll, function (popupClose) {
-  popupClose.addEventListener('click', function (e) {
-    e.preventDefault();
-    var popupElem = document.querySelectorAll('.popup');
-    popupElem[0].classList.remove('is-active');
-  });
-});
-Array.prototype.forEach.call(popupOpenAll, function (popupOpen) {
-  popupOpen.addEventListener('click', function (e) {
-    e.preventDefault();
-    var popupElem = document.querySelectorAll('.popup');
-    popupElem[0].classList.add('is-active');
-  });
+jQuery(function () {
+  //팝업열기
+  function openPopup() {
+    var el = $(this).attr('href').replace("#", "");
+    $('.popup').removeClass('is-active');
+    $('#' + el).addClass('is-active');
+    $('html').addClass('is-hidden');
+    return false;
+  }
+
+  $(document).on('click', '.js-popup-open', openPopup); //팝업닫기
+
+  function closePopup() {
+    $('.popup').removeClass('is-active');
+    $('html').removeClass('is-hidden');
+  }
+
+  $(document).on('click', '.js-popup-close', closePopup);
 });

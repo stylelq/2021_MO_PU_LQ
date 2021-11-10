@@ -45,5 +45,34 @@
     }
 }
 
+//filter Select
+.filter {
+    $this: &;
+    &__meta {
+        float:right;
+        padding-right:calcRem(40rem);
+        position: relative;
+
+        &--btn{
+            border: 1px solid $gray2;
+            width:calcRem(24rem);
+            height:calcRem(24rem);
+            @include btn-reset;
+            position: absolute;
+            top:50%;
+            right:0;
+            transform:translateY(-50%);
+
+            &:after{
+                content:"";
+                width:calcRem(12rem);
+                height:calcRem(11rem);
+                @include background('/images/common/ico_filter.png','no-repeat center center / contain');
+                background-size:calcRem(12rem) calcRem(11rem);
+                @include ab-center;
+            }
+        }
+    }
+}
 
 

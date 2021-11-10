@@ -1,13 +1,22 @@
+//Layout
 .popup{display:none; position:fixed; top:0; left:0; right:0; min-height:100vh; background-color:#fff; z-index:$popupZindex;
     &.is-active{display:block;}
-    &__header{position:relative;  display:flex; width:100%; height:calcRem(58rem); align-items: center; justify-content: center;}
+    &__header{position:relative;  display:flex; width:100%; height:calcRem(58rem); align-items: center; justify-content: center;border-bottom:solid 1px $lightgray1;}
     &__tit{@include title1();}
     &__close{overflow:hidden; position:absolute; display:block; top:0; right:calcRem($sitePadding); bottom:0; width:calcRem(14rem); height:calcRem(14rem); margin:auto 0; border:none; outline:none;
         @include background('/images/common/close.svg','no-repeat center center / contain'); text-indent: -9999px;
     }
-    &__body{overflow:auto; height:calc(100vh - #{calcRem(58rem)}); padding-bottom:calcRem(20rem); box-sizing: border-box;}
+    &__body{
+        overflow:auto; height:calc(100vh - #{calcRem(58rem)}); padding-top:calcRem(20rem); padding-bottom:calcRem(20rem); box-sizing: border-box;
+
+        //필터 팝업
+        .type-footer &{
+            height:calc(100vh - #{calcRem(171rem)});
+        }
+    }
 }
 
+//개인정보처리방침 컨텐츠
 .etc{
     $this:&;
     &__dl{margin:0;}
@@ -15,5 +24,91 @@
     }
     &__dd{margin:0; @include body3();
         & + #{$this}__dt{margin-top:calcRem(20rem);}
+    }
+}
+
+//필터 팝업
+.popup{
+    //컨텐츠
+    &-section{
+        margin-top:calcRem(26rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+
+        &__title{
+            @include title1;
+            margin-bottom:calcRem(16rem);
+        }
+    }
+
+    &-checkform{
+        &__item{
+            margin-top:calcRem(24rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+    //푸터
+    &-filter{
+        &__footer{
+            position: absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index: $childZindex;
+            background: $whiteColor;
+            border-top:solid 1px $gray2;
+        }
+
+        &__result{
+            padding:calcRem(23rem) calcRem(20rem);
+            text-align:center;
+            @include body1;
+        }
+
+        &__group{
+            background-color: $point1;
+        }
+
+        &__list{
+            overflow: hidden;
+        }
+
+        &__item{
+            float:left;
+            width:70%;
+            position: relative;
+
+            &:nth-child(2){
+                width:30%;
+
+                &:after{
+                    display: none;
+                }
+            }
+
+            &:after{
+                content:"";
+                width:1px;
+                height:calcRem(14rem);
+                background-color:$whiteColor;
+                position: absolute;
+                right:0;
+                @include vertical-center;
+            }
+        }
+
+        &__link{
+            display:block;
+            font-size:calcRem(12rem);
+            line-height: calclH(19,12);
+            color:$whiteColor;
+            text-align: center;
+            padding:calcRem(13rem) calcRem(15rem);
+        }
     }
 }

@@ -41,9 +41,21 @@
 	&:focus{border-color:$point1; outline:none;}
 }
 
-//셀렉트
+//셀렉트:보더 유형
 .select-v1{display:block; width:100%; padding:calcRem(7rem) calcRem(10rem) calcRem(7rem); @include body2(); border:1px solid $gray2; border-radius: 0; box-sizing: border-box; color:$gray2; outline:none; appearance:none;height:calcRem(36rem);
 	@include background('/images/common/more.svg','no-repeat center right #{calcRem(6rem)} / #{calcRem(8rem)} #{calcRem(16rem)}');
+}
+
+//셀렉트:필터 유형
+.filter__select{
+	font-size:calcRem(11rem);
+	line-height:calclH(18,11);
+	padding-right:calcRem(12rem);
+	font-weight: $light;
+	position: relative;
+	width:calcRem(67rem);
+	display: block;
+	@include background('/images/common/ico_sort_arrow.svg','no-repeat center right #{calcRem(0rem)} / #{calcRem(8rem)} #{calcRem(4rem)}');
 }
 
 //버튼 스타일
@@ -89,3 +101,48 @@ input {
         & + label{overflow:hidden; width:0; font-size:0; text-indent:-9999px;}
     }
 }
+
+//리스트형 라디오박스(필터 팝업)
+.list-radio{
+	$this:&;
+	&__label{
+		display: block;
+		@include body3;
+		padding-right:calcRem(36rem);
+		position: relative;
+
+		&:before{
+			content:"";
+			width:calcRem(14rem);
+			height:calcRem(14rem);
+			border:solid 1px $black1;
+			border-radius: 100%;
+			position: absolute;
+			right:0;
+			@include vertical-center;
+		}
+
+		&:after{
+			content:"";
+			width:calcRem(8rem);
+			height:calcRem(8rem);
+			background-color:$black1 ;
+			border-radius: 100%;
+			position: absolute;
+			right:calcRem(4rem);
+			@include vertical-center;
+			opacity: 0;
+		}
+	}
+	//checked
+	&__input{
+		display: none;
+		&:checked + #{$this}__label{
+			font-weight: $medium;
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+}
+

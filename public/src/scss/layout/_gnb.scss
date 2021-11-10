@@ -1,6 +1,6 @@
 //gnb
 .gnb{position:fixed; top:calcRem($headerHeight);  width:calc(100% - #{calcRem(45rem)}); bottom:0; background-color:#fff; z-index:$gnbZindex;
-    transform: translateX(-120%); transition: transform 0.5s;
+    transform: translateX(-120%); transition: transform 0.3s;
     $this:&;
     &.is-active{transform: translateX(0);}
     &.type-1depth{z-index:$depth1Zindex;}

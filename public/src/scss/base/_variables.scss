@@ -35,6 +35,8 @@ $lightgray2:#F5F5F5;
 $lightgray3:#FBFBFB;
 $bgColor:#f5f5f2;
 $bgSiteColor:#ffffff;
+$whiteColor:#ffffff;
+$throughColor:#C2C2C2;
 
 //Font Family
 $font-kor:'noto-kr', Sans-Serif;
@@ -48,6 +50,7 @@ $itemHeight:40rem;
 $joinMargin:20rem;
 $SiteMainMargin:20rem;
 $headerTotal: $headerHeight + $topHeight;
+$productTopMargin:40rem;
 
 //z-index;
 $headerZindex:130;
@@ -57,6 +60,8 @@ $depth2Zindex:120;
 $dimZindex:25;
 $searchZindex:150;
 $popupZindex:200;
+$childZindex:5;
+$fixBox:20;
 
 //Tablet
 $tabletMax:500px;

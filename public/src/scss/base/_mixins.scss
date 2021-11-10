@@ -70,9 +70,25 @@
 	&__img { position:absolute; top:0; left:0; right:0; bottom:0; margin:auto; max-width:100%; }
 }
 
+//Button 초기화
+@mixin btn-reset {
+	box-shadow:none;
+	border-radius:0;
+	padding:0;
+}
 
+//Center 정렬
+@mixin ab-center {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
 
-
+@mixin vertical-center {
+	top:50%;
+	transform: translateY(-50%);
+}
 
 
 

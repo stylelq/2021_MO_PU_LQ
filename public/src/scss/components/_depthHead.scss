@@ -80,7 +80,7 @@
         overflow:auto;
         margin:0;
         padding:0;
-        max-height:calcRem(400rem);
+        max-height:100vh;
     }
     &__item{list-style:none;
         &.is-active{
@@ -126,5 +126,32 @@
     &__line{
         display:inline-block;
         position:relative;
+    }
+
+    &__collection{
+        display: block;
+        padding:calcRem(10rem) calcRem(10rem);
+        text-align: center;
+        margin-top:calcRem(13rem);
+        line-height:0;
+
+        &--text{
+            @include title2;
+            color:$point1;
+            padding-right:calcRem(13rem);
+            position: relative;
+            display: inline-block;
+
+            &:after{
+                content:"";
+                width:calcRem(4rem);
+                height:calcRem(6rem);
+                @include background('/images/common/ico_red_arrow.svg','no-repeat center center / contain');
+                background-size:calcRem(4rem) calcRem(6rem) ;
+                position: absolute;
+                @include vertical-center;
+                right:0;
+            }
+        }
     }
 }
