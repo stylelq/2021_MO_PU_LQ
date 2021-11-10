@@ -66,15 +66,6 @@ gulp.task('scss:compile', function () {
 });
 
 
-gulp.task('kss', function() {
-	gulp.src(src+'/scss/**/*')
-	.pipe(kss({
-		overview: src+'/styleguide-template/styleguide.md',
-		templateDirectory: src+'/styleguide-template'
-	}))
-	.pipe(gulp.dest(dist+'/styleguide/'))
-});
-
 // ejs -> HTML
 gulp.task('ejs', function() {
 	gulp
@@ -179,4 +170,4 @@ gulp.task('watch',[], function() {
 	gulp.watch(paths.scss, ['scss:compile']);
 });
 
-gulp.task('default', ['server','scss:compile','ejs','babel','imgmin','watch','font','index','libs','kss']);
+gulp.task('default', ['server','scss:compile','ejs','babel','imgmin','watch','font','index','libs',]);

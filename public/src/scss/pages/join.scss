@@ -1,8 +1,7 @@
-@charset "UTF-8";
-@import "variables";
-@import "mixins";
+@import "../base/variables";
+@import "../base/mixins";
 //회원가입
-.join{margin-top:calcRem($joinMargin); padding-bottom:calcRem(50rem); box-sizing: border-box; text-align: center;
+.join{box-sizing: border-box; text-align: center;
 	&__info{position:relative; display:inline-block; padding-left:calcRem(46rem); @include body3(); box-sizing: border-box; text-align: left;
 		&:before{display:block; position: absolute; top:0; bottom:0; left:0; width:calcRem(36rem); height:calcRem(36rem); margin:auto 0;  content:'';}
 		&.type-naver{
@@ -18,6 +17,11 @@
 	&__area{margin-top:calcRem($joinMargin);}
 	&__box{
 		& + &{margin-top:calcRem(40rem);}
+		.btn-group2{
+			max-width: $tabletMax;
+			margin-left:auto;
+			margin-right:auto;
+		}
 	}
 	&__group{margin-top:calcRem(40rem);}
 	&__link{display:block; margin-top:calcRem($joinMargin); @include body3(); text-decoration: underline;}
@@ -25,6 +29,7 @@
 	&__finish{margin-top:calcRem($joinMargin);}
 }
 .join-sns{
+	max-width: $tabletMax;margin-left:auto;margin-right:auto;
 	&__list{display:flex; margin:0; padding:0; list-style:none; justify-content: space-between;
 	} 
 	&__item{text-align: center;
@@ -68,18 +73,18 @@
 		& + &{margin-top:calcRem(6rem);}
 	}
 	&__depth2-link{position:absolute; top:0; right:0; @include body3();}
-	&__btn{overflow:hidden; display:block; position:absolute; width:calcRem(12rem); height:calcRem(24rem); top:calcRem(0rem); right:calcRem(-10rem); text-indent: -999px;
+	&__btn{overflow:hidden; display:block; position:absolute; width:calcRem(12rem); height:calcRem(24rem); top:calcRem(0rem); right:calcRem(-10rem);transform: rotate(180deg); text-indent: -999px;
 		padding:0 calcRem(15rem); @include background('/images/common/more.svg','no-repeat center center / #{calcRem(12rem)} #{calcRem(24rem)}'); 
 		content:'';
-		&.is-active{transform: rotate(180deg); }
+		&.is-active{transform: rotate(0); }
 	}
 }
 
 
 .join-benefit{text-align: left;
 	&__list{margin:0; padding:0; list-style: none;}
-	&__item{display:flex; position: relative; padding:calcRem(20rem) 0 calcRem(20rem) calcRem(40rem); @include body2(); align-items: center; border-bottom:1px solid $lightgrey1;
-		&:first-child{border-top:1px solid $lightgrey1;}
+	&__item{display:flex; position: relative; padding:calcRem(20rem) 0 calcRem(20rem) calcRem(40rem); @include body2(); align-items: center; border-bottom:1px solid $lightgray1;
+		&:first-child{border-top:1px solid $lightgray1;}
 		&.type-coin{
 			&:before{width:calcRem(25rem); height:calcRem(27rem); @include background('/images/join/coin_icon.png','no-repeat center center / contain')}
 		}
@@ -99,8 +104,8 @@
 
 .login-info{margin-top:calcRem($joinMargin);
 	&__list{display:flex; margin:0; padding:0; list-style:none;}
-	&__item{position:relative; flex-grow: 1; @include body2(); color:$grey1;
-		& + &:before{position:absolute; top:0; bottom:0; left:0;  width:0; height:calcRem(8.25rem); margin:auto 0; border-left: 1px solid $grey1; content:'';}
+	&__item{position:relative; flex-grow: 1; @include body2(); color:$gray1;
+		& + &:before{position:absolute; top:0; bottom:0; left:0;  width:0; height:calcRem(8.25rem); margin:auto 0; border-left: 1px solid $gray1; content:'';}
 	}
 }
 
@@ -111,7 +116,12 @@
 	&__box{margin-bottom:calcRem($joinMargin);}
 }
 
-
+.result{
+	&__tit{@include title2();}
+	&__box{margin-top:calcRem($joinMargin); @include body3(); padding:calcRem(10rem); border:1px solid $lightgray1;}
+	&__table{margin-top:calcRem($joinMargin);}
+	&__bullet{margin-top:calcRem($joinMargin);}
+}
 
 
 

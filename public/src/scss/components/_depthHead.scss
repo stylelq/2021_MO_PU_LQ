@@ -1,0 +1,130 @@
+//lnb
+.lnb{
+    position:relative;
+    background-color: #fff;
+    $this:&;
+    &.is-active{
+        #{$this}__wrap{
+            display:block;
+        }
+        #{$this}__dim{
+            display:block;
+        }
+    }
+    &.type-one{
+        #{$this}__arrow{
+            padding-right:0;
+            &:after{
+                display:none;
+            }
+        }
+    }
+    &__tit{
+        position:relative;
+        margin:0;
+    }
+    &__back{
+        overflow:hidden;
+        position:absolute;
+        top:0;
+        left:0;
+        width:calcRem(50rem);
+        height:calcRem($topHeight);
+        text-indent: -9999px;
+        z-index:10;
+        display:block;
+        @include background('/images/common/gnb_back.png','no-repeat left 20px center / 8px 14px'); content:'';
+    }
+    &__btn{
+        display:table-cell;
+        width:1%;
+        height:calcRem($topHeight);
+        vertical-align: middle;
+        @include title1();
+        text-align:center;
+        text-transform: uppercase;
+        font-weight:$medium;
+    }
+    &__arrow{
+        display:inline-block;
+        position:relative;
+        padding-right:calcRem(16rem);
+        &:after{
+            position:absolute;
+            right:0;
+            display:block;
+            width:calcRem(7rem);
+            height:calcRem(4rem);
+            top:0;
+            bottom:0;
+            margin:auto;
+            @include background('/images/common/arrow_down.png','no-repeat right center / contain'); content:'';
+        }
+    }
+    &__wrap{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        padding:calcRem(15rem) 0;
+        background-color:$bgColor;
+        box-sizing:border-box;
+        text-align:center;
+        z-index:20;
+
+        .is-open &{
+            display:block;
+        }
+    }
+    &__list{
+        overflow:auto;
+        margin:0;
+        padding:0;
+        max-height:calcRem(400rem);
+    }
+    &__item{list-style:none;
+        &.is-active{
+            #{$this}__line{
+                font-weight:$medium;
+                &:after{
+                    position:absolute;
+                    left:0;
+                    bottom:-1px;
+                    width:100%;
+                    height:1px;
+                    background-color:#000;
+                    content:'';
+                }
+            }
+        }
+    }
+    &__dim{
+        overflow:hidden;
+        display:none;
+        position:fixed;
+        top:calcRem($headerTotal);
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,0.5);
+        text-indent:-9999px;
+        z-index:20;
+
+        .is-open &{
+            display:block;
+        }
+    }
+    &__link{
+        display:table-cell;
+        height:calcRem($itemHeight);
+        width:1%;
+        @include title2();
+        vertical-align: middle;
+        text-transform: uppercase;
+        text-align:center;
+    }
+    &__line{
+        display:inline-block;
+        position:relative;
+    }
+}

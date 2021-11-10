@@ -1,0 +1,72 @@
+//gnb
+.gnb{position:fixed; top:calcRem($headerHeight);  width:calc(100% - #{calcRem(45rem)}); bottom:0; background-color:#fff; z-index:$gnbZindex;
+    transform: translateX(-120%); transition: transform 0.5s;
+    $this:&;
+    &.is-active{transform: translateX(0);}
+    &.type-1depth{z-index:$depth1Zindex;}
+    &.type-2depth{z-index:$depth2Zindex;;
+        .gnb-body{min-height:50%; height:auto;}
+        #{$this}__scroll{padding-bottom:calcRem(40rem); box-sizing:border-box;}
+    }
+    &__scroll{position:relative; overflow:auto; width:100%; height:100%;}
+    &__close{overflow:hidden; display:block; position:absolute; top:calcRem(20rem); right: calcRem(-30rem); width:calcRem(16rem); height:calcRem(16rem);
+        @include background('/images/common/close.png','no-repeat center center / contain'); text-decoration: none; text-indent: -9999px;
+    }
+    &__banner{
+        img{width:100%;}
+    }
+}
+
+.dim{display:none; position:fixed; top:calcRem($headerHeight); left:0; right:0; bottom:0; z-index:$dimZindex; background-color: rgba(0,0,0,0.5);
+    &.is-active{display:block;}
+    &.is-sub{display:block; top:calcRem(95rem)}
+}
+.gnb-header{padding:0 calcRem($sitePadding); box-sizing:border-box; border-bottom:1px solid #cacaca;
+    &__wrap{display:table-cell; width:1%; height:calcRem($topHeight); vertical-align:middle;}
+    &__list{margin:0; padding:0;}
+    &__item{display:inline-block; list-style:none;
+        & + &{margin-left:calcRem(14rem)}
+    }
+    &__tit{position:relative; margin:0; padding-left:calcRem($sitePadding); @include title2(); box-sizing:border-box; text-transform: uppercase; font-weight:$medium;
+        &:before{display:block; position:absolute; top:calcRem(2.5rem); left:0; width:calcRem(8rem); height:calcRem(14rem); @include background('/images/common/gnb_back.png','no-repeat center center / contain'); content:'';}
+    }
+    &__link{display:block; @include title2();}
+}
+.gnb-body{height:calc(100% - #{calcRem(58rem)}); box-sizing:border-box;
+    $this:&;
+    &__list{overflow:auto; height:100%; margin:0; padding:calcRem(15rem) calcRem($sitePadding) calcRem(40rem); box-sizing:border-box;}
+    &__item{position:relative; list-style:none;
+        &:after{display:block; position:absolute; top:calcRem(20rem);  right:0; width:calcRem(5rem); height:calcRem(9rem);
+            @include background('/images/common/gnb_arrow.png','no-repeat center center / contain'); content:'';}
+        &.type-banner{margin-left: calcRem(-$sitePadding); margin-right: calcRem(-$sitePadding);
+            &:after{display:none}
+            #{$this}__link{display:block; width:auto; height:auto; padding-right:0;}
+            img{width:100%;}
+        }
+        &.type-2depth{
+            &:after{transform: rotate(90deg);}
+            &.is-active{
+                &:after{transform: rotate(270deg);}
+            }
+        }
+        &.type-none{
+            &:after{display:none;}
+        }
+    }
+    &__link{display:table-cell; width:1%; height:calcRem(50rem); padding-right:calcRem(15rem); @include title1(); text-transform: uppercase; vertical-align:middle; box-sizing:border-box;}
+}
+.gnb-3depth{display:none; padding-left:calcRem($sitePadding); box-sizing:border-box;
+    &.is-active{display:block;}
+    &__list{margin:0; padding:0;}
+    &__item{list-style:none;}
+    &__link{display:table-cell; height:calcRem($itemHeight); width:1%; @include body1(); vertical-align: middle; text-transform: uppercase;}
+}
+.mobile-menu{position:absolute; top:0; left:calcRem($sitePadding);  bottom:0; width:calcRem(18rem); height:calcRem(14rem); margin:auto; text-align: center; box-sizing:border-box; z-index:50; cursor:pointer;
+    $this:&;
+    &__wrap{position:relative; display:block; width:100%; height:100%;}
+    &__line{position:absolute; top:0; right:0; bottom:0; display:block; height:0; width:100%; border-top:1px solid $black1; margin:auto; transition: all linear 0.2s;font-size:0;
+        &:before{position:absolute; left:0; top:calcRem(-7rem); width:100%; height:0; border-top:1px solid $black1; transition: all linear 0.2s; content:'';}
+        &:after{position:absolute; left:0; bottom:calcRem(-6rem); width:100%; height:0; border-top:1px solid $black1; transition: all linear 0.2s; content:'';}
+    }
+    &__tel{display:none;}
+}

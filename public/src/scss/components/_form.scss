@@ -1,9 +1,7 @@
-@charset "utf-8";
-
 //table
-.table-v1{width:100%; padding:0;border:0;border-spacing:0px;border-collapse:collapse; border-top:1px solid $black1;
-	&__th{height:calcRem(48rem); @include body2(); background-color:$lightgrey2; vertical-align: middle;}
-	&__td{height:calcRem(42rem); @include body3(); border-bottom:1px solid $lightgrey1; vertical-align: middle;}
+.table-v1{width:100%; padding:0;border:0;border-spacing:0;border-collapse:collapse; border-top:1px solid $black1;
+	&__th{height:calcRem(48rem); @include body2(); background-color:$lightgray2; vertical-align: middle;}
+	&__td{height:calcRem(42rem); @include body3(); border-bottom:1px solid $lightgray1; vertical-align: middle;}
 }
 
 //bullet
@@ -30,30 +28,30 @@
 	$this:&;
 	&__list{display:flex; margin:0; padding:0; list-style:none;}
 	&__item{position:relative; flex-grow: 1;
-		& + &:before{display:block; position:absolute; top:0; bottom:0; left:0; margin:auto 0; width:0; height:calcRem(15rem); border-left:1px solid $grey1; content:'';}
+		& + &:before{display:block; position:absolute; top:0; bottom:0; left:0; margin:auto 0; width:0; height:calcRem(15rem); border-left:1px solid $gray1; content:'';}
 	}
 	&__link{@include title1();}
 }
 
 
 //input
-.input-v1{width:100%; padding:calcRem(5rem) calcRem(10rem) calcRem(6rem); @include body2(); border:1px solid $grey2; box-sizing: border-box; appearance: none; box-shadow: none;
-	&::placeholder{color:$grey2;}
-	&:disabled{background:$lightgrey3; color:$grey1;}
+.input-v1{width:100%; padding:calcRem(7rem) calcRem(10rem) calcRem(7rem); @include body2(); border:1px solid $gray2; box-sizing: border-box; appearance: none; box-shadow: none;height:calcRem(36rem);
+	&::placeholder{color:$gray2;}
+	&:disabled{background:$lightgray3; color:$gray1;}
 	&:focus{border-color:$point1; outline:none;}
 }
 
 //셀렉트
-.select-v1{display:block; width:100%; padding:calcRem(5rem) calcRem(10rem) calcRem(6rem); @include body2(); border:1px solid $grey2; border-radius: 0; box-sizing: border-box; color:$grey2; outline:none; appearance:none;
+.select-v1{display:block; width:100%; padding:calcRem(7rem) calcRem(10rem) calcRem(7rem); @include body2(); border:1px solid $gray2; border-radius: 0; box-sizing: border-box; color:$gray2; outline:none; appearance:none;height:calcRem(36rem);
 	@include background('/images/common/more.svg','no-repeat center right #{calcRem(6rem)} / #{calcRem(8rem)} #{calcRem(16rem)}');
 }
 
 //버튼 스타일
-.btn-v1{display:block; width:100%; padding:calcRem(10rem); background-color:transparent; border:1px solid #fff; outline:none;  @include title1; box-sizing: border-box; cursor: pointer; color:$darkgrey;
+.btn-v1{display:block; width:100%; padding:calcRem(9rem) calcRem(10rem); background-color:transparent; border:1px solid #fff; outline:none;  @include title1; box-sizing: border-box; cursor: pointer; color:$darkgray;
 	&.type-primary{background-color:$point1; color:#fff; border-color:$point1;}
-	&.type-secondary{background-color:$darkgrey; color:#fff; border-color:$darkgrey;}
+	&.type-secondary{background-color:$darkgray; color:#fff; border-color:$darkgray;}
 	&.type-outline{border-color:$black1;}
-	&.type-white{border-color:$grey2;}
+	&.type-white{border-color:$gray2;}
 	&.size-small{width:auto; padding:calcRem(15rem) calcRem(5rem);}
 }
 
@@ -80,7 +78,7 @@ input {
  //체크박스
  .checkbox-v1 { overflow: hidden; position: absolute; top: auto; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0, 0, 0, 0);
     & + label{display:inline-block; position: relative; margin-left: 0; padding-left:  calcRem(20rem); cursor: pointer; @include body3(); box-sizing: border-box;
-        &:before{position: absolute; top:calcRem(3rem); left: 0; -webkit-box-sizing: border-box; box-sizing: border-box; width: calcRem(12rem); height: calcRem(12rem);  border: 1px solid $grey2; content: ''; cursor: pointer;}
+        &:before{position: absolute; top:calcRem(3rem); left: 0; -webkit-box-sizing: border-box; box-sizing: border-box; width: calcRem(12rem); height: calcRem(12rem);  border: 1px solid $gray2; content: ''; cursor: pointer;}
     }
     &:checked{
         & + label{
