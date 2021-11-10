@@ -1,7 +1,7 @@
 //mixin
 //Background url/ver
 @mixin background($file, $backOption, $ver:$ver ) {
-	background: url('../..' + $file + '?ver=' + $ver)+" "+$backOption
+	background: url('..' + $file + '?ver=' + $ver)+" "+$backOption
 }
 
 //Vender prefixes
