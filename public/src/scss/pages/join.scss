@@ -35,13 +35,13 @@
 	&__item{text-align: center;
 		&:before{display:inline-block; width:calcRem(46rem); height:calcRem(46rem); content:'';}
 		&.type-naver{
-			&:before{@include background('/images/join/naver_icon.png','no-repeat center center / contain')}
+			&:before{@include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')}
 		}
 		&.type-kakao{
-			&:before{@include background('/images/join/kakao_icon.png','no-repeat center center / contain')}
+			&:before{@include pageBackground('/images/join/kakao_icon.png','no-repeat center center / contain')}
 		}
 		&.type-payco{
-			&:before{@include background('/images/join/payco_icon.png','no-repeat center center / contain')}
+			&:before{@include pageBackground('/images/join/payco_icon.png','no-repeat center center / contain')}
 		}
 	}
 	&__link{display:block; @include body2(); margin-top:calcRem(10rem);}
@@ -103,6 +103,9 @@
 
 
 .login-info{margin-top:calcRem($joinMargin);
+	max-width: $tabletMax;
+	margin-left:auto;
+	margin-right:auto;
 	&__list{display:flex; margin:0; padding:0; list-style:none;}
 	&__item{position:relative; flex-grow: 1; @include body2(); color:$gray1;
 		& + &:before{position:absolute; top:0; bottom:0; left:0;  width:0; height:calcRem(8.25rem); margin:auto 0; border-left: 1px solid $gray1; content:'';}
