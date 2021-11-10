@@ -46,6 +46,22 @@
         top:calcRem(20rem);
         left:calcRem(20rem);
         z-index: $childZindex;
+
+        &--expected{
+            position: relative;
+            padding-left:calcRem(5rem);
+            margin-left:calcRem(5rem);
+
+            &:after{
+                content:"";
+                width:1px;
+                height:calcRem(6rem);
+                background-color: $gray2;
+                position: absolute;
+                left:0;
+                @include vertical-center;
+            }
+        }
     }
 
     &__thumb{
