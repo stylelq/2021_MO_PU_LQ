@@ -62,7 +62,7 @@
 }
 
 //line-clamp
-@mixin line-clamp($lines, $line-height) { display:block; display:-webkit-box; -webkit-box-orient:vertical; position:relative; text-overflow: ellipsis; -webkit-line-clamp:$lines; white-space:normal;}
+@mixin line-clamp($lines, $line-height) { overflow:hidden;display:block; display:-webkit-box; -webkit-box-orient:vertical; position:relative; text-overflow: ellipsis; -webkit-line-clamp:$lines; white-space:normal;}
 
 //img-wrap
 @mixin img-wrap {

@@ -20,6 +20,10 @@ html{
   overflow-y:scroll;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  text-size-adjust :none;
+  -webkit-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+
   @media screen and (max-width: 374px) and (min-width: 1px) {
     font-size:$smallDefaultSize + px;
   }
@@ -34,9 +38,6 @@ body{
   background:$bgSiteColor;
   word-wrap:break-word;
   word-break:keep-all;
-  text-size-adjust :none;
-  -webkit-text-size-adjust:none;
-  -moz-text-size-adjust:none;
   font-weight:$regular;
 }
 
@@ -161,6 +162,7 @@ select{
   background:none;
   font-size:100%;
   box-sizing: border-box;
+  font-family: $defaultFont;
   @include vendor-prefix('appearance', 'none');
 }
 
@@ -230,4 +232,71 @@ select::-ms-expand {
   src: url(../fonts/notosans/notokr-black.eot?#iefix) format("embedded-opentype"), url(../fonts/notosans/notokr-black.woff2) format("woff2"), url(../fonts/notosans/notokr-black.woff) format("woff"), url(../fonts/notosans/notokr-black.ttf) format("truetype"), url(../fonts/notosans/notokr-black.svg#notokr-black) format("svg");
   font-weight: 700;
   font-style: normal;
+}
+
+//swiper reset
+.swiper{
+  &-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    transform: translate3d(0px, 0, 0);
+  }
+
+  &-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &-scrollbar {
+    border-radius: 10px;
+    position: relative;
+    -ms-touch-action: none;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+.swiper-container-fade .swiper-slide{
+  transition-property: opacity;
+}
+
+.swiper-button-disabled{
+  display: none;
+}
+
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
 }

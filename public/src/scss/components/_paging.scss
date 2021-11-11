@@ -5,6 +5,11 @@
     text-align: center;
     overflow: hidden;
 
+    //제품 상세 리뷰
+    .product-review__info &{
+        margin-top:calcRem(25rem);
+    }
+
     &__list{
         line-height:0;
         overflow: hidden;
@@ -26,7 +31,7 @@
         box-sizing: border-box;
         border-radius: 100%;
 
-        .is-current &{
+        .paging__item.is-current &{
             background-color: $point1;
             color:$whiteColor;
         }

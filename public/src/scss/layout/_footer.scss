@@ -1,5 +1,7 @@
 //Footer
 .footer{position:relative; padding:calcRem(30rem) calcRem(30rem); text-align:center; box-sizing:border-box; background-color:$bgColor; margin-top: auto;
+    &.bottom-fix{padding-bottom:calcRem(62
+    rem);}
     &__logo{vertical-align:middle; width:calcRem(150rem);}
     &__list{margin:calcRem(20rem) auto 0 auto; padding:0; list-style:none; font-size:0;max-width: $tabletMax;}
     &__item{display:inline-block; width:33.33%; font-size:11px;  color:$black1;}

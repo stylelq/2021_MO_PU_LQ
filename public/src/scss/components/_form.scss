@@ -146,3 +146,155 @@ input {
 	}
 }
 
+//수량 체크
+.quantity{
+	position: relative;
+	padding:0 calcRem(19rem);
+
+	&__minus{
+		width:calcRem(19rem);
+		height:calcRem(19rem);
+		position: absolute;
+		left:calcRem(-8rem);
+		@include vertical-center;
+
+		&:before{
+			content:"";
+			width:calcRem(5rem);
+			height:calcRem(2rem);
+			@include background('/images/common/icon_link_minus.svg','no-repeat center center / contain');
+			background-size: calcRem(5rem) calcRem(2rem);
+			@include ab-center;
+		}
+	}
+
+	&__plus{
+		width:calcRem(19rem);
+		height:calcRem(19rem);
+		position: absolute;
+		right:calcRem(-8rem);
+		@include vertical-center;
+
+		&:before{
+			content:"";
+			width:calcRem(6rem);
+			height:calcRem(6rem);
+			@include background('/images/common/icon_link_plus.svg','no-repeat center center / contain');
+			background-size: calcRem(6rem) calcRem(6rem);
+			@include ab-center;
+		}
+	}
+
+	&__text--current{
+		@include body3;
+		display: block;
+		min-width: calcRem(16rem);
+		text-align: center;
+		border:none;
+	}
+}
+
+//보더 버튼
+.btn{
+	&--border{
+		@include body3;
+		font-weight:$regular;
+		border:solid 1px $gray1;
+		padding:calcRem(8rem) calcRem(20rem);
+		width:100%;
+		max-width:calcRem(155rem);
+		text-align: center;
+		display: inline-block;
+		box-sizing: border-box;
+	}
+}
+
+//기본 폼 셀렉트
+.form__select{
+	display: block;
+	width:100%;
+	border:solid 1px $gray2;
+	@include body2;
+	color:$gray2;
+	padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
+	height:calcRem(36rem);
+	@include pageBackground('/images/common/ico_qna_more.svg','no-repeat center center / contain');
+	background-size: calcRem(8rem) calcRem(4rem);
+	background-position: calc(100% - #{calcRem(10rem)}) center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	&.is-check{
+		color:$black1;
+	}
+
+	&:focus{
+		border-color:$point1;
+	}
+}
+
+//기본 폼 인풋박스
+.form__input{
+	&--text{
+		border:solid 1px $gray2;
+		display: block;
+		width:100%;
+		@include body2;
+		padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
+		height:calcRem(36rem);
+		@include placeholder-color($gray2);
+
+		&:focus{
+			border-color:$point1;
+		}
+	}
+
+	&--textarea{
+		border:solid 1px $gray2;
+		display: block;
+		width:100%;
+		@include body2;
+		padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
+		height:calcRem(240rem);
+		@include placeholder-color($gray2);
+		resize:none;
+
+		&:focus{
+			border-color:$point1;
+		}
+	}
+}
+
+//기본폼 체크박스
+.form__checkbox{
+	$this:&;
+	position: relative;
+
+	&--text{
+		display: inline-block;
+		max-width: 100%;
+		@include body3;
+		position: relative;
+		padding-left:calcRem(20rem);
+
+		&:after{
+			content:"";
+			width:12px;
+			height:12px;
+			box-sizing: border-box;
+			border:solid 1px $gray2;
+			position: absolute;
+			top:calcRem(2rem);
+			left:0;
+		}
+	}
+
+	&--input{
+		&:checked + #{$this}--text{
+			&:after{
+				@include background('/images/common/check.svg','no-repeat center center / #{calcRem(8rem)} #{calcRem(8rem)}')
+			}
+		}
+	}
+}
