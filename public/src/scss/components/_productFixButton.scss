@@ -7,7 +7,7 @@
     background-color: $bgSiteColor;
     z-index: $fixButtonZindex;
 
-    &.is-on{
+    &.is-on:not(.sold-out){
         background-color: $point1;
     }
 
@@ -73,7 +73,7 @@
         position: relative;
         box-sizing: border-box;
 
-        .is-on &{
+        .is-on:not(.sold-out) &{
             color:$whiteColor;
         }
 
@@ -86,7 +86,7 @@
                 background-size: calcRem(16rem) calcRem(14rem);
                 @include ab-center;
 
-                .is-on &{
+                .is-on:not(.sold-out) &{
                     @include background('/images/common/ico_big_like_white.svg','no-repeat center center / contain');
                 }
             }
@@ -94,7 +94,7 @@
                 &:after{
                     @include background('/images/common/ico_big_like_black-active.svg','no-repeat center center / contain');
 
-                    .is-on &{
+                    .is-on:not(.sold-out) &{
                         @include background('/images/common/ico_big_like_white-active.svg','no-repeat center center / contain');
                     }
                 }
@@ -110,7 +110,7 @@
                 background-size: calcRem(37rem) calcRem(14rem);
                 @include ab-center;
 
-                .is-on &{
+                .is-on:not(.sold-out) &{
                     @include background('/images/common/ico-naver-pay-white.png','no-repeat center center / contain');
                 }
             }
