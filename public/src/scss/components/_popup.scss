@@ -300,7 +300,7 @@
     &__cont{
         overflow: hidden;
         overflow-y: auto;
-        max-height: calc(100vh - #{calcRem(180rem)});
+        max-height: calc(100vh - #{calcRem(200rem)});
 
         &::-webkit-scrollbar {
             display: none;
@@ -366,6 +366,244 @@
             margin:0;
             @include body4;
             text-align: center;
+        }
+    }
+}
+
+//무이자 할부 안내
+.installment{
+
+    //테이블
+    &-table{
+        border-top:solid 1px $gray2;
+        thead{
+            th{
+                @include body2;
+                padding:calcRem(12rem) calcRem(5rem);
+                text-align: center;
+                vertical-align: middle;
+                border-bottom: solid 1px $gray2;
+            }
+        }
+
+        tbody{
+            th{
+                padding:calcRem(15rem) calcRem(5rem);
+                @include body4;
+                font-size:calcRem(11rem);
+                vertical-align: middle;
+                border-bottom: solid 1px $gray2;
+            }
+
+            td{
+                padding:calcRem(15rem) 0;
+                @include body3;
+                vertical-align: middle;
+                border-bottom: solid 1px $gray2;
+            }
+        }
+
+        //상세 값
+        &__info{
+            margin-top:calcRem(10rem);
+        }
+
+        &__thumb{
+            line-height:0;
+
+            img{
+                display: block;
+                margin:0 auto;
+            }
+
+            &.thumb-kb img{
+                width:calcRem(100rem);
+            }
+
+            &.thumb-lotte img{
+                width:calcRem(104rem);
+            }
+
+            &.thumb-hana img{
+                width:calcRem(113rem);
+            }
+
+            &.thumb-samsung img{
+                width:calcRem(99rem);
+            }
+
+            &.thumb-shinhan img{
+                width:calcRem(104rem);
+            }
+
+            &.thumb-bc img{
+                width:calcRem(98rem);
+            }
+
+            &.thumb-nh img{
+                width:calcRem(104rem);
+            }
+
+            &.thumb-citi img{
+                width:calcRem(85rem);
+            }
+
+            &.thumb-uri img{
+                width:calcRem(92rem);
+            }
+
+            &.thumb-kj img{
+                width:calcRem(107rem);
+            }
+
+            &.thumb-junb img{
+                width:calcRem(93rem);
+            }
+        }
+    }
+
+    //유의사항
+    &-info{
+        padding-top:calcRem(30rem);
+        padding-bottom:calcRem(30rem);
+
+        &__title{
+            margin:0 0 calcRem(10rem);
+            @include body2;
+        }
+
+        &__item{
+            margin-top:calcRem(5rem);
+            @include body3;
+            padding-left:calcRem(7rem);
+            position: relative;
+
+            &:first-child{
+                margin-top:0;
+            }
+
+            &:after{
+                content:"";
+                width:calcRem(2rem);
+                height:calcRem(2rem);
+                border-radius: 100%;
+                background-color: $black1;
+                position: absolute;
+                top:calcRem(7rem);
+                left:0;
+            }
+        }
+    }
+}
+
+//슬라이드 팝업(제품 상세)
+.slide-popup{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: $whiteColor;
+    z-index: $popupZindex;
+    display: none;
+
+    &.is-active{
+        display: block;
+    }
+
+    &__close{
+        width:calcRem(34rem);
+        height:calcRem(34rem);
+        position: absolute;
+        top:calcRem(85rem);
+        right:calcRem(20rem);
+        z-index: $popupButtonZindex;
+        @include background('/images/common/ico_pop_slide_close.png','no-repeat center center / contain');
+        background-size:calcRem(34rem) calcRem(34rem) ;
+    }
+}
+
+//슬라이드 팝업 슬라이트구성
+.popup-slider{
+    $this:&;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    &__item{
+        overflow: hidden;
+        transition-property: opacity;
+        transition-duration: 0.2s;
+        opacity: 0;
+
+        &.swiper-slide-active{
+            opacity: 1;
+        }
+    }
+
+    //버튼
+    &__button{
+        width:calcRem(90rem);
+        position: absolute;
+        bottom:calcRem(100rem);
+        left:50%;
+        margin-left:calcRem(-90rem)/2;
+        z-index: $popupButtonZindex;
+
+        &:after{
+            @include block-reset;
+        }
+
+        &--prev{
+            width:calcRem(34rem);
+            height:calcRem(34rem);
+            display: block;
+            border:solid 1px $gray2;
+            background-color: $whiteColor;
+            border-radius: 100%;
+            position: relative;
+            float:left;
+
+            &:after{
+                content:"";
+                width:calcRem(6rem);
+                height:calcRem(12rem);
+                @include background('/images/common/ico_pop_slide_prev.svg','no-repeat center center / contain');
+                background-size:calcRem(6rem) calcRem(12rem) ;
+                @include ab-center;
+            }
+
+            &.swiper-button-disabled{
+                display: none;
+                pointer-events: none;
+            }
+        }
+
+        &--next{
+            width:calcRem(34rem);
+            height:calcRem(34rem);
+            display: block;
+            border:solid 1px $gray2;
+            background-color: $whiteColor;
+            border-radius: 100%;
+            position: relative;
+            float:right;
+
+            &:after{
+                content:"";
+                width:calcRem(6rem);
+                height:calcRem(12rem);
+                @include background('/images/common/ico_pop_slide_next.svg','no-repeat center center / contain');
+                background-size:calcRem(6rem) calcRem(12rem) ;
+                @include ab-center;
+            }
+
+            &.swiper-button-disabled{
+                display: none;
+                pointer-events: none;
+            }
         }
     }
 }
