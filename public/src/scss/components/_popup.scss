@@ -1,13 +1,49 @@
 //Layout
-.popup{display:none; position:fixed; top:0; left:0; right:0; min-height:100vh; background-color:#fff; z-index:$popupZindex;
-    &.is-active{display:block;}
-    &__header{position:relative;  display:flex; width:100%; height:calcRem(58rem); align-items: center; justify-content: center;border-bottom:solid 1px $lightgray1;}
-    &__tit{@include title1();}
-    &__close{overflow:hidden; position:absolute; display:block; top:0; right:calcRem($sitePadding); bottom:0; width:calcRem(14rem); height:calcRem(14rem); margin:auto 0; border:none; outline:none;
-        @include background('/images/common/close.svg','no-repeat center center / contain'); text-indent: -9999px;
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    min-height:100vh;
+    background-color:#fff;
+    z-index:$popupZindex;
+    &.is-active{
+        display:block;
+    }
+    &__header{
+        position:relative;
+        display:flex;
+        width:100%;
+        height:calcRem(58rem);
+        align-items: center;
+        justify-content: center;
+        border-bottom:solid 1px $lightgray1;
+    }
+    &__tit{
+        @include title1();
+    }
+    &__close{
+        overflow:hidden;
+        position:absolute;
+        display:block;
+        top:0;
+        right:calcRem($sitePadding);
+        bottom:0;
+        width:calcRem(14rem);
+        height:calcRem(14rem);
+        margin:auto 0;
+        border:none;
+        outline:none;
+        @include background('/images/common/close.svg','no-repeat center center / contain');
+        text-indent: -9999px;
     }
     &__body{
-        overflow:auto; height:calc(100vh - #{calcRem(58rem)}); padding-top:calcRem(20rem); padding-bottom:calcRem(20rem); box-sizing: border-box;
+        overflow:auto;
+        height:calc(100vh - #{calcRem(58rem)});
+        padding-top:calcRem(20rem);
+        padding-bottom:calcRem(20rem);
+        box-sizing: border-box;
 
         //필터 팝업
         .type-footer &{

@@ -1,48 +1,156 @@
 //table
-.table-v1{width:100%; padding:0;border:0;border-spacing:0;border-collapse:collapse; border-top:1px solid $black1;
-	&__th{height:calcRem(48rem); @include body2(); background-color:$lightgray2; vertical-align: middle;}
-	&__td{height:calcRem(42rem); @include body3(); border-bottom:1px solid $lightgray1; vertical-align: middle;}
+.table-v1{
+	width:100%;
+	padding:0;
+	border:0;
+	border-spacing:0;
+	border-collapse:collapse;
+	border-top:1px solid $black1;
+
+	&__th{
+		height:calcRem(48rem);
+		@include body2();
+		background-color:$lightgray2;
+		vertical-align: middle;
+	}
+
+	&__td{
+		height:calcRem(42rem);
+		@include body3();
+		border-bottom:1px solid $lightgray1;
+		vertical-align: middle;
+	}
 }
 
 //bullet
 .bullet-v1{
-	&__list{margin:0; padding:0; list-style: none; text-align: left;}
-	&__item{position: relative; @include body3(); padding-left:calcRem(7rem);
-		& + &{margin-top:calcRem(5rem);}
-		&:before{position: absolute; top:calcRem(8rem); left:0; width:2px; height:2px; background-color:$black1; content:''; }
+
+	&__list{
+		margin:0;
+		padding:0;
+		list-style: none;
+		text-align: left;
+	}
+
+	&__item{
+		position: relative;
+		@include body3();
+		padding-left:calcRem(7rem);
+		& + &{
+			margin-top:calcRem(5rem);
+		}
+		&:before{
+			position: absolute;
+			top:calcRem(8rem);
+			left:0;
+			width:2px;
+			height:2px;
+			background-color:$black1;
+			content:'';
+		}
 	}
 }
 
 //버튼 그룹
 .btn-group{
 	$this:&;
-	&__list{margin:0 0 0 calcRem(-5rem); padding:0; list-style:none; font-size:0;
+
+	&__list{
+		margin:0 0 0 calcRem(-5rem);
+		padding:0;
+		list-style:none;
+		font-size:0;
 		&.type-two{
-			#{$this}__item:nth-child(1){width:37.5%;}
-			#{$this}__item:nth-child(2){width:62.5%;}
+			#{$this}__item:nth-child(1){
+				width:37.5%;
+			}
+			#{$this}__item:nth-child(2){
+				width:62.5%;
+			}
 		}
 	}
-	&__item{display:inline-block; padding-left:calcRem(5rem); vertical-align: top; box-sizing: border-box;}
-}
-.btn-group2{margin-top:calcRem(20rem);
-	$this:&;
-	&__list{display:flex; margin:0; padding:0; list-style:none;}
-	&__item{position:relative; flex-grow: 1;
-		& + &:before{display:block; position:absolute; top:0; bottom:0; left:0; margin:auto 0; width:0; height:calcRem(15rem); border-left:1px solid $gray1; content:'';}
+
+	&__item{
+		display:inline-block;
+		padding-left:calcRem(5rem);
+		vertical-align: top;
+		box-sizing: border-box;
 	}
-	&__link{@include title1();}
+}
+.btn-group2{
+	margin-top:calcRem(20rem);
+	$this:&;
+
+	&__list{
+		display:flex;
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	&__item{
+		position:relative;
+		flex-grow: 1;
+
+		& + &:before{
+			display:block;
+			position:absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			margin:auto 0;
+			width:0;
+			height:calcRem(15rem);
+			border-left:1px solid $gray1;
+			content:'';
+		}
+	}
+
+	&__link{
+		@include title1();
+	}
 }
 
 
 //input
-.input-v1{width:100%; padding:calcRem(7rem) calcRem(10rem) calcRem(7rem); @include body2(); border:1px solid $gray2; box-sizing: border-box; appearance: none; box-shadow: none;height:calcRem(36rem);
-	&::placeholder{color:$gray2;}
-	&:disabled{background:$lightgray3; color:$gray1;}
-	&:focus{border-color:$point1; outline:none;}
+.input-v1{
+	width:100%;
+	padding:calcRem(7rem) calcRem(10rem) calcRem(7rem);
+	@include body2();
+	border:1px solid $gray2;
+	box-sizing: border-box;
+	appearance: none;
+	box-shadow: none;
+	height:calcRem(36rem);
+
+	&::placeholder{
+		color:$gray2;
+	}
+
+	&:disabled{
+		background:$lightgray3;
+		color:$gray1;
+	}
+
+	&:focus{
+		border-color:$point1;
+		outline:none;
+	}
 }
 
 //셀렉트:보더 유형
-.select-v1{display:block; width:100%; padding:calcRem(7rem) calcRem(10rem) calcRem(7rem); @include body2(); border:1px solid $gray2; border-radius: 0; box-sizing: border-box; color:$gray2; outline:none; appearance:none;height:calcRem(36rem);
+.select-v1{
+	display:block;
+	width:100%;
+	padding:calcRem(7rem) calcRem(10rem) calcRem(7rem);
+	@include body2();
+	border:1px solid $gray2;
+	border-radius: 0;
+	box-sizing: border-box;
+	color:$gray2;
+	outline:none;
+	appearance:none;
+	height:calcRem(36rem);
 	@include background('/images/common/more.svg','no-repeat center right #{calcRem(6rem)} / #{calcRem(8rem)} #{calcRem(16rem)}');
 }
 
@@ -59,25 +167,84 @@
 }
 
 //버튼 스타일
-.btn-v1{display:block; width:100%; padding:calcRem(9rem) calcRem(10rem); background-color:transparent; border:1px solid #fff; outline:none;  @include title1; box-sizing: border-box; cursor: pointer; color:$darkgray;
-	&.type-primary{background-color:$point1; color:#fff; border-color:$point1;}
-	&.type-secondary{background-color:$darkgray; color:#fff; border-color:$darkgray;}
-	&.type-outline{border-color:$black1;}
-	&.type-white{border-color:$gray2;}
-	&.size-small{width:auto; padding:calcRem(15rem) calcRem(5rem);}
+.btn-v1{
+	display:block;
+	width:100%;
+	padding:calcRem(9rem) calcRem(10rem);
+	background-color:transparent;
+	border:1px solid #fff; outline:none;
+	@include title1;
+	box-sizing: border-box;
+	cursor: pointer;
+	color:$darkgray;
+
+	&.type-primary{
+		background-color:$point1;
+		color:#fff;
+		border-color:$point1;
+	}
+
+	&.type-secondary{
+		background-color:$darkgray;
+		color:#fff;
+		border-color:$darkgray
+	;}
+
+	&.type-outline{
+		border-color:$black1;
+	}
+
+	&.type-white{
+		border-color:$gray2;
+	}
+
+	&.size-small{
+		width:auto;
+		padding:calcRem(15rem) calcRem(5rem);
+	}
 }
 
-.btn-v2{border:none; outline:none; background-color: transparent; text-decoration: underline; cursor: pointer; color:inherit}
+.btn-v2{
+	border:none;
+	outline:none;
+	background-color: transparent;
+	text-decoration: underline;
+	cursor: pointer;
+	color:inherit
+}
 
 
 //인풋 리스트 형태
 .input-list{
-	&__list{margin:0; padding:0; list-style:none;}
-	&__item{position: relative;
-		&.type-btn{padding-right:calcRem(85rem); box-sizing: border-box;}
-		& + &{margin-top:calcRem(10rem);}
+
+	&__list{
+		margin:0;
+		padding:0;
+		list-style:none;
 	}
-	&__btn{position:absolute; top:0; right:0; bottom:0; width:calcRem(80rem); @include body2(); padding:calcRem(5rem) calcRem(10rem) calcRem(6rem);}
+
+	&__item{
+		position: relative;
+
+		&.type-btn{
+			padding-right:calcRem(85rem);
+			box-sizing: border-box;
+		}
+
+		& + &{
+			margin-top:calcRem(10rem);
+		}
+	}
+
+	&__btn{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		width:calcRem(80rem);
+		@include body2();
+		padding:calcRem(5rem) calcRem(10rem) calcRem(6rem);
+	}
 }
 
 //인풋 초기화
@@ -88,17 +255,56 @@ input {
 
 
  //체크박스
- .checkbox-v1 { overflow: hidden; position: absolute; top: auto; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; clip: rect(0, 0, 0, 0);
-    & + label{display:inline-block; position: relative; margin-left: 0; padding-left:  calcRem(20rem); cursor: pointer; @include body3(); box-sizing: border-box;
-        &:before{position: absolute; top:calcRem(3rem); left: 0; -webkit-box-sizing: border-box; box-sizing: border-box; width: calcRem(12rem); height: calcRem(12rem);  border: 1px solid $gray2; content: ''; cursor: pointer;}
+ .checkbox-v1 {
+	 overflow: hidden;
+	 position: absolute;
+	 top: auto;
+	 width: 1px;
+	 height: 1px;
+	 padding: 0;
+	 margin: -1px;
+	 border: 0;
+	 clip: rect(0, 0, 0, 0);
+
+    & + label{
+		display:inline-block;
+		position: relative;
+		margin-left: 0;
+		padding-left:  calcRem(20rem);
+		cursor: pointer;
+		@include body3();
+		box-sizing: border-box;
+
+        &:before{
+			position: absolute;
+			top:calcRem(3rem);
+			left: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			width: calcRem(12rem);
+			height: calcRem(12rem);
+			border: 1px solid $gray2;
+			content: '';
+			cursor: pointer;
+		}
     }
     &:checked{
+
         & + label{
-            &:before{@include background('/images/common/check.svg','no-repeat center center / #{calcRem(8rem)} #{calcRem(8rem)}')}
+
+            &:before{
+				@include background('/images/common/check.svg','no-repeat center center / #{calcRem(8rem)} #{calcRem(8rem)}')
+			}
         }
     }
     &.type-only-check{
-        & + label{overflow:hidden; width:0; font-size:0; text-indent:-9999px;}
+
+        & + label{
+			overflow:hidden;
+			width:0;
+			font-size:0;
+			text-indent:-9999px;
+		}
     }
 }
 

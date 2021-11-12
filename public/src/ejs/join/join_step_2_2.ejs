@@ -37,10 +37,10 @@
                     <div class="terms">
                         <ul class="terms__list">
                             <li class="terms__item">
-                                <a href="" class="terms__btn js-accordion is-active">open/close</a>
-                                <input type="checkbox" name="terms" class="checkbox-v1" onclick='selectAll(this,name)' id="checkAll" />
+                                <a href="" class="terms__btn js-accordion">open/close</a>
+                                <input type="checkbox" name="terms" class="checkbox-v1 js-check-all" id="checkAll" />
                                 <label for="checkAll"> <span class="color-point1">[필수]</span>이용약관 및 개인정보 수집/이용/취급</label>
-                                <ul class="terms__depth2-list is-hide">
+                                <ul class="terms__depth2-list">
                                     <li class="terms__depth2-item">
                                         <input type="checkbox" name="terms" class="checkbox-v1" id="terms1"/>
                                         <label for="terms1">통합 이용약관</label>
@@ -59,7 +59,8 @@
                                 </ul>
                             </li>
                             <li class="terms__item">
-                                <input type="checkbox" name="info" class="checkbox-v1" onclick='selectAll(this,name)' id="infoAll" />
+                                <a href="" class="terms__btn js-accordion">open/close</a>
+                                <input type="checkbox" name="info" class="checkbox-v1 js-check-all" id="infoAll" />
                                 <label for="infoAll"> [선택] 정보수신동의</label>
                                 <ul class="terms__depth2-list type-inline">
                                     <li class="terms__depth2-item">

@@ -1,5 +1,5 @@
 jQuery(function(){
-    //팝업열기
+    //팝업열기(공통)
     function openPopup() {
         var el = $(this).attr('href').replace("#","");
         $('.popup').removeClass('is-active');
@@ -9,7 +9,7 @@ jQuery(function(){
     }
     $(document).on('click', '.js-popup-open', openPopup);
 
-    //확대축소(플러그인 panzoom)
+    //제품 팝업 확대축소(플러그인 panzoom)
     function productZoom(){
         var area = document.querySelectorAll('.js-product-zoom');
         var instance = "";
@@ -18,12 +18,13 @@ jQuery(function(){
             instance  = panzoom(item);
         }
     }
-
+    
+    //확대축소(플러그인 panzoom):play
     if($('.product-zoom').length > 0) {
         productZoom();
     }
 
-    //확대축소(플러그인 panzoom):reset
+    //확대축소(플러그인 panzoom):reset-슬라이드 이동시, 닫기시
     function resetPanZoom(){
         var area = document.querySelectorAll('.js-product-zoom');
         var instance = "";
@@ -33,7 +34,7 @@ jQuery(function(){
         }
     }
 
-    //zoom slider
+    //팝업에 사용되는 슬라이드(확대축소팝업, 360도 회전 팝업)
     if($('.popup-slider').length > 0){
         var zoomSlide = new Swiper('.popup-slider__container', {
             observer: true,
@@ -53,7 +54,7 @@ jQuery(function(){
         });
     }
 
-    //팝업닫기
+    //팝업닫기(공통)
     function closePopup() {
         $('.popup, .small-popup, .slide-popup').removeClass('is-active');
         $('html').removeClass('is-hidden');
