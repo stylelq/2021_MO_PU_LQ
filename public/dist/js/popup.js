@@ -13,9 +13,9 @@ jQuery(function () {
   $(document).on('click', '.js-popup-open', openPopup); //팝업닫기
 
   function closePopup() {
-    $('.popup').removeClass('is-active');
+    $('.popup, .small-popup').removeClass('is-active');
     $('html').removeClass('is-hidden');
   }
 
-  $(document).on('click', '.js-popup-close', closePopup);
+  $(document).on('click', '.js-popup-close, .small-popup__dim', closePopup);
 });

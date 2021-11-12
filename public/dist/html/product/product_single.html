@@ -569,7 +569,7 @@
                         <div class="detail-Meta__price">
                             <span class="detail-Meta__price--current">289,290원</span>
                             <span class="detail-Meta__price--sale">328,000원</span>
-                            <a href="#;" class="detail-Meta__benefit">benefit</a>
+                            <a href="#benefitsPop" class="detail-Meta__benefit js-popup-open">benefit</a>
                         </div>
                     </div>
                     <!-- .Title|Price -->
@@ -772,11 +772,11 @@
             <dd class="review-total__count">
                 <div class="review-total__text">4.0</div>
                 <div class="review-total__star">
-                    <a href="javascript:void(0);" class="review-total__star--item js-check-star"><span class="sr-only">1</span></a>
-                    <a href="javascript:void(0);" class="review-total__star--item js-check-star"><span class="sr-only">2</span></a>
-                    <a href="javascript:void(0);" class="review-total__star--item js-check-star"><span class="sr-only">3</span></a>
-                    <a href="javascript:void(0);" class="review-total__star--item js-check-star"><span class="sr-only">4</span></a>
-                    <a href="javascript:void(0);" class="review-total__star--item js-check-star"><span class="sr-only">5</span></a>
+                    <span class="review-total__star--item is-active"><span class="sr-only">1</span></span>
+                    <span class="review-total__star--item is-active"><span class="sr-only">2</span></span>
+                    <span class="review-total__star--item is-active"><span class="sr-only">3</span></span>
+                    <span class="review-total__star--item is-active"><span class="sr-only">4</span></span>
+                    <span class="review-total__star--item"><span class="sr-only">5</span></span>
                 </div>
             </dd>
         </dl>
@@ -890,7 +890,8 @@
                 </div>
             </div>
             <!-- .item -->
-            <div class="paging">
+            <!-- paging -->
+<div class="paging">
     <ul class="paging__list">
         <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
         <li class="paging__item is-current"><span class="paging__link">1</span></li>
@@ -901,6 +902,7 @@
         <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
     </ul>
 </div>
+<!-- .paging -->
             <!-- .리뷰리스트 -->
         </div>
     </div>
@@ -1075,81 +1077,70 @@
         </section>
     </div>
 </div>
-		<!-- //section끝 -->
-		<!--footer시작-->
-		<footer class="footer">
-			<img src="../../images/common/icon_footer_logo.png" class="footer__logo" alt="루이까또즈">
-			<ul class="footer__list">
-				<li class="footer__item fw-bold">
-					<a href="" class="footer__link">이용약관</a>
-				</li>
-				<li class="footer__item">
-					<a href="" class="footer__link">개인정보처리방침</a>
-				</li>
-				<li class="footer__item">
-					<a href="" class="footer__link">고객센터</a>
-				</li>
-				<li class="footer__item">
-					<a href="" class="footer__link">STORES</a>
-				</li>
-				<li class="footer__item">
-					<a href="" class="footer__link">MEMBERSHIP</a>
-				</li>
-				<li class="footer__item">
-					<a href="" class="footer__link">ABOUT</a>
-				</li>
-			</ul>
-			<p class="footer__txt">
-				(주)태진인터내셔날    대표이사 전상우 신경민<br>
-				서울시 동대문구 하정로 26<br>
-				국내사업자등록번호 211-81063749   <a class="footer__blank" href="">사업자정보확인</a><br>
-				통신판매업신고 제 2011-서울동대문구-0019호
-			</p>
-			<p class="footer__txt">
-				•고객센터 080-599-1414  • A/S문의 080-725-7272<br>
-				월-금 9:30 -18:00 (공휴일 휴무)  점심 12:00-13:00
-			</p>
-			<p class="footer__txt">
-				소비자피해 보상보험<br>
-				고객님은 안전거래를 위해 현금 결제시 저희사이트에서<br>
-				가입한 구매안전 서비스를 이용하실 수 있습니다.<br>
-				<a href="" class="footer__blank">서울보증보험 가입 확인</a>
-			</p>
-			<div class="footer-sns">
-				<ul class="footer-sns__list">
-					<li class="footer-sns__item type-facebook">
-						<a href="" class="footer-sns__link">facebook</a>
-					</li>
-					<li class="footer-sns__item type-instagram">
-						<a href="" class="footer-sns__link">instagram</a>
-					</li>
-					<li class="footer-sns__item type-youtube">
-						<a href="" class="footer-sns__link">youtube</a>
-					</li>
-					<li class="footer-sns__item type-post">
-						<a href="" class="footer-sns__link">post</a>
-					</li>
-					<li class="footer-sns__item type-talk">
-						<a href="" class="footer-sns__link">talk</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer__copy">
-				COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
-			</div>
-		</footer>
-	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
-	<script src="../../js/common.js"></script>
-	
-		<script src="../../js/popup.js"></script>
-	
-	
-		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
-	
-</body>
-</html>
-<!--footer끝-->
-
+<!-- //section끝 -->
+<!--footer시작-->
+<footer class="footer">
+    <img src="../../images/common/icon_footer_logo.png" class="footer__logo" alt="루이까또즈">
+    <ul class="footer__list">
+        <li class="footer__item fw-bold">
+            <a href="" class="footer__link">이용약관</a>
+        </li>
+        <li class="footer__item">
+            <a href="" class="footer__link">개인정보처리방침</a>
+        </li>
+        <li class="footer__item">
+            <a href="" class="footer__link">고객센터</a>
+        </li>
+        <li class="footer__item">
+            <a href="" class="footer__link">STORES</a>
+        </li>
+        <li class="footer__item">
+            <a href="" class="footer__link">MEMBERSHIP</a>
+        </li>
+        <li class="footer__item">
+            <a href="" class="footer__link">ABOUT</a>
+        </li>
+    </ul>
+    <p class="footer__txt">
+        (주)태진인터내셔날    대표이사 전상우 신경민<br>
+        서울시 동대문구 하정로 26<br>
+        국내사업자등록번호 211-81063749   <a class="footer__blank" href="">사업자정보확인</a><br>
+        통신판매업신고 제 2011-서울동대문구-0019호
+    </p>
+    <p class="footer__txt">
+        •고객센터 080-599-1414  • A/S문의 080-725-7272<br>
+        월-금 9:30 -18:00 (공휴일 휴무)  점심 12:00-13:00
+    </p>
+    <p class="footer__txt">
+        소비자피해 보상보험<br>
+        고객님은 안전거래를 위해 현금 결제시 저희사이트에서<br>
+        가입한 구매안전 서비스를 이용하실 수 있습니다.<br>
+        <a href="" class="footer__blank">서울보증보험 가입 확인</a>
+    </p>
+    <div class="footer-sns">
+        <ul class="footer-sns__list">
+            <li class="footer-sns__item type-facebook">
+                <a href="" class="footer-sns__link">facebook</a>
+            </li>
+            <li class="footer-sns__item type-instagram">
+                <a href="" class="footer-sns__link">instagram</a>
+            </li>
+            <li class="footer-sns__item type-youtube">
+                <a href="" class="footer-sns__link">youtube</a>
+            </li>
+            <li class="footer-sns__item type-post">
+                <a href="" class="footer-sns__link">post</a>
+            </li>
+            <li class="footer-sns__item type-talk">
+                <a href="" class="footer-sns__link">talk</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__copy">
+        COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
+    </div>
+</footer>
+<!-- fix button -->
 <div class="fix-button">
     <div class="fix-button__item">
         <a href="javascript:void(0);" class="fix-button__link fix-button__link--like"><span class="fix-button__text sr-only">좋아요</span></a>
@@ -1165,10 +1156,14 @@
         <a href="javascript:void(0);" class="fix-button__link fix-button__link--buy"><span class="fix-button__text">Buy Now</span></a>
     </div>
 </div>
+<!-- .fix button -->
+<!-- cart-fix -->
 <div class="cart-fix">
     <div class="cart-fix__add"><span class="cart-fix__add--count">2</span></div>
     <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
 </div>
+<!-- .cart-fix -->
+<!-- qna write popup -->
 <section id="qnaWrite" class="popup type-write">
     <header class="popup__header">
         <h3 class="popup__tit">상품 Q&A 작성</h3>
@@ -1219,5 +1214,69 @@
         </div>
         <!-- .wirte Footer -->
     </section>
-
 </section>
+<!-- .qna write popup -->
+<!-- Benefits popup -->
+<section id="benefitsPop" class="small-popup">
+    <div class="small-popup__dim"></div>
+    <section class="small-popup__body">
+        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="small-popup__header">
+            <h3 class="small-popup__header--title">혜택가 안내</h3>
+        </div>
+        <div class="small-popup__cont">
+            <!-- Benefits cont -->
+            <div class="pop-benefits">
+                <ul class="pop-benefits__list">
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">소비자가</dt>
+                            <dd class="pop-benefits__text">498,000원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">판매가</dt>
+                            <dd class="pop-benefits__text">250,000원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">상품 쿠폰할인</dt>
+                            <dd class="pop-benefits__text">-25,000원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">적립금 즉시할인</dt>
+                            <dd class="pop-benefits__text">-4,500원</dd>
+                        </dl>
+                    </li>
+                    <li class="pop-benefits__item pop-benefits__item--total">
+                        <dl class="pop-benefits__inner">
+                            <dt class="pop-benefits__title">혜택가</dt>
+                            <dd class="pop-benefits__text">220,500원<span class="pop-benefits__text--sale">56%할인</span></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <p class="pop-benefits__info--text">혜택가는 고객님께서 최대 할인 받을수 있는 <br />예상 금액 입니다.</p>
+            </div>
+            <!-- .Benefits cont -->
+        </div>
+    </section>
+</section>
+<!-- Benefits popup -->
+
+
+	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
+	
+		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
+	
+	<script src="../../js/common.js"></script>
+	
+		<script src="../../js/popup.js"></script>
+	
+</body>
+</html>
+<!--footer끝-->
+
