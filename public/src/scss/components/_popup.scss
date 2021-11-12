@@ -512,14 +512,14 @@
     }
 
     &__close{
-        width:calcRem(34rem);
-        height:calcRem(34rem);
+        width:calcRem(30rem);
+        height:calcRem(30rem);
         position: absolute;
         top:calcRem(85rem);
         right:calcRem(20rem);
         z-index: $popupButtonZindex;
         @include background('/images/common/ico_pop_slide_close.png','no-repeat center center / contain');
-        background-size:calcRem(34rem) calcRem(34rem) ;
+        background-size:calcRem(30rem) calcRem(30rem) ;
     }
 }
 
@@ -557,8 +557,8 @@
         }
 
         &--prev{
-            width:calcRem(34rem);
-            height:calcRem(34rem);
+            width:calcRem(30rem);
+            height:calcRem(30rem);
             display: block;
             border:solid 1px $gray2;
             background-color: $whiteColor;
@@ -582,8 +582,8 @@
         }
 
         &--next{
-            width:calcRem(34rem);
-            height:calcRem(34rem);
+            width:calcRem(30rem);
+            height:calcRem(30rem);
             display: block;
             border:solid 1px $gray2;
             background-color: $whiteColor;
