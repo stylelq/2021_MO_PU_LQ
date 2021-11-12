@@ -2,6 +2,9 @@
 
 jQuery(function () {
   $(document).ready(function () {
+    /*
+    //Gnb
+    */
     //Gnb 메뉴햄버거버튼 클릭시 노출/비노출 관련 액션
     function GnbMenu() {
       if ($('.type-1depth').hasClass('is-active')) {
@@ -53,7 +56,17 @@ jQuery(function () {
         $("." + dataPage).find('.gnb-body__item').eq(0).addClass('is-active');
         $("." + dataPage).find('.gnb-3depth').eq(0).addClass('is-active');
       }
-    }); //헤더 서치박스 열기
+    }); //Gnb 2뎁스 닫기
+
+    $('.js-gnb-back').off('click').on('click', function (e) {
+      e.preventDefault();
+      $('.gnb.type-2depth').removeClass('is-active');
+      $('.gnb-body__item, .gnb-3depth').removeClass('is-active');
+    });
+    /*
+    //Header Search
+    */
+    //헤더 서치박스 열기
 
     $('.js-search-open').off('click').on('click', function (e) {
       e.preventDefault();
@@ -65,33 +78,11 @@ jQuery(function () {
       e.preventDefault();
       $('.search').removeClass('is-active');
       $('html').removeClass('is-hidden');
-    }); //Gnb 2뎁스 닫기
-
-    $('.js-gnb-back').off('click').on('click', function (e) {
-      e.preventDefault();
-      $('.gnb.type-2depth').removeClass('is-active');
-      $('.gnb-body__item, .gnb-3depth').removeClass('is-active');
-    }); //Lnb 2뎁스 메뉴 오픈
-
-    function depthMenu() {
-      var depthHead = $('.js-lnb-btn').closest('.lnb');
-
-      if ($(depthHead).hasClass('is-open')) {
-        $(depthHead).removeClass('is-open');
-      } else {
-        $(depthHead).addClass('is-open');
-      }
-
-      return false;
-    }
-
-    $(document).on('click', '.js-lnb-btn', depthMenu); //Lnb 2뎁스 메뉴 닫기
-
-    function depthMenuClose() {
-      $('.lnb').removeClass('is-open');
-    }
-
-    $(document).on('click', '.js-lnb-close', depthMenuClose); //전체 체크박스 체크
+    });
+    /*
+    //Join(회원가입, 로그인)
+    */
+    //전체 체크박스 체크
 
     function allCheck() {
       var dataName = $(this).attr('name');
@@ -123,7 +114,31 @@ jQuery(function () {
     }
 
     ;
-    $(document).on('click', '.terms__depth2-item label', allCheckItem); //상품리스트 타입 변경 버튼제어
+    $(document).on('click', '.terms__depth2-item label', allCheckItem);
+    /*
+    //Product(리스트페이지)
+    */
+    //Lnb 2뎁스 메뉴 오픈
+
+    function depthMenu() {
+      var depthHead = $('.js-lnb-btn').closest('.lnb');
+
+      if ($(depthHead).hasClass('is-open')) {
+        $(depthHead).removeClass('is-open');
+      } else {
+        $(depthHead).addClass('is-open');
+      }
+
+      return false;
+    }
+
+    $(document).on('click', '.js-lnb-btn', depthMenu); //Lnb 2뎁스 메뉴 닫기
+
+    function depthMenuClose() {
+      $('.lnb').removeClass('is-open');
+    }
+
+    $(document).on('click', '.js-lnb-close', depthMenuClose); //상품리스트 타입 변경 버튼제어
 
     function productTypeChage() {
       if ($(this).hasClass('filter__link--list')) {
@@ -161,7 +176,11 @@ jQuery(function () {
       }, 340);
     }
 
-    $(document).on('click', '.js-scrollTop', scrollTopBtn); //상품상세 상단 배너슬라이드
+    $(document).on('click', '.js-scrollTop', scrollTopBtn);
+    /*
+    //Product(상세페이지)
+    */
+    //상품상세 상단 배너슬라이드
 
     if ($('.detail-thumb').length > 0) {
       var detailThumbSlide = new Swiper('.detail-thumb__container', {
@@ -338,6 +357,10 @@ jQuery(function () {
     $(document).on('click', '.js-accordion', accordionMore);
   });
 });
+/*
+//Header Scroll Bg
+*/
+
 jQuery(function () {
   $(document).ready(function () {
     // 헤더 스크롤 백그라운드
