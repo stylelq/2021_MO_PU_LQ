@@ -424,7 +424,7 @@ input {
 	color:$gray2;
 	padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
 	height:calcRem(36rem);
-	@include pageBackground('/images/common/ico_qna_more.svg','no-repeat center center / contain');
+	@include background('/images/common/ico_qna_more.svg','no-repeat center center / contain');
 	background-size: calcRem(8rem) calcRem(4rem);
 	background-position: calc(100% - #{calcRem(10rem)}) center;
 	overflow: hidden;
