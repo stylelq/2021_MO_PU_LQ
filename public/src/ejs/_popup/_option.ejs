@@ -1,0 +1,42 @@
+<!-- option popup -->
+<section id="cartOption" class="button-popup">
+    <div class="button-popup__dim"></div>
+    <section class="button-popup__body">
+        <div class="button-popup__cont">
+            <!-- option cont -->
+            <div class="button-popup__option">
+                <div class="button-popup__option--select">
+                    <select name="cartOption" id="cartOption" class="form__select--noborder" title="사이즈 선택">
+                        <option value="all">FREESIZE</option>
+                        <option value="size">36</option>
+                        <option value="color">37</option>
+                        <option value="etc">38</option>
+                    </select>
+                </div>
+                <div class="button-popup__option--count">
+                    <!-- quantity -->
+                    <div class="quantity">
+                        <a href="#;" class="quantity__minus js-minus"><span class="sr-only">minus</span></a>
+                        <input class="quantity__text--current" type="number" value="1" min="1" max="999" maxlength="3" inputmode="numeric" pattern="[0-9]*" readonly="readonly" />
+                        <a href="#;" class="quantity__plus js-plus"><span class="sr-only">plus</span></a>
+                    </div>
+                    <!-- quantity -->
+                </div>
+            </div>
+            <!-- .option cont -->
+        </div>
+        <!-- button -->
+        <div class="button-popup__footer">
+            <ul class="button-popup__footer--list">
+                <li class="button-popup__footer--item">
+                    <a href="javascript:void(0);" class="button-popup__footer--link js-popup-close">Cancel</a>
+                </li>
+                <li class="button-popup__footer--item">
+                    <a href="javascript:void(0);" class="button-popup__footer--link button-popup__footer--link-red">Update</a>
+                </li>
+            </ul>
+        </div>
+        <!-- .button -->
+    </section>
+</section>
+<!-- option popup -->

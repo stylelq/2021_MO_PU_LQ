@@ -1,0 +1,173 @@
+<%
+type = "cart"
+page = "cart"
+popup = "true"
+lnbTitle = "장바구니"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnb %>
+    <div class="site-main">
+        <section class="cart">
+            <!-- list -->
+            <div class="cart-list">
+                <!-- item -->
+                <div class="cart-product">
+                    <div class="cart-product__header">
+                        <div class="checkbox-point cart-product__checkbox">
+                            <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" checked>
+                            <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                        </div>
+                        <a href="javascript:void(0);" onclick="basketDelete()" class="cart-product__close js-cart-close"><span class="sr-only">닫기</span></a>
+                        <!-- js-cart-close 클릭시 cart-product 클래스 영역 삭제 -->
+                    </div>
+                    <div class="cart-product__body">
+                        <div class="cart-product__info">
+                            <a href="#;" class="cart-product__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                            <div class="cart-product__cont">
+                                <div class="cart-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                                <div class="cart-product__option">
+                                    <ul class="cart-product__option--list">
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">색상 :</span>
+                                            <span class="cart-product__option--text">WHITE</span>
+                                        </li>
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">옵션 :</span>
+                                            <span class="cart-product__option--text">FREESIZE</span>
+                                        </li>
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">수량 :</span>
+                                            <span class="cart-product__option--text">1개</span>
+                                        </li>
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">배송 :</span>
+                                            <span class="cart-product__option--text">무료배송</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-product__price">
+                            <span class="cart-product__price--current">289,290원</span>
+                            <span class="cart-product__price--sale">328,000원</span>
+                            <a href="#benefitsPop" class="cart-product__benefit js-popup-open">benefit</a>
+                        </div>
+                    </div>
+                    <div class="cart-product__meta">
+                        <div class="cart-product__meta--item">
+                            <a href="javascript:void(0);" class="cart-product__meta--link cart-product__meta--like"><span class="cart-product__meta--text sr-only">좋아요</span></a>
+                            <!-- 좋아요 시 is-active -->
+                        </div>
+                        <div class="cart-product__meta--item">
+                            <a href="#cartOption" class="cart-product__meta--link cart-product__meta--option js-popup-open"><span class="cart-product__meta--text">Option</span></a>
+                        </div>
+                        <div class="cart-product__meta--item">
+                            <a href="javascript:void(0);" class="cart-product__meta--link cart-product__meta--buy"><span class="cart-product__meta--text">Buy Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!--.item -->
+                <!-- item -->
+                <div class="cart-product">
+                    <div class="cart-product__header">
+                        <div class="checkbox-point cart-product__checkbox">
+                            <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
+                            <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                        </div>
+                        <a href="javascript:void(0);" onclick="basketDelete()" class="cart-product__close js-cart-close"><span class="sr-only">닫기</span></a>
+                        <!-- js-cart-close 클릭시 cart-product 클래스 영역 삭제 -->
+                    </div>
+                    <div class="cart-product__body">
+                        <div class="cart-product__info">
+                            <a href="#;" class="cart-product__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                            <div class="cart-product__cont">
+                                <div class="cart-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                                <div class="cart-product__option">
+                                    <ul class="cart-product__option--list">
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">색상 :</span>
+                                            <span class="cart-product__option--text">WHITE</span>
+                                        </li>
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">옵션 :</span>
+                                            <span class="cart-product__option--text">FREESIZE</span>
+                                        </li>
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">수량 :</span>
+                                            <span class="cart-product__option--text">1개</span>
+                                        </li>
+                                        <li class="cart-product__option--item">
+                                            <span class="cart-product__option--title">배송 :</span>
+                                            <span class="cart-product__option--text">무료배송</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-product__price">
+                            <span class="cart-product__price--current">289,290원</span>
+                            <span class="cart-product__price--sale">328,000원</span>
+                            <a href="#benefitsPop" class="cart-product__benefit js-popup-open">benefit</a>
+                        </div>
+                    </div>
+                    <div class="cart-product__meta">
+                        <div class="cart-product__meta--item">
+                            <a href="javascript:void(0);" class="cart-product__meta--link cart-product__meta--like"><span class="cart-product__meta--text sr-only">좋아요</span></a>
+                            <!-- 좋아요 시 is-active -->
+                        </div>
+                        <div class="cart-product__meta--item">
+                            <a href="#cartOption" class="cart-product__meta--link cart-product__meta--option js-popup-open"><span class="cart-product__meta--text">Option</span></a>
+                        </div>
+                        <div class="cart-product__meta--item">
+                            <a href="javascript:void(0);" class="cart-product__meta--link cart-product__meta--buy"><span class="cart-product__meta--text">Buy Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!--.item -->
+            </div>
+            <!-- .list -->
+            <!-- total -->
+            <div class="cart-total">
+                <div class="cart-total__list">
+                    <ul class="cart-total__list--inner">
+                        <li class="cart-total__list--item">
+                            <dl class="cart-total--inner">
+                                <dt class="cart-total__title">총 상품 금액</dt>
+                                <dd class="cart-total__text">328,000원</dd>
+                            </dl>
+                        </li>
+                        <li class="cart-total__list--item">
+                            <dl class="cart-total--inner">
+                                <dt class="cart-total__title">총 할인 금액</dt>
+                                <dd class="cart-total__text">-38,710원</dd>
+                            </dl>
+                        </li>
+                        <li class="cart-total__list--item">
+                            <dl class="cart-total--inner">
+                                <dt class="cart-total__title">배송비</dt>
+                                <dd class="cart-total__text">0 원</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cart-total-sum">
+                    <dl class="cart-total--inner">
+                        <dt class="cart-total__title">총 주문 금액</dt>
+                        <dd class="cart-total__text">289,290원</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- .total -->
+            <div class="cart-info">
+                <p class="cart-info__text">장바구니에 담긴 상품은 30일간 보관됩니다.</p>
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_cartFixButton %>
+<% include ../_popup/_benefits %>
+<% include ../_popup/_option %>
+<% include ../_include/_footer %>

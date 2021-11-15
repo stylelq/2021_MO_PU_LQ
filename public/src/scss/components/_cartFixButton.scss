@@ -1,0 +1,77 @@
+//상품 하단 결제 버튼
+.cart-fix__button{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: $point1;
+    z-index: $fixButtonZindex;
+
+    &:after{
+        @include block-reset;
+    }
+
+    &--item{
+        float: left;
+        position: relative;
+
+        &:nth-child(1){
+            width:57%;
+        }
+
+        &:nth-child(2){
+            width:43%;
+        }
+
+        &:after{
+            content:"";
+            width:1px;
+            height:calcRem(14rem);
+            position: absolute;
+            background-color:$gray2 ;
+            right:0;
+            @include vertical-center;
+        }
+
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &--link{
+        display: block;
+        line-height:0;
+        text-align: center;
+        padding:calcRem(13rem) calcRem(5rem);
+        height:calcRem(46rem);
+        position: relative;
+        box-sizing: border-box;
+
+    }
+
+    &--text{
+        display: inline-block;
+        @include body2;
+        color:$whiteColor;
+    }
+
+    &--count{
+        font-size:calcRem(11rem);
+        line-height:calclH(18,11);
+        color:$black1;
+        letter-spacing: $defaultLetter;
+        font-weight:$regular;
+        background-color: $bgSiteColor;
+        border-radius: calcRem(9rem) calcRem(9rem);
+        padding:0 calcRem(2rem);
+        min-width:calcRem(18rem);
+        height:calcRem(18rem);
+        text-align: center;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right:calcRem(8rem);
+    }
+}

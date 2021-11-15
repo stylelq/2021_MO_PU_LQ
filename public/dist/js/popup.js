@@ -60,7 +60,7 @@ jQuery(function () {
 
 
   function closePopup() {
-    $('.popup, .small-popup, .slide-popup').removeClass('is-active');
+    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
     $('html').removeClass('is-hidden');
 
     if ($(this).hasClass('slide-popup__close')) {

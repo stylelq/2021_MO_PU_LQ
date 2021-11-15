@@ -272,7 +272,7 @@ jQuery(function () {
 
     $(document).on('click', '.js-tab-link', detailTab); //제품 상세 하단 픽시드 결제 박스
 
-    if ($('.fix-button').length > 0) {
+    if ($('.fix-button , .cart-fix__button').length > 0) {
       $(window).scroll(function () {
         var height = $(document).scrollTop();
         var headHeight = $('.header').scrollTop();
@@ -284,7 +284,6 @@ jQuery(function () {
         }
       });
       $('.cart-fix').addClass('is-up');
-      $('.footer').addClass('bottom-fix');
     } //연관제품 슬라이드
 
 
@@ -397,4 +396,9 @@ jQuery(function () {
 
 function stoNtsAsk() {
   alert('입고 알림을 \n신청하시겠습니까?');
+} //카트 제품 삭제 버튼클릭시
+
+
+function basketDelete() {
+  alert('삭제하시겠습니까?');
 }

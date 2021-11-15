@@ -486,8 +486,8 @@ input {
 
 		&:after{
 			content:"";
-			width:12px;
-			height:12px;
+			width:calcRem(12rem);
+			height:calcRem(12rem);
 			box-sizing: border-box;
 			border:solid 1px $gray2;
 			position: absolute;
@@ -503,4 +503,59 @@ input {
 			}
 		}
 	}
+}
+
+//단독 폼(텍스트없는 버전)
+.checkbox-point{
+	$this:&;
+	&__label{
+		display: block;
+		width: calcRem(18rem);
+		height: calcRem(18rem);
+		box-sizing: border-box;
+		border:solid 1px $point1;
+		position: relative;
+
+		&:after{
+			content:"";
+			width:calcRem(8rem);
+			height:calcRem(5rem);
+			@include background('/images/common/ico_red-checked.svg','no-repeat center center / contain');
+			background-size:calcRem(8rem) calcRem(5rem);
+			@include ab-center;
+			opacity: 0;
+		}
+	}
+
+	&__input{
+		&:checked + #{$this}__label{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+//폼 셀렉트(하단보더)
+.form__select{
+	&--noborder{
+		display: block;
+		width:100%;
+		border-bottom:solid 1px $gray1;
+		@include body3;
+		padding:0 calcRem(10rem) calcRem(7rem) 0;
+		height:calcRem(26rem);
+		@include background('/images/common/ico_qna_more.svg','no-repeat center center / contain');
+		background-size: calcRem(8rem) calcRem(4rem);
+		background-position: right calcRem(8rem);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		text-transform: uppercase;
+
+		&.is-check{
+			color:$black1;
+		}
+	}
+
 }

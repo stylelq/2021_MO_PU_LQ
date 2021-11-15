@@ -1,0 +1,296 @@
+@import "../base/variables";
+@import "../base/mixins";
+//layout
+.cart{
+    border-top:solid 1px $lightgray1;
+
+    &-info{
+        margin-top: calcRem(10rem);
+        padding:0 calcRem(20rem);
+
+        &__text{
+            position: relative;
+            font-size:calcRem(11rem);
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            font-weight:$light;
+            color:$darkgray;
+            padding-left:calcRem(7rem);
+
+            &:after{
+                content:"";
+                width:calcRem(2rem);
+                height:calcRem(2rem);
+                border-radius: 100%;
+                background-color: $darkgray;
+                position: absolute;
+                top:calcRem(8rem);
+                left:0;
+            }
+        }
+    }
+}
+
+//제품 정보
+.cart-product{
+    border-bottom:solid 1px $gray1;
+    position: relative;
+    padding:calcRem(20rem) 0 0;
+
+    //header
+    &__header{
+        padding:0 calcRem(20rem);
+        position: relative;
+        margin-bottom:calcRem(10rem);
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__checkbox{
+        float:left;
+    }
+
+    &__close{
+        position: absolute;
+        right:calcRem(20rem);
+        @include vertical-center;
+        width:calcRem(14rem);
+        height:calcRem(14rem);
+        @include pageBackground('/images/common/ico_cart_close.svg','no-repeat center center / contain');
+        background-size: calcRem(14rem) calcRem(14rem);
+    }
+
+    //body
+    &__body{
+        padding:0 calcRem(20rem);
+    }
+
+    &__info{
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__thumb{
+        float: left;
+        margin-right:calcRem(15rem);
+        width:calcRem(120rem);
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom:100%;
+        }
+    }
+
+    &__img{
+        width:100%;
+        @include ab-center;
+    }
+
+    &__cont{
+        overflow: hidden;
+    }
+
+    &__title{
+        @include body2;
+    }
+
+    &__option{
+        margin-top:calcRem(12rem);
+
+        &--item{
+            margin-top:calcRem(5rem);
+
+            &:after{
+                @include block-reset;
+            }
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body3;
+        }
+
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body3;
+        }
+    }
+
+    &__price{
+        margin-top:calcRem(25rem);
+        clear: both;
+        padding-left:calcRem(20rem);
+        padding-right:calcRem(90rem);
+        position: relative;
+        line-height:0;
+        font-size:0;
+
+        &--current{
+            @include title2;
+            margin-right:calcRem(12rem);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &--sale{
+            @include title2;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__benefit{
+        position: absolute;
+        right:calcRem(20rem);
+        @include vertical-center;
+        display: block;
+        font-size:calcRem(12rem);
+        line-height:calclH(20,12);
+        color:$whiteColor;
+        padding:calcRem(2rem) calcRem(15rem);
+        background-color: $point1;
+        letter-spacing: $defaultLetter;
+    }
+
+    //footer(meta)
+    &__meta{
+        border-top:solid 1px $lightgray1;
+        margin-top:calcRem(25rem);
+        padding:0 calcRem(20rem);
+
+        &:after{
+            @include block-reset;
+        }
+
+        &--item{
+            float: left;
+            position: relative;
+
+            &:nth-child(1){
+                width:18%;
+            }
+
+            &:nth-child(2){
+                width:36%;
+            }
+
+           &:nth-child(3){
+                width:46%;
+            }
+
+
+            &:after{
+                content:"";
+                width:1px;
+                height:calcRem(14rem);
+                position: absolute;
+                background-color:$gray2 ;
+                right:0;
+                @include vertical-center;
+            }
+
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+
+        &--link{
+            display: block;
+            line-height:0;
+            text-align: center;
+            padding:calcRem(13rem) calcRem(5rem);
+            height:calcRem(46rem);
+            position: relative;
+            box-sizing: border-box;
+
+            &.cart-product__meta--like{
+                &:after{
+                    content:"";
+                    width:calcRem(16rem);
+                    height:calcRem(14rem);
+                    @include pageBackground('/images/common/ico_big_like_black.svg','no-repeat center center / contain');
+                    background-size: calcRem(16rem) calcRem(14rem);
+                    @include ab-center;
+                }
+                &.is-active{
+                    &:after{
+                        @include pageBackground('/images/common/ico_big_like_black-active.svg','no-repeat center center / contain');
+                    }
+                }
+            }
+        }
+
+        &--text{
+            display: inline-block;
+            @include body2;
+        }
+    }
+}
+
+//카트 제품 합계
+.cart-total{
+    $this:&;
+    background-color: $bgColor;
+    padding:calcRem(30rem) calcRem(20rem);
+
+    &__list{
+        padding-bottom:calcRem(20rem);
+        margin-bottom:calcRem(20rem);
+        border-bottom:solid 1px $gray1;
+
+        &--item{
+            margin-top:calcRem(10rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+
+    &--inner{
+        margin:0;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__title{
+        float: left;
+        @include body3;
+
+        #{$this}-sum &{
+            @include title2;
+        }
+    }
+
+    &__text{
+        overflow: hidden;
+        text-align: right;
+        @include body3;
+
+        #{$this}-sum &{
+            @include title2;
+            color:$point1;
+        }
+    }
+}
+
