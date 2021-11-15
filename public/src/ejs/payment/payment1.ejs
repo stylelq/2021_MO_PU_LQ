@@ -1,0 +1,72 @@
+<%
+type = "payment"
+page = "payment"
+popup = "true"
+lnbTitle = "주문서"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnb %>
+    <div class="site-main">
+        <section class="payment">
+            <!-- 배송지 정보 -->
+            <section class="payment-section bor--bottom">
+                <h2 class="payment-section__title">배송지 정보</h2>
+                <p class="payment-section__text">등록된 배송지 정보가 없습니다. 배송지 정보를 입력하세요.</p>
+                <div class="payment-section__cont">
+                    <% include ../_include/_addressInfo %>
+                </div>
+            </section>
+            <!-- .배송지 정보 -->
+            <!-- 주문자 정보 -->
+            <section class="payment-section bor--bottom">
+                <h2 class="payment-section__title">주문자 정보</h2>
+                <div class="payment-section__cont">
+                    <% include ../_include/_ordererInfo %>
+                </div>
+            </section>
+            <!-- .주문자 정보 -->
+            <!-- 주문 상품정보-->
+            <section class="payment-section bor--bottom">
+                <h2 class="payment-section__title">주문 상품정보</h2>
+                <div class="payment-section__cont">
+                    <% include ../_include/_orderProduct %>
+                </div>
+            </section>
+            <!-- .주문 상품정보 -->
+            <!-- 쿠폰/할인 정보-->
+            <section class="payment-section bor--bottom">
+                <h2 class="payment-section__title">쿠폰/할인 정보</h2>
+                <div class="payment-section__cont">
+
+                </div>
+            </section>
+            <!-- .쿠폰/할인 정보 -->
+            <!-- 결제하기-->
+            <section class="payment-section">
+                <h2 class="payment-section__title">결제하기</h2>
+                <div class="payment-section__cont">
+
+                </div>
+            </section>
+            <!-- .결제하기 -->
+            <!-- 토탈결제금액-->
+            <section class="payment-section bg-gray">
+                <div class="payment-section__cont">
+
+                </div>
+            </section>
+            <!-- .토탈결제금액 -->
+            <!-- 구매동의-->
+            <section class="payment-section">
+                <h2 class="payment-section__title">구매동의</h2>
+                <div class="payment-section__cont">
+
+                </div>
+            </section>
+            <!-- .구매동의 -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

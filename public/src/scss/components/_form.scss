@@ -454,6 +454,11 @@ input {
 		&:focus{
 			border-color:$point1;
 		}
+
+		&:read-only{
+			background-color: $lightgray3;
+			pointer-events: none;
+		}
 	}
 
 	&--textarea{
@@ -502,6 +507,10 @@ input {
 				@include background('/images/common/check.svg','no-repeat center center / #{calcRem(8rem)} #{calcRem(8rem)}')
 			}
 		}
+	}
+
+	.form__checkbox--big{
+		display: none;
 	}
 }
 
