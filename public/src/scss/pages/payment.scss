@@ -5,6 +5,10 @@
     &-section{
         padding:calcRem(30rem) calcRem(20rem);
 
+        &:last-child{
+            padding-bottom:0;
+        }
+
         &.bor--bottom{
             border-bottom:solid 1px $gray1;
         }
@@ -105,6 +109,15 @@
                 float:left;
                 padding-right:calcRem(5rem);
                 box-sizing: border-box;
+            }
+        }
+
+        &__custom{
+            margin-top:calcRem(10rem);
+            display: none;
+
+            &.is-active{
+                display: block;
             }
         }
     }
@@ -546,6 +559,7 @@
     &__list{
         &--item{
             display: none;
+            padding-top:calcRem(20rem);
 
             &.is-current{
                 display: block;
@@ -555,7 +569,6 @@
 
     //신용카드
     &__cedit{
-        padding-top:calcRem(20rem);
         line-height:0;
         font-size:0;
 
@@ -588,5 +601,265 @@
                 @include vertical-center;
             }
         }
+    }
+
+    //페이코
+    &__payco{
+
+        &--text{
+            display: block;
+            @include body3;
+        }
+
+        &--title{
+            font-weight: $regular;
+            margin-bottom:calcRem(5rem);
+
+            &-red{
+                color:$point1;
+
+            }
+        }
+
+        &--sub{
+            margin:0;
+        }
+    }
+}
+
+//무통장 입금
+.nobankbook{
+    &__item{
+        padding:calcRem(20rem) 0;
+        border-top:solid 1px $lightgray1;
+
+        &:first-child{
+            padding-top:0;
+            border-top:0;
+        }
+
+        &:last-child{
+            padding-bottom:0;
+        }
+
+        //보증보험 가입
+        .form__checkbox{
+            margin-top:calcRem(15rem);
+        }
+    }
+
+    &__title{
+        @include body2;
+        margin-bottom:calcRem(8rem);
+    }
+
+    //환불계좌
+    &__form{
+        &--item{
+            margin-top:calcRem(10rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+
+    //보증보험 가입
+    &__text{
+        @include body3;
+        margin:calcRem(20rem) 0 0;
+
+        &:first-of-type{
+            margin:0;
+        }
+    }
+
+    &-info--text{
+        font-size:calcRem(11rem);
+        padding-left:calcRem(7rem);
+        position: relative;
+        line-height:calclH(18,11);
+        letter-spacing: $defaultLetter;
+        font-weight: $light;
+        color:$darkgray;
+        margin:calcRem(20rem) 0 0;
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$darkgray;
+        }
+    }
+
+    &__option{
+        margin-top:calcRem(25rem);
+
+        &--item{
+            margin:calcRem(20rem) 0 0;
+
+            &:first-child{
+                margin-top:0;
+            }
+
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &--title{
+            float:left;
+            width: calcRem(58rem);
+            @include body2;
+
+            &-vertical{
+                padding-top:calcRem(7rem);
+            }
+        }
+
+        &--cont{
+            float:left;
+            width:calc(100% - #{calcRem(58rem)});
+            margin:0;
+        }
+    }
+
+    &-birth{
+        &__list{
+            margin-right:calcRem(-5rem);
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__item{
+            width:33.333%;
+            float:left;
+            padding-right:calcRem(5rem);
+            box-sizing: border-box;
+        }
+    }
+
+    &-gender{
+        &__list{
+            margin-right:calcRem(-8rem);
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__item{
+            float:left;
+            padding-right:calcRem(8rem);
+        }
+    }
+}
+
+//최종금액
+.payment-total{
+    $this:&;
+
+    &__title{
+        margin-bottom:calcRem(20rem);
+    }
+
+    &__inner{
+        margin:0;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__text{
+        float:left;
+        @include body3;
+
+        #{$this}__title &{
+            @include title2;
+        }
+    }
+
+    &__price{
+        overflow: hidden;
+        text-align: right;
+        @include body3;
+
+        #{$this}__title &{
+            @include title2;
+            color:$point1;
+        }
+    }
+
+    &__item{
+        margin-top:calcRem(10rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
+
+//구매동의
+.payment-agree{
+    &__text{
+        margin:0 0 calcRem(20rem);
+        @include body3;
+    }
+
+    &__btn{
+        margin-top:calcRem(30rem);
+    }
+}
+
+//배송지 정보 있을경우
+.user-address{
+    &__header{
+        margin-bottom:calcRem(20rem);
+    }
+
+    &__link{
+        display: block;
+        position: relative;
+        padding-right:calcRem(8rem);
+
+        &:after{
+            content: "";
+            width:calcRem(4rem);
+            height:calcRem(9rem);
+            @include pageBackground('/images/common/ico_address_more.svg','no-repeat center center / contain');
+            background-size: calcRem(4rem) calcRem(9rem);
+            position: absolute;
+            right:0;
+            @include vertical-center;
+        }
+    }
+
+    &__meta{
+        margin-bottom:calcRem(3rem);
+        @include body3;
+
+        &--name{
+            @include body3;
+            margin-right:calcRem(4rem);
+        }
+
+        &--position{
+            @include body3;
+            margin-left:calcRem(4rem);
+        }
+    }
+
+    &__tel{
+        @include body3;
+        margin-bottom:calcRem(2rem);
+    }
+
+    &__address{
+        @include body3;
     }
 }

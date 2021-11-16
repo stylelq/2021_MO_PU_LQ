@@ -607,5 +607,50 @@ input {
 			color:$black1;
 		}
 	}
+}
 
+//기본폼 라디오박스
+.form__radio{
+	$this:&;
+	position: relative;
+
+	&--text{
+		display: inline-block;
+		max-width: 100%;
+		@include body3;
+		position: relative;
+		padding-left:calcRem(20rem);
+
+		&:before{
+			content:"";
+			width:calcRem(16rem);
+			height:calcRem(16rem);
+			box-sizing: border-box;
+			border:solid 1px $black1;
+			border-radius: 100%;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+		&:after{
+			content:"";
+			width:calcRem(8rem);
+			height:calcRem(8rem);
+			background-color:$black1 ;
+			border-radius: 100%;
+			position: absolute;
+			top:calcRem(4rem);
+			left:calcRem(4rem);
+			opacity: 0;
+		}
+	}
+
+	&--input{
+		&:checked + #{$this}--text{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
 }

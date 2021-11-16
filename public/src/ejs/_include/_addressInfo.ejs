@@ -97,7 +97,7 @@
     <!-- .item -->
     <!-- item -->
     <div class="address-info__item address-info__item--message">
-        <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder" title="배송 메세지 선택">
+        <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder js-custom-message" title="배송 메세지 선택">
             <option value="1">메시지를 선택해주세요</option>
             <option value="2">부재시 경비실/관리실에 맡겨주세요.</option>
             <option value="3">배송 전에 미리 연락주세요.</option>
@@ -105,6 +105,9 @@
             <option value="5">파손의 위험이 있으므로, 주의하여 배송해 주세요.</option>
             <option value="6">메시지 직접입력</option>
         </select>
+        <div class="address-info__custom js-select-custom">
+            <input type="text" class="form__input--text js-max-keyup" placeholder="최대 50자 이내 입력 가능합니다.">
+        </div>
     </div>
     <!-- item -->
 </div>

@@ -425,6 +425,19 @@ jQuery(function(){
     };
 
     $(document).on('keyup', '.js-max-keyup', textareaKeyup);
+
+    function customOption() {
+        var customOption = $(this).next('.js-select-custom');
+        var optionSelected = $(this).find('option:selected');
+        if(optionSelected.val() == 6) {
+            customOption.addClass('is-active');
+        }
+        else {
+            customOption.removeClass('is-active');
+        }
+    };
+
+    $(document).on('change', '.js-custom-message', customOption);
 });
 
 //입고알림 버튼클릭시
