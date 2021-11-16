@@ -917,3 +917,123 @@
 }
 
 //주문내역 하단 컨텐츠
+.complete-section{
+    &--last{
+        padding-top:calcRem(20rem);
+    }
+
+    &__inner{
+        font-size:0;
+        line-height:0;
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__item{
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        padding:0 calcRem(37rem);
+        position: relative;
+
+        &:after{
+            content:"";
+            width:1px;
+            height:calcRem(15rem);
+            background-color: $gray1;
+            position: absolute;
+            right:0;
+            @include vertical-center;
+        }
+
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        @include title1;
+        display: block;
+    }
+}
+
+//주문완료 결제 정보 확인
+.payment-confirm{
+    &__inner{
+        margin:0;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__title{
+        float:left;
+        @include body3;
+    }
+
+    &__text{
+        overflow: hidden;
+        text-align: right;
+        @include body3;
+    }
+
+    &__sort{
+        margin-top:calcRem(20rem);
+        padding-top:calcRem(20rem);
+        border-top:solid 1px $lightgray1;
+
+        &--title{
+            @include body2;
+            margin-bottom:calcRem(10rem);
+        }
+
+        &--current{
+            @include body3;
+            margin-bottom:calcRem(3rem);
+
+            &.unidentified{
+                color:$point1;
+            }
+        }
+
+        &--account{
+            @include body3;
+        }
+
+        &--number{
+            @include body3;
+            margin-top:calcRem(3rem);
+        }
+
+        &--date{
+            @include body3;
+            margin-top:calcRem(3rem);
+        }
+    }
+
+    &__info-text{
+        font-size:calcRem(11rem);
+        padding-left:calcRem(7rem);
+        position: relative;
+        line-height:calclH(18,11);
+        font-weight: $light;
+        letter-spacing: $defaultLetter;
+        color:$darkgray;
+        margin:calcRem(10rem) 0 0;
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$darkgray;
+        }
+    }
+}
