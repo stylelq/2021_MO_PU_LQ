@@ -746,3 +746,82 @@
         }
     }
 }
+
+//선물포장 안내
+.pop{
+    &-gift{
+        padding-top:calcRem(20rem);
+
+        &__title{
+           @include body2;
+            margin-bottom:calcRem(5rem);
+        }
+
+        &__item{
+            margin-top:calcRem(40rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+
+    &-bullet__text{
+        margin:0;
+        font-size:calcRem(11rem);
+        padding-left:calcRem(7rem);
+        position: relative;
+        line-height:calclH(18,11);
+        letter-spacing: $defaultLetter;
+        font-weight: $light;
+        color:$black1;
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$black1;
+        }
+    }
+}
+
+//메시지 카드 안내
+.pop{
+    &-message{
+        padding-top:calcRem(20rem);
+
+        &__item{
+            margin-top:calcRem(5rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+
+    &-bullet__text{
+        margin:0;
+        font-size:calcRem(11rem);
+        padding-left:calcRem(7rem);
+        position: relative;
+        line-height:calclH(18,11);
+        letter-spacing: $defaultLetter;
+        font-weight: $light;
+        color:$black1;
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$black1;
+        }
+    }
+}

@@ -22,7 +22,7 @@ lnbTitle = "주문서"
             <section class="payment-section bor--bottom">
                 <h2 class="payment-section__title">주문자 정보</h2>
                 <div class="payment-section__cont">
-                    <% include ../_include/_ordererInfo %>
+                    <% include ../_include/_ordererInfoNonMember %>
                 </div>
             </section>
             <!-- .주문자 정보 -->
@@ -30,18 +30,10 @@ lnbTitle = "주문서"
             <section class="payment-section bor--bottom">
                 <h2 class="payment-section__title">주문 상품정보</h2>
                 <div class="payment-section__cont">
-                    <% include ../_include/_orderProduct %>
+                    <% include ../_include/_orderProductNonMember %>
                 </div>
             </section>
             <!-- .주문 상품정보 -->
-            <!-- 쿠폰/할인 정보-->
-            <section class="payment-section bor--bottom">
-                <h2 class="payment-section__title">쿠폰/할인 정보</h2>
-                <div class="payment-section__cont">
-                    <% include ../_include/_couponInfo %>
-                </div>
-            </section>
-            <!-- .쿠폰/할인 정보 -->
             <!-- 결제하기-->
             <section class="payment-section">
                 <h2 class="payment-section__title">결제하기</h2>
@@ -65,24 +57,6 @@ lnbTitle = "주문서"
                                 <dl class="payment-total__inner">
                                     <dt class="payment-total__text">총 주문상품금액</dt>
                                     <dd class="payment-total__price">328,000원</dd>
-                                </dl>
-                            </li>
-                            <li class="payment-total__item">
-                                <dl class="payment-total__inner">
-                                    <dt class="payment-total__text">쿠폰할인금액</dt>
-                                    <dd class="payment-total__price">-38,710원</dd>
-                                </dl>
-                            </li>
-                            <li class="payment-total__item">
-                                <dl class="payment-total__inner">
-                                    <dt class="payment-total__text">적립금 즉시할인</dt>
-                                    <dd class="payment-total__price">0원</dd>
-                                </dl>
-                            </li>
-                            <li class="payment-total__item">
-                                <dl class="payment-total__inner">
-                                    <dt class="payment-total__text">적립금 사용</dt>
-                                    <dd class="payment-total__price">-2,000원</dd>
                                 </dl>
                             </li>
                             <li class="payment-total__item">
@@ -116,6 +90,4 @@ lnbTitle = "주문서"
 </div>
 <% include ../_include/_contentFooter %>
 <% include ../_popup/_installment %>
-<% include ../_popup/_gift %>
-<% include ../_popup/_message %>
 <% include ../_include/_footer %>

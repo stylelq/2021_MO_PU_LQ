@@ -654,3 +654,42 @@ input {
 		}
 	}
 }
+
+//핸드폰 번호 레이아웃
+.form-tel{
+	margin-right:calcRem(-5rem);
+	&:after{
+		@include block-reset;
+	}
+
+	&__list{
+		margin-right:calcRem(-5rem);
+		box-sizing: border-box;
+
+		&:after{
+			@include block-reset;
+		}
+	}
+
+	&__item{
+		width:33.333%;
+		float:left;
+		padding-right:calcRem(5rem);
+		box-sizing: border-box;
+	}
+}
+
+//이메일 폼 레이아웃
+.form-email{
+	&__field{
+		position: relative;
+		padding-right:calcRem(117rem);
+	}
+
+	&__select{
+		position: absolute;
+		right:0;
+		top:0;
+		width:calcRem(118rem);
+	}
+}
