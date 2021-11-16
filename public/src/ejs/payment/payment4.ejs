@@ -2,19 +2,35 @@
 type = "payment"
 page = "payment"
 popup = "true"
-lnbTitle = "주문서"
+lnbTitle = "주문완료"
 %>
 <% include ../_include/_header %>
 <div class="container">
     <% include ../_include/_lnb %>
     <div class="site-main">
         <section class="payment">
+            <!-- 주문완료 컨텐츠 -->
+            <section class="payment-section bor--bottom">
+                <div class="payment-complete">
+                    <h2 class="payment-complete__title"><span class="payment-complete__title--name">홍길동</span>님 <br />주문이 정상적으로 완료되었습니다.</h2>
+                    <div class="payment-complete__code">주문번호: <span class="payment-complete__code--name">M202081816</span></div>
+                    <p class="payment-complete__info-text">주문 내역은 My Page &gt; 쇼핑내역 &gt; 주문/배송조회에서 확인 가능합니다.</p>
+                </div>
+            </section>
+            <!-- .주문완료 컨텐츠 -->
             <!-- 배송지 정보 -->
             <section class="payment-section bor--bottom">
                 <h2 class="payment-section__title">배송지 정보</h2>
-                <p class="payment-section__text">등록된 배송지 정보가 없습니다. 배송지 정보를 입력하세요.</p>
                 <div class="payment-section__cont">
-                    <% include ../_include/_addressInfo %>
+                    <div class="user-address">
+                        <div class="user-address__header">
+                            <div class="user-address__meta">
+                                <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
+                            </div>
+                            <div class="user-address__tel">010-1234-5678</div>
+                            <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- .배송지 정보 -->
@@ -30,18 +46,10 @@ lnbTitle = "주문서"
             <section class="payment-section bor--bottom">
                 <h2 class="payment-section__title">주문 상품정보</h2>
                 <div class="payment-section__cont">
-                    <% include ../_include/_orderProduct %>
+                    <% include ../_include/_orderProductNonMember %>
                 </div>
             </section>
             <!-- .주문 상품정보 -->
-            <!-- 쿠폰/할인 정보-->
-            <section class="payment-section bor--bottom">
-                <h2 class="payment-section__title">쿠폰/할인 정보</h2>
-                <div class="payment-section__cont">
-                    <% include ../_include/_couponInfo %>
-                </div>
-            </section>
-            <!-- .쿠폰/할인 정보 -->
             <!-- 결제하기-->
             <section class="payment-section">
                 <h2 class="payment-section__title">결제하기</h2>
@@ -97,18 +105,11 @@ lnbTitle = "주문서"
             </section>
             <!-- .토탈결제금액 -->
             <!-- 구매동의-->
-            <section class="payment-section">
-                <h2 class="payment-section__title">구매동의</h2>
-                <div class="payment-section__cont">
-                    <div class="payment-agree">
-                        <p class="payment-agree__text">주문할 상품의 상품명, 상품가격, 배송 정보를 확인하였으며, 구매에 동의하시겠습니까? <br />(전자상거래법 제8조 제2항)</p>
-                        <div class="form__checkbox form__checkbox--big">
-                            <input class="form__checkbox--input sr-only" type="checkbox" name="paymentAgree" id="paymentAgree">
-                            <label class="form__checkbox--text js-full-use" for="paymentAgree">동의합니다.</label>
-                        </div>
-                        <button class="payment-agree__btn btn-v1 type-primary">결제하기</button>
-                    </div>
-                </div>
+            <section class="payment-section complete-section--last">
+                <ul class="complete-section__inner">
+                    <li class="complete-section__item"><a href="#;" class="complete-section__link">쇼핑 계속하기</a></li>
+                    <li class="complete-section__item"><a href="#;" class="complete-section__link">주문내역 조회</a></li>
+                </ul>
             </section>
             <!-- .구매동의 -->
         </section>
@@ -116,6 +117,4 @@ lnbTitle = "주문서"
 </div>
 <% include ../_include/_contentFooter %>
 <% include ../_popup/_installment %>
-<% include ../_popup/_gift %>
-<% include ../_popup/_message %>
 <% include ../_include/_footer %>
