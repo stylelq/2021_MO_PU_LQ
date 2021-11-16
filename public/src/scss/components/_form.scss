@@ -68,6 +68,15 @@
 				width:62.5%;
 			}
 		}
+
+		&.type-three{
+			#{$this}__item:nth-child(1){
+				width:50%;
+			}
+			#{$this}__item:nth-child(2){
+				width:50%;
+			}
+		}
 	}
 
 	&__item{

@@ -472,3 +472,121 @@
     }
 }
 
+//결제하기
+.payment-tool{
+    $this:&;
+    &__list{
+        overflow: hidden;
+        margin:calcRem(-3rem) calcRem(-3rem);
+    }
+
+    &__item{
+        width:33.333%;
+        float: left;
+        padding:calcRem(3rem) calcRem(3rem);
+        box-sizing: border-box;
+    }
+
+    &__link{
+        display: block;
+        border:solid 1px $gray2;
+        position: relative;
+        height:calcRem(36rem);
+        box-sizing: border-box;
+
+        .is-current &{
+            background-color: $darkgray;
+            border-color:$darkgray;
+        }
+
+        //naver pay
+        &.payment-tool__link--naverpay{
+            &:after{
+                content:"";
+                @include ab-center;
+                width:calcRem(46rem);
+                height:calcRem(18rem);
+                @include pageBackground('/images/common/payment_naverpay.png','no-repeat center center / contain');
+                background-size: calcRem(46rem) calcRem(18rem);
+
+                .is-current &{
+                    @include pageBackground('/images/common/payment_naverpay_active.png','no-repeat center center / contain');
+                }
+            }
+        }
+
+        //payco
+        &.payment-tool__link--payco{
+            &:after{
+                content:"";
+                @include ab-center;
+                width:calcRem(52rem);
+                height:calcRem(11rem);
+                @include pageBackground('/images/common/payment_payco.png','no-repeat center center / contain');
+                background-size: calcRem(52rem) calcRem(11rem);
+
+                .is-current &{
+                    @include pageBackground('/images/common/payment_payco_active.png','no-repeat center center / contain');
+                }
+            }
+        }
+    }
+
+    &__text{
+        @include ab-center;
+        white-space: nowrap;
+        @include body2;
+
+        .is-current &{
+            color:$whiteColor;
+        }
+    }
+
+    //컨텐츠
+    &__list{
+        &--item{
+            display: none;
+
+            &.is-current{
+                display: block;
+            }
+        }
+    }
+
+    //신용카드
+    &__cedit{
+        padding-top:calcRem(20rem);
+        line-height:0;
+        font-size:0;
+
+        &--link{
+            display: inline-block;
+            padding-left:calcRem(24rem);
+            padding-right:calcRem(14rem);
+            @include body3;
+            position: relative;
+
+            &:before{
+                content: "";
+                width:calcRem(16rem);
+                height:calcRem(16rem);
+                @include pageBackground('/images/common/icon_guide.svg','no-repeat center center / contain');
+                background-size: calcRem(16rem) calcRem(16rem);
+                position: absolute;
+                left:0;
+                @include vertical-center;
+            }
+
+            &:after{
+                content: "";
+                width:calcRem(3rem);
+                height:calcRem(6rem);
+                @include pageBackground('/images/common/ico_text_more.svg','no-repeat center center / contain');
+                background-size: calcRem(3rem) calcRem(6rem);
+                position: absolute;
+                right:0;
+                @include vertical-center;
+            }
+        }
+    }
+}

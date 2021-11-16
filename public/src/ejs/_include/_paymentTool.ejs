@@ -1,28 +1,28 @@
 <!-- 쿠폰/할인 정보 -->
 <div class="payment-tool">
     <ul class="payment-tool__list">
-        <li class="payment-tool__item">
+        <li class="payment-tool__item is-current"><!-- 현재값에 is-current -->
             <a href="#ceditCard" class="payment-tool__link js-payment-open"><span class="payment-tool__text">신용카드</span></a>
         </li>
         <li class="payment-tool__item">
             <a href="#noBankbook" class="payment-tool__link js-payment-open"><span class="payment-tool__text">무통장 입금</span></a>
         </li>
         <li class="payment-tool__item">
-            <a href="javascript:void(0)" class="payment-tool__link js-payment-open"><span class="payment-tool__text sr-only">naver pay</span></a>
+            <a href="javascript:void(0)" class="payment-tool__link payment-tool__link--naverpay js-payment-open"><span class="payment-tool__text sr-only">naver pay</span></a>
         </li>
         <li class="payment-tool__item">
-            <a href="#payco" class="payment-tool__link js-payment-open"><span class="payment-tool__text sr-only">payco</span></a>
+            <a href="#payco" class="payment-tool__link payment-tool__link--payco js-payment-open"><span class="payment-tool__text sr-only">payco</span></a>
         </li>
         <li class="payment-tool__item">
-            <a href="#realTime" class="payment-tool__link js-payment-open"><span class="payment-tool__text">실시간 계좌이체</span></a>
+            <a href="javascript:void(0)" class="payment-tool__link"><span class="payment-tool__text">실시간 계좌이체</span></a>
         </li>
     </ul>
 </div>
 <div class="payment-tool__list">
     <!-- 신용카드 -->
-    <div id="ceditCard" class="payment-tool__list--item">
+    <div id="ceditCard" class="payment-tool__list--item is-current">
         <div class="payment-tool__cedit">
-            <a href="payment-tool__cedit--link">무이자 및 부분 무이자 할부 안내</a>
+            <a href="#installmentPop" class="payment-tool__cedit--link js-popup-open">무이자 및 부분 무이자 할부 안내</a>
         </div>
     </div>
     <!-- .신용카드 -->
@@ -40,10 +40,5 @@
         </div>
     </div>
     <!-- .페이코 -->
-    <!-- 실시간 계좌이체 -->
-    <div id="realTime" class="payment-tool__list--item">
-
-    </div>
-    <!-- .실시간 계좌이체 -->
 </div>
 <!-- .쿠폰/할인 정보 -->

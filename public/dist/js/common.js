@@ -354,7 +354,17 @@ jQuery(function () {
     }
 
     $(document).on('click', '.js-accordion', accordionMore);
-  });
+  }); //결제탭
+
+  function paymentTab() {
+    var el = $(this).attr('href').replace("#", "");
+    $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+    $('.payment-tool__list--item').removeClass('is-current');
+    $('#' + el).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.js-payment-open', paymentTab);
 });
 /*
 //Header Scroll Bg
