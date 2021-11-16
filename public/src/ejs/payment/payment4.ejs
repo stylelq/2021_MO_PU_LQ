@@ -52,9 +52,23 @@ lnbTitle = "주문완료"
             <!-- .주문 상품정보 -->
             <!-- 결제하기-->
             <section class="payment-section">
-                <h2 class="payment-section__title">결제하기</h2>
+                <h2 class="payment-section__title">결제 정보 확인</h2>
                 <div class="payment-section__cont">
-                    <% include ../_include/_paymentTool %>
+                    <div class="payment-confirm">
+                        <dl class="payment-confirm__inner">
+                            <dt class="payment-confirm__title">적립 예정 적립금</dt>
+                            <dd class="payment-confirm__text">460원</dd>
+                        </dl>
+                        <div class="payment-confirm__sort">
+                            <div class="payment-confirm__sort--title">무통장 입금</div>
+                            <div class="payment-confirm__sort--current unidentified">입금 미확인</div>
+                            <!-- 미확인시 unidentified 클래스 추가 -->
+                            <div class="payment-confirm__sort--account">입금계좌 : <span class="payment-confirm__sort--account-text">[케이뱅크]</span></div>
+                            <div class="payment-confirm__sort--number">7012344552111333</div>
+                            <div class="payment-confirm__sort--date">입금 기한일 : <span class="payment-confirm__sort--date-text">2021.10.06</span></div>
+                        </div>
+                        <p class="payment-confirm__info-text">입금기한일까지 입금하지 않으시면 주문이 자동취소됩니다.</p>
+                    </div>
                 </div>
             </section>
             <!-- .결제하기 -->
