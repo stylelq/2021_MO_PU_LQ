@@ -1,0 +1,65 @@
+<!-- 쿠폰/할인 정보 -->
+<div class="coupon-info">
+    <div class="coupon-info__inner">
+        <!-- 전체 계산 -->
+        <div class="coupon-info__list">
+            <dl class="coupon-info__list--inner">
+                <dt class="coupon-info__list--total">전체 사용 가능한 쿠폰 : <span class="coupon-info__list--count">2</span>장</dt>
+                <dd class="coupon-info__list--cont">
+                    <ul class="coupon-info__price">
+                        <li class="coupon-info__price--item">
+                            <span class="coupon-info__price--title">상품쿠폰 할인 금액</span>
+                            <span class="coupon-info__price--text">-38,710원</span>
+                        </li>
+                        <li class="coupon-info__price--item">
+                            <span class="coupon-info__price--title">더블쿠폰 할인 금액</span>
+                            <span class="coupon-info__price--text">-12,000원</span>
+                        </li>
+                        <li class="coupon-info__price--item coupon-info__price--item-total">
+                            <span class="coupon-info__price--title">총 쿠폰 할인 금액</span>
+                            <span class="coupon-info__price--text">-12,000원</span>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <p class="coupon-info__text-info">상품쿠폰 외 1장의 쿠폰이 더 있습니다.</p>
+            <div class="coupon-info__btn">
+                <a href="javascript:void(0);" class="btn--border">쿠폰 조회/적용</a>
+            </div>
+        </div>
+        <!-- 쿠폰 계산 -->
+    </div>
+    <div class="coupon-info__inner">
+        <!-- 가능 적립금 -->
+        <div class="coupon-info__accumulate">
+            <div class="coupon-info__accumulate--title">
+                <div class="coupon-info__accumulate--text">즉시할인 가능한 적립금 : <span class="coupon-info__accumulate--price">2,850원</span></div>
+                <div class="form__checkbox form__checkbox--big">
+                    <input class="form__checkbox--input sr-only" type="checkbox" name="accumulate" id="accumulate">
+                    <label class="form__checkbox--text" for="accumulate">사용</label>
+                </div>
+            </div>
+            <p class="coupon-info__text-info">구매확정 시, 적립금이 지급되지 않습니다.</p>
+        </div>
+        <!-- .가능 적립금 -->
+    </div>
+    <div class="coupon-info__inner">
+        <!-- 적립금 사용 -->
+        <div class="coupon-info__use">
+            <div class="coupon-info__use--title">적립금 사용</div>
+            <div class="coupon-info__use--cont">
+                <div class="coupon-info__use--inner">
+                    <input type="number" class="form__input--text js-full-use-text" value="0">
+                    <div class="form__checkbox form__checkbox--big">
+                        <input class="form__checkbox--input sr-only" type="checkbox" name="use" id="useFull">
+                        <label class="form__checkbox--text js-full-use" for="useFull">전액</label>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="coupon-info__use--btn">적용</a>
+                <div class="coupon-info__use--total">사용가능 적립금 : <span class="coupon-info__use--total-price">1,234,567</span>원</div>
+            </div>
+        </div>
+        <!-- .적립금 사용 -->
+    </div>
+</div>
+<!-- 쿠폰/할인 정보 -->

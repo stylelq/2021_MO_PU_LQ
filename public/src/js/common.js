@@ -378,6 +378,43 @@ jQuery(function(){
             lastScrollTop = thisSt;
         }
     });
+
+    //메세지 카드 체크시 노출
+    function messageCheck() {
+        var messageCheckInput = $(this).prev('input[type="checkbox"]');
+        var activeClass = $(this).closest('.order-product__item').find('.order-product__message');
+        messageCheckInput.change(function(){
+            if(messageCheckInput.is( ":checked") == true) {
+                activeClass.addClass('is-active');
+            } else {
+                activeClass.removeClass('is-active');
+            }
+        });
+    }
+    $(document).on('click', '.js-open-message', messageCheck);
+
+    //적립금 전액 체크
+    function useTotalCheck() {
+        var useTotalCheckInput = $(this).prev('input[type="checkbox"]');
+        var totalPrice = $('.coupon-info__use--total-price').text().replace(/,/g, '');
+        useTotalCheckInput.change(function(){
+            if(useTotalCheckInput.is( ":checked") == true) {
+                $('.js-full-use-text').attr('value', totalPrice);
+            } else {
+                $('.js-full-use-text').attr('value', '0');
+            }
+        });
+    }
+    $(document).on('click', '.js-full-use', useTotalCheck);
+
+    function textareaKeyup() {
+        if ($(this).val().length > 50) {
+            alert("글자수는 50자로 이내로 제한됩니다.");
+            $(this).val($(this).val().substring(0, 50));
+        }
+    };
+
+    $(document).on('keyup', '.js-max-keyup', textareaKeyup);
 });
 
 //입고알림 버튼클릭시

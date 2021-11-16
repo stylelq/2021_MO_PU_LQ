@@ -489,6 +489,16 @@ input {
 		position: relative;
 		padding-left:calcRem(20rem);
 
+		//red-big size
+		#{$this}--big-red &{
+			padding-left:calcRem(25rem);
+		}
+
+		//big size
+		#{$this}--big &{
+			padding-left:calcRem(25rem);
+		}
+
 		&:after{
 			content:"";
 			width:calcRem(12rem);
@@ -498,19 +508,41 @@ input {
 			position: absolute;
 			top:calcRem(2rem);
 			left:0;
+
+			//red-big size
+			#{$this}--big-red &{
+				width:calcRem(18rem);
+				height:calcRem(18rem);
+				border-color:$point1;
+				top:calcRem(0rem);
+			}
+
+			//big size
+			#{$this}--big &{
+				width:calcRem(18rem);
+				height:calcRem(18rem);
+				top:calcRem(0rem);
+			}
 		}
 	}
 
 	&--input{
 		&:checked + #{$this}--text{
 			&:after{
-				@include background('/images/common/check.svg','no-repeat center center / #{calcRem(8rem)} #{calcRem(8rem)}')
+				@include background('/images/common/check.svg','no-repeat center center / #{calcRem(8rem)} #{calcRem(8rem)}');
+
+				//red-big size
+				#{$this}--big-red &{
+					@include background('/images/common/ico_red-checked.svg','no-repeat center center / contain');
+					background-size:calcRem(8rem) calcRem(5rem);
+				}
+
+				//big size
+				#{$this}--big &{
+					background-size:calcRem(8rem) calcRem(5rem);
+				}
 			}
 		}
-	}
-
-	.form__checkbox--big{
-		display: none;
 	}
 }
 

@@ -152,7 +152,7 @@
     &__item{
         padding-top:calcRem(20rem);
         margin-top:calcRem(20rem);
-        border-top:solid 1px $gray2;
+        border-top:solid 1px $lightgray1;
 
         &:first-child{
             padding-top:0;
@@ -248,4 +248,227 @@
             vertical-align: middle;
         }
     }
+
+    //메세지 카드
+    &__meta{
+        margin-top:calcRem(30rem);
+        line-height:0;
+
+        &--list{
+            margin:0 calcRem(-15rem);
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &--item{
+            float:left;
+            margin:0 calcRem(15rem);
+            position: relative;
+            padding-right:calcRem(24rem);
+        }
+
+        &--btn{
+            width:calcRem(16rem);
+            height:calcRem(16rem);
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+            background-size:calcRem(16rem) calcRem(16rem) ;
+        }
+    }
+
+    &__message{
+        margin-top:calcRem(15rem);
+        display: none;
+
+        &.is-active{
+            display: block;
+        }
+
+        textarea{
+            height:calcRem(57rem);
+        }
+    }
 }
+
+//쿠폰/할인 정보
+.coupon-info{
+    $this:&;
+    padding:0;
+
+    &__inner{
+        padding:calcRem(20rem) 0;
+        border-top:solid 1px $lightgray1;
+
+        &:first-child{
+            border-top:none;
+            padding-top:0;
+        }
+
+        &:last-child{
+            padding-bottom:0;
+        }
+    }
+
+    &__text-info{
+        font-size:calcRem(11rem);
+        padding-left:calcRem(7rem);
+        position: relative;
+        line-height:calclH(18,11);
+        letter-spacing: $defaultLetter;
+        font-weight: $light;
+        color:$darkgray;
+        margin:calcRem(10rem) 0 0;
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$darkgray;
+        }
+    }
+
+    //상단 전체 쿠폰 정보
+    &__list{
+        &--inner{
+            margin:0;
+        }
+
+        &--total{
+            margin-bottom:calcRem(10rem);
+            @include body2;
+        }
+
+        &--cont{
+            margin:0;
+        }
+    }
+
+    &__price{
+
+        &--item{
+            margin-top:calcRem(8rem);
+
+            &:after{
+                @include block-reset;
+            }
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &--title{
+            float:left;
+            display: block;
+            @include body3;
+
+            #{$this}__price--item-total &{
+                font-weight: $medium;
+            }
+        }
+
+        &--text{
+            overflow: hidden;
+            display: block;
+            text-align: right;
+            @include body3;
+
+            #{$this}__price--item-total &{
+                font-weight: $medium;
+                color:$point1;
+            }
+        }
+    }
+
+    &__btn{
+        margin-top:calcRem(20rem);
+
+        .btn--border{
+            font-weight: $medium;
+        }
+    }
+
+    //적립금 사용
+    &__accumulate{
+        &--title{
+            position: relative;
+
+            .form__checkbox{
+                position: absolute;
+                right:0;
+                @include vertical-center;
+
+                &--text{
+                    font-weight: $medium;
+                }
+            }
+        }
+
+        &--text{
+            margin-bottom:calcRem(10rem);
+            @include body2;
+        }
+    }
+
+    //적립금 사용
+    &__use{
+        &:after{
+            @include block-reset;
+        }
+
+        &--title{
+            float:left;
+            margin-right:calcRem(10rem);
+            @include body2;
+            padding-top:calcRem(8rem);
+        }
+        
+        &--cont{
+            overflow: hidden;
+            padding-right:calcRem(80rem);
+            position: relative;
+        }
+
+        &--btn{
+            @include body2;
+            color:$whiteColor;
+            padding:calcRem(8rem) calcRem(5rem);
+            height:calcRem(36rem);
+            text-align: center;
+            width:calcRem(53rem);
+            background-color: $darkgray;
+            position: absolute;
+            right:0;
+            top:0;
+            box-sizing: border-box;
+        }
+
+        &--inner{
+            padding-right:calcRem(56rem);
+            position: relative;
+
+            .form__checkbox{
+                position: absolute;
+                right:0;
+                @include vertical-center;
+            }
+        }
+
+        &--total{
+            margin-top:calcRem(8rem);
+            @include body3;
+
+            &--price{
+                font-weight: $regular;
+            }
+        }
+    }
+}
+

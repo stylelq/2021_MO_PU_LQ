@@ -25,6 +25,7 @@
 		@include background('/images/common/ico-card-fix.png','no-repeat center center / contain');
 		background-size: calcRem(36rem) calcRem(30rem);
 		position: relative;
+		display: block;
 
 		&--count{
 			position: absolute;
