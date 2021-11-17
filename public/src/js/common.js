@@ -438,25 +438,6 @@ jQuery(function(){
     };
 
     $(document).on('change', '.js-custom-message', customOption);
-
-
-    //애니메이션
-    /**
-     * ScrollMagic: Opacity
-     */
-    var controller = new ScrollMagic.Controller();
-
-    if($('.a-Opacity').length > 0){
-        $('.a-Opacity').each(function(){
-            var Opacity = new ScrollMagic.Scene({
-                triggerElement: this.children[0],
-                triggerHook:0.9
-            })
-                .reverse(false)
-                .setClassToggle(this, 'is-Opacity')
-                .addTo(controller);
-        });
-    }
 });
 
 //입고알림 버튼클릭시
