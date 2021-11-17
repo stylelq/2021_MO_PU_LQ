@@ -72,11 +72,18 @@ jQuery(function () {
 
   function shippingTab() {
     var idx = $(this).parent('li').index();
+    var shippingIdx = $('.shipping-tab__item:nth-child(4)');
     $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
     $('.js-pop-tab-cont').eq(idx).addClass('is-current').siblings('.js-pop-tab-cont').removeClass('is-current');
     $('html, body').animate({
       scrollTop: $('.popup__body').offset().top
     }, 340);
+
+    if (shippingIdx.hasClass('is-current')) {
+      $('#shippingPop .popup-confirm__link').text('확인');
+    } else {
+      $('#shippingPop .popup-confirm__link').text('선택 주소 사용');
+    }
   }
 
   $(document).on('click', '.js-pop-tab-link', shippingTab);

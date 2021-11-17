@@ -1097,3 +1097,106 @@
         font-weight: $regular;
     }
 }
+
+//주소검색(1)
+.address-search{
+    &__section{
+        display: none;
+
+        &.is-current{
+            display: block;
+        }
+    }
+
+    &__text{
+        margin:calcRem(10rem) 0 0;
+        @include body3;
+    }
+
+    &__list{
+        margin-top:calcRem(20rem);
+    }
+
+    &__item{
+        margin-top:calcRem(20rem);
+        font-size:calcRem(11rem);
+        line-height:calclH(18,11);
+        letter-spacing: $defaultLetter;
+        font-weight:$light;
+        position: relative;
+        padding-left:calcRem(7rem);
+
+        &:before{
+            content:"-";
+            position: absolute;
+            top:calcRem(-1rem);
+            left:0;
+            color:$black1;
+        }
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
+
+//주소 검색 리스트
+.address-list{
+
+    &__item{
+        border-bottom:solid 1px $gray1;
+    }
+}
+
+.zipcode-address{
+    display: block;
+    padding:calcRem(20rem) 0;
+
+    &:after{
+        @include block-reset;
+    }
+
+    &__zip{
+        float:left;
+        margin-right:calcRem(5rem);
+        min-width:calcRem(55rem);
+        box-sizing: border-box;
+        @include body3;
+    }
+    
+    &__cont{
+        overflow: hidden;
+
+        &--zip{
+            display: block;
+            @include body3;
+        }
+
+        &--address{
+            display: block;
+            @include body3;
+            color:$grayTextColor;
+            margin-top:calcRem(2rem);
+        }
+    }
+
+    //주소검색(3)
+    &__form{
+        margin-top:calcRem(20rem);
+    }
+}
+
+//주소검색(3)
+.address-search{
+    &__btn{
+        margin-top:calcRem(20rem);
+
+        &--item{
+            margin-top:calcRem(10rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+}
