@@ -447,6 +447,10 @@ input {
 	&:focus{
 		border-color:$point1;
 	}
+
+	&.fix-value{
+		color:$black1;
+	}
 }
 
 //기본 폼 인풋박스
@@ -467,6 +471,7 @@ input {
 		&:read-only{
 			background-color: $lightgray3;
 			pointer-events: none;
+			color:$gray1;
 		}
 	}
 

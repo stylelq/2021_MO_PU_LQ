@@ -438,6 +438,7 @@ jQuery(function(){
     };
 
     $(document).on('change', '.js-custom-message', customOption);
+
 });
 
 //입고알림 버튼클릭시

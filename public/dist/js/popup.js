@@ -68,5 +68,16 @@ jQuery(function () {
     }
   }
 
-  $(document).on('click', '.js-popup-close', closePopup);
+  $(document).on('click', '.js-popup-close', closePopup); //배송지 정보 탭
+
+  function shippingTab() {
+    var idx = $(this).parent('li').index();
+    $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+    $('.js-pop-tab-cont').eq(idx).addClass('is-current').siblings('.js-pop-tab-cont').removeClass('is-current');
+    $('html, body').animate({
+      scrollTop: $('.popup__body').offset().top
+    }, 340);
+  }
+
+  $(document).on('click', '.js-pop-tab-link', shippingTab);
 });
