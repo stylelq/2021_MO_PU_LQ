@@ -54,6 +54,11 @@
         .type-write &{
             height:calc(100vh - #{calcRem(100rem)});
         }
+
+        //배송정보 팝업
+        .type-tab &{
+            height:calc(100vh - #{calcRem(100rem)});
+        }
     }
 }
 
@@ -825,3 +830,156 @@
         }
     }
 }
+
+//쿠폰 조회/적용
+.popup{
+    &-coupon{
+        &__header{
+            margin:0 calcRem(-20rem);
+            padding:0 calcRem(30rem) calcRem(20rem);
+            border-bottom: solid 1px $gray1;
+        }
+
+        &__item{
+            margin-top: calcRem(8rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__inner{
+            margin:0;
+
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__title{
+            float:left;
+            @include title2;
+        }
+
+        &__text{
+            overflow: hidden;
+            text-align: right;
+            @include title2;
+            color:$point1;
+        }
+
+        //상품 리스트
+        &__product--item{
+            padding:calcRem(25rem) calcRem(20rem) 0;
+            margin-top:calcRem(25rem);
+            border-top:solid 1px $gray1;
+            margin-left:calcRem(-20rem);
+            margin-right:calcRem(-20rem);
+
+            &:first-child{
+                padding-top:0;
+                margin-top:0;
+                border-top:none;
+            }
+        }
+    }
+}
+
+//상품 목록
+.coupon-product{
+    display: table;
+    table-layout: fixed;
+    width:100%;
+
+    &__thumb{
+        display: table-cell;
+        vertical-align: middle;
+        width:calcRem(120rem);
+    }
+
+    &__title{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left:calcRem(15rem);
+        @include body2;
+        font-weight: $regular;
+    }
+
+    //상품 옵션
+    &__list{
+        padding-top:calcRem(25rem);
+        margin-top:calcRem(25rem);
+        border-top:solid 1px $lightgray1;
+    }
+
+    &__item{
+        margin-top:calcRem(10rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+
+        &--title{
+            @include body2;
+            margin-bottom:calcRem(10rem);
+        }
+
+        &--cont{
+            margin:0;
+        }
+    }
+
+    &__price{
+        margin-top:calcRem(10rem);
+        text-align: right;
+        font-size:0;
+        line-height:0;
+
+        &--title{
+            @include body3;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right:calcRem(5rem);
+        }
+
+        &--text{
+            @include body3;
+            display: inline-block;
+            vertical-align: middle;
+            color:$point1;
+            min-width:calcRem(85rem);
+        }
+    }
+}
+
+//배송 정보 레이아웃
+.popup-confirm{
+    &__footer{
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: $childZindex;
+        background: $whiteColor;
+    }
+
+    &__list{
+        overflow: hidden;
+    }
+
+    &__item{
+        width:100%;
+        position: relative;
+    }
+
+    &__link{
+        display:block;
+        @include title1;
+        color:$whiteColor;
+        text-align: center;
+        padding:calcRem(9rem) calcRem(15rem);
+        border:solid 1px $point1;
+        background-color: $point1;
+    }
+}
+

@@ -439,7 +439,7 @@ jQuery(function () {
   }
 
   ;
-  $(document).on('keyup', '.js-max-keyup', textareaKeyup);
+  $(document).off('keyup').on('keyup', '.js-max-keyup', textareaKeyup);
 
   function customOption() {
     var customOption = $(this).next('.js-select-custom');

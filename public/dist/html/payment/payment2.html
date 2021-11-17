@@ -107,6 +107,9 @@
 						<li class="gnb-body__item">
 							<a href="" class="gnb-body__link" data-page="none">membership</a>
 						</li>
+						<li class="gnb-body__item">
+							<a href="" class="gnb-body__link" data-page="page-shop">Project</a>
+						</li>
 					</ul>
 				</div>            
 			</div>
@@ -511,7 +514,7 @@
                     <!-- 배송지 정보 -->
 <div class="user-address">
     <div class="user-address__header">
-        <a href="#;" class="user-address__link">
+        <a href="#shippingPop" class="user-address__link js-popup-open">
             <div class="user-address__meta">
                 <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
             </div>
@@ -707,7 +710,7 @@
             </dl>
             <p class="coupon-info__text-info">상품쿠폰 외 1장의 쿠폰이 더 있습니다.</p>
             <div class="coupon-info__btn">
-                <a href="javascript:void(0);" class="btn--border">쿠폰 조회/적용</a>
+                <a href="#couponPop" class="btn--border js-popup-open">쿠폰 조회/적용</a>
             </div>
         </div>
         <!-- 쿠폰 계산 -->
@@ -1407,6 +1410,227 @@
 </section>
 <!-- message popup -->
 
+<!-- qna write popup -->
+<section id="couponPop" class="popup type-write">
+    <header class="popup__header">
+        <h3 class="popup__tit">쿠폰 조회/적용</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <div class="wrap">
+            <!-- 쿠폰 컨텐츠 -->
+            <div class="popup-coupon">
+                <div class="popup-coupon__header">
+                    <ul class="popup-coupon__list">
+                        <li class="popup-coupon__item">
+                            <dl class="popup-coupon__inner">
+                                <dt class="popup-coupon__title">쿠폰(적용 가능한 쿠폰 : 2장)</dt>
+                                <dd class="popup-coupon__text">0원</dd>
+                            </dl>
+                        </li>
+                        <li class="popup-coupon__item">
+                            <dl class="popup-coupon__inner">
+                                <dt class="popup-coupon__title">상품쿠폰 총 할인금액</dt>
+                                <dd class="popup-coupon__text">56,800원</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 상품 -->
+                <div class="popup-coupon__product">
+                    <!-- item -->
+                    <div class="popup-coupon__product--item">
+                        <div class="coupon-product">
+                            <div class="coupon-product__thumb"><img class="coupon-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></div>
+                            <div class="coupon-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                        </div>
+                        <div class="coupon-product__list">
+                            <ul class="coupon-product__inner">
+                                <li class="coupon-product__item">
+                                    <dl class="coupon-product__item--inner">
+                                        <dt class="coupon-product__item--title">상품쿠폰</dt>
+                                        <dd class="coupon-product__item--cont">
+                                            <select name="couponSelect1-1" id="couponSelect1-1" class="form__select js-placeholder" title="선택하세요">
+                                                <option value="1" selected="">선택하세요</option>
+                                                <option value="2">직영몰 상품할인 10% 쿠폰</option>
+                                            </select>
+                                            <div class="coupon-product__price">
+                                                <span class="coupon-product__price--title">할인금액</span>
+                                                <span class="coupon-product__price--text">56,800원</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="coupon-product__item">
+                                    <dl class="coupon-product__item--inner">
+                                        <dt class="coupon-product__item--title">더블쿠폰</dt>
+                                        <dd class="coupon-product__item--cont">
+                                            <select name="couponSelect2-1" id="couponSelect2-1" class="form__select js-placeholder" title="선택하세요">
+                                                <option value="1" selected="">선택하세요</option>
+                                                <option value="2">등급혜택 더블할인 5% 쿠폰</option>
+                                            </select>
+                                            <div class="coupon-product__price">
+                                                <span class="coupon-product__price--title">할인금액</span>
+                                                <span class="coupon-product__price--text">0</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="coupon-product__item">
+                                    <dl class="coupon-product__item--inner">
+                                        <dt class="coupon-product__item--title">추가쿠폰</dt>
+                                        <dd class="coupon-product__item--cont">
+                                            <select name="couponSelect3-1" id="couponSelect3-1" class="form__select js-placeholder" title="선택하세요" disabled>
+                                                <option value="1">선택하세요</option>
+                                                <option value="2" selected="">쿠폰 없음</option>
+                                            </select>
+                                            <div class="coupon-product__price">
+                                                <span class="coupon-product__price--title">할인금액</span>
+                                                <span class="coupon-product__price--text">0</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .item -->
+                    <!-- item -->
+                    <div class="popup-coupon__product--item">
+                        <div class="coupon-product">
+                            <div class="coupon-product__thumb"><img class="coupon-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></div>
+                            <div class="coupon-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                        </div>
+                        <div class="coupon-product__list">
+                            <ul class="coupon-product__inner">
+                                <li class="coupon-product__item">
+                                    <dl class="coupon-product__item--inner">
+                                        <dt class="coupon-product__item--title">상품쿠폰</dt>
+                                        <dd class="coupon-product__item--cont">
+                                            <select name="couponSelect1-2" id="couponSelect1-2" class="form__select js-placeholder" title="선택하세요">
+                                                <option value="1" selected="">선택하세요</option>
+                                                <option value="2">직영몰 상품할인 10% 쿠폰</option>
+                                            </select>
+                                            <div class="coupon-product__price">
+                                                <span class="coupon-product__price--title">할인금액</span>
+                                                <span class="coupon-product__price--text">56,800원</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="coupon-product__item">
+                                    <dl class="coupon-product__item--inner">
+                                        <dt class="coupon-product__item--title">더블쿠폰</dt>
+                                        <dd class="coupon-product__item--cont">
+                                            <select name="couponSelect2-2" id="couponSelect2-2" class="form__select js-placeholder" title="선택하세요">
+                                                <option value="1" selected="">선택하세요</option>
+                                                <option value="2">등급혜택 더블할인 5% 쿠폰</option>
+                                            </select>
+                                            <div class="coupon-product__price">
+                                                <span class="coupon-product__price--title">할인금액</span>
+                                                <span class="coupon-product__price--text">0</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="coupon-product__item">
+                                    <dl class="coupon-product__item--inner">
+                                        <dt class="coupon-product__item--title">추가쿠폰</dt>
+                                        <dd class="coupon-product__item--cont">
+                                            <select name="couponSelect3-2" id="couponSelect3-2" class="form__select js-placeholder" title="선택하세요" disabled>
+                                                <option value="1">선택하세요</option>
+                                                <option value="2" selected="">쿠폰 없음</option>
+                                            </select>
+                                            <div class="coupon-product__price">
+                                                <span class="coupon-product__price--title">할인금액</span>
+                                                <span class="coupon-product__price--text">0</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .상품 -->
+            </div>
+            <!-- .쿠폰 컨텐츠 -->
+        </div>
+        <!-- wirte Footer -->
+        <div class="popup-write__footer">
+            <ul class="popup-write__list">
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">초기화</a></li>
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">적용하기</a></li>
+            </ul>
+        </div>
+        <!-- .wirte Footer -->
+    </section>
+</section>
+<!-- .qna write popup -->
+<!-- shipping popup -->
+<section id="shippingPop" class="popup type-tab is-active">
+    <header class="popup__header">
+        <h3 class="popup__tit">배송지 정보</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <!-- tab -->
+    <!-- detail tab -->
+    <div class="shipping-tab">
+        <ul class="shipping-tab__fix">
+            <li class="shipping-tab__item is-current">
+                <a href="#;" class="shipping-tab__link js-tab-link">내주소록</a>
+            </li>
+            <li class="shipping-tab__item">
+                <a href="#;" class="shipping-tab__link js-tab-link">새로운 주소</a>
+            </li>
+            <li class="shipping-tab__item">
+                <a href="#;" class="shipping-tab__link js-tab-link">최근 배송지</a>
+            </li>
+            <li class="shipping-tab__item">
+                <a href="#;" class="shipping-tab__link js-tab-link">주문자 정보</a>
+            </li>
+        </ul>
+    </div>
+    <!-- detail tab -->
+    <!-- detail Tab content -->
+    <div class="shipping-tab__cont">
+        <!-- 내주소록 -->
+        <div class="shipping-tab__info is-current">
+        </div>
+        <!-- .내주소록 -->
+        <!-- 새로운 주소 -->
+        <div class="shipping-tab__info">
+        </div>
+        <!-- .새로운 주소 -->
+        <!-- 최근 배송지 -->
+        <div class="shipping-tab__info">
+        </div>
+        <!-- .최근 배송지 -->
+        <!-- 주문자 정보 -->
+        <div class="shipping-tab__info">
+        </div>
+        <!-- .주문자 정보 -->
+    </div>
+    <!-- .tab -->
+    <section class="popup__body">
+        <div class="wrap">
+            <!-- 쿠폰 컨텐츠 -->
+            <div class="popup-shipping">
+
+            </div>
+            <!-- .쿠폰 컨텐츠 -->
+        </div>
+        <!-- confirm Footer -->
+        <div class="popup-confirm__footer">
+            <ul class="popup-confirm__list">
+                <li class="popup-confirm__item"><a class="popup-confirm__link" href="javascript:void(0);">선택 주소 사용</a></li>
+            </ul>
+        </div>
+        <!-- .confirm Footer -->
+    </section>
+</section>
+<!-- .shipping popup -->
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	
