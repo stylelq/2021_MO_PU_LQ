@@ -456,7 +456,7 @@ input {
 		display: block;
 		width:100%;
 		@include body2;
-		padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
+		padding:calcRem(7rem) calcRem(10rem);
 		height:calcRem(36rem);
 		@include placeholder-color($gray2);
 
@@ -606,6 +606,14 @@ input {
 		&.is-check{
 			color:$black1;
 		}
+	}
+
+	//disabled
+	&:disabled{
+		opacity: 1;
+		background-color: $gray2;
+		border-color:$gray2;
+		color:$disabledColor;
 	}
 }
 

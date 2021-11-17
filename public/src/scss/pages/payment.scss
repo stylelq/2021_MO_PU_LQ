@@ -920,6 +920,7 @@
 .complete-section{
     &--last{
         padding-top:calcRem(20rem);
+        text-align: center;
     }
 
     &__inner{
@@ -993,6 +994,7 @@
 
         &--current{
             @include body3;
+            font-weight: $regular;
             margin-bottom:calcRem(3rem);
 
             &.unidentified{
