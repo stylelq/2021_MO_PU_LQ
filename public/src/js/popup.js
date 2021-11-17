@@ -2,7 +2,10 @@ jQuery(function(){
     //팝업열기(공통)
     function openPopup() {
         var el = $(this).attr('href').replace("#","");
-        $('.popup').removeClass('is-active');
+        if($('.popup.is-active').length <= 1) {
+        }else{
+            $('.popup').removeClass('is-active');
+        }
         $('#' + el).addClass('is-active');
         $('html').addClass('is-hidden');
         return false;
@@ -56,8 +59,12 @@ jQuery(function(){
 
     //팝업닫기(공통)
     function closePopup() {
-        $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-        $('html').removeClass('is-hidden');
+        if($('.popup.is-active').length <= 1) {
+            $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+            $('html').removeClass('is-hidden');
+        }else{
+            $(this).closest('.popup').removeClass('is-active');
+        }
 
         if($(this).hasClass('slide-popup__close')){
             resetPanZoom();
