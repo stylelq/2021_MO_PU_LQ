@@ -285,6 +285,19 @@ jQuery(function(){
                 },
             });
         }
+        //프로젝트 슬라이드
+        if($('.project-slider').length > 0){
+            var projectSlide = new Swiper('.project-slider__container', {
+                observer: true,
+                observeParents: true,
+                watchOverflow: true,
+                slidesPerView: 1,
+                loop: true,
+                pagination: {
+                    el: ".project-pagination",
+                },
+            });
+        }
 
         //리뷰 평가체크(현재는 사용하지않음. 혹시필요할시 사용하세요)
         function checkStar() {

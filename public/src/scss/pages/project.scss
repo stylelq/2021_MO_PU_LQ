@@ -1,0 +1,603 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+
+//font
+@font-face {
+    font-family: 'Gotham';
+    src: url(../../fonts/gotham/GothamBlack.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url(../../fonts/gotham/GothamMedium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+//animation keyframe
+@-webkit-keyframes x-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes x-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes x-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes x-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes x-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes x-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes y-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes y-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes y-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes y-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes y-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes y-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+// project - about: 섹션
+.site-project{
+    margin-bottom: calcVw(-44vw);
+}
+
+.find{
+
+    //기본값
+    &-section {
+        $this: &;
+
+        & + .find-section {
+            border-top: 1px solid #fff;
+        }
+
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0;
+            letter-spacing: 0;
+        }
+
+        &__item {
+            overflow: hidden;
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        &__item:nth-child(odd) {
+            padding-right: 1.35%;
+        }
+
+        &__link {
+            display: block;
+        }
+    }
+
+    //섹션0
+    &-section0 {
+        padding: calcVw(40vw) calcVw(40vw);
+        background: url(https://mcdn.louisclub.com/static/mo/img/find/top_bg.jpg) no-repeat center center/cover;
+    }
+
+    //섹션1
+    &-section1 {
+        padding-top: 16%;
+        padding-bottom: 30%;
+        background: url(https://mcdn.louisclub.com/static/mo/img/find/section_bg1.jpg) no-repeat center center/cover;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        line-height: 0;
+
+        &__txt {
+            margin-top: 22%;
+        }
+
+        &__top {
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section2_top_bg.jpg") no-repeat center center/cover;
+        }
+    }
+
+
+    //섹션2
+    &-section2 {
+        line-height: 0;
+
+        &__video {
+            position: relative;
+            line-height: 0;
+        }
+
+        &__video video {
+            width: 100%;
+        }
+
+        &__sound {
+            display: block;
+            position: absolute;
+            right: calcVw(20vw);
+            bottom: calcVw(15vw);
+            overflow: hidden;
+            width: calcVw(30vw);
+            height: calcVw(30vw);
+            background: url(https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png) no-repeat center center/contain;
+            text-indent: -9999px;
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            user-select: auto;
+        }
+
+        &__top {
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section2_top_bg.jpg") no-repeat center center/cover;
+        }
+
+        &__bottom {
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section2_bg.jpg") no-repeat center center/cover;
+        }
+    }
+
+    //섹션3
+    &-section3 {
+        padding: 11% 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    //섹션4
+    &-section4 {
+        &__top {
+            position: relative;
+            background: url(https://mcdn.louisclub.com/static/mo/img/find/section4_bg1.jpg) no-repeat center center/cover;
+        }
+
+        &__top:after {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 13%;
+            width: 0;
+            height: 100%;
+            border-left: 1px solid #fff;
+            content: '';
+        }
+    }
+
+    //섹션5
+    &-section5 {
+        position: relative;
+        line-height: 0;
+
+        &__top {
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section5_bg.jpg") no-repeat center center/cover;
+        }
+    }
+
+    //섹션6
+    &-section6 {
+        border-top: none !important;
+        padding: 25% 0;
+        background: url(https://mcdn.louisclub.com/static/mo/img/find/section6_bg.jpg) no-repeat center bottom/cover;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &__txt {
+            margin-top: 10%;
+        }
+    }
+}
+
+// project - about:첫번째 섹션 - 애니메이션 영역
+.poster {
+    width: 100%;
+    vertical-align: middle;
+    &__content{
+        color: $whiteColor;
+        position: relative;
+        overflow: hidden;
+        background-color: #9367db;
+        &:after{
+            content:"";
+            display: block;
+            padding-bottom: calcVw(580vw);
+        }
+    }
+    &__wrap{
+        position: absolute;
+        box-sizing: border-box;
+        padding-right: calcVw(160vw);
+        padding-bottom: calcVw(100vw);
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(35deg);
+        transform-origin: center center;
+    }
+
+    &__meta{
+        font-size: calcVw(4vw);
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: left;
+        letter-spacing: .05em;
+        float: right;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__box{
+        float: left;
+        padding-right: calcVw(80vw);
+        vertical-align: top;
+        box-sizing: border-box;
+        &:last-child{
+            padding-right: calcVw(26vw);
+        }
+    }
+
+    &__title{
+        white-space: nowrap;
+        padding-right: calcVw(36vw);
+    }
+
+    &__name{
+        margin: 0;
+        font-size: calcVw(70vw);
+        font-family: 'Gotham';
+        line-height: 1.4;
+        font-weight: 600;
+    }
+
+    // 애니메이션 바
+    &__graphic{
+        div{
+            position: absolute;
+            background: #fff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        &--x{
+            z-index: 1;
+            margin-left: calcVw(35vw);
+            margin-top: calcVw(10vw);
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__span{
+        display: block;
+        font-size: calcVw(17vw);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+    &__meta p{
+        display: block;
+        margin-top: 0;
+        margin-bottom: calcVw(12vw) !important;
+        font-size: calcVw(17vw);
+    }
+
+    // 애니메이션 컨텐츠
+    .artist{
+        font-size: calcVw(12vw);
+        font-family: 'Gotham';
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &__name{
+            font-family: 'Gotham';
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+    }
+
+    &__span{
+        font-size: calcVw(17vw);
+        font-family: 'Gotham';
+        font-weight: 600;
+    }
+    &__meta{
+        &__artist{
+            margin: 0;
+            font-family: 'Gotham';
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    }
+
+    //애니메이션 바
+    &__graphic{
+        div {
+            position: absolute;
+            background: #fff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        &--x{
+            .x-1{
+                left: 245px;
+                bottom: 20px;
+                width: 60px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-2{
+                left: 208px;
+                bottom: -100px;
+                width: 100px;
+                height: 8px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-3{
+                left: 155px;
+                bottom: -85px;
+                width: 155px;
+                height: 20px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-4{
+                left: 108px;
+                bottom: -115px;
+                width: 200px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-5{
+                left: -70 px;
+                bottom: -140px;
+                width: 330px;
+                height: 12px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-6{
+                left: -430px;
+                bottom: -140px;
+                width: 120px;
+                height: 12px;
+                -webkit-animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-7{
+                left: -440px;
+                bottom: -65 px;
+                width: 450px;
+                height: 20px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-8{
+                left: 20px;
+                bottom: -10px;
+                width: 170px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-9{
+                left: -350px;
+                bottom: -10px;
+                width: 260px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-10{
+                left: -360px;
+                bottom: -115px;
+                width: 370px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-11{
+                left: -270px;
+                bottom: -100px;
+                width: 370px;
+                height: 8px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-12{
+                left: -235px;
+                bottom: 3px;
+                width: 165px;
+                height: 12px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+        }
+    }
+}
+
+//about 슬라이드
+.project{
+    &-slider{
+        position: relative;
+        &__name{
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section5_bg.jpg") no-repeat center center/cover;
+        }
+
+        &__wrap{
+            width:100%;
+        }
+
+        &__item{
+            a{
+                display: block;
+                width:100%;
+
+                img{
+                    width:100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-pagination{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calcVw(20vw) !important;
+        text-align: center;
+        width: 100%;
+        z-index: 50;
+        line-height: 0;
+        font-size: 0;
+
+        .swiper-pagination-bullet {
+            margin-left: calcVw(7vw);
+            width: calcVw(6vw);
+            height: calcVw(6vw);
+            background: #fff !important;
+            opacity: 1 !important;
+            display: inline-block;
+            border-radius: 100%;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .swiper-pagination-bullet-active{
+            background: #000 !important;
+        }
+    }
+}
+
+
+
+
