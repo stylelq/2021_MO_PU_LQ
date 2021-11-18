@@ -19,6 +19,10 @@
 @function calcRem($size){
 	@return ($size/$defaultSize);
 }
+//Px-> Vw
+@function calcVw($size){
+	@return ($size / 360) * 100;
+}
 
 //Line height px -> .
 @function calclH($lh,$font){
