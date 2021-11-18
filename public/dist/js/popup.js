@@ -4,7 +4,11 @@ jQuery(function () {
   //팝업열기(공통)
   function openPopup() {
     var el = $(this).attr('href').replace("#", "");
-    $('.popup').removeClass('is-active');
+
+    if ($('.popup.is-active').length <= 1) {} else {
+      $('.popup').removeClass('is-active');
+    }
+
     $('#' + el).addClass('is-active');
     $('html').addClass('is-hidden');
     return false;
@@ -60,13 +64,35 @@ jQuery(function () {
 
 
   function closePopup() {
-    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-    $('html').removeClass('is-hidden');
+    if ($('.popup.is-active').length <= 1) {
+      $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+      $('html').removeClass('is-hidden');
+    } else {
+      $(this).closest('.popup').removeClass('is-active');
+    }
 
     if ($(this).hasClass('slide-popup__close')) {
       resetPanZoom();
     }
   }
 
-  $(document).on('click', '.js-popup-close', closePopup);
+  $(document).on('click', '.js-popup-close', closePopup); //배송지 정보 탭
+
+  function shippingTab() {
+    var idx = $(this).parent('li').index();
+    var shippingIdx = $('.shipping-tab__item:nth-child(4)');
+    $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+    $('.js-pop-tab-cont').eq(idx).addClass('is-current').siblings('.js-pop-tab-cont').removeClass('is-current');
+    $('html, body').animate({
+      scrollTop: $('.popup__body').offset().top
+    }, 340);
+
+    if (shippingIdx.hasClass('is-current')) {
+      $('#shippingPop .popup-confirm__link').text('확인');
+    } else {
+      $('#shippingPop .popup-confirm__link').text('선택 주소 사용');
+    }
+  }
+
+  $(document).on('click', '.js-pop-tab-link', shippingTab);
 });

@@ -1,55 +1,54 @@
 <!-- shipping popup -->
-<section id="shippingPop" class="popup type-tab is-active">
+<section id="shippingPop" class="popup type-tab">
     <header class="popup__header">
         <h3 class="popup__tit">배송지 정보</h3>
         <button class="popup__close js-popup-close">close</button>
     </header>
     <!-- tab -->
-    <!-- detail tab -->
+    <!-- shipping tab -->
     <div class="shipping-tab">
         <ul class="shipping-tab__fix">
             <li class="shipping-tab__item is-current">
-                <a href="#;" class="shipping-tab__link js-tab-link">내주소록</a>
+                <a href="#;" class="shipping-tab__link js-pop-tab-link">내주소록</a>
             </li>
             <li class="shipping-tab__item">
-                <a href="#;" class="shipping-tab__link js-tab-link">새로운 주소</a>
+                <a href="#;" class="shipping-tab__link js-pop-tab-link">새로운 주소</a>
             </li>
             <li class="shipping-tab__item">
-                <a href="#;" class="shipping-tab__link js-tab-link">최근 배송지</a>
+                <a href="#;" class="shipping-tab__link js-pop-tab-link">최근 배송지</a>
             </li>
             <li class="shipping-tab__item">
-                <a href="#;" class="shipping-tab__link js-tab-link">주문자 정보</a>
+                <a href="#;" class="shipping-tab__link js-pop-tab-link">주문자 정보</a>
             </li>
         </ul>
     </div>
-    <!-- detail tab -->
-    <!-- detail Tab content -->
-    <div class="shipping-tab__cont">
-        <!-- 내주소록 -->
-        <div class="shipping-tab__info is-current">
-        </div>
-        <!-- .내주소록 -->
-        <!-- 새로운 주소 -->
-        <div class="shipping-tab__info">
-        </div>
-        <!-- .새로운 주소 -->
-        <!-- 최근 배송지 -->
-        <div class="shipping-tab__info">
-        </div>
-        <!-- .최근 배송지 -->
-        <!-- 주문자 정보 -->
-        <div class="shipping-tab__info">
-        </div>
-        <!-- .주문자 정보 -->
-    </div>
-    <!-- .tab -->
+    <!-- shipping tab -->
     <section class="popup__body">
         <div class="wrap">
-            <!-- 쿠폰 컨텐츠 -->
-            <div class="popup-shipping">
-
+            <!-- shipping Tab content -->
+            <div class="shipping-tab__cont">
+                <!-- 내주소록 -->
+                <div class="shipping-tab__info js-pop-tab-cont is-current">
+                    <% include ../_include/_shippingPopAddress %>
+                </div>
+                <!-- .내주소록 -->
+                <!-- 새로운 주소 -->
+                <div class="shipping-tab__info js-pop-tab-cont">
+                    <% include ../_include/_shippingPopNewAddress %>
+                </div>
+                <!-- .새로운 주소 -->
+                <!-- 최근 배송지 -->
+                <div class="shipping-tab__info js-pop-tab-cont">
+                    <% include ../_include/_shippingPopNowAddress %>
+                </div>
+                <!-- .최근 배송지 -->
+                <!-- 주문자 정보 -->
+                <div class="shipping-tab__info js-pop-tab-cont">
+                    <% include ../_include/_shippingPopaddressInfo %>
+                </div>
+                <!-- .주문자 정보 -->
             </div>
-            <!-- .쿠폰 컨텐츠 -->
+            <!-- .shipping Tab content -->
         </div>
         <!-- confirm Footer -->
         <div class="popup-confirm__footer">

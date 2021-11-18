@@ -186,6 +186,7 @@
 	box-sizing: border-box;
 	cursor: pointer;
 	color:$darkgray;
+	text-align: center;
 
 	&.type-primary{
 		background-color:$point1;
@@ -196,8 +197,8 @@
 	&.type-secondary{
 		background-color:$darkgray;
 		color:#fff;
-		border-color:$darkgray
-	;}
+		border-color:$darkgray;
+	}
 
 	&.type-outline{
 		border-color:$black1;
@@ -447,6 +448,10 @@ input {
 	&:focus{
 		border-color:$point1;
 	}
+
+	&.fix-value{
+		color:$black1;
+	}
 }
 
 //기본 폼 인풋박스
@@ -467,6 +472,7 @@ input {
 		&:read-only{
 			background-color: $lightgray3;
 			pointer-events: none;
+			color:$gray1;
 		}
 	}
 
@@ -699,5 +705,48 @@ input {
 		right:0;
 		top:0;
 		width:calcRem(118rem);
+	}
+}
+
+//기본 서치 폼
+.form__search{
+	padding-right:calcRem(40rem);
+	position: relative;
+	border:solid 1px $gray2;
+
+	&--input{
+		border:none;
+		display: block;
+		width:100%;
+		@include body2;
+		padding:calcRem(7rem) calcRem(10rem);
+		height:calcRem(34rem);
+		@include placeholder-color($gray2);
+		position: relative;
+
+		&:focus{
+			border-color:$point1;
+		}
+
+		&:read-only{
+			background-color: $lightgray3;
+			pointer-events: none;
+			color:$gray1;
+		}
+	}
+
+	&--btn{
+		overflow:hidden;
+		position:absolute;
+		top:0;
+		right:0;
+		margin:auto 0;
+		text-indent:-9999px;
+		width:calcRem(38rem);
+		height:100%;
+		border:none;
+		padding:0;
+		@include background('/images/common/search_btn.png','no-repeat center center / contain');
+		background-size: calcRem(16rem) calcRem(14rem);
 	}
 }

@@ -77,10 +77,11 @@
         }
     }
     &__list{
-        overflow:auto;
         margin:0;
         padding:0;
-        max-height:100vh;
+        max-height:calc(100vh - #{calcRem(300rem)});
+        overflow: hidden;
+        overflow-y: auto;
     }
     &__item{list-style:none;
         &.is-active{

@@ -29,6 +29,7 @@
 	@return ($lh/$font);
 }
 
+
 //Typography
 @mixin heading1(){font-size:calcRem(20rem); line-height:calclH(28,20); letter-spacing: $defaultLetter; font-weight:$medium;}
 @mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
