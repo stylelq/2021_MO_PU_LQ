@@ -34,6 +34,16 @@
 			&:before{
 				@include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')}
 		}
+
+		&.type-payco{
+			&:before{
+				@include pageBackground('/images/join/payco_icon.png','no-repeat center center / contain')}
+		}
+
+		&.type-kakao{
+			&:before{
+				@include pageBackground('/images/join/kakao_icon.png','no-repeat center center / contain')}
+		}
 	}
 
 	&__point{
@@ -111,6 +121,12 @@
 		&.type-naver{
 			&:before{
 				@include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')
+			}
+		}
+
+		&.type-email{
+			&:before{
+				@include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')
 			}
 		}
 
