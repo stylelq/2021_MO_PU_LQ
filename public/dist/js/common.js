@@ -312,7 +312,48 @@ jQuery(function () {
           el: ".project-pagination"
         }
       });
-    } //리뷰 평가체크(현재는 사용하지않음. 혹시필요할시 사용하세요)
+    } // 프로젝트 작품별 슬라이드
+
+
+    if ($('.project-slide').length > 0) {
+      var projectSlide2 = new Swiper('.project-slide__container', {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".project-slide-pagination"
+        }
+      });
+    } // 장소 슬라이드
+
+
+    if ($('.project-place-slide').length > 0) {
+      var projectSlide2 = new Swiper('.project-place__container', {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".project-place-pagination"
+        }
+      });
+    }
+    /*if($('.project-place-slide').length > 0){
+        var placeSlide = new Swiper('.project-place__container', {
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".project-place-pagination",
+            },
+        });
+    }*/
+    //리뷰 평가체크(현재는 사용하지않음. 혹시필요할시 사용하세요)
 
 
     function checkStar() {
@@ -477,4 +518,18 @@ function stoNtsAsk() {
 
 function basketDelete() {
   alert('삭제하시겠습니까?');
+}
+/**
+ * ScrollMagic: Opacity
+ */
+
+
+if ($('.motion-up').length > 0) {
+  var controller = new ScrollMagic.Controller();
+  $('.motion-up').each(function () {
+    var Opacity = new ScrollMagic.Scene({
+      triggerElement: this.children[0],
+      triggerHook: 0.9
+    }).reverse(false).setClassToggle(this, 'motion-up--active').addTo(controller);
+  });
 }
