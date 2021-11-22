@@ -100,11 +100,15 @@
             content: "";
             width:calcRem(24rem);
             height:calcRem(24rem);
-            @include pageBackground('/images/common/ico_faq_q.svg','no-repeat center center / contain');
+            @include pageBackground('/images/common/ico_faq_q_normal.svg','no-repeat center center / contain');
             background-size: calcRem(24rem) calcRem(24rem);
             position: absolute;
             left:0;
             top:calcRem(17rem);
+
+            .is-active &{
+                @include pageBackground('/images/common/ico_faq_q.svg','no-repeat center center / contain');
+            }
         }
 
         &:after{
