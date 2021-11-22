@@ -1,0 +1,105 @@
+@import "../base/variables";
+@import "../base/mixins";
+//1:1문의 페이징
+.center-inquiry{
+    .paging{
+        margin-top:calcRem(30rem);
+    }
+}
+
+//1:1문의 탑버튼
+.inquiry{
+    &-header{
+        padding:calcRem(8rem) calcRem(20rem) calcRem(40rem);
+        text-align: center;
+
+        .btn--border{
+            font-weight: $medium;
+        }
+    }
+}
+
+//1:1 리스트
+.inquiry{
+
+    //레이아웃
+    &-list{
+        border-top:solid 1px $black1;
+
+        &__item{
+            border-bottom:solid 1px $lightgray2;
+        }
+    }
+
+    //컨텐츠
+    &-item{
+        &__link{
+            display: flex;
+            align-items: center;
+            padding:calcRem(20rem) calcRem(20rem);
+        }
+
+        &__state{
+            margin-right:calcRem(27rem);
+            width:calcRem(36rem);
+            box-sizing: border-box;
+        }
+
+        &__tag{
+            display: block;
+            font-size:calcRem(11rem);
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            font-weight:$medium;
+            padding:0 calcRem(0rem);
+            text-align: center;
+            width:100%;
+            border-width: 1px;
+            border-style: solid;
+
+            &.inquiry-item__waiting{
+                border-color: $gray1;
+                color:$gray1;
+            }
+
+            &.inquiry-item__end{
+                border-color: $point1;
+                color:$point1;
+            }
+        }
+
+        &__cont{
+            position: relative;
+            padding-right:calcRem(30rem);
+            width:calc(100% - #{calcRem(63rem)});
+            box-sizing: border-box;
+
+            &:after{
+                content: "";
+                width:calcRem(3rem);
+                height:calcRem(6rem);
+                @include pageBackground('/images/common/ico-notice-list-arrow.svg','no-repeat center center / contain');
+                background-size: calcRem(3rem) calcRem(6rem);
+                position: absolute;
+                right:0;
+                @include vertical-center;
+            }
+        }
+
+        &__title{
+            @include body2;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &__date{
+            font-size:calcRem(11rem);
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            font-weight:$regular;
+            color:$darkgray;
+            margin-top:calcRem(5rem);
+        }
+    }
+}
