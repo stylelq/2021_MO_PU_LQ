@@ -1,0 +1,116 @@
+@import "../base/variables";
+@import "../base/mixins";
+//공지사항 페이징
+.center-notice{
+    .paging{
+        margin-top:calcRem(30rem);
+    }
+}
+
+//공지사항 리스트
+.notice{
+    &-list{
+        border-top:solid 1px $black1;
+
+        &__item{
+            border-bottom:solid 1px $lightgray2;
+
+            &.notice-list__item--notice{
+                border-bottom-color: $gray1;
+            }
+        }
+    }
+
+    &-item{
+        &__link{
+            display: block;
+            position: relative;
+            padding:calcRem(20rem) calcRem(50rem) calcRem(20rem) calcRem(20rem);
+
+            .notice-list__item--notice &{
+                background-color: $lightgray2;
+            }
+
+            &:after{
+                content: "";
+                width:calcRem(3rem);
+                height:calcRem(6rem);
+                @include pageBackground('/images/common/ico-notice-list-arrow.svg','no-repeat center center / contain');
+                background-size: calcRem(3rem) calcRem(6rem);
+                position: absolute;
+                right:calcRem(20rem);
+                @include vertical-center;
+            }
+        }
+
+        &__title{
+            @include body2;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &__date{
+            font-size:calcRem(11rem);
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            font-weight:$regular;
+            color:$darkgray;
+            margin-top:calcRem(5rem);
+        }
+    }
+}
+
+//공지사항 상세페이지
+
+.center{
+    &-notice__single{
+        border-top:solid 1px $black1;
+    }
+
+    &-single{
+        //헤더
+        &__header{
+            padding:calcRem(20rem) 0;
+            border-bottom:solid 1px $lightgray1;
+            margin-bottom:calcRem(20rem);
+        }
+
+        &__title{
+            @include title1;
+            margin:0;
+        }
+
+        &__date{
+            font-size:calcRem(11rem);
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            font-weight:$regular;
+            color:$darkgray;
+            margin-top:calcRem(10rem);
+        }
+
+
+        //컨텐츠
+        &__cont{
+            @include body3;
+
+            strong{
+                font-weight: $medium;
+            }
+
+            p{
+                margin:calcRem(15rem) 0 0;
+
+                &:first-child{
+                    margin:0;
+                }
+            }
+        }
+
+        //목록버튼
+        &__btn{
+            margin-top:calcRem(40rem);
+        }
+    }
+}
