@@ -237,3 +237,46 @@
         }
     }
 }
+
+//하단 픽시드 버튼
+.inquiry-fix{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: $bgSiteColor;
+    z-index: $fixButtonZindex;
+
+    &__list{
+        overflow: hidden;
+    }
+
+    &__item{
+        float:left;
+        width:37%;
+        position: relative;
+
+        &:nth-child(2){
+            width:63%;
+
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        display:block;
+        @include title1;
+        color:$black1;
+        text-align: center;
+        padding:calcRem(9rem) calcRem(15rem);
+        border:solid 1px $gray2;
+
+        .inquiry-fix__item:nth-child(2) &{
+            border-color:$point1;
+            background-color: $point1;
+            color:$whiteColor;
+        }
+    }
+}

@@ -258,7 +258,7 @@ jQuery(function(){
         $(document).on('click', '.js-tab-link', detailTab);
 
         //제품 상세 하단 픽시드 결제 박스
-        if($('.fix-button , .cart-fix__button').length > 0) {
+        if($('.fix-button , .cart-fix__button, .inquiry-fix').length > 0) {
             $(window).scroll(function () {
                 var height = $(document).scrollTop();
                 var headHeight = $('.header').scrollTop();
