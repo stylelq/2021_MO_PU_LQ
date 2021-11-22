@@ -3,7 +3,7 @@
 //1:1문의 페이징
 .center-inquiry{
     .paging{
-        margin-top:calcRem(30rem);
+        margin-top:calcRem(40rem);
     }
 }
 
@@ -163,6 +163,7 @@
 
         &--text{
             @include body3;
+            line-height:calclH(19,12);
 
             strong{
                 font-weight: $medium;
@@ -219,6 +220,7 @@
 
         &--text{
             @include body3;
+            line-height:calclH(19,12);
             color:$darkgray;
 
             strong{

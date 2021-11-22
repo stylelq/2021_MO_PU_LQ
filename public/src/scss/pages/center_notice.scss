@@ -3,7 +3,7 @@
 //공지사항 페이징
 .center-notice{
     .paging{
-        margin-top:calcRem(30rem);
+        margin-top:calcRem(40rem);
     }
 }
 
@@ -94,6 +94,7 @@
         //컨텐츠
         &__cont{
             @include body3;
+            line-height:calclH(19,12);
 
             strong{
                 font-weight: $medium;
