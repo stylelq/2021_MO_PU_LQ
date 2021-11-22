@@ -372,6 +372,18 @@ jQuery(function(){
         }
         $(document).on('click', '.js-qna-more', qnaMore);
 
+        //faq 더보기(아코디언)
+        function faqMore() {
+            var parent = $(this).closest('.notice-faq__item');
+            if(parent.hasClass('is-active')){
+                parent.removeClass('is-active');
+            }else{
+                parent.addClass('is-active').siblings('li').removeClass('is-active');
+            }
+            return false;
+        }
+        $(document).on('click', '.js-faq-more', faqMore);
+
         //셀렉트 박스 텍스트 컬러변경(placeholder 시각적 효과)
         function selectPlaceholder() {
             $(this).addClass('is-check');
