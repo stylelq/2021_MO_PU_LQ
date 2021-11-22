@@ -270,6 +270,7 @@ jQuery(function(){
                 }
             });
             $('.cart-fix').addClass('is-up');
+            $('.footer').addClass('bottom-fix');
         }
 
         //연관제품 슬라이드
