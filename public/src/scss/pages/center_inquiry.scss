@@ -103,3 +103,135 @@
         }
     }
 }
+
+//1:1 싱글페이지
+.center-inquiry{
+    &__single{
+        border-top:solid 1px $black1;
+    }
+
+    //header
+    &__header{
+        border-bottom:solid 1px $lightgray1;
+        padding:calcRem(20rem) 0;
+        margin-bottom:calcRem(25rem);
+    }
+
+    &__item{
+        margin-top:calcRem(4rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+
+    &__inner{
+        overflow: hidden;
+        margin:0;
+    }
+
+    &__title{
+        float:left;
+        min-width: calcRem(70rem);
+        padding-right:calcRem(10rem);
+        box-sizing: border-box;
+        @include body3;
+    }
+
+    &__text{
+        overflow: hidden;
+        margin:0;
+        @include body3;
+        font-weight: $regular;
+    }
+
+    //질문
+    &__question{
+        &--title{
+            margin:0 0 calcRem(18rem);
+            @include title1;
+            position: relative;
+            padding-left:calcRem(23rem);
+
+            &:before{
+                content: "Q.";
+                position: absolute;
+                top:0;
+                left:0;
+            }
+        }
+
+        &--text{
+            @include body3;
+
+            strong{
+                font-weight: $medium;
+            }
+
+            p{
+                margin:calcRem(15rem) 0 0;
+
+                &:first-child{
+                    margin:0;
+                }
+            }
+        }
+    }
+
+    &__thumbs{
+        margin-top:calcRem(20rem);
+        line-height: 0;
+
+        &--item{
+            margin-top:calcRem(10rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &--img{
+            width:100%;
+            display: block;
+        }
+    }
+
+    //답변
+    &__answer{
+        margin-top:calcRem(40rem);
+        background-color: $lightgray2;
+        border-top:solid 1px $gray2;
+        padding:calcRem(25rem) calcRem(20rem) calcRem(35rem);
+
+        &--title{
+            margin:0 0 calcRem(18rem);
+            @include title1;
+            position: relative;
+            padding-left:calcRem(23rem);
+
+            &:before{
+                content: "A.";
+                position: absolute;
+                top:0;
+                left:0;
+            }
+        }
+
+        &--text{
+            @include body3;
+            color:$darkgray;
+
+            strong{
+                font-weight: $medium;
+            }
+
+            p{
+                margin:calcRem(15rem) 0 0;
+
+                &:first-child{
+                    margin:0;
+                }
+            }
+        }
+    }
+}
