@@ -368,7 +368,47 @@
                 background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
             }
         }
+    }@else if $color == lime {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video {
+                &__intro {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_10.jpg") no-repeat center center/cover;
+                }
+
+                &__play {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
     }
+
 }
 
 @mixin projectLine($position) {
@@ -449,6 +489,11 @@
 }
 @mixin lineTypeNine{
     @include create-line(type-darkorange){
+        @content
+    }
+}
+@mixin lineTypeTen{
+    @include create-line(type-lime){
         @content
     }
 }
@@ -1080,6 +1125,9 @@
     &-darkorange{
         @include projectBg(darkorange);
     }
+    &-lime{
+        @include projectBg(lime);
+    }
 }
 .project{
     //타이틀
@@ -1152,6 +1200,9 @@
                 @include projectLine(name1);
             }
             .type-darkorange &{
+                @include projectLine(name1);
+            }
+            .type-lime &{
                 @include projectLine(name1);
             }
         }
