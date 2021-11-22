@@ -116,6 +116,10 @@
             position: absolute;
             right:0;
             top:calcRem(28rem);
+
+            .is-active &{
+                transform: rotate(180deg);
+            }
         }
     }
 
@@ -137,7 +141,7 @@
             background-size: calcRem(24rem) calcRem(24rem);
             position: absolute;
             left:calcRem(15rem);
-            top:calcRem(15rem);
+            top:calcRem(16rem);
         }
 
         .is-active &{
