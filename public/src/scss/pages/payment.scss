@@ -83,8 +83,8 @@
                 .form__input--btn{
                     @include body2;
                     color:$whiteColor;
-                    padding:calcRem(8rem) calcRem(5rem);
-                    height:calcRem(36rem);
+                    padding:calcRem(9rem) calcRem(5rem);
+                    height:calcRem(38rem);
                     text-align: center;
                     width:calcRem(83rem);
                     background-color: $darkgray;
@@ -444,7 +444,7 @@
             float:left;
             margin-right:calcRem(10rem);
             @include body2;
-            padding-top:calcRem(8rem);
+            padding-top:calcRem(9rem);
         }
         
         &--cont{
@@ -456,8 +456,8 @@
         &--btn{
             @include body2;
             color:$whiteColor;
-            padding:calcRem(8rem) calcRem(5rem);
-            height:calcRem(36rem);
+            padding:calcRem(9rem) calcRem(5rem);
+            height:calcRem(38rem);
             text-align: center;
             width:calcRem(53rem);
             background-color: $darkgray;
