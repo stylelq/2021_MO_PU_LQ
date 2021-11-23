@@ -1336,3 +1336,31 @@
     }
 }
 
+
+// 룩북 레이어
+.lookbook-wrap{
+    // 룩북 소개
+    &__contents{
+        position: relative;
+        text-align: center;
+    }
+    &__title{
+        font-size: calcRem(22rem);
+    }
+    &__txt{
+        margin: 0 calcRem(20rem);
+        padding: calcRem(20rem) 0 calcRem(40rem);
+        font-size: calcRem(14rem);
+        font-weight: 100;
+    }
+
+    // 룩북 이미지
+    &__list{
+        position: relative;
+        padding-bottom: calcRem(40rem);
+    }
+    &__img{
+        width: 100%;
+        display: block;
+    }
+}

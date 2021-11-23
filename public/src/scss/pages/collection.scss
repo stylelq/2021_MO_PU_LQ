@@ -1,0 +1,257 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../pages/product";
+
+@mixin imageBlock {
+    display:block;
+    width:100%;
+}
+
+// collection main
+.collection{
+    &-wrap{
+        padding-top: calcRem(20rem);
+    }
+    // 컬렉션 메인 비주얼
+    &-visual{
+        position: relative;
+        &__img{
+            @include imageBlock;
+        }
+        &__detail{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            @include vertical-center;
+        }
+        &__link{
+            display: block;
+        }
+        &__button{
+            color: #fff;
+            border: 1px solid #fff;
+            margin: 0 calcRem(20rem);
+            padding: calcRem(16rem) 0;
+        }
+    }
+
+    // 컬렉션 상품슬라이드
+    &-slide{
+        position: relative;
+        padding: calcRem(30rem) 0 calcRem(71rem);
+        .swiper{
+            &-button{
+                &-next{
+                    @include vertical-center;
+                    display: inline-block;
+                    width: calcRem(10rem);
+                    height: calcRem(20rem);
+                    position: absolute;
+                    right: calcRem(10rem);
+                    background: url('../../images/collection/collection_slide_next.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+                &-prev{
+                    @include vertical-center;
+                    display: inline-block;
+                    width: calcRem(10rem);
+                    height: calcRem(20rem);
+                    position: absolute;
+                    left: calcRem(10rem);
+                    background: url('../../images/collection/collection_slide_prev.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+
+    // more collection
+    &-more{
+        position: relative;
+        overflow: hidden;
+        &__title{
+            display: block;
+            padding-bottom: 30px;
+        }
+        &__txt{
+            font-size: calcRem(20rem);
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &__container{
+            overflow: visible;
+        }
+        &__slide{
+            padding: 0 calcRem(45rem);
+        }
+        &__item{
+            padding: 0 calcRem(5rem);
+            box-sizing: border-box;
+        }
+        &__img{
+            display: block;
+        }
+        .swiper{
+            &-pagination{
+                margin-top: calcRem(20rem);
+                display: block;
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+        .swiper{
+            &-button{
+                &-next{
+                    @include vertical-center;
+                    display: inline-block;
+                    width: calcRem(10rem);
+                    height: calcRem(20rem);
+                    position: absolute;
+                    right: calcRem(10rem);
+                    background: url('../../images/collection/collection_slide_next_w.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+                &-prev{
+                    @include vertical-center;
+                    display: inline-block;
+                    width: calcRem(10rem);
+                    height: calcRem(20rem);
+                    position: absolute;
+                    left: calcRem(10rem);
+                    background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+            }
+        }
+        &__detail{
+            @include vertical-center;
+            position: absolute;
+            width: 200px;
+            text-align: center;
+            z-index: 10;
+        }
+        &__link{
+            display: block;
+        }
+        &__box{
+            color: #fff;
+            border: 1px solid #fff;
+            padding: calcRem(10rem);
+        }
+    }
+
+// collection detail
+    // 컬렉션 상세 비주얼
+    &-detail{
+        position: relative;
+        &__img{
+            display: block;
+        }
+        &__title{
+            width: 100%;
+            position: absolute;
+            bottom: calcRem(80rem);
+            text-align: center;
+        }
+        &__name{
+            margin-bottom: calcRem(10rem);
+            color: #de9230;
+            font-size: calcRem(20rem);
+        }
+        &__info{
+            font-size: calcRem(12rem);
+            color: #fff;
+        }
+    }
+
+    // 컬렉션 아이템소개
+    &-info{
+        background-color: #f5d661;
+        text-align: center;
+        &__title{
+            padding: calcRem(50rem) 0 calcRem(20rem);
+            font-weight: 500;
+        }
+        &__txt{
+            padding-bottom: calcRem(50rem);
+            font-size: calcRem(14rem);
+        }
+    }
+
+    // 컬렉션 모델슬라이드
+    &-model{
+        position: relative;
+        .swiper{
+            &-button{
+                &-next{
+                    @include vertical-center;
+                    display: inline-block;
+                    width: calcRem(10rem);
+                    height: calcRem(20rem);
+                    position: absolute;
+                    right: calcRem(20rem);
+                    background: url('../../images/collection/collection_slide_next_w.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+                &-prev{
+                    @include vertical-center;
+                    display: inline-block;
+                    width: calcRem(10rem);
+                    height: calcRem(20rem);
+                    position: absolute;
+                    left: calcRem(20rem);
+                    background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+            }
+        }
+        &__img{
+            display: block;
+        }
+    }
+
+    // 룩북 바로가기 버튼
+    &-view{
+        position: relative;
+        &__button{
+            margin: calcRem(60rem) calcRem(40rem) calcRem(20rem);
+            border: 1px solid #000;
+            text-align: center;
+        }
+        &__link{
+            display: block;
+            padding: calcRem(10rem);
+            text-transform: uppercase;
+        }
+    }
+
+    // 컬렉션 상품 리스트
+    &-product{
+        &-list{
+            padding-bottom: calcRem(50rem);
+        }
+    }
+    &-list{
+        position: relative;
+        padding-top: calcRem(40rem);
+        &__name{
+            text-align: center;
+            font-size: calcRem(20rem);
+            text-transform: uppercase;
+        }
+        &__line{
+            margin: calcRem(13rem) auto calcRem(40rem);
+            width: 80%;
+            border: 1px solid #dddddd;
+        }
+        &__wrap{
+            overflow: hidden;
+            width: 100%;
+        }
+        &__item{
+            width: 50%;
+            float: left;
+            padding: calcRem(20rem) 0;
+        }
+    }
+}

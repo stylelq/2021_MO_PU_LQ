@@ -328,18 +328,56 @@ jQuery(function(){
                 },
             });
         }
-        /*if($('.project-place-slide').length > 0){
-            var placeSlide = new Swiper('.project-place__container', {
+
+        // 컬렉션 상품슬라이드
+        if($('.collection-slide').length > 0){
+            var collectionSlide = new Swiper('.collection-slide__container', {
+                observer: true,
+                observeParents: true,
+                watchOverflow: true,
+                slidesPerView: 2,
+                loop: true,
+                navigation: {
+                    nextEl: ".collecton-next-btn",
+                    prevEl: ".collecton-prev-btn",
+                }
+            });
+        }
+
+        // 컬렉션 더보기 슬라이드
+        if($('.collection-more-slide').length > 0){
+            var collectionSlide = new Swiper('.collection-more__container', {
                 observer: true,
                 observeParents: true,
                 watchOverflow: true,
                 slidesPerView: 1,
                 loop: true,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: ".more-next-btn",
+                    prevEl: ".more-prev-btn",
+                },
                 pagination: {
-                    el: ".project-place-pagination",
+                    el: ".swiper-pagination",
+                    type: "fraction",
                 },
             });
-        }*/
+        }
+
+        // 컬렉션 모델슬라이드
+        if($('.collection-model-slide').length > 0){
+            var collectionModelSlide = new Swiper('.collection-model__container', {
+                observer: true,
+                observeParents: true,
+                watchOverflow: true,
+                slidesPerView: 1,
+                loop: true,
+                navigation: {
+                    nextEl: ".model-next-btn",
+                    prevEl: ".model-prev-btn",
+                }
+            });
+        }
 
         //리뷰 평가체크(현재는 사용하지않음. 혹시필요할시 사용하세요)
         function checkStar() {
