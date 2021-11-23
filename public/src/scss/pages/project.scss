@@ -1206,10 +1206,8 @@
                 @include projectLine(name1);
             }
         }
-        &__title{
-            &__img {
-                @include imageBlock;
-            }
+        &__img {
+            @include imageBlock;
         }
         &__contents{
             width: 100%;
@@ -1217,9 +1215,6 @@
             top: 0;
             left: 0;
             width: 100%;
-            &__img {
-                @include imageBlock;
-            }
         }
     }
 
@@ -1271,6 +1266,7 @@
         &__name{
             position: absolute;
             z-index: $childZindex;
+            @include imageBlock;
         }
         &__wrap{
             width: 100%;
