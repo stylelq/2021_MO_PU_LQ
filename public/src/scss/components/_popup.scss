@@ -94,6 +94,10 @@
             @include title1;
             margin-bottom:calcRem(16rem);
         }
+
+        &__cont{
+            margin-left:calcRem(20rem);
+        }
     }
 
     &-checkform{
@@ -121,6 +125,10 @@
             padding:calcRem(23rem) calcRem(20rem);
             text-align:center;
             @include body1;
+
+            &--point{
+                color:$point1;
+            }
         }
 
         &__group{
@@ -560,8 +568,8 @@
     }
 
     &__close{
-        width:calcRem(30rem);
-        height:calcRem(30rem);
+        width:calcRem(32rem);
+        height:calcRem(32rem);
         position: absolute;
         top:calcRem(85rem);
         right:calcRem(20rem);

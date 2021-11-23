@@ -44,7 +44,7 @@
             }
 
             &--message{
-                margin-top:calcRem(15rem);
+                margin-top:calcRem(25rem);
             }
         }
 
@@ -138,18 +138,17 @@
         }
 
         &--name{
-            display: inline-block;
+            display: block;
             vertical-align: middle;
-            margin-right:calcRem(10rem);
             @include body3;
             font-weight: $regular;
         }
 
         &--tel{
-            display: inline-block;
+            display: block;
             vertical-align: middle;
             @include body3;
-            margin:0;
+            margin:calcRem(4rem) 0 0;
         }
     }
 
@@ -163,8 +162,8 @@
 .order-product{
     //item
     &__item{
-        padding-top:calcRem(20rem);
-        margin-top:calcRem(20rem);
+        padding-top:calcRem(30rem);
+        margin-top:calcRem(30rem);
         border-top:solid 1px $lightgray1;
 
         &:first-child{
@@ -206,6 +205,7 @@
 
     &__title{
         @include body2;
+        padding-right:calcRem(20rem);
     }
 
     &__option{
@@ -264,8 +264,10 @@
 
     //메세지 카드
     &__meta{
-        margin-top:calcRem(30rem);
+        margin-top:calcRem(15rem);
         line-height:0;
+        padding-left:calcRem(20rem);
+        padding-right:calcRem(20rem);
 
         &--list{
             margin:0 calcRem(-15rem);
@@ -294,6 +296,8 @@
 
     &__message{
         margin-top:calcRem(15rem);
+        padding-left:calcRem(20rem);
+        padding-right:calcRem(20rem);
         display: none;
 
         &.is-active{

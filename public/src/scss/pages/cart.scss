@@ -108,6 +108,7 @@
 
     &__title{
         @include body2;
+        padding-right:calcRem(20rem);
     }
 
     &__option{

@@ -11,6 +11,7 @@
 		padding-left:calcRem(46rem);
 		@include body3();
 		box-sizing: border-box;
+		margin-top:0;
 		text-align: left;
 
 		&:before{
@@ -32,7 +33,7 @@
 
 		&.type-email{
 			&:before{
-				@include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')}
+				@include pageBackground('/images/join/email_icon.svg','no-repeat center center / contain')}
 		}
 
 		&.type-payco{
@@ -61,6 +62,10 @@
 
 	&__area{
 		margin-top:calcRem($joinMargin);
+
+		.input-list__item.type-btn:nth-child(3){
+			margin-top:calcRem(20rem);
+		}
 	}
 
 	&__box{

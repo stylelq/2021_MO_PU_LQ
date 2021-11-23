@@ -8,7 +8,7 @@ jQuery(function(){
             if($('.type-1depth').hasClass('is-active')){
                 $('.gnb').removeClass('is-active');
                 $('.dim').removeClass('is-active');
-                $('.header').removeClass('type-bg');
+                $('.header').removeClass('is-bg-view');
                 $('html').removeClass('is-hidden');
 
                 if($(window).scrollTop() == 0){
@@ -17,7 +17,7 @@ jQuery(function(){
             }else {
                 $('.type-1depth').addClass('is-active');
                 $('.dim').addClass('is-active');
-                $('.header').addClass('type-bg');
+                $('.header').addClass('is-bg-view');
                 $('.header').addClass('is-active');
                 $('html').addClass('is-hidden');
 
@@ -231,8 +231,9 @@ jQuery(function(){
                 var topContHeight = $('.product-option').height();
                 var mainOuterHeight = $('.site-main').outerHeight(true);
                 var mainHeight = $('.site-main').height();
+                var headerHeight = $('.header').height();
                 var marginHeight = mainOuterHeight - mainHeight;
-                var totalHeight = topContHeight  + marginHeight;
+                var totalHeight = topContHeight  + marginHeight + headerHeight;
                 if (height > totalHeight) {
                     $('.detail-tab').addClass('is-fixed');
                     $('.header').addClass('is-bg-white');
@@ -445,13 +446,28 @@ jQuery(function(){
                 return;
 
             if (thisSt > lastScrollTop && thisSt > navbarHeight){
-                $('.header').removeClass('type-bg');
+                $('.header').addClass('type-bg');
+                $('.detail-tab').removeClass('is-down');
+
             } else {
                 if(thisSt + $(window).height() < $(document).height()) {
-                    $('.header').addClass('type-bg');
+                    $('.header').removeClass('type-bg');
+                    $('.detail-tab').addClass('is-down');
                 }
             }
+
             lastScrollTop = thisSt;
+        }
+    });
+
+    //스크롤 헤더 백그라운드
+    $(window).scroll(function () {
+        var height = $(document).scrollTop();
+
+        if (height > 0) {
+            $('.header').addClass('is-bg-view');
+        } else {
+            $('.header').removeClass('is-bg-view');
         }
     });
 

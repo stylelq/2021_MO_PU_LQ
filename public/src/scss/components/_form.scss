@@ -19,6 +19,10 @@
 		@include body3();
 		border-bottom:1px solid $lightgray1;
 		vertical-align: middle;
+
+		&.bold{
+			font-weight: $regular;
+		}
 	}
 }
 
@@ -124,13 +128,13 @@
 //input
 .input-v1{
 	width:100%;
-	padding:calcRem(7rem) calcRem(10rem) calcRem(7rem);
+	padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
 	@include body2();
 	border:1px solid $gray2;
 	box-sizing: border-box;
 	appearance: none;
 	box-shadow: none;
-	height:calcRem(36rem);
+	height:calcRem(38rem);
 
 	&::placeholder{
 		color:$gray2;
@@ -167,19 +171,22 @@
 .filter__select{
 	font-size:calcRem(11rem);
 	line-height:calclH(18,11);
-	padding-right:calcRem(12rem);
+	padding-right:calcRem(15rem);
 	font-weight: $light;
 	position: relative;
 	width:calcRem(67rem);
+	direction:rtl;
 	display: block;
-	@include background('/images/common/ico_sort_arrow.svg','no-repeat center right #{calcRem(0rem)} / #{calcRem(8rem)} #{calcRem(4rem)}');
+	color:$black1;
+	text-align: right;
+	@include background('/images/common/ico_sort_arrow.svg','no-repeat center right #{calcRem(0rem)} / #{calcRem(9rem)} #{calcRem(6rem)}');
 }
 
 //버튼 스타일
 .btn-v1{
 	display:block;
 	width:100%;
-	padding:calcRem(9rem) calcRem(10rem);
+	padding:calcRem(10rem) calcRem(10rem) calcRem(8rem);
 	background-color:transparent;
 	border:1px solid #fff; outline:none;
 	@include title1;
@@ -250,10 +257,11 @@
 		position:absolute;
 		top:0;
 		right:0;
-		bottom:0;
 		width:calcRem(80rem);
+		height:calcRem(38rem);
+		display: block;
 		@include body2();
-		padding:calcRem(5rem) calcRem(10rem) calcRem(6rem);
+		padding:calcRem(9rem) calcRem(10rem) calcRem(7rem);
 	}
 }
 
@@ -432,8 +440,8 @@ input {
 	border:solid 1px $gray2;
 	@include body2;
 	color:$gray2;
-	padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
-	height:calcRem(36rem);
+	padding:calcRem(8rem) calcRem(30rem) calcRem(8rem) calcRem(10rem);
+	height:calcRem(38rem);
 	@include background('/images/common/ico_qna_more.svg','no-repeat center center / contain');
 	background-size: calcRem(8rem) calcRem(4rem);
 	background-position: calc(100% - #{calcRem(10rem)}) center;
@@ -461,8 +469,8 @@ input {
 		display: block;
 		width:100%;
 		@include body2;
-		padding:calcRem(7rem) calcRem(10rem);
-		height:calcRem(36rem);
+		padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
+		height:calcRem(38rem);
 		@include placeholder-color($gray2);
 
 		&:focus{
@@ -721,8 +729,8 @@ input {
 		display: block;
 		width:100%;
 		@include body2;
-		padding:calcRem(7rem) calcRem(10rem);
-		height:calcRem(34rem);
+		padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
+		height:calcRem(38rem);
 		@include placeholder-color($gray2);
 		position: relative;
 
