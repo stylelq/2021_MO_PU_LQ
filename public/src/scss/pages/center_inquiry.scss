@@ -280,3 +280,208 @@
         }
     }
 }
+
+//글쓰기
+.inquiry{
+    //상단 폼
+    &-form{
+        &__info{
+            margin-bottom:calcRem(20rem);
+        }
+
+        &__item{
+            margin-top:calcRem(15rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+
+    //주문검색
+    &-order{
+        margin-bottom:calcRem(20rem);
+
+        &__info{
+            position: relative;
+            padding-top:calcRem(15rem);
+            margin-top:calcRem(15rem);
+        }
+
+        &__close{
+            position: absolute;
+            right:0;
+            top:0;
+            width:calcRem(12rem);
+            height:calcRem(12rem);
+            @include pageBackground('/images/common/ico_inquiry_close.svg','no-repeat center center / contain');
+            background-size: calcRem(12rem) calcRem(12rem);
+        }
+
+        &__item{
+            margin-top:calcRem(5rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__inner{
+            margin:0;
+
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__title{
+            float:left;
+            @include body3;
+            min-width: calcRem(70rem);
+            box-sizing: border-box;
+        }
+        
+        &__text{
+            overflow: hidden;
+            @include body3;
+        }
+    }
+
+    //상품검색
+    &-product{
+        margin-bottom:calcRem(20rem);
+
+        &__info{
+            position: relative;
+            margin-top:calcRem(15rem);
+        }
+
+        &__close{
+            position: absolute;
+            right:0;
+            top:0;
+            width:calcRem(12rem);
+            height:calcRem(12rem);
+            @include pageBackground('/images/common/ico_inquiry_close.svg','no-repeat center center / contain');
+            background-size: calcRem(12rem) calcRem(12rem);
+        }
+
+        &__text{
+            @include body5;
+            margin:calcRem(5rem) 0 0;
+        }
+
+        &__body{
+            display: table;
+            table-layout: fixed;
+            width:100%;
+        }
+
+        &__thumb{
+            display: table-cell;
+            vertical-align: middle;
+            width:calcRem(120rem);
+            line-height: 0;
+        }
+
+        &__title{
+            display: table-cell;
+            vertical-align: middle;
+            padding-left:calcRem(15rem);
+            @include body2;
+            font-weight: $regular;
+        }
+    }
+
+    //이미지 첨부
+    &-image{
+        margin-bottom:calcRem(30rem);
+
+        &__header{
+            position: relative;
+            overflow: hidden;
+        }
+
+        &__file{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            display: block;
+            height:100%;
+            z-index: $childZindex;
+            font-size: calcRem(100rem);
+            opacity: 0;
+        }
+
+        &__text{
+            @include body5;
+            margin:calcRem(5rem) 0 0;
+        }
+
+        //이미지 스크롤
+        &__scroll{
+            margin:0 calcRem(-20rem);
+            box-sizing: border-box;
+            overflow: hidden;
+            padding:0 calcRem(20rem);
+            overflow-x: scroll;
+            line-height:0;
+            font-size:0;
+            scrollbar-width: none;
+            position: relative;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &--inner{
+                white-space: nowrap;
+                padding:calcRem(25rem) 0 calcRem(15rem);
+            }
+
+            &--item{
+                display: inline-block;
+                margin-right:calcRem(10rem);
+                width:calcRem(77rem);
+                position: relative;
+
+                &:last-child{
+                    margin-right:calcRem(20rem);
+                }
+            }
+        }
+    }
+
+    //알림신청
+    &-notification{
+        &__title{
+            @include title2;
+            margin-bottom:calcRem(12rem);
+        }
+
+        &__item{
+            margin-top:calcRem(15rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+}
+
+//이미지 첨부 item
+.view-image{
+    position: relative;
+
+    &__close{
+        position: absolute;
+        top:calcRem(3rem);
+        right:calcRem(3rem);
+        width:calcRem(18rem);
+        height:calcRem(18rem);
+        @include pageBackground('/images/common/ico_view_img_close.svg','no-repeat center center / contain');
+        background-size: calcRem(18rem) calcRem(18rem);
+        z-index: $childZindex;
+    }
+}

@@ -481,7 +481,7 @@ input {
 		display: block;
 		width:100%;
 		@include body2;
-		padding:calcRem(7rem) calcRem(30rem) calcRem(7rem) calcRem(10rem);
+		padding:calcRem(7rem) calcRem(10rem) calcRem(7rem) calcRem(10rem);
 		height:calcRem(240rem);
 		@include placeholder-color($gray2);
 		resize:none;
@@ -554,7 +554,9 @@ input {
 
 				//big size
 				#{$this}--big &{
+					@include background('/images/common/ico_red-checked.svg','no-repeat center center / contain');
 					background-size:calcRem(8rem) calcRem(5rem);
+					border-color:$point1;
 				}
 			}
 		}
@@ -748,5 +750,34 @@ input {
 		padding:0;
 		@include background('/images/common/search_btn.png','no-repeat center center / contain');
 		background-size: calcRem(16rem) calcRem(14rem);
+	}
+}
+
+//애로우 버튼
+.form-arrow__btn{
+	border:solid 1px $gray2;
+	display: block;
+	text-align: center;
+	font-size:0;
+	line-height:0;
+	box-sizing: border-box;
+	padding:calcRem(7rem) calcRem(10rem);
+
+	&--text{
+		display: inline-block;
+		@include body2;
+		padding-right:calcRem(14rem);
+		position: relative;
+
+		&:after{
+			content:"";
+			width:calcRem(3rem);
+			height:calcRem(6rem);
+			@include pageBackground('/images/common/ico-notice-list-arrow.svg','no-repeat center center / contain');
+			background-size: calcRem(3rem) calcRem(6rem);
+			position: absolute;
+			right:0;
+			@include vertical-center;
+		}
 	}
 }
