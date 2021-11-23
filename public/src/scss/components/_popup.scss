@@ -711,6 +711,12 @@
         }
     }
 
+    &__title{
+     text-align: center;
+        margin-bottom: calcRem(30rem);
+        @include title1;
+    }
+
     &__option{
         &--count{
             margin-top:calcRem(20rem);
@@ -718,7 +724,27 @@
             .quantity{
                 max-width: calcRem(68rem);
                 box-sizing: border-box;
+                float: right;
             }
+        }
+
+        &--inner{
+            display: table;
+            table-layout: fixed;
+            width:100%;
+        }
+
+        &--title{
+            display: table-cell;
+            vertical-align: middle;
+            width:calcRem(100rem);
+            @include body3;
+            font-size: calcRem(11rem);
+        }
+
+        &--quantity{
+            display: table-cell;
+            vertical-align: middle;
         }
     }
 

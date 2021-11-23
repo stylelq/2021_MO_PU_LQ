@@ -1,0 +1,37 @@
+<%
+type = "cart"
+page = "cart"
+popup = "false"
+lnbTitle = "장바구니"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnb %>
+    <div class="site-main">
+        <section class="cart">
+            <!-- 링크배너 -->
+            <div class="cart-banner">
+                <div class="cart-banner__text">고객님은 <span class="cart-banner__text--point">비로그인</span> 상태 입니다.<br />로그인 하시면 혜택가로 구매 가능 합니다.</div>
+                <div class="cart-banner__btn">
+                    <ul class="cart-banner__list">
+                        <li class="cart-banner__item">
+                            <a href="" class="btn-v1 type-primary">로그인 하기</a>
+                        </li>
+                        <li class="cart-banner__item">
+                            <a href="" class="btn-v1 type-white">계속 쇼핑하기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .링크배너 -->
+            <!-- list -->
+            <div class="cart-list">
+                <div class="cart-list__no-cart">장바구니에 담긴 상품이 없습니다.</div>
+            </div>
+            <!-- .list -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>

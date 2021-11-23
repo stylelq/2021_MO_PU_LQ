@@ -41,6 +41,7 @@
 @mixin body2(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$medium;}
 @mixin body3(){font-size:calcRem(12rem); line-height:calclH(18,12); letter-spacing: $defaultLetter; font-weight:$light;}
 @mixin body4(){font-size:calcRem(10rem); line-height:calclH(16,10); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body5(){font-size:calcRem(11rem); line-height:calclH(18,11); letter-spacing: $defaultLetter; font-weight:$light;}
 
 //placeholder-color
 @mixin placeholder-color($place-color){

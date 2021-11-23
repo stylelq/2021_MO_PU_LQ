@@ -2,7 +2,6 @@
 @import "../base/mixins";
 //layout
 .cart{
-    border-top:solid 1px $lightgray1;
 
     &-info{
         margin-top: calcRem(10rem);
@@ -29,6 +28,12 @@
             }
         }
     }
+
+    &-list__no-cart{
+        @include body5;
+        text-align: center;
+        padding:calcRem(20rem) calcRem(20rem);
+    }
 }
 
 //제품 정보
@@ -36,6 +41,10 @@
     border-bottom:solid 1px $gray1;
     position: relative;
     padding:calcRem(20rem) 0 0;
+
+    &:first-child{
+        border-top:solid 1px $lightgray1;
+    }
 
     //header
     &__header{
@@ -294,3 +303,29 @@
     }
 }
 
+//비회원
+.cart-banner{
+    padding:0 calcRem(20rem);
+    margin-bottom:calcRem(40rem);
+
+    &__text{
+        text-align: center;
+        @include title2;
+
+        &--point{
+            color:$point1;
+        }
+    }
+
+    &__btn{
+        margin-top:calcRem(20rem);
+    }
+
+    &__item{
+        margin-top:calcRem(10rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
