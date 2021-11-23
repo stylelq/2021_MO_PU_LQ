@@ -255,7 +255,7 @@
                 content:"";
                 width:calcRem(35rem);
                 height:calcRem(20rem);
-                @include pageBackground('/images/common/ico_360_view.png','no-repeat center center / contain');
+                @include pageBackground('/images/common/ico_360_view.svg','no-repeat center center / contain');
                 background-size: calcRem(35rem) calcRem(20rem);
                 position: absolute;
                 left:0;
@@ -354,8 +354,8 @@
             height:calcRem(14rem);
             display: inline-block;
             margin-left:calcRem(7rem);
-            vertical-align: middle;
-            @include pageBackground('/images/common/ico_radius_arrow.png','no-repeat center center / contain');
+            vertical-align: text-top;
+            @include pageBackground('/images/common/ico_radius_arrow.svg','no-repeat center center / contain');
             background-size: calcRem(14rem) calcRem(14rem);
         }
     }
@@ -488,7 +488,7 @@
         &--del{
             width:calcRem(14rem);
             height:calcRem(14rem);
-            @include pageBackground('/images/common/icon_sum_delete.png','no-repeat center center / contain');
+            @include pageBackground('/images/common/icon_sum_delete.svg','no-repeat center center / contain');
             background-size: calcRem(14rem) calcRem(14rem);
             position: absolute;
             right:0;

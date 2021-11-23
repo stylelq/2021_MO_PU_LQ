@@ -1,7 +1,7 @@
 <%
 type = "center"
 page = "center"
-popup = "false"
+popup = "true"
 lnbTitle = "1:1 문의"
 %>
 <% include ../_include/_header %>
@@ -43,7 +43,7 @@ lnbTitle = "1:1 문의"
                     <!-- 주문검색 -->
                     <div class="inquiry-order">
                         <div class="inquiry-order__header">
-                            <a href="inquiryOrderPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">주문검색</span></a>
+                            <a href="#inquiryOrderPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">주문검색</span></a>
                         </div>
                         <!-- 주문내용 -->
                         <div class="inquiry-order__info">
@@ -71,7 +71,7 @@ lnbTitle = "1:1 문의"
                     <!-- 상품검색 -->
                     <div class="inquiry-product">
                         <div class="inquiry-product__header">
-                            <a href="inquiryProductPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">상품검색</span></a>
+                            <a href="#inquiryProductPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">상품검색</span></a>
                         </div>
                         <!-- 주문내용 -->
                         <div class="inquiry-product__info">
@@ -158,4 +158,6 @@ lnbTitle = "1:1 문의"
 <% include ../_include/_contentFooter %>
 <% include ../_include/_cartFix %>
 <% include ../_include/_inquiryFixWriteButton %>
+<% include ../_popup/_orderSearch %>
+<% include ../_popup/_productSearch %>
 <% include ../_include/_footer %>

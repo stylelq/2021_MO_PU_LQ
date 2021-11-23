@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="../../css/pages/center_notice.css">
 	<link rel="stylesheet" href="../../css/pages/center_faq.css">
 	<link rel="stylesheet" href="../../css/pages/center_inquiry.css">
+	<link rel="stylesheet" href="../../css/pages/product.css">
 
 </head>
 
@@ -604,14 +605,14 @@
                     <!-- 주문검색 -->
                     <div class="inquiry-order">
                         <div class="inquiry-order__header">
-                            <a href="inquiryOrderPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">주문검색</span></a>
+                            <a href="#inquiryOrderPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">주문검색</span></a>
                         </div>
                     </div>
                     <!-- .주문검색- -->
                     <!-- 상품검색 -->
                     <div class="inquiry-product">
                         <div class="inquiry-product__header">
-                            <a href="inquiryProductPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">상품검색</span></a>
+                            <a href="#inquiryProductPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">상품검색</span></a>
                         </div>
                         <p class="inquiry-product__text">상담할 상품이 온라인 스토어에서 확인되지 않을 경우 직접 상품명이나 제품 코드를 입력해 주세요.</p>
                     </div>
@@ -728,11 +729,296 @@
     </ul>
 </div>
 <!-- .inquiry-fix -->
+<!-- qna write popup -->
+<section id="inquiryOrderPop" class="popup type-write">
+    <header class="popup__header">
+        <h3 class="popup__tit">주문내역</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+
+    <section class="popup__body">
+        <div class="popup-orderlist">
+            <div class="popup-orderlist__header">최근 6개월 동안의 주문내역 입니다.</div>
+            <div class="popup-orderlist__body">
+                <!-- 상품이 없을경우 노출 -->
+                <!--<div class="popup-orderlist__no-cart">주문하신 상품이 없습니다.</div>-->
+                <!-- .상품이 없을경우 노출 -->
+                <!-- list -->
+                <div class="popup-orderlist__list">
+                    <!-- item -->
+                    <div class="orderlist-item">
+                        <div class="orderlist-item__header">
+                            <div class="form__radio">
+                                <input class="form__radio--input sr-only" type="radio" name="popupProduct" id="popupProduct1">
+                                <label class="form__radio--text" for="popupProduct1">주문번호<span class="orderlist-item__number">P20210812142407</span></label>
+                            </div>
+                            <div class="orderlist-item__date">2021.10.27</div>
+                        </div>
+                        <div class="orderlist-item__body">
+                            <div class="orderlist-item__product">
+                                <div class="orderlist-item__thumb"><img src="../../images/dummy/detail-img1.jpg" alt="" /></div>
+                                <div class="orderlist-item__cont">
+                                    <div class="orderlist-item__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백<br />HO1PM21IV</div>
+                                    <div class="orderlist-item__price">289,290원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .item -->
+                    <!-- item -->
+                    <div class="orderlist-item">
+                        <div class="orderlist-item__header">
+                            <div class="form__radio">
+                                <input class="form__radio--input sr-only" type="radio" name="popupProduct" id="popupProduct2">
+                                <label class="form__radio--text" for="popupProduct2">주문번호<span class="orderlist-item__number">P20210812142407</span></label>
+                            </div>
+                            <div class="orderlist-item__date">2021.10.27</div>
+                        </div>
+                        <div class="orderlist-item__body">
+                            <div class="orderlist-item__product">
+                                <div class="orderlist-item__thumb"><img src="../../images/dummy/detail-img1.jpg" alt="" /></div>
+                                <div class="orderlist-item__cont">
+                                    <div class="orderlist-item__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백<br />HO1PM21IV</div>
+                                    <div class="orderlist-item__price">289,290원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .list -->
+            </div>
+        </div>
+        <!-- wirte Footer -->
+        <div class="popup-write__footer">
+            <ul class="popup-write__list">
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">취소</a></li>
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">확인</a></li>
+            </ul>
+        </div>
+        <!-- .wirte Footer -->
+    </section>
+</section>
+<!-- .qna write popup -->
+<!-- productSearch popup -->
+<section id="inquiryProductPop" class="popup">
+    <header class="popup__header">
+        <h3 class="popup__tit">상품 검색</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <!-- filter -->
+        <div class="product-search">
+            <div class="product-search__filter">
+                <ul class="product-search__list">
+                    <li class="product-search__item">
+                        <select name="wirteOption" id="productSearch1" class="form__select js-multiselect" title="1차 카테고리 선택">
+                            <option value="" selected>1차 카테고리 선택</option>
+                            <option value="107">WOMEN</option>
+                            <option value="108">MEN</option>
+                            <option value="109">ACCESSORIES</option>
+                            <option value="301">FASHION&amp;ACC</option>
+                            <option value="378">PLATFORM-L</option>
+                            <option value="392">OÀLC</option>
+                        </select>
+                    </li>
+                    <li class="product-search__item">
+                        <select name="wirteOption" id="productSearch2" class="form__select js-multiselect" title="2차 카테고리 선택" disabled>
+                            <option value="" selected>2차 카테고리 선택</option>
+                            <option value="110">BAG</option>
+                            <option value="111">WALLET</option>
+                        </select>
+                    </li>
+                    <li class="product-search__item">
+                        <select name="wirteOption" id="productSearch3" class="form__select js-multiselect" title="3차 카테고리 선택" disabled>
+                            <option value="" disabled="" selected>3차 카테고리 선택</option>
+                            <option value="117">숄더백</option>
+                            <option value="118">토트백</option>
+                            <option value="119">크로스백</option>
+                            <option value="120">미니백/클러치백</option>
+                            <option value="121">백팩</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="product-search__code">
+                    <input type="text" class="form__input--text" title="상품명/상품코드" placeholder="상품명/상품코드 입력">
+                </div>
+                <div class="product-search__btn">
+                    <a href="javascript:void(0)" class="join-box__btn btn-v1 type-secondary">검색</a>
+                </div>
+            </div>
+        </div>
+        <!-- .filter -->
+        <!-- list -->
+        <div class="product-search__body">
+            <!-- 리스트가 없을경우 노출 -->
+            <!--<div class="product-search__no-cart">상품 검색 내역이 없습니다.</div>-->
+            <!-- .리스트가 없을경우 노출 -->
+            <!-- 리스트가 있을경우 -->
+            <!-- Product List Filter -->
+<div class="list-filter list-filter__search">
+    <div class="wrap">
+        <div class="filter__layout">
+            <a href="#;" class="filter__link filter__link--list js-layout-chage">217개 상품</a>
+        </div>
+        <div class="filter__meta">
+            <!-- Select -->
+            <div class="filter__meta--select">
+                <select name="sort" id="sort" class="filter__select" title="상품 정렬 순서">
+                    <option value="new" selected="">신상품순</option>
+                    <option value="best">베스트순</option>
+                    <option value="high">높은가격순</option>
+                    <option value="low">낮은가격순</option>
+                </select>
+            </div>
+            <!-- .Select -->
+        </div>
+    </div>
+</div>
+<!-- .Product List Filter -->
+            <!-- product post -->
+            <div class="product-post product-post--post">
+                <ul class="product-post__list">
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">SOLD OUT</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW<span class="product-item__state--expected">출시예정</span></div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                </ul>
+            </div>
+            <!-- .product post -->
+            <!-- paging -->
+<div class="paging">
+    <ul class="paging__list">
+        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
+        <li class="paging__item is-current"><span class="paging__link">1</span></li>
+        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
+        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
+    </ul>
+</div>
+<!-- .paging -->
+            <!-- .리스트가 있을경우 -->
+        </div>
+        <!-- .list -->
+    </section>
+</section>
+<!-- .productSearch popup -->
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	
 	
 	<script src="../../js/common.js"></script>
+	
+		<script src="../../js/popup.js"></script>
 	
 </body>
 </html>

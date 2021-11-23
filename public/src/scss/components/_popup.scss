@@ -624,7 +624,7 @@
             }
 
             &.swiper-button-disabled{
-                display: none;
+                opacity: 0.3;
                 pointer-events: none;
             }
         }
@@ -1226,3 +1226,105 @@
         }
     }
 }
+
+//주문내역
+.popup-orderlist{
+
+    &__header{
+        @include body3;
+        padding:0 calcRem(20rem) calcRem(20rem);
+        border-bottom:solid 1px $black1;
+    }
+
+    &__no-cart{
+        @include body5;
+        text-align: center;
+        padding:calcRem(40rem) calcRem(20rem);
+    }
+}
+
+//주문내역 제품 컨텐츠
+.orderlist-item{
+    border-bottom:solid 1px $gray2;
+
+    &__header{
+        padding:calcRem(20rem) calcRem(20rem);
+        border-bottom:solid 1px $lightgray1;
+
+        .form__radio--text{
+            font-weight: $medium;
+        }
+    }
+
+    &__number{
+        margin-left:calcRem(5rem);
+    }
+
+    &__date{
+        @include body5;
+        font-weight: $regular;
+        color:$darkgray;
+        margin-top:calcRem(1rem);
+        padding-left:calcRem(20rem);
+    }
+
+    &__body{
+        padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__thumb{
+        float:left;
+        width:calcRem(120rem);
+        margin-right:calcRem(15rem);
+    }
+
+    &__cont{
+        overflow: hidden;
+    }
+
+    &__title{
+        @include body2;
+    }
+
+    &__price{
+        @include title2;
+        margin-top:calcRem(20rem);
+    }
+}
+
+//상품검색
+.product-search{
+    margin-bottom:calcRem(40rem);
+    padding:0 calcRem(20rem);
+
+    &__item{
+        margin-top:calcRem(10rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+
+    &__code{
+        margin-top:calcRem(20rem);
+    }
+
+    &__btn{
+        margin-top:calcRem(30rem);
+    }
+
+    &__body{
+        padding-bottom:calcRem(20rem);
+    }
+
+    &__no-cart{
+        @include body5;
+        text-align: center;
+        padding:calcRem(30rem) calcRem(20rem);
+    }
+}
+

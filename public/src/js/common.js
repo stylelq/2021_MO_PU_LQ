@@ -27,7 +27,7 @@ jQuery(function(){
             }
             return false;
         }
-        $(document).on('click', '.js-menu-btn', GnbMenu);
+        $(document).on('click', '.js-menu-btn,header .dim', GnbMenu);
 
         //Gnb 메뉴 클릭시 공통액션
         $('.gnb-body__link').off('click').on('click', function (e) {
@@ -504,6 +504,21 @@ jQuery(function(){
     };
 
     $(document).on('change', '.js-custom-message', customOption);
+
+    //셀렉트 박스 텍스트 멀티(상품검색 팝업)
+    function selectMulti() {
+        var selectMultiSelected = $(this).find('option:selected');
+        var idxDisabled = $(this).closest('.product-search__item').next('.product-search__item').find('.js-multiselect');
+        if(selectMultiSelected.val() == "") {
+            $(this).removeClass('is-check');
+            idxDisabled.attr("disabled",true);
+        }
+        else {
+            $(this).addClass('is-check');
+            idxDisabled.removeAttr('disabled');
+        }
+    }
+    $(document).on('change', '.js-multiselect', selectMulti);
 });
 
 //입고알림 버튼클릭시
