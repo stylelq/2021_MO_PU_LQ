@@ -86,10 +86,10 @@
         position: absolute;
         height:calcRem(35rem);
         background-color: $whiteColor;
+        top:0;
         left:0;
         width:100%;
         z-index: $childZindex;
-        top:0;
 
         &:after{
             @include block-reset;
