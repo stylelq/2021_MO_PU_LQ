@@ -508,6 +508,7 @@
 //제품 정보 탭
 .detail-tab{
     height:calcRem(35rem);
+    position: relative;
 
     //head
     &__fix{
