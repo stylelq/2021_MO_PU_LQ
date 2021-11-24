@@ -1,9 +1,84 @@
-/*@import "../base/variables";
+@import "../base/variables";
 @import "../base/mixins";
-@import "../pages/promotion";
 
 @mixin imageBlock {
   display:block;
   width:100%;
-}*/
+}
 
+.promotion{
+    // 프로모션 리스트
+    // 프로모션 메인배너
+    &-banner{
+        position: relative;
+        padding-top: calcRem(20rem);
+        &__img{
+          width: 100%;
+          @include imageBlock;
+        }
+        &__bottom{
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          bottom: calcRem(40rem);
+        }
+        &__txt{
+          color: #fff;
+          font-size: calcRem(14rem);
+        }
+    }
+
+    // 프로모션 배너 리스트 그룹
+    &-wrap{
+        padding-top: calcRem(60rem);
+    }
+
+    // 프로모션 배너 리스트
+    &-list{
+        padding: 0 calcRem(20rem) calcRem(20rem);
+        &__link{
+          display: block;
+        }
+        &__img{
+          @include imageBlock;
+        }
+        &__name{
+          padding-top: calcRem(10rem);
+          text-align: center;
+          font-family: 'futura-pt';
+          font-size: calcRem(14rem);
+        }
+    }
+
+    // 프로모션 뷰 비주얼
+    &-view{
+        padding: calcRem(17rem) 0 calcRem(41rem);
+        &__title{
+          text-align: center;
+          padding: 0 0 calcRem(10rem);
+        }
+        &__date{
+          margin-top: calcRem(9rem);
+          font-size: calcRem(11rem);
+          font-weight: 100;
+          color: #484848;
+        }
+        &__img{
+          @include imageBlock;
+        }
+    }
+
+    // 프로모션 상품 리스트
+    &-product{
+        position: relative;
+        &__header{
+          padding: 0 20px;
+          text-align: center;
+        }
+        &__name{
+          padding-bottom: calcRem(10rem)
+          border-bottom: 1px solid #dddddd;
+        }
+    }
+
+}
