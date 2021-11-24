@@ -1338,6 +1338,19 @@
 
 
 // 룩북 레이어
+#lookbookPop{
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(110%);
+    transition-property: transform,opacity,visibility;
+    transition-duration: 0.3s;
+    &.is-active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
 .lookbook-wrap{
     // 룩북 소개
     &__contents{
