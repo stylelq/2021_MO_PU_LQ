@@ -1,0 +1,50 @@
+@import "../base/variables";
+@import "../base/mixins";
+//error
+.error-404{
+    width:100%;
+    min-height:100vh;
+    padding:calcRem(20rem) 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &__inner{
+        width:100%;
+        padding:0 calcRem(20rem);
+        text-align: center;
+    }
+
+    &__icon{
+        line-height:0;
+        width:calcRem(84rem);
+        margin:0 auto calcRem(20rem);
+    }
+
+    &__title{
+        margin:0;
+        @include heading2;
+    }
+
+    &__text{
+        margin:calcRem(10rem) 0 0;
+        @include title2;
+    }
+
+    &__info{
+         padding-top:calcRem(25rem);
+         margin:calcRem(25rem) 0 0;
+         border-top:dashed 1px $gray2;
+        @include body3;
+        font-weight: $regular;
+
+        &--point{
+            font-weight: $medium;
+            color:$point1;
+        }
+     }
+
+    &__btn{
+        margin-top:calcRem(40rem);
+    }
+}

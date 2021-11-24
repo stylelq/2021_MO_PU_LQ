@@ -78,6 +78,14 @@ jQuery(function(){
             $('html').removeClass('is-hidden');
         })
 
+        //기본탭
+        function basicTab() {
+            var idx = $(this).parent('li').index();
+            $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+            $('.js-change-cont').eq(idx).addClass('is-current').siblings('.js-change-cont').removeClass('is-current');
+        }
+        $(document).on('click', '.js-tab-change', basicTab);
+
         /*
         //Join(회원가입, 로그인)
         */
@@ -486,11 +494,13 @@ jQuery(function(){
             if (thisSt > lastScrollTop && thisSt > navbarHeight){
                 $('.header').addClass('type-bg');
                 $('.detail-tab').removeClass('is-down');
+                $('.js-fixed-check').removeClass('is-down');
 
             } else {
                 if(thisSt + $(window).height() < $(document).height()) {
                     $('.header').removeClass('type-bg');
                     $('.detail-tab').addClass('is-down');
+                    $('.js-fixed-check').addClass('is-down');
                 }
             }
 
@@ -573,6 +583,40 @@ jQuery(function(){
         }
     }
     $(document).on('change', '.js-multiselect', selectMulti);
+
+    //멤버쉽 스크롤 픽시드
+    if($('.js-fixed-check').length > 0) {
+        $(window).scroll(function () {
+            var height = $(document).scrollTop();
+            var mainOuterHeight = $('.site-main').outerHeight(true);
+            var lnbHeight = $('.lnb').height();
+            var mainHeight = $('.site-main').height();
+            var headerHeight = $('.header').height();
+            var marginHeight = mainOuterHeight - mainHeight;
+            var totalHeight =  lnbHeight + marginHeight + headerHeight;
+            if (height > totalHeight) {
+                $('.js-fixed-check').addClass('is-fixed');
+                $('.header').addClass('is-bg-white');
+            } else {
+                $('.js-fixed-check').removeClass('is-fixed');
+                $('.header').removeClass('is-bg-white');
+            }
+        });
+    }
+    
+    //멤버쉽 스크롤 탭
+    function membershipTab() {
+        var mainOuterHeight = $('.site-main').outerHeight(true);
+        var lnbHeight = $('.lnb').height();
+        var mainHeight = $('.site-main').height();
+        var marginHeight = mainOuterHeight - mainHeight;
+        var totalHeight =  lnbHeight + marginHeight;
+        var idx = $(this).parent('li').index();
+        $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+        $('.js-basic-tab-cont').eq(idx).addClass('is-current').siblings('.js-basic-tab-cont').removeClass('is-current');
+        $('html, body').animate({scrollTop: totalHeight}, 340);
+    }
+    $(document).on('click', '.js-basic-tab-link', membershipTab);
 });
 
 //입고알림 버튼클릭시

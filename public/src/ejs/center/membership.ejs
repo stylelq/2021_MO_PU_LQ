@@ -1,0 +1,39 @@
+<%
+type = "center"
+page = "center"
+popup = "false"
+lnbTitle = "MEMBERSHIP"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbSelectCenter %>
+    <div class="site-main">
+        <section class="service-center">
+            <!-- 탭 -->
+            <div class="membership-tab js-fixed-check">
+                <ul class="membership-tab__fix">
+                    <li class="membership-tab__item is-current">
+                        <a href="#;" class="membership-tab__link js-basic-tab-link">회원등급</a>
+                    </li>
+                    <li class="membership-tab__item">
+                        <a href="#;" class="membership-tab__link js-basic-tab-link">적립금 안내</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 탭 -->
+            <!-- 컨텐츠 -->
+            <div class="membership-tab__cont">
+                <div class="membership-tab__info js-basic-tab-cont is-current">
+                    <% include ../_include/_membershipRanking %>
+                </div>
+                <div class="membership-tab__info js-basic-tab-cont">
+                    <% include ../_include/_membershipInfo %>
+                </div>
+            </div>
+            <!-- .컨텐츠 -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>

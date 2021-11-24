@@ -1,0 +1,333 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+//공통 불릿
+.center-bullet{
+    &__item{
+        padding-left:calcRem(7rem);
+        position: relative;
+        @include body3;
+        color:$darkgray;
+        margin:calcRem(9rem) 0 0;
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$darkgray;
+        }
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
+
+//공통 테이블
+.basic-table{
+    margin-bottom:calcRem(25rem);
+    border-top:solid 1px $black1;
+    width:100%;
+
+    thead{
+        th{
+            vertical-align: middle;
+            @include body2;
+            padding:calcRem(10rem) calcRem(5rem);
+            background-color: $lightgray2;
+            text-align: center;
+        }
+    }
+
+    tbody{
+        th{
+            vertical-align: middle;
+            @include body3;
+            padding:calcRem(10rem) calcRem(5rem);
+            text-align: center;
+            border-bottom: solid 1px $lightgray1;
+            color:$darkgray;
+            background-color: $lightgray3;
+        }
+
+        td{
+            vertical-align: middle;
+            @include body3;
+            padding:calcRem(10rem) calcRem(5rem);
+            text-align: center;
+            border-bottom: solid 1px $lightgray1;
+            color:$darkgray;
+
+            .basic-table__sub{
+                display: block;
+                font-size: calcRem(11rem);
+                color:$gray2;
+            }
+
+            &.basic-table--left{
+                text-align: left;
+            }
+        }
+    }
+}
+
+//멤버쉽 탭
+.membership-tab{
+    height:calcRem(35rem);
+    position: relative;
+
+    //head
+    &__fix{
+        border-top:solid 1px $gray1;
+        position: absolute;
+        height:calcRem(35rem);
+        background-color: $whiteColor;
+        left:0;
+        width:100%;
+        z-index: $childZindex;
+        transition: top 0.3s;
+
+        &:after{
+            @include block-reset;
+        }
+
+        .is-fixed &{
+            position: fixed;
+            top:0;
+        }
+
+        .is-fixed.is-down &{
+            top:calcRem(45rem);
+        }
+    }
+
+    &__item{
+        width:50%;
+        float:left;
+        text-align: center;
+    }
+
+    &__link{
+        display: block;
+        @include body3;
+        padding:calcRem(8rem) calcRem(5rem);
+        position: relative;
+
+        .is-current &{
+            font-weight: $medium;
+        }
+
+        &:after{
+            content:"";
+            height:calcRem(2rem);
+            background-color: $black1;
+            position: absolute;
+            top:-1px;
+            left:0;
+            right:0;
+            opacity: 0;
+
+            .is-current &{
+                opacity: 1;
+            }
+        }
+    }
+
+    //cont
+    &__cont{
+        padding:calcRem(35rem) calcRem(20rem) 0;
+    }
+
+    &__info{
+        display:none;
+
+        &.is-current{
+            display: block;
+        }
+    }
+}
+
+//회원등급
+.ranking{
+    $this:&;
+    //탭
+    &-tab{
+        margin-top:calcRem(-10rem);
+        margin-bottom:calcRem(14rem);
+
+        &:after{
+            @include block-reset;
+        }
+        &__item{
+            width:25%;
+            float:left;
+
+            &.is-current{
+                #{$this}-tab__link{
+                    color:$black1;
+                }
+            }
+        }
+
+        &__link{
+            text-align: center;
+            display: block;
+            @include body5;
+            color:$grayTextColor;
+            text-transform: uppercase;
+        }
+    }
+
+    &-cont{
+        padding-bottom:calcRem(25rem);
+        margin-bottom:calcRem(25rem);
+        border-bottom:solid 1px $lightgray1;
+
+        &__item{
+            display: none;
+
+            &.is-current{
+                display: block;
+            }
+        }
+    }
+
+    //회원등급 인포
+    &-info{
+        &__title{
+            background-color: $bgColor;
+            padding:calcRem(30rem) calcRem(20rem) calcRem(27rem);
+            text-align: center;
+        }
+
+        &__name{
+            @include title1;
+            text-transform: uppercase;
+            margin-bottom:calcRem(7rem);
+
+            &--gold{
+                color:$gold;
+            }
+
+            &--silver{
+                color:$silver;
+            }
+
+            &--club{
+                color:$club;
+            }
+        }
+
+        &__icon{
+            line-height: 0;
+            width:calcRem(54rem);
+            margin:0 auto calcRem(12rem);
+        }
+
+        &__condition{
+            @include body5;
+        }
+
+        &__coupon{
+            padding-top:calcRem(25rem);
+        }
+
+        &__item{
+            margin-top:calcRem(20rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__inner{
+            margin:0;
+            display: table;
+            table-layout: fixed;
+            width:100%;
+        }
+
+        &__price{
+            display: table-cell;
+            vertical-align: middle;
+            padding:0 calcRem(25rem);
+            width:calcRem(140rem);
+            box-sizing: border-box;
+
+            &--box{
+                border:solid 1px $point1;
+                border-radius: 0 calcRem(7rem) 0 calcRem(7rem);
+                height:calcRem(57rem);
+                width:100%;
+                position: relative;
+            }
+
+            &--inner{
+                @include ab-center;
+                width:100%;
+                text-align: center;
+            }
+
+            &--title{
+                @include body4;
+                font-weight: $medium;
+                color:$point1;
+                display: block;
+            }
+
+            &--text{
+                @include title1;
+                color:$point1;
+                font-weight: $regular;
+                display: block;
+            }
+
+            &--won{
+                @include body4;
+            }
+        }
+
+        &__text{
+            margin:0;
+            display: table-cell;
+            vertical-align: middle;
+            @include body2;
+        }
+    }
+
+    &-notice{
+        margin-top:calcRem(40rem);
+
+        &__title{
+            @include title2;
+            margin-bottom:calcRem(13rem);
+        }
+    }
+}
+
+//적립금 안내
+.membership{
+    &-info{
+        margin-top:calcRem(50rem);
+
+        &:first-child{
+            margin-top:0;
+        }
+
+        &__text{
+            @include body3;
+            margin:0 0 calcRem(20rem);
+        }
+
+        &__title{
+            @include title2;
+            margin:0 0 calcRem(12rem);
+        }
+    }
+}
+
+
