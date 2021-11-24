@@ -306,6 +306,7 @@ jQuery(function(){
                 },
             });
         }
+
         //프로젝트 슬라이드
         if($('.project-slider').length > 0){
             var projectSlide = new Swiper('.project-slider__container', {
@@ -474,10 +475,10 @@ jQuery(function(){
     $(document).on('click', '.js-payment-open', paymentTab);
 });
 
-/*
-//Header Scroll Bg
-*/
 jQuery(function(){
+    /*
+    //Header Scroll Bg
+    */
     $(document).ready(function(){
         // 헤더 스크롤 백그라운드
         var didScroll;
@@ -638,9 +639,21 @@ jQuery(function(){
         var idx = $(this).parent('li').index();
         $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
         $('.js-basic-tab-cont').eq(idx).addClass('is-current').siblings('.js-basic-tab-cont').removeClass('is-current');
-        $('html, body').animate({scrollTop: totalHeight}, 340);
+
+        if($('.js-fixed-check').hasClass('is-fixed')){
+            $('html, body').animate({scrollTop: totalHeight}, 340);
+        }
     }
     $(document).on('click', '.js-basic-tab-link', membershipTab);
+
+    //스토어 스페셜탭으로 가져오기
+    if($('.stores-tab').length > 0) {
+        var url_param = $(location).attr('href').split("?");
+        var param = (url_param[1]);
+        if (param == 'tabNo=2') {
+
+        }
+    }
 });
 
 //입고알림 버튼클릭시
