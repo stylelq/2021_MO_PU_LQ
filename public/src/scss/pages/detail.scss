@@ -516,10 +516,11 @@
         position: absolute;
         height:calcRem(35rem);
         background-color: $whiteColor;
+        top:0;
         left:0;
         width:100%;
         z-index: $childZindex;
-        transition: top 0.3s;
+        transition: transform 0.3s;
 
         &:after{
             @include block-reset;
@@ -527,11 +528,11 @@
 
         .is-fixed &{
             position: fixed;
-            top:0;
+            transform:translateZ(0) translateY(0);
         }
 
         .is-fixed.is-down &{
-            top:calcRem(45rem);
+            transform:translateZ(0) translateY(calcRem(45rem));
         }
     }
 

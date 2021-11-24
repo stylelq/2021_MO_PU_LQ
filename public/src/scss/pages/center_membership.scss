@@ -89,7 +89,8 @@
         left:0;
         width:100%;
         z-index: $childZindex;
-        transition: top 0.3s;
+        transition: transform 0.3s;
+        top:0;
 
         &:after{
             @include block-reset;
@@ -97,11 +98,11 @@
 
         .is-fixed &{
             position: fixed;
-            top:0;
+            transform:translateZ(0) translateY(0);
         }
 
         .is-fixed.is-down &{
-            top:calcRem(45rem);
+            transform:translateZ(0) translateY(calcRem(45rem));
         }
     }
 
