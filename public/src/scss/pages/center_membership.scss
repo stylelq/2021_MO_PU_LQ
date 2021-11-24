@@ -89,7 +89,6 @@
         left:0;
         width:100%;
         z-index: $childZindex;
-        transition: transform 0.3s;
         top:0;
 
         &:after{
@@ -97,6 +96,7 @@
         }
 
         .is-fixed &{
+            transition: transform 0.3s;
             position: fixed;
             transform:translateZ(0) translateY(0);
         }

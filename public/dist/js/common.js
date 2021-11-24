@@ -253,13 +253,24 @@ jQuery(function () {
         var headerHeight = $('.header').height();
         var marginHeight = mainOuterHeight - mainHeight;
         var totalHeight = topContHeight + marginHeight + headerHeight;
+        var upTotalHeight = topContHeight + marginHeight;
 
-        if (height > totalHeight) {
-          $('.detail-tab').addClass('is-fixed');
-          $('.header').addClass('is-bg-white');
+        if ($('.header').hasClass('type-bg')) {
+          if (height > totalHeight) {
+            $('.detail-tab').addClass('is-fixed');
+            $('.header').addClass('is-bg-white');
+          } else {
+            $('.detail-tab').removeClass('is-fixed');
+            $('.header').removeClass('is-bg-white');
+          }
         } else {
-          $('.detail-tab').removeClass('is-fixed');
-          $('.header').removeClass('is-bg-white');
+          if (height > upTotalHeight) {
+            $('.detail-tab').addClass('is-fixed');
+            $('.header').addClass('is-bg-white');
+          } else {
+            $('.detail-tab').removeClass('is-fixed');
+            $('.header').removeClass('is-bg-white');
+          }
         }
       });
     } //제품상세 탭
@@ -609,13 +620,24 @@ jQuery(function () {
       var headerHeight = $('.header').height();
       var marginHeight = mainOuterHeight - mainHeight;
       var totalHeight = lnbHeight + marginHeight + headerHeight;
+      var upTotalHeight = lnbHeight + marginHeight;
 
-      if (height > totalHeight) {
-        $('.js-fixed-check').addClass('is-fixed');
-        $('.header').addClass('is-bg-white');
+      if ($('.header').hasClass('type-bg')) {
+        if (height > totalHeight) {
+          $('.js-fixed-check').addClass('is-fixed');
+          $('.header').addClass('is-bg-white');
+        } else {
+          $('.js-fixed-check').removeClass('is-fixed');
+          $('.header').removeClass('is-bg-white');
+        }
       } else {
-        $('.js-fixed-check').removeClass('is-fixed');
-        $('.header').removeClass('is-bg-white');
+        if (height > upTotalHeight) {
+          $('.js-fixed-check').addClass('is-fixed');
+          $('.header').addClass('is-bg-white');
+        } else {
+          $('.js-fixed-check').removeClass('is-fixed');
+          $('.header').removeClass('is-bg-white');
+        }
       }
     });
   } //멤버쉽 스크롤 탭

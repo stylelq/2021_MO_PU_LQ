@@ -242,12 +242,23 @@ jQuery(function(){
                 var headerHeight = $('.header').height();
                 var marginHeight = mainOuterHeight - mainHeight;
                 var totalHeight = topContHeight  + marginHeight + headerHeight;
-                if (height > totalHeight) {
-                    $('.detail-tab').addClass('is-fixed');
-                    $('.header').addClass('is-bg-white');
-                } else {
-                    $('.detail-tab').removeClass('is-fixed');
-                    $('.header').removeClass('is-bg-white');
+                var upTotalHeight =  topContHeight + marginHeight;
+                if($('.header').hasClass('type-bg')){
+                    if (height > totalHeight) {
+                        $('.detail-tab').addClass('is-fixed');
+                        $('.header').addClass('is-bg-white');
+                    } else {
+                        $('.detail-tab').removeClass('is-fixed');
+                        $('.header').removeClass('is-bg-white');
+                    }
+                }else {
+                    if (height > upTotalHeight) {
+                        $('.detail-tab').addClass('is-fixed');
+                        $('.header').addClass('is-bg-white');
+                    } else {
+                        $('.detail-tab').removeClass('is-fixed');
+                        $('.header').removeClass('is-bg-white');
+                    }
                 }
             });
         }
@@ -594,12 +605,25 @@ jQuery(function(){
             var headerHeight = $('.header').height();
             var marginHeight = mainOuterHeight - mainHeight;
             var totalHeight =  lnbHeight + marginHeight + headerHeight;
-            if (height > totalHeight) {
-                $('.js-fixed-check').addClass('is-fixed');
-                $('.header').addClass('is-bg-white');
-            } else {
-                $('.js-fixed-check').removeClass('is-fixed');
-                $('.header').removeClass('is-bg-white');
+            var upTotalHeight =  lnbHeight + marginHeight;
+            if($('.header').hasClass('type-bg')){
+                if (height > totalHeight) {
+                    $('.js-fixed-check').addClass('is-fixed');
+                    $('.header').addClass('is-bg-white');
+
+                } else {
+                    $('.js-fixed-check').removeClass('is-fixed');
+                    $('.header').removeClass('is-bg-white');
+                }
+            }else {
+                if (height > upTotalHeight) {
+                    $('.js-fixed-check').addClass('is-fixed');
+                    $('.header').addClass('is-bg-white');
+
+                } else {
+                    $('.js-fixed-check').removeClass('is-fixed');
+                    $('.header').removeClass('is-bg-white');
+                }
             }
         });
     }
