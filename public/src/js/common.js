@@ -590,7 +590,7 @@ jQuery(function(){
         var idxDisabled = $(this).closest('.product-search__item').nextAll('.product-search__item').find('.js-multiselect');
         if(selectMultiSelected.val() == "") {
             $(this).removeClass('is-check');
-            idxDisabled.attr("disabled",true);
+            idxDisabled.attr("disabled",true).removeClass('is-check');
             idxDisabled.find('option:eq(0)').prop('selected',true);
         }
         else {

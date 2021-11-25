@@ -604,7 +604,7 @@ jQuery(function () {
 
     if (selectMultiSelected.val() == "") {
       $(this).removeClass('is-check');
-      idxDisabled.attr("disabled", true);
+      idxDisabled.attr("disabled", true).removeClass('is-check');
       idxDisabled.find('option:eq(0)').prop('selected', true);
     } else {
       $(this).addClass('is-check');
