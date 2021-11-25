@@ -587,7 +587,7 @@ jQuery(function(){
     //셀렉트 박스 텍스트 멀티(상품검색 팝업)
     function selectMulti() {
         var selectMultiSelected = $(this).find('option:selected');
-        var idxDisabled = $(this).closest('.product-search__item').next('.product-search__item').find('.js-multiselect');
+        var idxDisabled = $(this).closest('.product-search__item').nextAll('.product-search__item').find('.js-multiselect');
         if(selectMultiSelected.val() == "") {
             $(this).removeClass('is-check');
             idxDisabled.attr("disabled",true);
