@@ -404,5 +404,28 @@
 	}
 }
 
+//기존회원가입 존재할경우
+.join-existing{
+	text-align: left;
+
+	&__text{
+		@include title2;
+		text-align: center;
+		margin-bottom:calcRem(24rem);
+
+		&--point{
+			color:$point1;
+		}
+	}
+
+	&__table{
+		margin-bottom:calcRem(10rem);
+
+		.basic-table{
+			margin-bottom:0;
+		}
+	}
+}
+
 
 
