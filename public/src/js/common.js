@@ -82,7 +82,8 @@ jQuery(function(){
         function basicTab() {
             var idx = $(this).parent('li').index();
             $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
-            $('.js-change-cont').eq(idx).addClass('is-current').siblings('.js-change-cont').removeClass('is-current');
+            $(this).closest('.js-tab-wrap').find('.js-change-cont').eq(idx).addClass('is-current').siblings('.js-change-cont').removeClass('is-current');
+            return false;
         }
         $(document).on('click', '.js-tab-change', basicTab);
 
