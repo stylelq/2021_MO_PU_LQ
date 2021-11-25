@@ -591,6 +591,7 @@ jQuery(function(){
         if(selectMultiSelected.val() == "") {
             $(this).removeClass('is-check');
             idxDisabled.attr("disabled",true);
+            idxDisabled.find('option:eq(0)').prop('selected',true);
         }
         else {
             $(this).addClass('is-check');
