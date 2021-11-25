@@ -497,6 +497,10 @@ input {
 		&:focus{
 			border-color:$point1;
 		}
+
+		&-small{
+			height:calcRem(120rem);
+		}
 	}
 }
 
