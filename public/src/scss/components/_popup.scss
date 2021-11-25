@@ -1255,6 +1255,10 @@
 .orderlist-item{
     border-bottom:solid 1px $gray2;
 
+    &:last-child{
+        border-color:$black1;
+    }
+
     &__header{
         padding:calcRem(20rem) calcRem(20rem);
         border-bottom:solid 1px $lightgray1;

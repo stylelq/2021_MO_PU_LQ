@@ -18,6 +18,10 @@
             &.notice-list__item--notice{
                 border-bottom-color: $gray1;
             }
+
+            &:last-child{
+                border-color:$black1;
+            }
         }
     }
 

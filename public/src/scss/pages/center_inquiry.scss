@@ -28,6 +28,10 @@
 
         &__item{
             border-bottom:solid 1px $lightgray2;
+
+            &:last-child{
+                border-color:$black1;
+            }
         }
     }
 
@@ -147,6 +151,7 @@
 
     //질문
     &__question{
+        font-family: $font-kor;
         &--title{
             margin:0 0 calcRem(18rem);
             @include title1;
@@ -158,6 +163,7 @@
                 position: absolute;
                 top:0;
                 left:0;
+                font-family: $defaultFont;
             }
         }
 
@@ -203,6 +209,7 @@
         background-color: $lightgray2;
         border-top:solid 1px $gray2;
         padding:calcRem(25rem) calcRem(20rem) calcRem(35rem);
+        font-family: $font-kor;
 
         &--title{
             margin:0 0 calcRem(18rem);
@@ -215,6 +222,7 @@
                 position: absolute;
                 top:0;
                 left:0;
+                font-family: $defaultFont;
             }
         }
 
@@ -312,10 +320,10 @@
             position: absolute;
             right:0;
             top:0;
-            width:calcRem(12rem);
-            height:calcRem(12rem);
-            @include pageBackground('/images/common/ico_inquiry_close.svg','no-repeat center center / contain');
-            background-size: calcRem(12rem) calcRem(12rem);
+            width:calcRem(18rem);
+            height:calcRem(18rem);
+            @include pageBackground('/images/common/ico_view_img_close.svg','no-repeat center center / contain');
+            background-size: calcRem(18rem) calcRem(18rem);
         }
 
         &__item{
@@ -360,10 +368,10 @@
             position: absolute;
             right:0;
             top:0;
-            width:calcRem(12rem);
-            height:calcRem(12rem);
-            @include pageBackground('/images/common/ico_inquiry_close.svg','no-repeat center center / contain');
-            background-size: calcRem(12rem) calcRem(12rem);
+            width:calcRem(18rem);
+            height:calcRem(18rem);
+            @include pageBackground('/images/common/ico_view_img_close.svg','no-repeat center center / contain');
+            background-size: calcRem(18rem) calcRem(18rem);
         }
 
         &__text{

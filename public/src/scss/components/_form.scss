@@ -785,7 +785,7 @@ input {
 			content:"";
 			width:calcRem(4rem);
 			height:calcRem(12rem);
-			@include pageBackground('/images/common/ico-notice-list-arrow.svg','no-repeat center center / contain');
+			@include background('/images/common/ico-notice-list-arrow.svg','no-repeat center center / contain');
 			background-size: calcRem(4rem) calcRem(12rem);
 			position: absolute;
 			right:0;
