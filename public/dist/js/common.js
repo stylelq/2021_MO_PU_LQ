@@ -133,8 +133,10 @@ jQuery(function () {
 
       if ($(depthHead).hasClass('is-open')) {
         $(depthHead).removeClass('is-open');
+        $('html').removeClass('is-hidden');
       } else {
         $(depthHead).addClass('is-open');
+        $('html').addClass('is-hidden');
       }
 
       return false;
@@ -144,6 +146,7 @@ jQuery(function () {
 
     function depthMenuClose() {
       $('.lnb').removeClass('is-open');
+      $('html').removeClass('is-hidden');
     }
 
     $(document).on('click', '.js-lnb-close', depthMenuClose); //상품리스트 타입 변경 버튼제어

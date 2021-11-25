@@ -127,8 +127,10 @@ jQuery(function(){
             var depthHead = $('.js-lnb-btn').closest('.lnb');
             if($(depthHead).hasClass('is-open')){
                 $(depthHead).removeClass('is-open');
+                $('html').removeClass('is-hidden');
             }else {
                 $(depthHead).addClass('is-open');
+                $('html').addClass('is-hidden');
             }
             return false;
         }
@@ -137,6 +139,7 @@ jQuery(function(){
         //Lnb 2뎁스 메뉴 닫기
         function depthMenuClose() {
             $('.lnb').removeClass('is-open');
+            $('html').removeClass('is-hidden');
         }
         $(document).on('click', '.js-lnb-close', depthMenuClose);
 
