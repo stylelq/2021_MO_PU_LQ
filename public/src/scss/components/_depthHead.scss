@@ -50,15 +50,16 @@
         position:relative;
         padding-right:calcRem(16rem);
         &:after{
+            content:'';
             position:absolute;
             right:0;
             display:block;
-            width:calcRem(7rem);
-            height:calcRem(4rem);
-            top:0;
-            bottom:0;
+            width:calcRem(9rem);
+            height:calcRem(5rem);
+            @include vertical-center;
             margin:auto;
-            @include background('/images/common/arrow_down.png','no-repeat right center / contain'); content:'';
+            @include background('/images/common/ico_lnb_arrow_down.svg','no-repeat right center / contain');
+            background-size: calcRem(9rem) calcRem(5rem);
         }
     }
     &__wrap{
