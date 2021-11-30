@@ -527,7 +527,47 @@ jQuery(function () {
   /*
   //main(gift)
   */
-  //gift 배너슬라이드
+  //메인 배너슬라이드
+
+
+  if ($('.main-banner').length > 0) {
+    var mainSlide = new Swiper('.main-banner__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".main-banner__pagination"
+      },
+      on: {
+        init: function init() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
+        }
+      }
+    });
+  } //gift 배너슬라이드
 
 
   if ($('.gift-thumb').length > 0) {

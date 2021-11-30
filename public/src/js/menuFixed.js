@@ -18,6 +18,8 @@ jQuery(function(){
             }
         }, 250);
 
+        $('.cart-fix').addClass('is-project');
+
         function hasScrolled() {
             var thisSt = $(window).scrollTop();
 
@@ -27,14 +29,12 @@ jQuery(function(){
             if (thisSt > lastScrollTop && thisSt > navbarHeight) {
                 $('.fyl-menu').addClass('is-active');
                 $('.cart-fix').addClass('is-up');
-                $('.cart-fix').addClass('is-project');
                 $('.footer').addClass('bottom-fix');
 
             } else {
                 if (thisSt + $(window).height() < $(document).height()) {
                     $('.fyl-menu').removeClass('is-active');
                     $('.cart-fix').removeClass('is-up');
-                    $('.cart-fix').removeClass('is-project');
                     $('.footer').addClass('bottom-fix');
                 }
             }

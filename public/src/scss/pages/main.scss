@@ -2,7 +2,6 @@
 @import "../base/mixins";
 //메인 레이아웃
 .page-main{
-	padding-top:calcRem(100rem);
 	.header{
 		&:before{
 			top:calcRem(-$headerHeight);
@@ -11,6 +10,15 @@
 
 	.section-body{
 		padding-bottom:calcRem(50rem);
+	}
+}
+
+//메인 탑배너
+.main-banner{
+	&__inner{
+		display: block;
+		width:100%;
+		line-height:0;
 	}
 }
 
@@ -62,6 +70,7 @@
 	&__inner{
 		position: relative;
 		width:100%;
+		display: block;
 
 		&:after{
 			content:"";
