@@ -524,6 +524,47 @@ jQuery(function () {
       }
     });
   }
+  /*
+  //main(gift)
+  */
+  //gift 배너슬라이드
+
+
+  if ($('.gift-thumb').length > 0) {
+    var giftSlide = new Swiper('.gift-thumb__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".gift-thumb__pagination",
+        type: "fraction"
+      },
+      navigation: {
+        nextEl: ".gift-thumb--next",
+        prevEl: ".gift-thumb--prev"
+      },
+      on: {
+        init: function init() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var cate = slide.data("slide");
+          var slide = $('[data-link=' + cate + ']').parent('.main-gift__tab--item').addClass('is-current').siblings('.main-gift__tab--item').removeClass('is-current');
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var cate = slide.data("slide");
+          var slide = $('[data-link=' + cate + ']').parent('.main-gift__tab--item').addClass('is-current').siblings('.main-gift__tab--item').removeClass('is-current');
+        }
+      }
+    });
+    $('.js-slide-tab').on('click', function () {
+      var link = $(this).data("link");
+      var slide = $('[data-slide=' + link + ']').index();
+      var num = slide;
+      giftSlide.slideTo(num);
+    });
+  }
 });
 jQuery(function () {
   /*

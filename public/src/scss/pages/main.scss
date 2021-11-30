@@ -1,11 +1,132 @@
 @import "../base/variables";
 @import "../base/mixins";
-//메인
+//메인 레이아웃
 .page-main{
+	padding-top:calcRem(100rem);
 	.header{
-		&:before{top:calcRem(-$headerHeight);}
-		&.is-active{
-			&:before{top:0;}
+		&:before{
+			top:calcRem(-$headerHeight);
+		}
+	}
+
+	.section-body{
+		padding-bottom:calcRem(50rem);
+	}
+}
+
+//연관 기프트
+.main-gift{
+	&__header{
+		margin-bottom:calcRem(20rem);
+		text-align: center;
+	}
+
+	&__title{
+		@include heading2;
+		text-transform: uppercase;
+		margin:0 0 calcRem(15rem);
+	}
+
+	//tab
+	&__tab{
+		&--inner{
+			text-align: center;
+			font-size:0;
+			line-height:0;
+			margin:0 calcRem(-15rem);
+		}
+
+		&--item{
+			display: inline-block;
+			vertical-align: middle;
+			padding:0 calcRem(15rem);
+		}
+
+		&--link{
+			display: block;
+			@include body2;
+			opacity: 0.5;
+			text-transform: uppercase;
+
+			.is-current &{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+//gift slide
+//detail thumb
+.gift-thumb{
+	//썸네일
+	&__inner{
+		position: relative;
+		width:100%;
+
+		&:after{
+			content:"";
+			display: block;
+			padding-bottom:100%;
+		}
+	}
+
+	&__img{
+		@include ab-center;
+		width:100%;
+	}
+
+	//prev, next
+	&--prev{
+		width:calcRem(8rem);
+		height:calcRem(16rem);
+		position: absolute;
+		left:calcRem(20rem);
+		@include vertical-center;
+		@include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
+		background-size:calcRem(8rem) calcRem(16rem) ;
+		z-index: $childZindex;
+	}
+
+	&--next{
+		width:calcRem(8rem);
+		height:calcRem(16rem);
+		position: absolute;
+		right:calcRem(20rem);
+		@include vertical-center;
+		@include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+		background-size:calcRem(8rem) calcRem(16rem) ;
+		z-index: $childZindex;
+	}
+
+	//페이징
+	&__pagination{
+		text-align: center;
+		font-size:0;
+		line-height:0;
+
+		.swiper-pagination{
+			&-current{
+				font-size:calcRem(12rem);
+				line-height:calclH(19,12);
+				padding-right:calcRem(11rem);
+				position: relative;
+
+				&:after{
+					content:"";
+					width:1px;
+					height:calcRem(10rem);
+					background-color: $gray1;
+					position: absolute;
+					right:0;
+					@include vertical-center;
+				}
+			}
+
+			&-total{
+				font-size:calcRem(12rem);
+				line-height:calclH(19,12);
+				padding-left:calcRem(10rem);
+			}
 		}
 	}
 }
