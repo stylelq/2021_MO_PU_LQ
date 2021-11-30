@@ -1,0 +1,443 @@
+@import "../base/variables";
+@import "../base/mixins";
+//스토어 탭
+.stores-tab{
+    height:calcRem(35rem);
+    position: relative;
+
+    //head
+    &__fix{
+        border-top:solid 1px $gray1;
+        position: absolute;
+        padding:0 calcRem(20rem);
+        height:calcRem(35rem);
+        background-color: $whiteColor;
+        top:0;
+        left:0;
+        width:100%;
+        z-index: $childZindex;
+        box-sizing: border-box;
+
+        &:after{
+            @include block-reset;
+        }
+
+        .is-fixed &{
+            transition: transform 0.3s;
+            position: fixed;
+            transform:translateZ(0) translateY(0);
+        }
+
+        .is-fixed.is-down &{
+            transform:translateZ(0) translateY(calcRem(45rem));
+        }
+    }
+
+    &__item{
+        width:33.333%;
+        float:left;
+        text-align: center;
+    }
+
+    &__link{
+        display: block;
+        @include body3;
+        padding:calcRem(8rem) calcRem(5rem);
+        position: relative;
+
+        .is-current &{
+            font-weight: $medium;
+        }
+
+        &:after{
+            content:"";
+            height:calcRem(2rem);
+            background-color: $black1;
+            position: absolute;
+            top:-1px;
+            left:0;
+            right:0;
+            opacity: 0;
+
+            .is-current &{
+                opacity: 1;
+            }
+        }
+    }
+
+    //cont
+    &__cont{
+        padding:calcRem(35rem) calcRem(20rem) 0;
+    }
+
+    &__info{
+        display:none;
+
+        &.is-current{
+            display: block;
+        }
+    }
+}
+
+//스토어
+.stores{
+    //location filter
+    &-filter{
+        margin-bottom:calcRem(40rem);
+
+        &__list{
+            margin:0 calcRem(-2rem);
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__item{
+            width:50%;
+            float:left;
+            padding:0 calcRem(2rem);
+            box-sizing: border-box;
+        }
+    }
+
+    //location list
+    &-location{
+        border-top:solid 1px $black1;
+        border-bottom:solid 1px $black1;
+        margin-left:calcRem(-20rem);
+        margin-right:calcRem(-20rem);
+        padding:0 calcRem(20rem);
+
+        &__item{
+            border-bottom:solid 1px $lightgray1;
+
+            &:last-child{
+                border-bottom:none;
+            }
+        }
+    }
+}
+
+//location component
+.location{
+    &-item{
+        position: relative;
+
+        &__inner{
+            margin:0;
+        }
+
+        &__body{
+            margin:0 calcRem(-20rem);
+            display: none;
+
+            .is-active &{
+                display: block;
+            }
+        }
+
+        &__map{
+            line-height:0;
+
+            iframe{
+                width:100% !important;
+                height:calcRem(300rem) !important;
+            }
+        }
+
+        &__link{
+            display: block;
+            padding:calcRem(15rem) 0 calcRem(10rem);
+            position: relative;
+        }
+
+        &__country{
+            @include body5;
+            color:$grayTextColor;
+            font-weight: $regular;
+            margin-bottom:calcRem(7rem);
+            text-transform: uppercase;
+        }
+
+        &__title{
+            @include body2;
+            position: relative;
+            padding-right:calcRem(15rem);
+
+            &:after{
+                content: "";
+                width:calcRem(8rem);
+                height:calcRem(4rem);
+                @include pageBackground('/images/common/ico_faq_arrow.svg','no-repeat center center / contain');
+                background-size: calcRem(8rem) calcRem(4rem);
+                position: absolute;
+                right:0;
+                top:calcRem(8rem);
+
+                .is-active &{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__address{
+            @include body5;
+            margin-top:calcRem(5rem);
+        }
+
+        &__meta{
+            font-size:0;
+            line-height:0;
+            padding-bottom:calcRem(20rem);
+
+            &--navi{
+                display: inline-block;
+                @include body5;
+                position: relative;
+                padding-right:calcRem(11rem);
+                margin-right:calcRem(10rem);
+                color:$darkgray;
+
+                &:after{
+                    content: "";
+                    width:1px;
+                    height:calcRem(8rem);
+                    background-color: $gray1;
+                    position: absolute;
+                    right:0;
+                    @include vertical-center;
+                }
+
+                &:last-child:after{
+                    display: none;
+                }
+            }
+
+            &--tel{
+                display: inline-block;
+                @include body5;
+                color:$darkgray;
+            }
+        }
+    }
+}
+
+//글로벌
+.stores{
+    &-global{
+        &__section{
+            margin-top:calcRem(50rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__title{
+            margin-bottom:calcRem(20rem);
+            @include title2;
+        }
+
+        &__list {
+            margin:0 calcRem(-20rem);
+            overflow: hidden;
+            padding:0 calcRem(20rem);
+            overflow-x: scroll;
+            line-height:0;
+            font-size:0;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &__inner{
+            white-space: nowrap;
+        }
+
+        &__item{
+            display: inline-block;
+            width:calcRem(128rem);
+            margin-right:calcRem(15rem);
+            vertical-align: top;
+
+            &:last-child{
+                margin-right:calcRem(20rem);
+            }
+        }
+    }
+}
+
+.global-item{
+    &__link{
+        display: block;
+    }
+
+    &__thumb{
+        line-height:0;
+
+        img{
+            width:100%;
+        }
+    }
+
+    &__text{
+        @include body3;
+        font-weight: $regular;
+        text-align: center;
+        margin-top:calcRem(14rem);
+        white-space: normal;
+    }
+}
+
+//스페셜 리스트
+.stores{
+    &-special{
+        &__item{
+            margin-top:calcRem(40rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+    }
+}
+
+.special-item{
+    &__link{
+        display: block;
+    }
+
+    &__thumb{
+        line-height:0;
+        position: relative;
+        margin-bottom:calcRem(11rem);
+        overflow: hidden;
+
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom:51%;
+            overflow: hidden;
+        }
+    }
+
+    &__img{
+        width:100%;
+        @include ab-center;
+    }
+
+    &__title{
+        text-align: center;
+        @include body1;
+        font-weight: $regular;
+    }
+}
+
+//스토어 스페셜 상세페이지
+//슬라이드
+.special-slide{
+    margin-bottom:calcRem(32rem);
+
+    &__inner{
+        line-height:0;
+        width:100%;
+    }
+
+    //페이징
+    &__pagination{
+        text-align: center;
+        font-size:0;
+        line-height:0;
+        margin-top:calcRem(18rem);
+
+        .swiper-pagination{
+            &-current{
+                font-size:calcRem(12rem);
+                line-height:calclH(19,12);
+                padding-right:calcRem(11rem);
+                position: relative;
+
+                &:after{
+                    content:"";
+                    width:1px;
+                    height:calcRem(10rem);
+                    background-color: $gray1;
+                    position: absolute;
+                    right:0;
+                    @include vertical-center;
+                }
+            }
+
+            &-total{
+                font-size:calcRem(12rem);
+                line-height:calclH(19,12);
+                padding-left:calcRem(10rem);
+            }
+        }
+    }
+}
+
+//컨텐츠
+.special-single{
+    //header
+    &__header{
+        margin-bottom:calcRem(40rem);
+        text-align: center;
+        font-size:0;
+        line-height:0;
+    }
+
+    &__title{
+        margin:0;
+        @include heading2;
+        font-weight: $regular;
+    }
+
+    &__sub{
+        margin-top:calcRem(10rem);
+        display: inline-block;
+        max-width: 100%;
+        box-sizing: border-box;
+        @include body3;
+        color:$darkgray;
+        text-decoration: underline;
+
+        :not(a){
+            text-decoration: none;
+        }
+    }
+
+    //body
+    &__cont{
+        @include body3;
+
+        p{
+            margin: 0 0 calcRem(15rem);
+
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+
+        .title{
+            margin:0 0 calcRem(10rem);
+            @include body2;
+        }
+
+        .email{
+            @include body5;
+            color:$darkgray;
+
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__btn{
+        max-width: calcRem(210rem);
+        margin:calcRem(40rem) auto 0;
+    }
+}

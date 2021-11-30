@@ -1,0 +1,45 @@
+<%
+type = "center"
+page = "center"
+popup = "false"
+lnbTitle = "STROES"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbSelectCenter %>
+    <div class="site-main">
+        <section class="service-center">
+            <!-- 탭 -->
+            <div class="stores-tab js-fixed-check">
+                <ul class="stores-tab__fix">
+                    <li class="stores-tab__item is-current">
+                        <a href="#;" class="stores-tab__link js-basic-tab-link">LOCATION</a>
+                    </li>
+                    <li class="stores-tab__item">
+                        <a href="#;" class="stores-tab__link js-basic-tab-link">GLOBAL</a>
+                    </li>
+                    <li class="stores-tab__item">
+                        <a href="#;" class="stores-tab__link js-basic-tab-link">SPECIAL</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 탭 -->
+            <!-- 컨텐츠 -->
+            <div class="stores-tab__cont">
+                <div class="stores-tab__info js-basic-tab-cont is-current">
+                    <% include ../_include/_storesLocation %>
+                </div>
+                <div class="stores-tab__info js-basic-tab-cont">
+                    <% include ../_include/_storesGlobal %>
+                </div>
+                <div class="stores-tab__info js-basic-tab-cont">
+                    <% include ../_include/_storesSpecial %>
+                </div>
+            </div>
+            <!-- .컨텐츠 -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>

@@ -448,6 +448,18 @@ jQuery(function(){
         }
         $(document).on('click', '.js-faq-more', faqMore);
 
+        //로케이션 더보기(아코디언)
+        function locationMore() {
+            var parent = $(this).closest('.stores-location__item');
+            if(parent.hasClass('is-active')){
+                parent.removeClass('is-active');
+            }else{
+                parent.addClass('is-active').siblings('li').removeClass('is-active');
+            }
+            return false;
+        }
+        $(document).on('click', '.js-location-more', locationMore);
+
         //셀렉트 박스 텍스트 컬러변경(placeholder 시각적 효과)
         function selectPlaceholder() {
             $(this).addClass('is-check');
@@ -477,6 +489,21 @@ jQuery(function(){
         return false;
     }
     $(document).on('click', '.js-payment-open', paymentTab);
+
+    //스토어 스페셜 슬라이드
+    if($('.special-slide').length > 0){
+        var specialSlide = new Swiper('.special-slide__container', {
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            loop:true,
+            slidesPerView: 1,
+            pagination: {
+                el: ".special-slide__pagination",
+                type: "fraction",
+            },
+        });
+    }
 });
 
 jQuery(function(){
@@ -655,8 +682,11 @@ jQuery(function(){
     if($('.stores-tab').length > 0) {
         var url_param = $(location).attr('href').split("?");
         var param = (url_param[1]);
-        if (param.indexOf('tabNo=2') != -1 ) {
-
+        if(param) {
+            if (param.indexOf('tabNo=2') != -1) {
+                $('.stores-tab__item').removeClass('is-current').eq(2).addClass('is-current');
+                $('.stores-tab__info').removeClass('is-current').eq(2).addClass('is-current');
+            }
         }
     }
 
@@ -664,9 +694,11 @@ jQuery(function(){
     if($('.product-detail').length > 0) {
         var naver_param = $(location).attr('href').split("?");
         var param = (naver_param[1]);
-        if (param.indexOf('PRD_MST_CD') != -1 ) {
-            $('html').addClass('is-hidden');
-            $('#naverPop').addClass('is-active');
+        if(param){
+            if (param.indexOf('PRD_MST_CD') != -1 ) {
+                $('html').addClass('is-hidden');
+                $('#naverPop').addClass('is-active');
+            }
         }
     }
 });
