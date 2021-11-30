@@ -409,7 +409,7 @@
         color:$darkgray;
         text-decoration: underline;
 
-        :not(a){
+        &:not(a){
             text-decoration: none;
         }
     }
