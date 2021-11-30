@@ -1,10 +1,4 @@
 // 하단 메뉴 고정탭
-function stopVideo(){
-    objAry[videoNum].stopVideo();
-    $('#' + idAry[videoNum] + '').removeClass('is-active');
-    $('.project-video__intro').removeClass('is-hide');
-}
-
 var typedPlay = "false";
 var fixedPlay;
 var sectionH;
