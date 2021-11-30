@@ -1,36 +1,52 @@
-// 하단 메뉴 고정탭
-var typedPlay = "false";
-var fixedPlay;
-var sectionH;
-$(window).on('load resize', function () {
-    var boxAry = [];
-    $(".fyl-contents").each(function () {
-        var boxH = $(this).offset().top;
-        boxAry.push(boxH)
-    });
-    (function () {
-        sectionH = $('.fyl-contents').outerHeight();
-        var menuElem = document.querySelector('.fyl-menu');
-        var typedElem = document.querySelector('.js-type-line');
-        var topH = $('.fyl-full').outerHeight() + (sectionH * 3);
-        var currentY;
-        function showScroll() {
-            typedY = parseInt(typedElem.getBoundingClientRect().top);
-            currentY = window.pageYOffset;
-            fixedPlay = (currentY < topH) ? false : true;
-            if (currentY > 0){
-                menuElem.classList.add('is-active');
-            }
-        };
-        window.addEventListener('scroll', function () {
-            showScroll();
-        })
-    }());
+jQuery(function(){
+    $(document).ready(function(){
 
-    $(".js-hash").on('click', function (e) {
-        e.preventDefault();
-        var hashNum = $(this).parents('.fyl-menu__link').index();
-        console.log($('.fyl-contents').eq(hashNum + 1).offset().top)
-        $('html,body').animate({ scrollTop: $('.fyl-contents').eq(hashNum+1).offset().top - 10 }, 500);
+        //스크롤 픽스
+        if($('.fyl-menu').length > 0) {
+            // 프로젝트 하단 픽스
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = $('.header').outerHeight();
+
+            $(window).scroll(function (event) {
+                didScroll = true;
+            });
+
+            setInterval(function () {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                var thisSt = $(window).scrollTop();
+
+                if (Math.abs(lastScrollTop - thisSt) <= delta)
+                    return;
+
+                if (thisSt > lastScrollTop && thisSt > navbarHeight) {
+                    $('.fyl-menu').addClass('is-active');
+                    $('.cart-fix').addClass('is-up');
+
+                } else {
+                    if (thisSt + $(window).height() < $(document).height()) {
+                        $('.fyl-menu').removeClass('is-active');
+                        $('.cart-fix').removeClass('is-up');
+                    }
+                }
+
+                lastScrollTop = thisSt;
+            }
+        }
+
+        //클릭 스크롤
+        function projectScroll() {
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 340);
+
+            return false;
+        }
+        $(document).on('click', '.js-hash', projectScroll);
     });
 });
