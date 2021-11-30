@@ -670,7 +670,18 @@ jQuery(function () {
     var url_param = $(location).attr('href').split("?");
     var param = url_param[1];
 
-    if (param == 'tabNo=2') {}
+    if (param.indexOf('tabNo=2') != -1) {}
+  } //네이버 팝업
+
+
+  if ($('.product-detail').length > 0) {
+    var naver_param = $(location).attr('href').split("?");
+    var param = naver_param[1];
+
+    if (param.indexOf('PRD_MST_CD') != -1) {
+      $('html').addClass('is-hidden');
+      $('#naverPop').addClass('is-active');
+    }
   }
 }); //입고알림 버튼클릭시
 

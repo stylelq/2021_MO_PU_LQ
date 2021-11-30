@@ -1381,3 +1381,20 @@
         display: block;
     }
 }
+
+//제품 상세페이지 네이버 제휴 할인
+.pop-naver{
+    padding-top:calcRem(25rem);
+
+    &__scroll{
+        overflow: hidden;
+        overflow-y: auto;
+        max-height:calc(100vh - #{calcRem(290rem)});
+        line-height: 0;
+
+        img{
+            width:100%;
+            display: block;
+        }
+    }
+}
