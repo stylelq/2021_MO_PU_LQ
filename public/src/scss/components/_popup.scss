@@ -1398,3 +1398,63 @@
         }
     }
 }
+// 콜라보 레이어
+#collaborationPop{
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(110%);
+    transition-property: transform,opacity,visibility;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    &.is-active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition-delay: 1.5s;
+    }
+    .popup {
+        &__header{
+            height: auto;
+            border-bottom: none;
+        }
+        &__close{
+            top: 50px;
+            display: block;
+            right: 16px;
+            z-index: 100;
+        }
+    }
+}
+
+.collabo-wrap{
+    // 콜라보 컨텐츠
+    &__title{
+        margin: calcRem(46rem) 0 calcRem(70rem);
+        text-align: center;
+    }
+    &__name{
+        font-weight: 100;
+    }
+    &__list{
+        position: relative;
+        padding-bottom: calcRem(40rem);
+    }
+    &__img{
+        width: 100%;
+        display: block;
+    }
+    &__video{
+        width: 100%;
+    }
+    &__sound{
+        display: block;
+        position: absolute;
+        right: calcRem(20rem);
+        bottom: 10%;
+        overflow: hidden;
+        width: calcRem(30rem);
+        height: calcRem(30rem);
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png") no-repeat center center/contain;
+    }
+}
