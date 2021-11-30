@@ -683,3 +683,25 @@ if ($('.motion-up').length > 0) {
     }).reverse(false).setClassToggle(this, 'motion-up--active').addTo(controller);
   });
 }
+/*collabo 리스트 클릭 시 텍스트 호버효과*/
+
+
+var collaboElemAll = document.querySelectorAll('.collabo-list__link');
+Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
+  collaboElem.addEventListener('click', function (e) {
+    e.preventDefault();
+    var collaboName = this.getAttribute('data-name');
+    body.classList.add('is-stop');
+    setTimeout(function () {
+      body.classList.add('is-stop');
+    }, 300);
+    collaboPopup.classList.add('is-active');
+    setPopup(collaboName);
+  });
+  collaboElem.addEventListener('mouseenter', function (e) {
+    this.parentNode.classList.add('is-hover');
+  });
+  collaboElem.addEventListener('mouseleave', function (e) {
+    this.parentNode.classList.remove('is-hover');
+  });
+});

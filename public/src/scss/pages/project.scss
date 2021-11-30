@@ -1,5 +1,6 @@
 @import "../base/variables";
 @import "../base/mixins";
+@import "../pages/promotion";
 
 //font
 @font-face {
@@ -619,6 +620,20 @@
     100% {
         -webkit-transform: translateX(800px);
         transform: translateX(800px);
+    }
+}
+
+@keyframes fyl-arrow {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0px, 20px);
+        opacity: 0;
     }
 }
 
@@ -1402,10 +1417,11 @@
         position: relative;
         padding: calcVw(20vw) calcVw(15vw);
         &__name{
+            font-size: calcVw(16vw);
             font-weight: 500;
         }
         &__date{
-            margin-top: 10px;
+            margin-top: calcVw(10vw);
             color: #999999;
             font-size: calcVw(12vw);
         }
@@ -1418,168 +1434,365 @@
             width: 100%;
             display: block;
         }
-    }
-
-    // FYL1 - 당신이 찾고 있는 빛은 어떤 색인가요?
-    &-info{
-        &__wrap{
-            padding: calcVw(70vw) 0;
-            background-color: #000;
-        }
-    }
-
-    // FYL1 - 컨텐츠 탭 & 콘텐츠
-    &-tab{
-        &__item{
-            width: 20%;
-            float: left;
-            font-size: calcVw(14vw);
-            text-align: center;
-            &.is-current{
-                border-bottom: 1px solid #dddddd;
-            }
-            &:nth-child(2) {
-                margin: 0 15%;
-                width: 30%;
-            }
-        }
-        &__link{
-            &--white{
-                text-align: left;
-                display: block;
-                background: url("../../images/project/tab_icon01.png") no-repeat center center/cover;
-                background-position: right;
-                background-size: 12px;
-            }
-            &--black{
-                text-align: left;
-                display: block;
-                background: url("../../images/project/tab_icon02.png") no-repeat center center/cover;
-                background-position: right;
-                background-size: 12px;
-            }
-        }
-        &__img{
-            float: left;
-        }
-    }
-
-    &-cont{
-        display: inline-block;
-        width: 100%;
-        padding: 10px 0 20px;
-        &__item{
-            display: none;
-            &.is-current{
-                display: block;
-            }
-        }
-    }
-
-    // FYL1 - Ns & DM 컨텐츠
-    &-contents{
-        position: relative;
-        height: 100vh;
-        &.cont01{
-            color: #dddddd;
-            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_0.jpg") no-repeat center center/cover;
-            .project{
-                &-video{
-                    &__intro{
-                        &.nth-1{
-                            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
-                        }
-                        &.nth-2{
-                            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_17.jpg") no-repeat center center/cover;
-                        }
-                        &.nth-3{
-                            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_18.jpg") no-repeat center center/cover;
-                        }
-                    }
-                    &__play{
-                        width: 100%;
-                        height: 100%;
-                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
-                    }
-                }
-            }
-            &-tab {
-                &__item {
-                    &.is-current {
-                        border-bottom: 1px solid #dddddd;
-                    }
-                }
-            }
-        }
-        &.cont02{
-            color: #000000;
-            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_1.jpg") no-repeat center center/cover;
-            .project{
-                &-video{
-                    &__intro{
-                        &.nth-4{
-                            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_1.jpg") no-repeat center center/cover;
-                        }
-                        &.nth-5{
-                            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_2.jpg") no-repeat center center/cover;
-                        }
-                    }
-                    &__play{
-                        width: 100%;
-                        height: 100%;
-                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
-                    }
-                }
-            }
-        }
-
-
-
-        &__outer{
-            display: inline-table;
+        &__arrow{
+            position: absolute;
+            display: block;
+            bottom: 10%;
             width: 100%;
-            height: 100%;
-        }
-        &__inner{
-            display: table-cell;
-            height: 100%;
-            width: 1%;
-            vertical-align: middle;
+            height: 20px;
+            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/top_arrow.png") no-repeat center center/contain;
+            background-size: 20px;
             text-align: center;
-            padding: 0 calcVw(30vw);
+            animation: fyl-arrow 1s infinite;
+            z-index: 999;
         }
-        &__video{
-            padding: calcVw(10vw) 0 calcVw(20vw);
-            position: relative;
-            width: 100%;
-            display: inline-block;
-            .project{
-                &-video{
-                    &__intro{
-                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
-                    }
-                    &__play{
-                        width: 100%;
-                        height: 100%;
-                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
-                    }
-                }
-            }
-        }
-        &__source{
-            margin: 0 calcVw(-30vw);
-        }
+    }
+
+// FYL1 - 당신이 찾고 있는 빛은 어떤 색인가요?
+&-info{
+    &__wrap{
+        padding: calcVw(70vw) 0;
+        background-color: #000;
     }
 }
 
+// FYL1 - 컨텐츠 탭 & 콘텐츠
+&-tab{
+    &:after{
+        @include block-reset;
+    }
+    &__item{
+        width: 33.33333%;
+        float: left;
+        font-size: 0;
+        font-weight: 100;
+        line-height: 0;
+        text-align: center;
 
-// FYL1 - Hoody 컨텐츠
-// FYL1 - GOLDEN 컨텐츠
-// FYL1 - HAON 컨텐츠
-// FYL1 - COOGIE 컨텐츠
-// FYL1 - PH-1 컨텐츠
+        &:first-child{
+            text-align: left;
+        }
 
+        &:nth-child(2){
+            text-align: center;
+        }
+
+        &:last-child{
+            text-align: right;
+
+            &:nth-child(2){
+                text-align: center;
+            }
+        }
+    }
+    &__link{
+        padding-right: calcVw(14vw);
+        text-align: left;
+        font-size: calcVw(15vw);
+        display: inline-block;
+        background-position: right;
+        line-height: 1.4;
+        position: relative;
+        border-bottom: solid 1px transparent;
+
+        &--white{
+            .is-current &{
+                border-bottom-color: #fff;
+            }
+            &:after{
+                content: '';
+                width: calcVw(10vw);
+                height: calcVw(10vw);
+                background: url("../../images/project/tab_icon01.png") no-repeat center center/cover;
+                background-size: calcVw(10vw);
+                position: absolute;
+                right: 0;
+                @include vertical-center;
+            }
+        }
+        &--black{
+            .is-current &{
+                border-bottom-color: #000;
+            }
+            &:after{
+                content: '';
+                width: calcVw(10vw);
+                height: calcVw(10vw);
+                background: url("../../images/project/tab_icon02.png") no-repeat center center/cover;
+                background-size: calcVw(10vw);
+                position: absolute;
+                right: 0;
+                @include vertical-center;
+            }
+        }
+    }
+    &__img{
+        float: left;
+    }
+}
+
+&-cont{
+    display: inline-block;
+    width: 100%;
+    padding: calcVw(10vw) 0 calcVw(20vw);;
+    &__item{
+        display: none;
+        &.is-current{
+            display: block;
+        }
+    }
+}
+&-contents{
+    position: relative;
+    height: 100vh;
+    // FYL1 - Ns & DM 컨텐츠
+    &.cont01{
+        color: #ffffff;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_0.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-1{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-2{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_17.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-3{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_18.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - Hoody 컨텐츠
+    &.cont02{
+        color: #000000;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_1.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-4{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_1.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-5{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_2.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - GOLDEN 컨텐츠
+    &.cont03{
+         color: #ffffff;
+         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_2.jpg") no-repeat center center/cover;
+         .project{
+             &-video{
+                 &__intro{
+                     &.nth-6{
+                         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_4.jpg") no-repeat center center/cover;
+                     }
+                     &.nth-7{
+                         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_5.jpg") no-repeat center center/cover;
+                     }
+                     &.nth-8{
+                         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_6.jpg") no-repeat center center/cover;
+                     }
+                 }
+                 &__play{
+                     width: 100%;
+                     height: 100%;
+                     background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                 }
+             }
+         }
+
+     }
+
+    // FYL1 - HAON 컨텐츠
+    &.cont04{
+        color: #ffffff;
+        background-color: #177dce;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-9{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_7.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-10{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_8.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-11{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_9.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - COOGIE 컨텐츠
+    &.cont05{
+        color: #ffffff;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_4.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-12{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_10.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-13{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_11.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-14{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_12.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - PH-1 컨텐츠
+    &.cont06{
+        margin-bottom: calcVw(-60vw);
+        color: #000000;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_5.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-15{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_10.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-16{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_11.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-17{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_12.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    &__outer{
+        display: inline-table;
+        width: 100%;
+        height: 100%;
+    }
+    &__inner{
+        display: table-cell;
+        height: 100%;
+        width: 1%;
+        vertical-align: middle;
+        text-align: center;
+        padding: 0 calcVw(30vw);
+    }
+    &__video{
+        padding: calcVw(10vw) 0 calcVw(20vw);
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        .project{
+            &-video{
+                &__intro{
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+    &__source{
+        margin: 0 calcVw(-30vw);
+    }
+}
 // FYL1 = 하단 고정네비
+&-menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 50;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    &.is-active{
+        transform: translateY(0%);
+    }
+    &__list{
+        display: flex;
+    }
+    &__link{
+        flex: 1;
+        display: inline-block;
+        padding: calcVw(8vw) 0;
+        font-size: calcVw(12vw);
+        text-transform: uppercase;
+        text-align: center;
+        &.nsdm{
+            color: #cb38ff;
+        }
+        &.hoody{
+            color: #fd96a7;
+        }
+        &.golden{
+            color: #08b78e;
+        }
+        &.haon{
+            color: #49b2f6;
+        }
+        &.coogie{
+            color: #fb010b;
+        }
+        &.ph1{
+            color: #ff934b;
+        }
+    }
+    &__play{
+        font-size: calcVw(8vw);
+    }
+}
+
+}
+
+
+
+
+
+
+
+
+
 
 
 

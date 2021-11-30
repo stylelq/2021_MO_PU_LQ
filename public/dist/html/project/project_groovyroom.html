@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="../../css/common.css">
 
 	<link rel="stylesheet" href="../../css/pages/project.css">
+	<link rel="stylesheet" href="../../css/pages/project_collaboration.css">
 
 </head>
 
@@ -488,50 +489,12 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">PROJECT</span></a>
+        <span class="lnb__btn">PROJECT</span>
     </div>
-    <!-- lnbMenu -->
-    <div class="lnb__dim js-lnb-close">dim</div>
-    <div class="lnb__wrap">
-        <ul class="lnb__list">
-            <li class="lnb__item is-active">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">BAG ALL</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">숄더백</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">토트백</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">크로스백</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">미니백/클러치백</span>
-                </a>
-            </li>
-            <li class="lnb__item ">
-                <a href="" class="lnb__link">
-                    <span class="lnb__line">백팩</span>
-                </a>
-            </li>
-        </ul>
-        <a class="lnb__collection" href=""><span class="lnb__collection--text">COLLECTION</span></a>
-    </div>
-    <!-- .lnbMenu -->
 </div>
 <!-- .lnb -->
-    <div class="site-project">
-        <!--FYL1 - 헤더-->
+    <!--FYL1 - 헤더-->
+    <div class="site-groovy">
         <div class="fyl-header">
             <div class="fyl-header__name">FIND YOUR LIGHT</div>
             <div class="fyl-header__date">2020.07.17 ~ 2021.04.30</div>
@@ -542,6 +505,9 @@
         <div class="fyl-full">
             <div class="fyl-full__wrap">
                 <video class="fyl-full__source" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/find.mp4" loop="" autoplay="" muted="true" playsinline="" data-object-fit="cover" poster="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg.jpg"></video>
+            </div>
+            <div class="fyl-full__arrow">
+                <span></span>
             </div>
         </div>
         <!--//FYL1 - 비디오영역-->
@@ -555,7 +521,7 @@
         <!--//FYL1 - 당신이 찾고 있는 빛은 어떤 색인가요?-->
 
         <!--FYL1 - Ns & DM 컨텐츠-->
-        <div class="fyl-contents js-tab-wrap cont01">
+        <div class="fyl-contents js-tab-wrap cont01" id="cont01">
             <div class="fyl-contents__outer">
                 <div class="fyl-contents__inner">
                     <!-- tab -->
@@ -617,17 +583,17 @@
         <!--//FYL1 - Ns & DM 컨텐츠-->
 
         <!--FYL1 - Hoody 컨텐츠-->
-        <div class="fyl-contents js-tab-wrap cont02">
+        <div class="fyl-contents js-tab-wrap cont02" id="cont02">
             <div class="fyl-contents__outer">
                 <div class="fyl-contents__inner">
                     <!-- tab -->
                     <div class="fyl-tab">
                         <ul class="fyl-tab__list">
-                            <li class="fyl-tab__item is-current">
+                            <li class="fyl-tab__item is-current color-blk">
                                 <a href="#;" class="fyl-tab__link fyl-tab__link--black js-tab-change">MUSIC</a>
                             </li>
                             <li class="fyl-tab__item">
-                                <a href="#;" class="fyl-tab__link fyl-tab__link-black js-tab-change">STORY</a>
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--black js-tab-change">STORY</a>
                             </li>
                         </ul>
                     </div>
@@ -665,20 +631,303 @@
         </div>
         <!--//FYL1 - Hoody 컨텐츠-->
 
-        <!--FYL1 하단 메뉴탭-->
-        <!-- <div class="fyl-menu">
-            <div class="fyl-menu__wrap">
-                <div class="fyl-menu__list">
-                    <a href="#cont01"></a>
-                    <a href="#cont02"></a>
-                    <a href="#cont03"></a>
-                    <a href="#cont04"></a>
-                    <a href="#cont05"></a>
-                    <a href="#cont06"></a>
+        <!--FYL1 - GOLDEN 컨텐츠-->
+        <div class="fyl-contents js-tab-wrap cont03" id="cont03">
+            <div class="fyl-contents__outer">
+                <div class="fyl-contents__inner">
+                    <!-- tab -->
+                    <div class="fyl-tab">
+                        <ul class="fyl-tab__list">
+                            <li class="fyl-tab__item is-current">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">MUSIC</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">UNBOXING</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">STORY</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .tab -->
+
+                    <!-- cont -->
+                    <div class="fyl-cont">
+                        <div class="fyl-cont__item js-change-cont is-current">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-6">
+                                <div class="project-video__intro nth-6">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="cPfyqFdPdl4"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-7">
+                                <div class="project-video__intro nth-7">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="-j8g8dslSl0"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-8">
+                                <div class="project-video__intro nth-8">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="AxDl0dxLz3o"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                    </div>
+                    <!-- .cont -->
+                    <div class="fyl-contents__source">
+                        <img class="fyl-contents__txt" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_tit_2.png" alt=""/>
+                    </div>
                 </div>
             </div>
-        </div>-->
+        </div>
+        <!--//FYL1 - GOLDEN 컨텐츠-->
+
+        <!--FYL1 - HAON 컨텐츠-->
+        <div class="fyl-contents js-tab-wrap cont04" id="cont04">
+            <div class="fyl-contents__outer">
+                <div class="fyl-contents__inner">
+                    <!-- tab -->
+                    <div class="fyl-tab">
+                        <ul class="fyl-tab__list">
+                            <li class="fyl-tab__item is-current">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">MUSIC</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">UNBOXING</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">STORY</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .tab -->
+
+                    <!-- cont -->
+                    <div class="fyl-cont">
+                        <div class="fyl-cont__item js-change-cont is-current">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-9">
+                                <div class="project-video__intro nth-9">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="l2vvme5I-Gk"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-10">
+                                <div class="project-video__intro nth-10">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="TQKNVW7BxAE"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-11">
+                                <div class="project-video__intro nth-11">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="JFqkKUmAM_w"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                    </div>
+                    <!-- .cont -->
+                    <div class="fyl-contents__source">
+                        <img class="fyl-contents__txt" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_tit_3.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FYL1 - HAON 컨텐츠-->
+
+        <!--FYL1 - COOGIE 컨텐츠-->
+        <div class="fyl-contents js-tab-wrap cont05" id="cont05">
+            <div class="fyl-contents__outer">
+                <div class="fyl-contents__inner">
+                    <!-- tab -->
+                    <div class="fyl-tab">
+                        <ul class="fyl-tab__list">
+                            <li class="fyl-tab__item is-current">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">MUSIC</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">UNBOXING</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--white js-tab-change">STORY</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .tab -->
+
+                    <!-- cont -->
+                    <div class="fyl-cont">
+                        <div class="fyl-cont__item js-change-cont is-current">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-12">
+                                <div class="project-video__intro nth-12">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="2lg4jXqS3Tg"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-13">
+                                <div class="project-video__intro nth-13">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="mKUL-VYa12w"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-14">
+                                <div class="project-video__intro nth-14">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="4rcF7rX0plE"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                    </div>
+                    <!-- .cont -->
+                    <div class="fyl-contents__source">
+                        <img class="fyl-contents__txt" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_tit_4.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//FYL1 - COOGIE 컨텐츠-->
+
+        <!--FYL1 - PH-1 컨텐츠-->
+        <div class="fyl-contents js-tab-wrap cont06" id="cont06">
+            <div class="fyl-contents__outer">
+                <div class="fyl-contents__inner">
+                    <!-- tab -->
+                    <div class="fyl-tab">
+                        <ul class="fyl-tab__list">
+                            <li class="fyl-tab__item is-current">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--black js-tab-change">MUSIC</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--black js-tab-change">UNBOXING</a>
+                            </li>
+                            <li class="fyl-tab__item">
+                                <a href="#;" class="fyl-tab__link fyl-tab__link--black js-tab-change">STORY</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .tab -->
+
+                    <!-- cont -->
+                    <div class="fyl-cont">
+                        <div class="fyl-cont__item js-change-cont is-current">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-15">
+                                <div class="project-video__intro nth-15">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="w4zC12uMyno"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-16">
+                                <div class="project-video__intro nth-16">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="Tx7vbhPd-kU"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                        <div class="fyl-cont__item js-change-cont">
+                            <!--비디오-->
+                            <div class="project-video__area js-play-btn nth-17">
+                                <div class="project-video__intro nth-17">
+                                    <div class="project-video__play"></div>
+                                </div>
+                                <div class="project-video__youtube" data-url="hPP8_u8Tcgk"></div>
+                            </div>
+                            <!--//비디오-->
+                        </div>
+                    </div>
+                    <!-- .cont -->
+                    <div class="fyl-contents__source">
+                        <img class="fyl-contents__txt" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_tit_5.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//FYL1 - PH-1 컨텐츠-->
+
+        <!--FYL1 하단 메뉴탭-->
+        <div class="fyl-menu">
+            <div class="fyl-menu__wrap">
+                <div class="fyl-menu__list">
+                    <a class="fyl-menu__link nsdm js-hash" href="#cont01">ns&dm<br><span class="fyl-menu__play">▶</span></a>
+                    <a class="fyl-menu__link hoody js-hash" href="#cont02">hoody<br><span class="fyl-menu__play">▶</span></a>
+                    <a class="fyl-menu__link golden js-hash" href="#cont03">golden<br><span class="fyl-menu__play">▶</span></a>
+                    <a class="fyl-menu__link haon js-hash" href="#cont04">haon<br><span class="fyl-menu__play">▶</span></a>
+                    <a class="fyl-menu__link coogie js-hash" href="#cont05">coogie<br><span class="fyl-menu__play">▶</span></a>
+                    <a class="fyl-menu__link ph1 js-hash" href="#cont06">ph-1<br><span class="fyl-menu__play">▶</span></a>
+                </div>
+            </div>
+        </div>
         <!--//FYL1 하단 메뉴탭-->
+
+        <div class="promotion-wrap">
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="../promotion/promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/18/74480173-3dde-4aa5-a288-e70221b13deb.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">KAREL MARTENS BAG</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="../promotion/promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/19/35143dfb-abad-4ac5-b3f5-183ffe2a0b71.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">L-Quilting mini</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="../promotion/promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/17/becb0eb7-fa17-4ac9-9997-c266de64dde9.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">LALA WALLET</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+        </div>
     </div>
 </div>
 
@@ -761,6 +1010,7 @@
 		<script src="../../js/libs/animation.gsap.js"></script>
 		<script src="https://www.youtube.com/player_api"></script>
 		<script src="../../js/findYoutube.js"></script>
+		<script src="../../js/menuFixed.js"></script>
 	
 	
 	<script src="../../js/common.js"></script>

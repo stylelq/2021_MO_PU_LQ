@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/mixins";
+//@import "../pages/project";
+
+@mixin imageBlock {
+  display:block;
+  width:100%;
+}
+
+// collaboration
+// 콜라보 리스트
+.collabo{
+    &-list{
+        padding: calcVw(50vw) calcVw(42vw);
+        box-sizing: border-box;
+        &__wrap + &__wrap{
+            margin-top: calcVw(50vw);
+        }
+        &__wrap{
+            &.is-hover{
+                filter: grayscale(100%);
+                .collabo-list__txt{
+                    opacity: 1;
+                }
+            }
+        }
+        &__list{
+            display: inline-block;
+        }
+        &__link{
+            display: block;
+        }
+        &__img{
+            @include imageBlock;
+        }
+        &__txt{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0;
+            font-size: calcVw(16vw);
+            letter-spacing: calcVw(0.2vw);
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 0;
+            -webkit-transition: opacity 1s;
+            transition: opacity 1s;
+        }
+
+    }
+}
+
+
