@@ -14,47 +14,26 @@
     &.is-bg-white{
         background-color: $bgSiteColor;
     }
-    &.type-white{
 
-        .mobile-menu__line{
-            border-color:#fff;
-
-            &:before,&:after{
+    .is-black &{
+        &:not(.is-bg-view){
+            .mobile-menu__line{
                 border-color:#fff;
+
+                &:before,&:after{
+                    border-color:#fff;
+                }
             }
-        }
 
-        .basket-icon__num{
-            color:#fff;
-        }
-        #{$this}__black{
-            display:none;
-        }
-        #{$this}__white{
-            display:block;
-        }
-    }
-
-    &.is-active{
-
-        .mobile-menu__line{
-            border-color:$black1 !important;
-
-            &:before,&:after{
-                border-color:$black1 !important;
+            .basket-icon__num{
+                color:#fff;
             }
-        }
-
-        .basket-icon__num{
-            color:$black1 !important;
-        }
-
-        #{$this}__black{
-            display:block !important;
-        }
-
-        #{$this}__white{
-            display:none !important;
+            #{$this}__black{
+                display:none;
+            }
+            #{$this}__white{
+                display:block;
+            }
         }
     }
 
