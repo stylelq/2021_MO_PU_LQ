@@ -27,6 +27,9 @@
           color: #fff;
           font-size: calcRem(14rem);
         }
+        &__link{
+          display: block;
+        }
     }
 
     // 프로모션 배너 리스트 그룹

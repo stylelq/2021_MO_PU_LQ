@@ -1755,8 +1755,8 @@
     &__link{
         flex: 1;
         display: inline-block;
-        padding: calcVw(8vw) 0;
-        font-size: calcVw(12vw);
+        padding: calcRem(8rem) 0;
+        font-size: calcRem(12rem);
         text-transform: uppercase;
         text-align: center;
         &.nsdm{
@@ -1779,7 +1779,7 @@
         }
     }
     &__play{
-        font-size: calcVw(8vw);
+        font-size: calcRem(8rem);
     }
 }
 

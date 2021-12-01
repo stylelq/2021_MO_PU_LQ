@@ -400,16 +400,47 @@ jQuery(function () {
           type: "fraction"
         }
       });
-    } // 컬렉션 모델슬라이드
+    } // 컬렉션 모델슬라이드(상단)
 
 
     if ($('.collection-model-slide').length > 0) {
       var collectionModelSlide = new Swiper('.collection-model__container', {
+        effect: 'fade',
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1,
         loop: true,
+        autoplay: {
+          delay: 3000
+        },
+        pagination: {
+          el: '.collection-slide-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".model-next-btn",
+          prevEl: ".model-prev-btn"
+        }
+      });
+    } // 컬렉션 모델슬라이드(하단)
+
+
+    if ($('.collection-model-slideSecond').length > 0) {
+      var collectionModelSlideSecond = new Swiper('.collection-model__containerSecond', {
+        effect: 'fade',
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000
+        },
+        pagination: {
+          el: '.collection-slide-paginationSecond',
+          clickable: true
+        },
         navigation: {
           nextEl: ".model-next-btn",
           prevEl: ".model-prev-btn"
