@@ -6,13 +6,13 @@
     line-height:0;
     position: relative;
 
-    &.img:after{
+    &.product-banner--img:after{
         content:"";
         display: block;
         padding-bottom:112%;
     }
 
-    &.video:after{
+    &.product-banner--video:after{
         content:"";
         display: block;
         padding-bottom:57%;

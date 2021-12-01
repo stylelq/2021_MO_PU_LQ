@@ -7,13 +7,13 @@
         line-height:0;
         position: relative;
 
-        &.video:after{
+        &.platform-banner--video:after{
             content:"";
             display: block;
             padding-bottom:57%;
         }
 
-        &.img:after{
+        &.platform-banner--img:after{
             content:"";
             display: block;
             padding-bottom:125%;
