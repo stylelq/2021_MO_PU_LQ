@@ -1,19 +1,20 @@
 <%
-type = "platform"
-page = "platform"
-lnbTitle = "ALL WORKS"
+type = "product"
+page = "product"
+popup = "true"
+lnbTitle = "아우터"
 %>
 <% include ../_include/_header %>
 <div class="container">
-    <% include ../_include/_lnbSelectPlatform %>
+    <% include ../_include/_lnbSelect %>
     <div class="site-main">
-        <section class="platform">
-            <!-- platform video -->
-            <div class="platform-banner video">
-                <video src="https://mcdn.louisclub.com/static/mo/img/platform/video_210907.mp4" class="platform-banner__file" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>
+        <section class="product">
+            <!-- 상단이미지 -->
+            <div class="product-banner img"><!-- 안에 이미지가 들어갈시 img 클래스, 비디오 추가시 video 클래스 추가 -->
+                <img class="product-banner__img" src="../../images/dummy/product_banner_bg.jpg" alt="" />
             </div>
-            <!-- .platform video -->
-            <% include ../_include/_platformListFilter %>
+            <!-- .상단이미지 -->
+            <% include ../_include/_productFilter %>
             <!-- product post -->
             <div class="product-post product-post--post">
                 <ul class="product-post__list">
@@ -23,10 +24,10 @@ lnbTitle = "ALL WORKS"
                             <a href="" class="product-item__link">
                                 <div class="product-item__state">SOLD OUT</div>
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-1.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.jpg" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -42,10 +43,29 @@ lnbTitle = "ALL WORKS"
                             <a href="" class="product-item__link">
                                 <div class="product-item__state">NEW</div>
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-2.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW<span class="product-item__state--expected">출시예정</span></div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -60,10 +80,10 @@ lnbTitle = "ALL WORKS"
                         <div class="product-item">
                             <a href="" class="product-item__link">
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-1.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -78,10 +98,10 @@ lnbTitle = "ALL WORKS"
                         <div class="product-item">
                             <a href="" class="product-item__link">
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-2.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img1.jpg" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -96,28 +116,10 @@ lnbTitle = "ALL WORKS"
                         <div class="product-item">
                             <a href="" class="product-item__link">
                                 <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-1.jpg" alt="" />
+                                    <img class="product-item__img" src="../../images/dummy/product_img2.png" alt="" />
                                 </div>
                                 <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy1-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD43BU</div>
+                                    <div class="product-item__title">루이까또즈 L-Quilting Mini(엘퀼팅 미니) 여성크로스백 HP3QT06OR</div>
                                     <div class="product-item__price">
                                         <span class="product-item__price--sale">328,000원</span>
                                         <span class="product-item__price--current">289,290원</span>
@@ -136,4 +138,5 @@ lnbTitle = "ALL WORKS"
 </div>
 <% include ../_include/_contentFooter %>
 <% include ../_include/_cartFix %>
+<% include ../_popup/_filter %>
 <% include ../_include/_footer %>

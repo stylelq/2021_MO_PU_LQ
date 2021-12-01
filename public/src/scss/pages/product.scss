@@ -1,5 +1,35 @@
 @import "../base/variables";
 @import "../base/mixins";
+//product top banner
+.product-banner{
+    margin-bottom:calcRem(20rem);
+    line-height:0;
+    position: relative;
+
+    &.img:after{
+        content:"";
+        display: block;
+        padding-bottom:112%;
+    }
+
+    &.video:after{
+        content:"";
+        display: block;
+        padding-bottom:57%;
+    }
+
+    &__img{
+        @include ab-center;
+        width:100%;
+    }
+
+    &__file{
+        @include ab-center;
+        width:100% !important;
+        height:100% !important;
+    }
+}
+
 //product Post Layout
 .product-post{
     $this:&;
