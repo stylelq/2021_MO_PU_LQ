@@ -190,22 +190,24 @@
         }
     }
 
-                // 컬렉션 아이템소개
-                &-info{
+    // 컬렉션 아이템소개
+    &-info{
                     background-color: #f5d661;
                     text-align: center;
                     &__title{
                         padding: calcRem(50rem) 0 calcRem(20rem);
-                        font-weight: 500;
+                        font-size: calcRem(14rem);
+                        font-weight: 300;
                     }
                     &__txt{
                         padding-bottom: calcRem(50rem);
-                        font-size: calcRem(14rem);
+                        font-size: calcRem(10rem);
+                        font-weight: 300;
                     }
                 }
 
-                // 컬렉션 모델슬라이드
-                &-model{
+    // 컬렉션 모델슬라이드
+    &-model{
                     position: relative;
                     .swiper{
                         &-button{
@@ -236,8 +238,8 @@
                     }
                 }
 
-                // 룩북 바로가기 버튼
-                &-view{
+    // 룩북 바로가기 버튼
+    &-view{
                     position: relative;
                     padding: calcRem(60rem) calcRem(20rem) 0;
                     padding-top: calcRem(60rem);
@@ -284,3 +286,42 @@
         }
     }
 }
+
+.collection-slide-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calcVw(20vw) !important;
+    text-align: center;
+    width: 100%;
+    z-index: 50;
+    line-height: 0;
+    font-size: 0;
+}
+.collection-slide-paginationSecond{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calcVw(20vw) !important;
+    text-align: center;
+    width: 100%;
+    z-index: 50;
+    line-height: 0;
+    font-size: 0;
+}
+
+    .swiper-pagination-bullet {
+        margin-left: calcVw(7vw);
+        width: calcVw(15vw);
+        height: calcVw(1vw);
+        background: rgba(255, 255, 255, 0.2);
+        opacity: 1 !important;
+        display: inline-block;
+        border-radius: 0;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    .swiper-pagination-bullet-active{
+        background: #fff !important;
+    }
