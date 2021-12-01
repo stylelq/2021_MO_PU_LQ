@@ -1,0 +1,55 @@
+@import "../base/variables";
+@import "../base/mixins";
+.platform{
+    //platform Video
+    &-video{
+        margin-bottom:calcRem(20rem);
+        line-height:0;
+        position: relative;
+
+        &:after{
+            content:"";
+            display: block;
+            padding-bottom:57%;
+        }
+
+        &__file{
+            @include ab-center;
+            width:100% !important;
+            height:100% !important;
+        }
+    }
+
+    //타이틀 이미지
+    &-title{
+        margin-bottom:calcRem(20rem);
+        line-height:0;
+        position: relative;
+
+        &:after{
+            content:"";
+            display: block;
+            padding-bottom:125%;
+        }
+
+        &__img{
+            @include ab-center;
+            width:100%;
+        }
+    }
+
+    //포스트
+    .product-post{
+
+        &__list{
+            margin-left:calcRem(-2rem);
+            margin-right:calcRem(-2rem);
+        }
+
+        &__item{
+            padding-left:calcRem(2rem);
+            padding-right:calcRem(2rem);
+            box-sizing: border-box;
+        }
+    }
+}

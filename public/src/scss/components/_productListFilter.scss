@@ -58,6 +58,10 @@
             padding-right:0;
         }
 
+        .platform &{
+            padding-right:0;
+        }
+
         &--btn{
             border: 1px solid $gray2;
             width:calcRem(24rem);

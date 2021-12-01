@@ -115,43 +115,43 @@
 
 	&__item{
 		text-align: center;
-
-		&:before{
-			display:inline-block;
-			width:calcRem(46rem);
-			height:calcRem(46rem);
-			content:'';
-		}
-
-		&.type-naver{
-			&:before{
-				@include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')
-			}
-		}
-
-		&.type-email{
-			&:before{
-				@include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')
-			}
-		}
-
-		&.type-kakao{
-			&:before{
-				@include pageBackground('/images/join/kakao_icon.png','no-repeat center center / contain')
-			}
-		}
-
-		&.type-payco{
-			&:before{
-				@include pageBackground('/images/join/payco_icon.png','no-repeat center center / contain')
-			}
-		}
 	}
 
 	&__link{
 		display:block;
 		@include body2();
-		margin-top:calcRem(10rem);
+
+		&:before{
+			display:block;
+			width:calcRem(46rem);
+			height:calcRem(46rem);
+			margin:0 auto calcRem(10rem);
+			content:'';
+		}
+
+		.type-naver &{
+			&:before{
+				@include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')
+			}
+		}
+
+		.type-email &{
+			&:before{
+				@include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')
+			}
+		}
+
+		.type-kakao &{
+			&:before{
+				@include pageBackground('/images/join/kakao_icon.png','no-repeat center center / contain')
+			}
+		}
+
+		.type-payco &{
+			&:before{
+				@include pageBackground('/images/join/payco_icon.png','no-repeat center center / contain')
+			}
+		}
 	}
 }
 

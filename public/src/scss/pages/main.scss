@@ -2,12 +2,6 @@
 @import "../base/mixins";
 //메인 레이아웃
 .page-main{
-	.header{
-		&:before{
-			top:calcRem(-$headerHeight);
-		}
-	}
-
 	.section-body{
 		padding-bottom:calcRem(50rem);
 	}
