@@ -192,19 +192,26 @@
 
     // 컬렉션 아이템소개
     &-info{
-                    background-color: #f5d661;
-                    text-align: center;
-                    &__title{
-                        padding: calcRem(50rem) 0 calcRem(20rem);
-                        font-size: calcRem(14rem);
-                        font-weight: 300;
-                    }
-                    &__txt{
-                        padding-bottom: calcRem(50rem);
-                        font-size: calcRem(10rem);
-                        font-weight: 300;
-                    }
-                }
+        background-color: #f5d661;
+        text-align: center;
+        &__middle{
+            padding: calcRem(50rem) 0;
+            font-size: calcRem(10rem);
+            font-weight: 300;
+            line-height: 1.8;
+            background: #ffffff !important;
+        }
+        &__title{
+            padding: calcRem(50rem) 0 calcRem(20rem);
+            font-size: calcRem(14rem);
+            font-weight: 300;
+        }
+        &__txt{
+            padding-bottom: calcRem(50rem);
+            font-size: calcRem(10rem);
+            font-weight: 300;
+        }
+    }
 
     // 컬렉션 모델슬라이드
     &-model{
@@ -235,6 +242,9 @@
         }
         &__wrap{
             width: 100%;
+            &.monogram{
+                padding: 0 10%;
+            }
         }
         &__img{
             display: block;
