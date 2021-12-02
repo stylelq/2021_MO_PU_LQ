@@ -421,13 +421,16 @@ jQuery(function () {
         navigation: {
           nextEl: ".model-next-btn",
           prevEl: ".model-prev-btn"
+        },
+        thumbs: {
+          swiper: collectionModelSlide
         }
       });
-    } // 컬렉션 모델슬라이드(하단)
+    } // 컬렉션 모델슬라이드(썸네일)
 
 
-    if ($('.collection-model-slideSecond').length > 0) {
-      var collectionModelSlideSecond = new Swiper('.collection-model__containerSecond', {
+    if ($('.collection-thumb-slide').length > 0) {
+      var collectionThumbSlide = new Swiper('.collection-thumb__container', {
         effect: 'fade',
         observer: true,
         observeParents: true,
@@ -437,10 +440,7 @@ jQuery(function () {
         autoplay: {
           delay: 3000
         },
-        pagination: {
-          el: '.collection-slide-paginationSecond',
-          clickable: true
-        },
+        spaceBetween: 10,
         navigation: {
           nextEl: ".model-next-btn",
           prevEl: ".model-prev-btn"

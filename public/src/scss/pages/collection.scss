@@ -1,6 +1,7 @@
 @import "../base/variables";
 @import "../base/mixins";
 @import "../pages/product";
+@import "../pages/promotion";
 
 @mixin imageBlock {
     display:block;
@@ -62,6 +63,42 @@
                     z-index: 100;
                 }
             }
+        }
+
+        &-pagination {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calcRem(20rem) !important;
+            text-align: center;
+            width: 100%;
+            z-index: 50;
+            line-height: 0;
+            font-size: 0;
+            &-bullet {
+                margin-left: calcRem(7rem);
+                width: calcRem(15rem);
+                height: calcRem(1rem);
+                background: rgba(255, 255, 255, 0.2);
+                opacity: 1 !important;
+                display: inline-block;
+                border-radius: 0;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        &-paginationSecond{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calcRem(20rem) !important;
+            text-align: center;
+            width: 100%;
+            z-index: 50;
+            line-height: 0;
+            font-size: 0;
         }
     }
 
@@ -166,25 +203,29 @@
 
     // collection detail
     // 컬렉션 상세 비주얼
-    &-detail{
+    &-detail {
         position: relative;
         padding-top: calcRem(18rem);
-        &__img{
+
+        &__img {
             display: block;
             width: 100%;
         }
-        &__title{
+
+        &__title {
             width: 100%;
             position: absolute;
             bottom: calcRem(80rem);
             text-align: center;
         }
-        &__name{
+
+        &__name {
             margin-bottom: calcRem(10rem);
             color: #de9230;
             font-size: calcRem(20rem);
         }
-        &__info{
+
+        &__info {
             font-size: calcRem(12rem);
             color: #fff;
         }
@@ -200,6 +241,10 @@
             font-weight: 300;
             line-height: 1.8;
             background: #ffffff !important;
+            &.graphic{
+                padding: calcRem(80rem) 0;
+                background: #f2f2f2 !important;
+            }
         }
         &__title{
             padding: calcRem(50rem) 0 calcRem(20rem);
@@ -210,6 +255,22 @@
             padding-bottom: calcRem(50rem);
             font-size: calcRem(10rem);
             font-weight: 300;
+        }
+        &__img{
+            @include imageBlock;
+        }
+    }
+
+    // 컬렉션 이동하기 버튼
+    &-button{
+        margin: 0 calcRem(80rem) calcRem(50rem);
+        text-align: center;
+
+        &__link{
+            display: block;
+        }
+        &__img{
+            @include imageBlock;
         }
     }
 
@@ -245,20 +306,38 @@
             &.monogram{
                 padding: 0 10%;
             }
+            &.graphic{
+                background-color: #f2f2f2;
+                padding: 0 10%;
+            }
         }
         &__img{
             display: block;
             width: 100%;
         }
+        .model-next-btn{
+            right: calcRem(12rem);
+            background: url("../../images/collection/collection_slide_next.png") no-repeat center center/contain;
+        }
+        .model-prev-btn{
+            left: calcRem(12rem);
+            background: url("../../images/collection/collection_slide_prev.png") no-repeat center center/contain;
+        }
+    }
+
+    // 컬렉션 하단 로고이미지
+    &-logo{
+        &__img{
+            @include imageBlock;
+        }
     }
 
     // 룩북 바로가기 버튼
     &-view{
-                    position: relative;
-                    padding: calcRem(60rem) calcRem(20rem) 0;
-                    padding-top: calcRem(60rem);
-                    &__button{
-                        /*margin: calcRem(60rem) calcRem(40rem) calcRem(20rem);*/
+        position: relative;
+        padding: calcRem(60rem) calcRem(20rem) 0;
+        padding-top: calcRem(60rem);
+        &__button{
             border: 1px solid #000;
             text-align: center;
         }
@@ -301,41 +380,31 @@
     }
 }
 
-.collection-slide-pagination {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: calcVw(20vw) !important;
-    text-align: center;
-    width: 100%;
-    z-index: 50;
-    line-height: 0;
-    font-size: 0;
-}
-.collection-slide-paginationSecond{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: calcVw(20vw) !important;
-    text-align: center;
-    width: 100%;
-    z-index: 50;
-    line-height: 0;
-    font-size: 0;
-}
-
-    .swiper-pagination-bullet {
-        margin-left: calcVw(7vw);
-        width: calcVw(15vw);
-        height: calcVw(1vw);
-        background: rgba(255, 255, 255, 0.2);
-        opacity: 1 !important;
-        display: inline-block;
-        border-radius: 0;
-        &:first-child{
-            margin-left: 0;
+/*컬렉션 페이지 - pagination 슬라이드*/
+.swiper{
+    &-pagination{
+        &-bullet{
+            margin-left: calcRem(7rem);
+            width: calcRem(15rem);
+            height: calcRem(1rem);
+            background: rgba(255, 255, 255, 0.2);
+            opacity: 1 !important;
+            display: inline-block;
+            border-radius: 0;
+            &:first-child{
+                margin-left: 0;
+            }
+            &-active{
+                background: #fff !important;
+            }
         }
     }
-    .swiper-pagination-bullet-active{
-        background: #fff !important;
+    &-button{
+        &-next.dquilting{
+            right: calcRem(50rem);
+        }
+        &-prev.dquilting{
+            left: calcRem(50rem);
+        }
     }
+}
