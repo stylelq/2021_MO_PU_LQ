@@ -77,6 +77,23 @@
         left:calcRem(20rem);
         z-index: $childZindex;
 
+        &.type-circle{
+            border-radius: 100%;
+            width: calcRem(40rem);
+            height: calcRem(40rem);
+            line-height: 1.25;
+            background-color: #b8a7ed;
+            &.type-black{background-color: #525252;}
+            &.type-khaki{background-color:#a6a189}
+            &.type-tan{background-color:#ce9d6c;}
+            &.type-black{background-color:#525252;}
+            &.type-pink{background-color:#e4bbbf;}
+            &.type-camel{background-color:#d2b173;}
+            &.type-green{background-color:#aed1b3;}
+            &.type-ivory{background-color:#ffebbf;}
+            &.type-yellow{background-color:#FFDE00;}
+        }
+
         &--expected{
             position: relative;
             padding-left:calcRem(5rem);
