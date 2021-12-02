@@ -1451,6 +1451,10 @@
         margin: calcRem(46rem) 0 calcRem(70rem);
         text-align: center;
     }
+    &__item{
+        padding-bottom: calcRem(40rem);
+        position: relative;
+    }
     &__name{
         font-weight: 100;
     }
