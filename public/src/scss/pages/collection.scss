@@ -400,11 +400,93 @@
         }
     }
     &-button{
-        &-next.dquilting{
-            right: calcRem(50rem);
+        &-next{
+            .dquilting{
+                right: calcRem(50rem);
+            }
         }
-        &-prev.dquilting{
-            left: calcRem(50rem);
+        &-prev{
+            .dquilting {
+                left: calcRem(50rem);
+            }
         }
     }
+}
+
+/*썸네일 슬라이드*/
+.gallery{
+    &-top{
+        &__container{
+            display: block;
+            width: 100%;
+        }
+        &__img{
+            @include imageBlock;
+        }
+    }
+    &-wrap{
+        display: block;
+        position: relative;
+    }
+    &-thumbs{
+        padding: 5.3% 9.5% 10.6%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+        &__wrap{
+            position: relative;
+            display: flex;
+            &:before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.4);
+                z-index: 10;
+                content: '';
+            }
+        }
+
+        .swiper-slide{
+            flex: 1;
+            margin-right: 0 !important;
+            cursor: pointer;
+            &-thumb-active{
+                .gallery-thumbs__wrap:before{
+                    display: none;
+                }
+            }
+        }
+        .swiper-slide + .swiper-slide{
+            margin-left: 8px;
+        }
+    }
+}
+
+.swiper-container-fade .swiper-slide{
+    line-height: 0;
+}
+
+.event-monte__btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: block;
+    width: 18px;
+    height: 36px;
+    text-indent: -9999px;
+    margin: auto 0;
+    z-index: 10;
+}
+
+.event-monte__btn.thumb-next-btn{
+  right: 2.7%;
+  background: url(https://mcdn.louisclub.com/static/mo/img/specialty/20200911/arrow_next.png) no-repeat center center/contain;
+}
+
+.event-monte__btn.thumb-prev-btn{
+    left: 2.7%;
+    background: url(https://mcdn.louisclub.com/static/mo/img/specialty/20200911/arrow_prev.png) no-repeat center center/contain;
 }
