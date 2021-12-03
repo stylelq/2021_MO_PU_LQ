@@ -810,11 +810,8 @@ input {
 
 		.type-small &{
 			@include body5;
+			font-size:calcRem(12rem);
 			margin:calcRem(5rem) 0 0;
-		}
-
-		.color-black &{
-			color:$black1;
 		}
 
 		&:after{
