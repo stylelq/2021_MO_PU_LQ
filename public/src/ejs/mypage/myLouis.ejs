@@ -1,0 +1,78 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "MY LOUIS"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myLouis">
+            <!-- userLevel --->
+            <div class="myLouis-level level-1">
+                <div class="myLouis-level__icon"></div>
+                <div class="myLouis-level__name">PLATINUM</div>
+                <div class="myLouis-level__more">
+                    <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
+                    <a href="#" class="myLouis-level__more--membership">맴버쉽 혜택</a>
+                </div>
+            </div>
+            <!-- .userLevel --->
+
+            <div class="myLouis-contents">
+                <!-- userInfo -->
+                <div class="myLouis-info">
+                    <ul class="myLouis-info__list">
+                        <li class="myLouis-info__item">
+                            <div class="myLouis-info__item-icon"></div>
+                            <div class="myLouis-info__item-name">쿠폰</div>
+                            <div class="myLouis-info__item-num">2</div>
+                        </li>
+                        <li class="myLouis-info__item">
+                            <div class="myLouis-info__item-icon"></div>
+                            <div class="myLouis-info__item-name">적립금</div>
+                            <div class="myLouis-info__item-num">50,000</div>
+                        </li>
+                        <li class="myLouis-info__item">
+                            <div class="myLouis-info__item-icon"></div>
+                            <div class="myLouis-info__item-name">WISH LIST</div>
+                            <div class="myLouis-info__item-num">2</div>
+                        </li>
+                        <li class="myLouis-info__item">
+                            <div class="myLouis-info__item-icon"></div>
+                            <div class="myLouis-info__item-name">최근본상품</div>
+                            <div class="myLouis-info__item-num">8</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .userInfo -->
+
+                <!-- navi -->
+                <div class="myLouis-navi">
+                    <ul class="myLouis-navi__list">
+                        <li class="myLouis-navi__item"><a href="">주문배송조회</a></li>
+                        <li class="myLouis-navi__item"><a href="">취소/반품</a></li>
+                        <li class="myLouis-navi__item"><a href="">쿠폰</a></li>
+                        <li class="myLouis-navi__item"><a href="">적립금</a></li>
+                        <li class="myLouis-navi__item"><a href="">상품 리뷰</a></li>
+                    </ul>
+                    <ul class="myLouis-navi__list">
+                        <li class="myLouis-navi__item"><a href="">1:1 문의</a></li>
+                        <li class="myLouis-navi__item"><a href="">상품 Q&A</a></li>
+                        <li class="myLouis-navi__item"><a href="">재입고 알림 내역</a></li>
+                        <li class="myLouis-navi__item"><a href="">이벤트 참여현황</a></li>
+                    </ul>
+                    <ul class="myLouis-navi__list">
+                        <li class="myLouis-navi__item"><a href="">회원정보수정</a></li>
+                        <li class="myLouis-navi__item"><a href="">배송지 관리</a></li>
+                        <li class="myLouis-navi__item"><a href="">회원 탈퇴</a></li>
+                    </ul>
+                </div>
+                <!-- .navi -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>
