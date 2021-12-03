@@ -244,6 +244,26 @@
             }
         }
     }
+
+    //하단버튼
+    &__btn{
+        margin-top:calcRem(50rem);
+
+        &--inner{
+            margin:0 calcRem(-5rem);
+
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &--item{
+            width:50%;
+            float:left;
+            padding:0 calcRem(5rem);
+            box-sizing: border-box;
+        }
+    }
 }
 
 //하단 픽시드 버튼

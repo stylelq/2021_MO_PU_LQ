@@ -813,6 +813,10 @@ input {
 			margin:calcRem(5rem) 0 0;
 		}
 
+		.color-black &{
+			color:$black1;
+		}
+
 		&:after{
 			content:"";
 			width:calcRem(2rem);
