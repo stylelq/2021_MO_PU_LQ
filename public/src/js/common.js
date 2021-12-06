@@ -561,7 +561,7 @@ jQuery(function(){
     }
 
     /*
-    //main(gift)
+    //main(best)
     */
     //메인 배너슬라이드
     if($('.main-banner').length > 0){
@@ -571,8 +571,13 @@ jQuery(function(){
             watchOverflow: true,
             slidesPerView: 1,
             loop:true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".main-banner__pagination",
+                type: "fraction",
             },
             on: {
                 init: function(){
@@ -585,6 +590,19 @@ jQuery(function(){
                         $('body').removeClass('is-white');
                         $('body').addClass('is-black');
                     }
+
+                    $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("active");
+                    $('.main-banner__progressbar').eq(0).addClass("animate");
+                    $('.main-banner__progressbar').eq(0).addClass("active");
+                },
+                slideChangeTransitionStart: function(){
+                    $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("active");
+                    $('.main-banner__progressbar').eq(0).addClass("active");
+                },
+                slideChangeTransitionEnd: function(){
+                    $('.main-banner__progressbar').eq(0).addClass("animate");
                 },
 
                 beforeTransitionStart: function () {
@@ -602,33 +620,130 @@ jQuery(function(){
         });
     }
 
-    //gift 배너슬라이드
-    if($('.gift-thumb').length > 0){
-        var giftSlide = new Swiper('.gift-thumb__container', {
+    //메인 배너슬라이드2
+    if($('.main-banner2').length > 0){
+        var mainSlide = new Swiper('.main-banner2__container', {
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            slidesPerView: 1,
+            loop:true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".main-banner2__pagination",
+                type: "fraction",
+            },
+            on: {
+                init: function(){
+                    var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+                    var bg = slide.data("bg");
+                    if($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                        $('body').removeClass('is-black');
+                        $('body').addClass('is-white');
+                    }else {
+                        $('body').removeClass('is-white');
+                        $('body').addClass('is-black');
+                    }
+
+                    $('.main-banner2__progressbar').removeClass("animate");
+                    $('.main-banner2__progressbar').removeClass("active");
+                    $('.main-banner2__progressbar').eq(0).addClass("animate");
+                    $('.main-banner2__progressbar').eq(0).addClass("active");
+                },
+                slideChangeTransitionStart: function(){
+                    $('.main-banner2__progressbar').removeClass("animate");
+                    $('.main-banner2__progressbar').removeClass("active");
+                    $('.main-banner2__progressbar').eq(0).addClass("active");
+                },
+                slideChangeTransitionEnd: function(){
+                    $('.main-banner2__progressbar').eq(0).addClass("animate");
+                },
+
+                beforeTransitionStart: function () {
+                    var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+                    var bg = slide.data("bg");
+                    if($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                        $('body').removeClass('is-black');
+                        $('body').addClass('is-white');
+                    }else {
+                        $('body').removeClass('is-white');
+                        $('body').addClass('is-black');
+                    }
+                }
+            }
+        });
+    }
+
+    //new 배너슬라이드
+    if($('.main-new').length > 0){
+        var mainSlide = new Swiper('.main-new__container', {
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            slidesPerView: 1,
+            centeredSlides: true,
+            loop:true,
+            pagination: {
+                el: ".main-new__pagination",
+                type: "fraction",
+            },
+            on: {
+                init: function(){
+                    var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+                    var bg = slide.data("bg");
+                    if($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                        $('body').removeClass('is-black');
+                        $('body').addClass('is-white');
+                    }else {
+                        $('body').removeClass('is-white');
+                        $('body').addClass('is-black');
+                    }
+                },
+                beforeTransitionStart: function () {
+                    var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+                    var bg = slide.data("bg");
+                    if($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                        $('body').removeClass('is-black');
+                        $('body').addClass('is-white');
+                    }else {
+                        $('body').removeClass('is-white');
+                        $('body').addClass('is-black');
+                    }
+                }
+            }
+        });
+    }
+
+    //best 배너슬라이드
+    if($('.best-thumb').length > 0){
+        var bestSlide = new Swiper('.best-thumb__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
             slidesPerView: 1,
             loop:true,
             pagination: {
-                el: ".gift-thumb__pagination",
+                el: ".best-thumb__pagination",
                 type: "fraction",
             },
             navigation: {
-                nextEl: ".gift-thumb--next",
-                prevEl: ".gift-thumb--prev",
+                nextEl: ".best-thumb--next",
+                prevEl: ".best-thumb--prev",
             },
             on: {
                 init: function(){
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var cate = slide.data("slide");
-                    var slide = $('[data-link=' + cate + ']').parent('.main-gift__tab--item').addClass('is-current').siblings('.main-gift__tab--item').removeClass('is-current');
+                    var slide = $('[data-link=' + cate + ']').parent('.main-best__tab--item').addClass('is-current').siblings('.main-best__tab--item').removeClass('is-current');
                 },
 
                 beforeTransitionStart: function () {
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var cate = slide.data("slide");
-                    var slide = $('[data-link=' + cate + ']').parent('.main-gift__tab--item').addClass('is-current').siblings('.main-gift__tab--item').removeClass('is-current');
+                    var slide = $('[data-link=' + cate + ']').parent('.main-best__tab--item').addClass('is-current').siblings('.main-best__tab--item').removeClass('is-current');
                 }
             }
         });
@@ -637,7 +752,7 @@ jQuery(function(){
             var link = $(this).data("link");
             var slide = $('[data-slide=' + link + ']').index();
             var num = slide;
-            giftSlide.slideTo(num);
+            bestSlide.slideTo(num);
         });
     }
 });
