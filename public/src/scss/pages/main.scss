@@ -259,12 +259,14 @@
 	}
 
 	&__name {
-		font-size: calcRem(16rem);
+		font-size: calcRem(14rem);
 		font-weight: 300;
 		line-height: calcRem(28rem);
 	}
 	&__price {
+		font-size: calcRem(14rem);
 		font-weight: 400;
+		line-height: calcRem(22rem);
 	}
 	&__pagination {
 		bottom: calcRem(18rem);

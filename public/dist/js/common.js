@@ -700,13 +700,19 @@ jQuery(function () {
 
 
   if ($('.main-new').length > 0) {
+    var eventSliderTouch = false;
     var mainSlide = new Swiper('.main-new__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 1,
       centeredSlides: true,
+      speed: 10000,
       loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
       pagination: {
         el: ".main-new__pagination",
         type: "fraction"
