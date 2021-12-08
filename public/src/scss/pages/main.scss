@@ -13,9 +13,22 @@
 	&__inner{
 		display: block;
 		width:100%;
+		height: auto;
 		line-height:0;
 	}
+	&__source{
+		display: block;
+		&--img{
+			height: auto;
+		}
+		&--video{
+			height: 100vh;
+		}
+	}
 	&__img{
+		width: 100%;
+	}
+	&__video{
 		width: 100%;
 	}
 	&__content{
@@ -119,6 +132,9 @@
 		line-height:0;
 	}
 	&__img{
+		width: 100%;
+	}
+	&__video{
 		width: 100%;
 	}
 	&__content{

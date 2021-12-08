@@ -679,22 +679,21 @@ jQuery(function(){
 
     //new 배너슬라이드
     if($('.main-new').length > 0){
-        var eventSliderTouch = false;
         var mainNewSlide = new Swiper('.main-new__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
             slidesPerView: 1,
             centeredSlides: true,
-            speed: 10000,
+            speed: 12000,
             loop:true,
             autoplay: {
                 delay: 0,
-                disableOnInteraction: true,
+                disableOnInteraction: true
             },
             pagination: {
                 el: ".main-new__pagination",
-                type: "fraction",
+                type: "fraction"
             },
             on: {
                 init: function(){
@@ -719,7 +718,7 @@ jQuery(function(){
                         $('body').addClass('is-black');
                     }
                 }
-                touchMove: function() {
+                /*touchMove: function() {
                     eventSliderTouch = true;
                 },
                 touchEnd: function() {
@@ -730,14 +729,19 @@ jQuery(function(){
                 },
                 transitionEnd: function() {
                     this.params.speed = 10000;
-                }
+                }*/
             }
         });
     }
 
-    /*슬라이드 온클릭 시 자동슬라이드 정지*/
-    mainNewSlide.on('click', function() {
-        mainNewSlide.autoplay.stop();
+    // new 배너슬라이드 - swiper 클릭 시 자동슬라이드 해제
+    $('main-new').each(function(elem, target){
+        var newSlide = target.mainNewSlide;
+        $(this).on('click', function(){
+            newSlide.autoplay.stop(0);
+        }, function(){
+            newSlide.autoplay.start(0);
+        });
     });
 
     //best 배너슬라이드
