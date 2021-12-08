@@ -718,7 +718,7 @@ jQuery(function(){
                         $('body').removeClass('is-white');
                         $('body').addClass('is-black');
                     }
-                }
+                },
                 touchMove: function() {
                     eventSliderTouch = true;
                 },

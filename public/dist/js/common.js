@@ -741,6 +741,18 @@ jQuery(function () {
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
           }
+        },
+        touchMove: function touchMove() {
+          eventSliderTouch = true;
+        },
+        touchEnd: function touchEnd() {
+          if (eventSliderTouch) {
+            eventSliderTouch = false;
+            this.params.speed = 500;
+          }
+        },
+        transitionEnd: function transitionEnd() {
+          this.params.speed = 10000;
         }
       }
     });
