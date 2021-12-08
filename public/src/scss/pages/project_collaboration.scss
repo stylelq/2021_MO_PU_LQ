@@ -38,8 +38,8 @@
             @include imageBlock;
         }
         &__box{
-            @include vertical-center;
             position: absolute;
+            top: 50%;
             left: 0;
             right: 0;
             margin: 0 calcVw(20vw);
