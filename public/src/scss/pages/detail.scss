@@ -1252,6 +1252,24 @@
     }
 }
 
+//qna 수정/삭제
+.qna-box{
+    margin: calcRem(-20rem) 0 calcRem(10rem);
+    display: block;
+    text-align: right;
+    color: #000;
+    &__edit{
+        @include body3;
+        display: inline-block;
+        margin: 0 calcRem(2rem);
+    }
+    &__delete{
+        @include body3;
+        display: inline-block;
+
+    }
+}
+
 //qna 답변
 .qna-answer{
     background-color: $lightgray2;

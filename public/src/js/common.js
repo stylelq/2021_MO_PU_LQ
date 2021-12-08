@@ -680,7 +680,7 @@ jQuery(function(){
     //new 배너슬라이드
     if($('.main-new').length > 0){
         var eventSliderTouch = false;
-        var mainSlide = new Swiper('.main-new__container', {
+        var mainNewSlide = new Swiper('.main-new__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
@@ -690,7 +690,7 @@ jQuery(function(){
             loop:true,
             autoplay: {
                 delay: 0,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
             pagination: {
                 el: ".main-new__pagination",
@@ -734,6 +734,11 @@ jQuery(function(){
             }
         });
     }
+
+    /*슬라이드 온클릭 시 자동슬라이드 정지*/
+    mainNewSlide.on('click', function() {
+        mainNewSlide.autoplay.stop();
+    });
 
     //best 배너슬라이드
     if($('.best-thumb').length > 0){
