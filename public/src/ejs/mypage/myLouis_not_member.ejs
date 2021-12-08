@@ -9,20 +9,13 @@ lnbTitle = "MY LOUIS"
     <% include ../_include/_lnbMyPage %>
     <div class="site-main">
         <section class="myLouis">
-            <!-- userLevel '
-                [className style:: icon & text color]
-                level-1 : PLATINUM
-                level-2 : GOLD
-                level-3 : SILVER
-                level-4 : CLUB
-                level-5 : CLUB PLUS
-                --->
-            <div class="myLouis-level level-1">
+            <!-- userLevel --->
+            <div class="myLouis-level level-6">
                 <div class="myLouis-level__icon"></div>
-                <div class="myLouis-level__name">PLATINUM</div>
+                <div class="myLouis-level__name">WEB</div>
                 <div class="myLouis-level__more">
                     <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
-                    <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
+                    <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 회원으로 전환</a>
                 </div>
             </div>
             <!-- .userLevel --->
@@ -82,4 +75,7 @@ lnbTitle = "MY LOUIS"
     </div>
 </div>
 <% include ../_include/_contentFooter %>
+<% include ../_popup/_membershipJoin %>
+<% include ../_popup/_membershipJoin_result %>
+<% include ../_popup/_membershipJoin_success %>
 <% include ../_include/_footer %>

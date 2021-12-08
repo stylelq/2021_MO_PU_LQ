@@ -770,6 +770,51 @@ input {
 	}
 }
 
+//날짜 폼 레이아웃 추가
+.form-date{
+	&__field{
+		position: relative;
+		float: left;
+		width: 45%;
+
+		&:nth-child(2){
+			width: 10%;
+			text-align: center;
+			position: relative;
+			@include vertical-center;
+		}
+
+		.form__input--text{
+			box-sizing: border-box;
+			appearance: none;
+			background: #fff;
+			height: calcRem(36rem);
+			
+			&::placeholder{
+				font-size:calcRem(12rem);
+				font-weight: $regular;
+				color: $darkgray;
+			}
+		}
+		input[type="date"]::-webkit-calendar-picker-indicator{
+			width: calcRem(14rem);
+			height: calcRem(14rem);
+			@include background('/images/common/ico_calendar.png','no-repeat center center / auto');
+		}
+		input[type="text"]+span{
+			position: absolute;
+			top: 50%;
+			right: calcRem(11rem);
+			transform: translateY(-50%);
+			width: calcRem(14rem);
+			height: calcRem(14rem);
+			@include background('/images/common/ico_calendar.png','no-repeat center center / contain');
+		}
+		
+	}
+	
+}
+
 //애로우 버튼
 .form-arrow__btn{
 	border:solid 1px $gray2;
