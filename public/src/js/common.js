@@ -533,6 +533,19 @@ jQuery(function(){
             return false;
         }
         $(document).on('click', '.js-accordion', accordionMore);
+
+        //마이페이지 :: 주문배송조회 기간조회 dropDown
+        function btnDropDown() {
+            var parent = $(this).closest('.myOrderList-filter__btnList'),
+                parentNext = parent.next('.myOrderList-filter__detail');
+            if(parentNext.hasClass('is-view')){
+                parentNext.removeClass('is-view');
+            }else{
+                parentNext.addClass('is-view');
+            }
+
+        }
+        $(document).on('click', '.js-btn-dropDown', btnDropDown);
     });
 
     //결제탭
@@ -718,7 +731,7 @@ jQuery(function(){
                         $('body').removeClass('is-white');
                         $('body').addClass('is-black');
                     }
-                }
+                },
                 touchMove: function() {
                     eventSliderTouch = true;
                 },

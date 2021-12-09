@@ -551,7 +551,20 @@ jQuery(function () {
       return false;
     }
 
-    $(document).on('click', '.js-accordion', accordionMore);
+    $(document).on('click', '.js-accordion', accordionMore); //마이페이지 :: 주문배송조회 기간조회 dropDown
+
+    function btnDropDown() {
+      var parent = $(this).closest('.myOrderList-filter__btnList'),
+          parentNext = parent.next('.myOrderList-filter__detail');
+
+      if (parentNext.hasClass('is-view')) {
+        parentNext.removeClass('is-view');
+      } else {
+        parentNext.addClass('is-view');
+      }
+    }
+
+    $(document).on('click', '.js-btn-dropDown', btnDropDown);
   }); //결제탭
 
   function paymentTab() {
@@ -701,7 +714,7 @@ jQuery(function () {
 
   if ($('.main-new').length > 0) {
     var eventSliderTouch = false;
-    var mainSlide = new Swiper('.main-new__container', {
+    var mainNewSlide = new Swiper('.main-new__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
@@ -711,7 +724,7 @@ jQuery(function () {
       loop: true,
       autoplay: {
         delay: 0,
-        disableOnInteraction: false
+        disableOnInteraction: true
       },
       pagination: {
         el: ".main-new__pagination",
@@ -741,11 +754,28 @@ jQuery(function () {
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
           }
+        },
+        touchMove: function touchMove() {
+          eventSliderTouch = true;
+        },
+        touchEnd: function touchEnd() {
+          if (eventSliderTouch) {
+            eventSliderTouch = false;
+            this.params.speed = 500;
+          }
+        },
+        transitionEnd: function transitionEnd() {
+          this.params.speed = 10000;
         }
       }
     });
-  } //best 배너슬라이드
+  }
+  /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
+
+  mainNewSlide.on('click', function () {
+    mainNewSlide.autoplay.stop();
+  }); //best 배너슬라이드
 
   if ($('.best-thumb').length > 0) {
     var bestSlide = new Swiper('.best-thumb__container', {
