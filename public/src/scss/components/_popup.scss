@@ -1484,3 +1484,325 @@
         background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png") no-repeat center center/contain;
     }
 }
+
+
+
+//[팝업 공통사용]  _form에 center-bullet__item style
+@mixin popupBulletItem {
+    *[class *= -bullet__item],
+    *[class *= __bullet__item]{
+        padding-left:calcRem(7rem);
+        position: relative;
+        @include body3;
+        // color:$darkgray;
+        margin:calcRem(5rem) 0 0;
+
+        .type-small &{
+            @include body5;
+            font-size:calcRem(12rem);
+            margin:calcRem(5rem) 0 0;
+        }
+
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$darkgray;
+
+            .type-small &{
+                background:$bulletColor;
+            }
+        }
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
+
+//멤버쉽 전환
+.membership-join{
+    padding:0 calcRem(20rem);
+
+    &__contBox-img{
+        height: calcRem(120rem);
+        border: 1px solid $lightgray1;
+        margin-bottom: calcRem(15rem);
+        position: relative;
+        box-sizing: border-box;
+
+        img{
+            @include ab-center;
+        }
+    }
+
+    &__contBox-btn{
+        margin-bottom: calcRem(15rem);
+    }
+
+    &__contBox-bullet{
+        margin-bottom: calcRem(30rem);
+        @include popupBulletItem;
+    }
+}
+
+//멤버쉽 전환 :: 완료, 기존회원
+.membershipJoin-result{
+    padding:0 calcRem(20rem);
+
+    &__text{
+        text-align: center;
+        @include title2;
+        margin:calcRem(10rem) 0 calcRem(35rem) 0;
+
+        &.two-line{ margin:calcRem(0rem) 0 calcRem(23rem) 0; }
+        .text--point{ color: $point1; }
+    }
+
+    &__text.two-line + &__table{
+        table{ margin-bottom: calcRem(10rem) }
+    }
+
+    &__bullet{
+        @include popupBulletItem;
+    }
+
+    &__link{
+        text-align: center;
+        margin-top: calcRem(26rem);
+        @include body2;
+        color: $point1;
+
+        & a:after{
+            content: '';
+            display: inline-block;
+            width:calcRem(6rem);
+            height:calcRem(10rem);
+            box-sizing: border-box;
+            margin-left: calcRem(10rem);
+            @include pageBackground('/images/common/ico_red_arrow.svg','no-repeat center center / contain');
+        }
+    }
+}
+
+//마이페이지 :: 배송지 변경
+.address-modify{
+    //배송지 정보
+    .address{
+        &-info{
+            &__item{
+                margin-top:calcRem(19rem);
+
+                &:first-child{
+                    margin-top:0;
+                }
+
+                &--message{
+                    margin-top:calcRem(25rem);
+                }
+            }
+
+            &--text{
+                font-size:calcRem(12rem);
+                padding-left:calcRem(7rem);
+                position: relative;
+                line-height:calclH(18,11);
+                letter-spacing: $defaultLetter;
+                color:$darkgray;
+                margin:calcRem(15rem) 0 0;
+
+                &:after{
+                    content:"";
+                    width:calcRem(2rem);
+                    height:calcRem(2rem);
+                    border-radius: 100%;
+                    position: absolute;
+                    top:calcRem(8rem);
+                    left:0;
+                    background:$darkgray;
+                }
+            }
+
+            &__inner{
+                margin-top:calcRem(10rem);
+
+                &:first-child{
+                    margin-top:0;
+                }
+
+                &--btn{
+                    position: relative;
+                    padding-right:calcRem(87rem);
+
+                    .form__input--btn{
+                        @include body2;
+                        color:$whiteColor;
+                        padding:calcRem(9rem) calcRem(5rem);
+                        height:calcRem(38rem);
+                        text-align: center;
+                        width:calcRem(83rem);
+                        background-color: $darkgray;
+                        position: absolute;
+                        right:0;
+                        @include vertical-center;
+                        box-sizing: border-box;
+                    }
+                }
+
+                &--list{
+                    margin-right:calcRem(-5rem);
+                    box-sizing: border-box;
+
+                    &:after{
+                        @include block-reset;
+                    }
+                }
+
+                &--item{
+                    width:33.333%;
+                    float:left;
+                    padding-right:calcRem(5rem);
+                    box-sizing: border-box;
+                }
+            }
+
+            &__custom{
+                margin-top:calcRem(10rem);
+                display: none;
+
+                &.is-active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+//마이페이지 :: 반품신청
+.return-order__contents{
+    padding:0 calcRem(20rem);    
+    margin-bottom: calcRem(50rem);  
+    overflow: hidden;
+
+    .order-mypage__cont{
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+    }
+
+    .order-mypage__title{ 
+        @include body2; 
+    }
+    
+    .order-mypage__thumb{
+        margin-right:calcRem(15rem);
+        width:calcRem(120rem);
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        
+        img,
+        .order-mypage__img{ 
+            width:100%;
+            @include ab-center; 
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom:100%;
+        }
+    }
+            
+    .order-mypage__option{
+        margin-top:calcRem(12rem);
+    
+        &--item{    
+            &:after{
+                @include block-reset;
+            }
+        }
+    
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body3;
+        }
+    
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body3;
+        }
+    }
+    
+    .order-mypage__price{
+        margin-top:calcRem(20rem);
+        clear: both;
+        padding-left:calcRem(20rem);
+        padding-right:calcRem(20rem);
+        position: relative;
+        line-height:0;
+        font-size:0;
+
+        &--current{
+            @include title2;
+            margin-right:calcRem(12rem);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        &--sale{
+            @include title2;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+
+        &.type-single{
+            padding:0;
+            @include title1;
+        }
+    }
+
+    //message
+    .order-mypage__message{
+        margin-top:calcRem(30rem);
+
+        &.is-active{
+            display: block;
+        }
+        select{
+            margin-bottom:calcRem(20rem);
+        }
+        textarea{
+            height:calcRem(85rem);
+        }
+    }
+
+    .order-mypage__text{ 
+        @include body3; 
+        margin: calcRem(30rem) 0;
+    }
+
+    .order-mypage__textBox{
+        margin-bottom: calcRem(30rem);
+
+        &--title{
+            margin:0;
+            margin-bottom: calcRem(10rem);
+            @include title2;
+        }
+        .center-bullet__item{
+            color: $black1;
+            &:not(:nth-child(1)){ margin-top:calcRem(8rem); }
+        }
+    }
+}

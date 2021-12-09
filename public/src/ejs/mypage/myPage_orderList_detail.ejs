@@ -1,0 +1,141 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "주문배송조회"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myOrderListDetail">
+            <!-- 주문 상품 -->
+            <section class="myOrderListDetail-type">
+                <div class="myOrderListDetail-title">
+                    <div class="myOrderListDetail-title__orderId">주문번호 P20210812142407</div>
+                    <div class="myOrderListDetail-title__date">2021.10.19 오후 04:10</div>
+                </div>
+
+                <div class="myOrderListDetail-cont">
+                    <h2 class="myOrderListDetail-cont__title">주문 상품정보</h2>
+
+                    <div class="myOrderListDetail-cont__state">
+                        <div class="myOrderListDetail-cont__state--title">배송중</div>
+                        <ul class="myOrderListDetail-cont__state--list">
+                            <li class="myOrderListDetail-cont__state--item">
+                                <a href="#returnOrder" class="myOrderList-btn btn-v1 btn-v1--small js-popup-open">반품신청</a>
+                            </li>
+                            <li class="myOrderListDetail-cont__state--item">
+                                <a href="#" class="myOrderList-btn btn-v1 btn-v1--small js-popup-open">배송조회</a>
+                            </li>
+                            <li class="myOrderListDetail-cont__state--item">
+                                <a href="#" class="myOrderList-btn btn-v1 btn-v1--small js-popup-open">구매확정</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="myOrderListDetail-cont__detail">
+                        <% include ../_include/_orderItem %>
+                    </div>
+                </div>
+
+            </section>
+            <!-- .주문 상품 -->
+
+            <!-- 배송정보 -->
+            <section class="myOrderListDetail-info ">
+                <h2 class="myOrderListDetail-title">
+                    배송정보 (받으시는 분)
+                    <a class="info-more js-popup-open" href="#addressModifyPop">배송지 변경</a>
+                </h2>
+                <div class="myOrderListDetail-cont">
+                    <div class="user-address">
+                        <div class="user-address__meta">
+                            <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
+                        </div>
+                        <div class="user-address__tel">010-1234-5678</div>
+                        <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                    </div>
+                    <div class="user-address__state">배송 메시지: <span class="user-address__state--text">테스트 주문</span></div>
+                </div>
+            </section>
+            <!-- .배송정보 -->
+
+            <!-- 최종결제금액 -->
+            <section class="myOrderListDetail-payment bg-gray">
+                <div class="payment-total">
+                    <h2 class="payment-total__title">
+                        <dl class="payment-total__inner">
+                            <dt class="payment-total__text">최종 결제금액</dt>
+                            <dd class="payment-total__price">289,290원</dd>
+                        </dl>
+                    </h2>
+                    <div class="payment-total__cont">
+                        <ul class="payment-total__list">
+                            <li class="payment-total__item">
+                                <dl class="payment-total__inner">
+                                    <dt class="payment-total__text">총 주문상품금액</dt>
+                                    <dd class="payment-total__price">328,000원</dd>
+                                </dl>
+                            </li>
+                            <li class="payment-total__item">
+                                <dl class="payment-total__inner">
+                                    <dt class="payment-total__text">쿠폰할인금액</dt>
+                                    <dd class="payment-total__price">-38,710원</dd>
+                                </dl>
+                            </li>
+                            <li class="payment-total__item">
+                                <dl class="payment-total__inner">
+                                    <dt class="payment-total__text">적립금 즉시할인</dt>
+                                    <dd class="payment-total__price">0원</dd>
+                                </dl>
+                            </li>
+                            <li class="payment-total__item">
+                                <dl class="payment-total__inner">
+                                    <dt class="payment-total__text">적립금 사용</dt>
+                                    <dd class="payment-total__price">-2,000원</dd>
+                                </dl>
+                            </li>
+                            <li class="payment-total__item">
+                                <dl class="payment-total__inner">
+                                    <dt class="payment-total__text">배송비</dt>
+                                    <dd class="payment-total__price">0원</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- .최종결제금액 -->
+
+            <!-- 결제방식 -->
+            <section class="myOrderListDetail-paymentMethod">
+                <div class="payment-info">
+                    <h2 class="payment-info__title">신용카드</h2>
+                    <div class="payment-info__cont">
+                        <div class="payment-info__list">
+                            <div class="payment-info__item">승인번호 : <span class="payment-info__item--text">12345678</span></div>
+                            <div class="payment-info__item">신용카드 정보 : <span class="payment-info__item--text">외환 9411****3949****</span></div>
+                            <div class="payment-info__item">할부 : <span class="payment-info__item--text">일시불</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- .결제방식 -->
+
+            <!-- 주문자정보 -->
+            <section class="myOrderListDetail-user">
+                <h2 class="myOrderListDetail-title">주문자 정보</h2>
+                <div class="myOrderListDetail-cont">
+                    <% include ../_include/_ordererInfo %>
+                </div>
+            </section>
+            <!-- .주문자정보 -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_popup/_addressModify %>
+<% include ../_popup/_addressSearch %>
+<% include ../_popup/_returnOrder %>
+<% include ../_include/_footer %>
