@@ -7,7 +7,7 @@
 	}
 }
 
-//메인 탑배너
+//메인 탑배너슬라이드
 .main-banner{
 	position: relative;
 	&__inner{
@@ -122,8 +122,124 @@
 	}
 }
 
-//메인 탑배너2
+//메인 배너슬라이드2
 .main-banner2{
+	position: relative;
+	padding-top: calcRem(60rem);
+	&__inner{
+		display: block;
+		width:100%;
+		height: auto;
+		line-height:0;
+	}
+	&__source{
+		display: block;
+		&--img{
+			height: auto;
+		}
+		&--video{
+			height: 100vh;
+		}
+	}
+	&__img{
+		width: 100%;
+	}
+	&__video{
+		width: 100%;
+	}
+	&__content{
+		bottom: calcRem(50rem);
+		position: absolute;
+	}
+	&__name{
+		color: #fff;
+		font-size: calcRem(16rem);
+		line-height: calcRem(28rem);
+	}
+	&__pagination{
+		bottom: calcRem(22rem);
+		width: 100%;
+		position: absolute;
+		color: #fff;
+		text-align: center;
+		z-index: 100;
+		font-size:0;
+		line-height:0;
+
+		.swiper-pagination{
+			&-current {
+				font-size: calcRem(12rem);
+				line-height: calclH(19, 12);
+				padding-right: calcRem(11rem);
+				position: relative;
+
+				&:after {
+					content: "";
+					width: 1px;
+					height: calcRem(10rem);
+					background-color: $gray1;
+					position: absolute;
+					right: 0;
+					@include vertical-center;
+				}
+			}
+			&-total{
+				font-size:calcRem(12rem);
+				line-height:calclH(19,12);
+				padding-left:calcRem(10rem);
+			}
+		}
+	}
+
+	// 프로그래스바
+	.swiper-progress-bar{
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		display: block;
+		z-index: 1;
+		height: calcRem(3rem);
+		.slide_progress-bar {
+			position: absolute;
+			height: calcRem(3rem);
+			background: rgba(255, 255, 255, 0.5);
+			width: auto;
+			clear: both;
+			opacity: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: #9B192F;
+				height: 100%;
+				width: 0;
+				content: "";
+				transition: 0.1s width linear;
+			}
+		}
+		&.active {
+			.slide_progress-bar {
+				opacity: 1;
+			}
+		}
+		&.animate {
+			.slide_progress-bar {
+				&:after {
+					width: 100%;
+					transition: width linear;
+					transition-delay: unset;
+					transition-duration: 5s;
+				}
+			}
+		}
+	}
+}
+
+//메인 배너슬라이드3
+.main-banner3{
 	position: relative;
 	padding-top: calcRem(60rem);
 	&__inner{
@@ -131,8 +247,19 @@
 		width:100%;
 		line-height:0;
 	}
+	&__source{
+		display: block;
+		height: calcRem(540rem);
+		&--img{
+		}
+		&--video{
+		}
+	}
 	&__img{
+		max-width: 100%;
+		height: 100%;
 		width: 100%;
+		object-fit: cover;
 	}
 	&__video{
 		width: 100%;
@@ -334,24 +461,6 @@
 	}
 }
 
-//중간배너(포스터)
-.main-poster{
-	position: relative;
-	padding-top: calcRem(60rem);
-	&__img{
-		display: block;
-		width: 100%;
-	}
-	&__bottom{
-		bottom: calcRem(48rem);
-		width: 100%;
-		position: absolute;
-		text-align: center;
-		font-size: calcRem(28rem);
-		color: #fff;
-	}
-}
-
 //구매자 베스트
 .main-best{
 	padding-top: calcRem(60rem);
@@ -361,7 +470,7 @@
 	}
 
 	&__title{
-		@include heading2;
+		@include heading3;
 		text-transform: uppercase;
 		margin:0 0 calcRem(15rem);
 	}
@@ -390,7 +499,7 @@
 
 		&--link{
 			display: block;
-			@include body2;
+			@include body3;
 			opacity: 0.5;
 			text-transform: uppercase;
 
@@ -404,12 +513,17 @@
 //메인 컬렉션
 .main-collection{
 	position: relative;
-	margin-top: calcRem(60rem);
+	padding-top: calcRem(60rem);
 	&__center{
 		position: absolute;
 		width: 100%;
 		text-align: center;
 		@include vertical-center;
+	}
+	&__inner{
+		display: block;
+		position: absolute;
+		width: 100%;
 	}
 	&__img{
 		width: 100%;
@@ -417,7 +531,7 @@
 	}
 	&__button{
 		margin: 0 calcRem(20rem);
-		padding: calcRem(10rem) 0;
+		padding: calcRem(14rem) 0 calcRem(10rem);
 		color: #fff;
 		border: 1px solid #fff;
 		text-transform: uppercase;
@@ -448,21 +562,19 @@
 	&__title{
 		line-height: calcRem(32rem);
 		font-size: calcRem(20rem);
-		font-weight: 400;
+		font-weight: 500;
 		text-transform: uppercase;
 	}
 	&__txt{
 		line-height: calcRem(20rem);
 		font-size: calcRem(12rem);
-		font-weight: 500;
+		font-weight: 400;
 	}
 	&__info{
+		@include body3;
 		padding: calcRem(40rem) calcRem(20rem) calcRem(45rem);
 		color: #fff;
 		text-align: center;
-		font-size: calcRem(12rem);
-		font-weight: 300;
-		line-height: calcRem(20rem);
 	}
 	&__gender{
 		padding: 0 calcRem(20rem);
@@ -506,7 +618,7 @@
 	&__info{
 		padding-bottom: calcRem(34rem);
 		font-size: calcRem(12rem);
-		font-weight: 400;
+		font-weight: 300;
 		line-height: calcRem(20rem);
 	}
 	&__title{
@@ -583,6 +695,7 @@
 	&__img{
 		@include ab-center;
 		width:100%;
+		padding-bottom: calcRem(20rem);
 	}
 
 	//prev, next
@@ -610,6 +723,7 @@
 
 	//페이징
 	&__pagination{
+		padding-top: calcRem(20rem);
 		text-align: center;
 		font-size:0;
 		line-height:0;
@@ -638,5 +752,23 @@
 				padding-left:calcRem(10rem);
 			}
 		}
+	}
+
+	//상품명,가격
+	&__bottom{
+		bottom: 0;
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		font-size: calcRem(12rem);
+		line-height: calcRem(20rem);
+	}
+
+	&__name{
+		@include body3;
+	}
+
+	&__price {
+		@include body2;
 	}
 }

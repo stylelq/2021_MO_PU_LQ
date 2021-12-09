@@ -696,6 +696,64 @@ jQuery(function () {
         }
       }
     });
+  } //메인 배너슬라이드3
+
+
+  if ($('.main-banner3').length > 0) {
+    var mainSlide = new Swiper('.main-banner3__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".main-banner3__pagination",
+        type: "fraction"
+      },
+      on: {
+        init: function init() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner3__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
+
+          $('.main-banner3__progressbar').removeClass("animate");
+          $('.main-banner3__progressbar').removeClass("active");
+          $('.main-banner3__progressbar').eq(0).addClass("animate");
+          $('.main-banner3__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          $('.main-banner3__progressbar').removeClass("animate");
+          $('.main-banner3__progressbar').removeClass("active");
+          $('.main-banner3__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+          $('.main-banner3__progressbar').eq(0).addClass("animate");
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner3__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
+        }
+      }
+    });
   } //new 배너슬라이드
 
 
