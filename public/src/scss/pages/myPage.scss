@@ -4,6 +4,7 @@
 
 // 유저 멤버쉽 레벨,혜택보러가기
 .myLouis-level{
+    $level : '.myLouis-level';
     overflow: hidden;
     padding:0 calcRem(20rem) calcRem(25rem);
 
@@ -13,12 +14,29 @@
         height:calcRem(48rem);
         margin-right: calcRem(15rem)
     }
-    &.level-1 &__icon{ @include pageBackground('/images/membership/membership_1.png','no-repeat center center / contain'); }
-    &.level-2 &__icon{ @include pageBackground('/images/membership/membership_2.png','no-repeat center center / contain'); }
-    &.level-3 &__icon{ @include pageBackground('/images/membership/membership_3.png','no-repeat center center / contain'); }
-    &.level-4 &__icon{ @include pageBackground('/images/membership/membership_4.png','no-repeat center center / contain'); }
-    &.level-5 &__icon{ @include pageBackground('/images/membership/membership_5.png','no-repeat center center / contain'); }
-    &.level-6 &__icon{ @include pageBackground('/images/membership/membership_6.png','no-repeat center center / contain'); }
+    &.level-1{
+        #{$level}__icon{ @include pageBackground('/images/membership/membership_1.png','no-repeat center center / contain'); }
+    }
+    &.level-2 {
+        #{$level}__icon{ @include pageBackground('/images/membership/membership_2.png','no-repeat center center / contain'); }
+        #{$level}__name{ color:$gold; }
+    }
+    &.level-3{
+        #{$level}__icon{ @include pageBackground('/images/membership/membership_3.png','no-repeat center center / contain'); }
+        #{$level}__name{ color:$silver; }
+    }
+    &.level-4{
+        #{$level}__icon{ @include pageBackground('/images/membership/membership_4.png','no-repeat center center / contain'); }
+        #{$level}__name{ color:$club; }
+    }
+    &.level-5{
+        #{$level}__icon{ @include pageBackground('/images/membership/membership_5.png','no-repeat center center / contain'); }
+        #{$level}__name{ color:$clubPlus; }
+    }
+    &.level-6{
+        #{$level}__icon{ @include pageBackground('/images/membership/membership_6.png','no-repeat center center / contain'); }
+        #{$level}__name{ color:$web; }
+    }
 
     &__name{
         @include body4;

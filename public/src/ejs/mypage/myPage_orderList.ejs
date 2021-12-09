@@ -1,0 +1,76 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "주문배송조회"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myOrderList">
+            <div class="myOrderList-contents">
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
+
+                <!-- 배송현황 -->
+                <div class="myOrderList-workflow">
+                    <ul class="myOrderList-workflow__list">
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">주문<br>전체</p>
+                            <p class="myOrderList-workflow__item-figure">2</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">입금<br>대기</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">결제<br>완료</p>
+                            <p class="myOrderList-workflow__item-figure">1</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">상품<br>준비중</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">상품<br>배송중</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">배송<br>완료</p>
+                            <p class="myOrderList-workflow__item-figure">1</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .배송현황 -->
+                 
+                <!-- 주문 상품 -->
+                <section class="myOrderList-section">
+                    <% include ../_include/_orderItemNoOptionState %>
+                </section>
+                <!-- .주문 상품 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>
