@@ -1,0 +1,67 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "적립금"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myReserves">
+            <div class="myReserves-center">
+                <!-- my total -->
+                <div class="myReserves-pay">
+                    <div class="payment-total">
+                        <h2 class="payment-total__title">
+                            <dl class="payment-total__inner">
+                                <dt class="payment-total__text">현재 사용 가능한 적립금</dt>
+                                <dd class="payment-total__price"><span>24,700</span> 원</dd>
+                            </dl>
+                        </h2>
+                        <div class="payment-total__item">
+                            <dl class="payment-total__inner">
+                                <dt class="payment-total__text">이달 소멸예정 적립금</dt>
+                                <dd class="payment-total__price"><span>100</span> 원</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!-- .my total -->
+
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
+     
+                <!-- 적립금 리스트 -->
+                <section class="myReserves-section">
+                    <div class="myReserves-section__list">
+                        <% include ../_include/_reservesItem %>
+                    </div>
+                    <% include ../_include/_paging %>
+                </section>
+                <!-- .적립금 리스트 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>
