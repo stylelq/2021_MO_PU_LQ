@@ -1,0 +1,70 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "취소/반품"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myReturnOrder">
+            <div class="myReturnOrder-contents">
+                <!-- 탭 -->
+                <div class="myReturnOrder-tab js-fixed-check">
+                    <ul class="myReturnOrder-tab__fix">
+                        <li class="myReturnOrder-tab__item is-current">
+                            <a href="#;" class="myReturnOrder-tab__link js-basic-tab-link">취소/반품 전체</a>
+                        </li>
+                        <li class="myReturnOrder-tab__item">
+                            <a href="#;" class="myReturnOrder-tab__link js-basic-tab-link">취소내역</a>
+                        </li>
+                        <li class="myReturnOrder-tab__item">
+                            <a href="#;" class="myReturnOrder-tab__link js-basic-tab-link">반품내역</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 탭 -->
+            
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
+                 
+                <!-- 탭 컨텐츠 -->
+                <div class="myReturnOrder-tab__cont">
+                    <div class="myReturnOrder-tab__info js-basic-tab-cont is-current">
+                        <% include ../_include/_orderItemNoOption1 %>
+                        <% include ../_include/_orderItemNoOption2 %>
+                    </div>
+                    <div class="myReturnOrder-tab__info js-basic-tab-cont">
+                        <% include ../_include/_orderItemNoOption1 %>
+                    </div>
+                    <div class="myReturnOrder-tab__info js-basic-tab-cont">
+                        <% include ../_include/_orderItemNoOption2 %>
+                    </div>
+                </div>
+                <!-- .탭 컨텐츠 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

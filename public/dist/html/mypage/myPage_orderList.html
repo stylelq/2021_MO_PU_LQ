@@ -489,7 +489,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">MY LOUIS</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">주문배송조회</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -566,75 +566,125 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="myLouis">
-            <!-- userLevel '
-                [className style:: icon & text color]
-                level-1 : PLATINUM
-                level-2 : GOLD
-                level-3 : SILVER
-                level-4 : CLUB
-                level-5 : CLUB PLUS
-                --->
-            <div class="myLouis-level level-1">
-                <div class="myLouis-level__icon"></div>
-                <div class="myLouis-level__name">PLATINUM</div>
-                <div class="myLouis-level__more">
-                    <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
-                    <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
+        <section class="myOrderList">
+            <div class="myOrderList-contents">
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
                 </div>
-            </div>
-            <!-- .userLevel --->
+                <!-- .기간조회 -->
 
-            <div class="myLouis-contents">
-                <!-- userInfo -->
-                <div class="myLouis-info">
-                    <ul class="myLouis-info__list">
-                        <li class="myLouis-info__item">
-                            <div class="myLouis-info__item-icon"></div>
-                            <div class="myLouis-info__item-name">쿠폰</div>
-                            <div class="myLouis-info__item-num">2</div>
+                <!-- 배송현황 -->
+                <div class="myOrderList-workflow">
+                    <ul class="myOrderList-workflow__list">
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">주문<br>전체</p>
+                            <p class="myOrderList-workflow__item-figure">2</p>
                         </li>
-                        <li class="myLouis-info__item">
-                            <div class="myLouis-info__item-icon"></div>
-                            <div class="myLouis-info__item-name">적립금</div>
-                            <div class="myLouis-info__item-num">50,000</div>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">입금<br>대기</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
                         </li>
-                        <li class="myLouis-info__item">
-                            <div class="myLouis-info__item-icon"></div>
-                            <div class="myLouis-info__item-name">WISH LIST</div>
-                            <div class="myLouis-info__item-num">2</div>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">결제<br>완료</p>
+                            <p class="myOrderList-workflow__item-figure">1</p>
                         </li>
-                        <li class="myLouis-info__item">
-                            <div class="myLouis-info__item-icon"></div>
-                            <div class="myLouis-info__item-name">최근본상품</div>
-                            <div class="myLouis-info__item-num">8</div>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">상품<br>준비중</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">상품<br>배송중</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">배송<br>완료</p>
+                            <p class="myOrderList-workflow__item-figure">1</p>
                         </li>
                     </ul>
                 </div>
-                <!-- .userInfo -->
+                <!-- .배송현황 -->
+                 
+                <!-- 주문 상품 -->
+                <section class="myOrderList-section">
+                    <!-- item -->
+<div class="order-mypage__item">
+    <div class="order-mypage__info">
+        <div class="order-mypage__type">
+            <div class="order-mypage__orderId">주문번호 <a href="" class="order-mypage__orderId-link">P20210812142407</a></div>
+            <div class="order-mypage__date">2021.10.19 오후 04:10</div>
+        </div>
+        <div class="order-mypage__step">결제완료</div>
+    </div>
+    <div class="order-mypage__contents">
+        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+        <div class="order-mypage__cont">
+            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+            <div class="order-mypage__price type-single">289,290원</div>
+        </div>
+    </div>
+    <a href="" class="order-mypage__btn btn-v1 type-white">구매확정</a>
+</div>
+<!-- .item -->
 
-                <!-- navi -->
-                <div class="myLouis-navi">
-                    <ul class="myLouis-navi__list">
-                        <li class="myLouis-navi__item"><a href="">주문배송조회</a></li>
-                        <li class="myLouis-navi__item"><a href="">취소/반품</a></li>
-                        <li class="myLouis-navi__item"><a href="">쿠폰</a></li>
-                        <li class="myLouis-navi__item"><a href="">적립금</a></li>
-                        <li class="myLouis-navi__item"><a href="">상품 리뷰</a></li>
-                    </ul>
-                    <ul class="myLouis-navi__list">
-                        <li class="myLouis-navi__item"><a href="">1:1 문의</a></li>
-                        <li class="myLouis-navi__item"><a href="">상품 Q&A</a></li>
-                        <li class="myLouis-navi__item"><a href="">재입고 알림 내역</a></li>
-                        <li class="myLouis-navi__item"><a href="">이벤트 참여현황</a></li>
-                    </ul>
-                    <ul class="myLouis-navi__list">
-                        <li class="myLouis-navi__item"><a href="">회원정보수정</a></li>
-                        <li class="myLouis-navi__item"><a href="">배송지 관리</a></li>
-                        <li class="myLouis-navi__item"><a href="">회원 탈퇴</a></li>
-                    </ul>
-                </div>
-                <!-- .navi -->
+<!-- item -->
+<div class="order-mypage__item">
+    <div class="order-mypage__info">
+        <div class="order-mypage__type">
+            <div class="order-mypage__orderId">주문번호 <a href="" class="order-mypage__orderId-link">P20210812142407</a></div>
+            <div class="order-mypage__date">2021.10.19 오후 04:10</div>
+        </div>
+        <div class="order-mypage__step">배송중</div>
+    </div>
+    <div class="order-mypage__contents">
+        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+        <div class="order-mypage__cont">
+            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+            <div class="order-mypage__price type-single">289,290원</div>
+        </div>
+    </div>
+    <a href="" class="order-mypage__btn btn-v1 type-white">배송조회</a>
+</div>
+<!-- .item -->
+
+<!-- item -->
+<div class="order-mypage__item">
+    <div class="order-mypage__info">
+        <div class="order-mypage__type">
+            <div class="order-mypage__orderId">주문번호 <a href="" class="order-mypage__orderId-link">P20210812142407</a></div>
+            <div class="order-mypage__date">2021.10.19 오후 04:10</div>
+        </div>
+        <div class="order-mypage__step">구매확정</div>
+    </div>
+    <div class="order-mypage__contents">
+        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+        <div class="order-mypage__cont">
+            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+            <div class="order-mypage__price type-single">289,290원</div>
+        </div>
+    </div>
+    <a href="" class="order-mypage__btn btn-v1 type-white">리뷰작성</a>
+</div>
+<!-- .item -->
+                </section>
+                <!-- .주문 상품 -->
             </div>
         </section>
     </div>
