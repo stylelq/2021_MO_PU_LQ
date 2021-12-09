@@ -1,0 +1,68 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "쿠폰"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myCoupon">
+            <div class="myCoupon-center">
+                <!-- user level -->
+                <div class="myLouis-level level-6">
+                    <div class="myLouis-level__icon"></div>
+                    <div class="myLouis-level__user">홍길동 고객님은<br><span class="myLouis-level__name">WEB 회원</span>입니다.</div>
+                </div>
+                <!-- .user level -->
+
+                <!-- 쿠폰 -->
+                <div class="myCoupon__coupon">
+                    <h2 class="myCoupon__title">신용카드</h2>
+                    <ul class="myCoupon__list">
+                        <li class="myCoupon__item">
+                            <dl class="myCoupon__inner">
+                                <dt class="myCoupon__price">
+                                    <div class="myCoupon__price--box">
+                                        <div class="myCoupon__price--inner">
+                                            <span class="myCoupon__price--title">COUPON</span>
+                                            <span class="myCoupon__price--text">5<span class="myCoupon__price--won">%</span></span>
+                                        </div>
+                                    </div>
+                                </dt>
+                                <dd class="myCoupon__textBox">
+                                    <p class="myCoupon__textBox--title">매월 더블 할인 5% 쿠폰 제공</p>
+                                    <p class="myCoupon__textBox--date">2021.10.19 ~ 2021.12.31</p>
+                                    <p class="myCoupon__textBox--text">30,000원 이상 구매시<br>최대 100,000원 할인</p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="myCoupon__item">
+                            <dl class="myCoupon__inner">
+                                <dt class="myCoupon__price">
+                                    <div class="myCoupon__price--box">
+                                        <div class="myCoupon__price--inner">
+                                            <span class="myCoupon__price--title">COUPON</span>
+                                            <span class="myCoupon__price--text">5<span class="myCoupon__price--won">%</span></span>
+                                        </div>
+                                    </div>
+                                </dt>
+                                <dd class="myCoupon__textBox">
+                                    <p class="myCoupon__textBox--title">매월 더블 할인 5% 쿠폰 제공</p>
+                                    <p class="myCoupon__textBox--date">2021.10.19 ~ 2021.12.31</p>
+                                    <p class="myCoupon__textBox--text">30,000원 이상 구매시<br>최대 100,000원 할인</p>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .쿠폰 -->
+
+                <!-- info -->
+                <!-- .info -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

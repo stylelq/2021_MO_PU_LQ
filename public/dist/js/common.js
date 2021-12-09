@@ -551,7 +551,22 @@ jQuery(function () {
       return false;
     }
 
-    $(document).on('click', '.js-accordion', accordionMore);
+    $(document).on('click', '.js-accordion', accordionMore); // 마이페이지 :: 기간조회 dropDown버튼
+
+    function btnDropDown() {
+      var parent = $(this).closest('.myOrderList-filter__btnList'),
+          parentSibing = parent.next('.myOrderList-filter__detail');
+
+      if (parentSibing.hasClass('is-view')) {
+        parentSibing.removeClass('is-view');
+      } else {
+        parentSibing.addClass('is-view');
+      }
+
+      return false;
+    }
+
+    $(document).on('click', '.js-btn-dropDown', btnDropDown);
   }); //결제탭
 
   function paymentTab() {
