@@ -1,5 +1,7 @@
 @import "../base/variables";
 @import "../base/mixins";
+@import "../pages/product";
+
 //메인 레이아웃
 .page-main{
 	.section-body{
@@ -775,4 +777,33 @@
 	&__price {
 		@include body2;
 	}
+}
+
+
+//검색 후 결과페이지
+.main-search{
+	&__wrap{
+		padding: 0 calcRem(20rem);
+		text-align: center;
+	}
+	// 검색결과명
+	&__top{
+		display: block;
+	}
+	&__result{
+		font-size: calcRem(17rem);
+		font-weight: 500;
+		line-height: calcRem(27rem);
+	}
+	&__txt{
+		padding-top: calcRem(5rem);
+		font-size: calcRem(14rem);
+		font-weight: 300;
+		line-height: calcRem(22rem);
+	}
+	&__num{
+		color: #9B192F;
+	}
+
+	// 검색결과 상품슬라이드
 }

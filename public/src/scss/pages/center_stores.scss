@@ -139,10 +139,14 @@
         &__map{
             line-height:0;
 
-            iframe{
+            /*iframe{
                 width:100% !important;
                 height:calcRem(300rem) !important;
-            }
+            }*/
+        }
+
+        &__content{
+            height:calcRem(300rem) !important;
         }
 
         &__link{
