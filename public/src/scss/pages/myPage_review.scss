@@ -1,0 +1,119 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+/**********************
+  PAGE
+  상품리뷰
+**********************/
+.myReview{
+    // 탭
+    &-tab{
+        height:calcRem(35rem);
+        position: relative;
+
+        //head
+        &__fix{
+            border-top:solid 1px $gray1;
+            position: absolute;
+            padding:0 calcRem(20rem);
+            height:calcRem(35rem);
+            background-color: $whiteColor;
+            top:0;
+            left:0;
+            width:100%;
+            z-index: $childZindex;
+            box-sizing: border-box;
+
+            &:after{
+                @include block-reset;
+            }
+
+            .is-fixed &{
+                transition: transform 0.3s;
+                position: fixed;
+                transform:translateZ(0) translateY(0);
+            }
+
+            .is-fixed.is-down &{
+                transform:translateZ(0) translateY(calcRem(45rem));
+            }
+        }
+
+        &__item{
+            width:50%;
+            float:left;
+            text-align: center;
+        }
+
+        &__link{
+            display: block;
+            @include body3;
+            padding:calcRem(8rem) calcRem(5rem);
+            position: relative;
+
+            .is-current &{
+                font-weight: $medium;
+            }
+
+            &:after{
+                content:"";
+                height:calcRem(2rem);
+                background-color: $black1;
+                position: absolute;
+                top:-1px;
+                left:0;
+                right:0;
+                opacity: 0;
+
+                .is-current &{
+                    opacity: 1;
+                }
+            }
+        }
+
+        //cont
+        &__cont{
+            padding-top:calcRem(20rem);
+        }
+
+        &__info{
+            display:none;
+
+            &.is-current{
+                display: block;
+            }
+        }
+    }
+
+    //안내 text
+    &-text{
+        padding:calcRem(20rem) calcRem(20rem) 0;
+        margin: 0;
+        @include body3;
+    }
+}
+
+
+
+//별점
+.order-mypage__view{
+    &--list{}
+    &--item{
+        display: table-cell;
+        width: 80%;
+    }
+    &--date{
+        display: table-cell;
+        width: 20%;
+        text-align: right;
+    }
+
+    &--score{ 
+        float: left;
+        margin-top: 3px; 
+        margin-right: 5px;
+    }
+    &--star{
+        span{}
+    }
+}
