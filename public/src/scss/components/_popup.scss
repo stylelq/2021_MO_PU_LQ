@@ -1806,3 +1806,71 @@
         }
     }
 }
+
+//마이페이지 상품리뷰 슬라이드
+.reviewImages__contents{
+    position: relative;
+    @include vertical-center;
+    .swiper-slide{
+        img{ width:100%; }
+    }
+
+    .detail-thumb{    
+        //prev, next
+        &--prev{
+            width:calcRem(8rem);
+            height:calcRem(16rem);
+            position: absolute;
+            left:calcRem(20rem);
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_slide_prev_w.svg','no-repeat center center / contain');
+            background-size:calcRem(8rem) calcRem(16rem) ;
+            z-index: $childZindex;
+        }
+    
+        &--next{
+            width:calcRem(8rem);
+            height:calcRem(16rem);
+            position: absolute;
+            right:calcRem(20rem);
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_slide_next_w.svg','no-repeat center center / contain');
+            background-size:calcRem(8rem) calcRem(16rem) ;
+            z-index: $childZindex;
+        }
+    
+        //페이징
+        &__pagination{
+            text-align: center;
+            font-size:0;
+            line-height:0;
+            margin-top:calcRem(30rem);
+    
+            .swiper-pagination{
+                &-current{
+                    font-size:calcRem(12rem);
+                    line-height:calclH(19,12);
+                    padding-right:calcRem(11rem);
+                    position: relative;
+    
+                    &:after{
+                        content:"";
+                        width:1px;
+                        height:calcRem(10rem);
+                        background-color: $gray1;
+                        position: absolute;
+                        right:0;
+                        @include vertical-center;
+                    }
+                }
+    
+                &-total{
+                    font-size:calcRem(12rem);
+                    line-height:calclH(19,12);
+                    padding-left:calcRem(10rem);
+                }
+            }
+        }
+    }
+}
+
