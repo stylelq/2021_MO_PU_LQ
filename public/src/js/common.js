@@ -577,6 +577,16 @@ jQuery(function(){
     //main(best)
     */
 
+    //메인 - 검색 후 결과페이지 슬라이드
+    if($('.main-search').length > 0){
+        var mainSlide = new Swiper('.main-search__container', {
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            slidesPerView: 6,
+        });
+    }
+
     //메인 배너슬라이드
     /*if($('.main-banner').length > 0){
         var mainSlide = new Swiper('.main-banner__container', {
