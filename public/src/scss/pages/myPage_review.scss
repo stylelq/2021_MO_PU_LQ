@@ -1,0 +1,225 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+/**********************
+  PAGE
+  상품리뷰
+**********************/
+.myReview{
+    // 탭
+    &-tab{
+        height:calcRem(35rem);
+        position: relative;
+
+        //head
+        &__fix{
+            border-top:solid 1px $gray1;
+            position: absolute;
+            padding:0 calcRem(20rem);
+            height:calcRem(35rem);
+            background-color: $whiteColor;
+            top:0;
+            left:0;
+            width:100%;
+            z-index: $childZindex;
+            box-sizing: border-box;
+
+            &:after{
+                @include block-reset;
+            }
+
+            .is-fixed &{
+                transition: transform 0.3s;
+                position: fixed;
+                transform:translateZ(0) translateY(0);
+            }
+
+            .is-fixed.is-down &{
+                transform:translateZ(0) translateY(calcRem(45rem));
+            }
+        }
+
+        &__item{
+            width:50%;
+            float:left;
+            text-align: center;
+        }
+
+        &__link{
+            display: block;
+            @include body3;
+            padding:calcRem(8rem) calcRem(5rem);
+            position: relative;
+
+            .is-current &{
+                font-weight: $medium;
+            }
+
+            &:after{
+                content:"";
+                height:calcRem(2rem);
+                background-color: $black1;
+                position: absolute;
+                top:-1px;
+                left:0;
+                right:0;
+                opacity: 0;
+
+                .is-current &{
+                    opacity: 1;
+                }
+            }
+        }
+
+        //cont
+        &__cont{
+            padding-top:calcRem(20rem);
+        }
+
+        &__info{
+            display:none;
+
+            &.is-current{
+                display: block;
+            }
+        }
+    }
+
+    //안내 text
+    &-text{
+        padding:calcRem(20rem) calcRem(20rem) 0;
+        margin: 0;
+        @include body3;
+    }
+}
+
+.myReview-tab__info{
+    
+    .order-mypage__item{
+        .order-mypage__contents{
+            border-bottom:solid 1px $lightgray4;
+        }
+    }
+
+    // 리뷰리스트
+    .review-list{
+        padding-top:calcRem(30rem);
+
+        //평점
+        &__grade{
+            font-size:0;
+            line-height:0;
+            margin-bottom:calcRem(20rem);
+
+            &--text{
+                font-size:calcRem(12rem);
+                line-height:calclH(12,12);
+                font-weight: $regular;
+                vertical-align: middle;
+                display: inline-block;
+                margin-right:calcRem(5rem);
+            }
+
+            &--star{
+                vertical-align: middle;
+                display: inline-block;
+                overflow: hidden;
+
+                &-item{
+                    float:left;
+                    width:calcRem(13rem);
+                    height:calcRem(12rem);
+                    @include pageBackground('/images/common/ico_star.svg','no-repeat center center / contain');
+                    background-size: calcRem(13rem) calcRem(12rem);
+                    margin-right:calcRem(1rem);
+
+                    &:last-child{
+                        margin-right:0;
+                    }
+
+                    &.is-active{
+                        @include pageBackground('/images/common/ico_star_active.svg','no-repeat center center / contain');
+                    }
+                }
+            }
+
+            &--date{
+                float: right;    
+                font-size:calcRem(11rem);
+                line-height:calclH(17,11);
+                color: $darkgray;
+                margin-top: -3px;
+            }
+        }
+
+        //텍스트
+        &__text{
+            margin:0;
+            @include body3;
+        }
+        .review-list:not(.is-view) &__text{
+            @include line-clamp(3,calcRem(57rem));
+        }
+
+        &__photo{
+            margin:calcRem(30rem) calcRem(-20rem) calcRem(20rem);
+            overflow: hidden;
+            padding:0 calcRem(20rem);
+            overflow-x: scroll;
+            line-height:0;
+            font-size:0;
+            scrollbar-width: none;
+
+            .is-view &{
+                display: block;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &--list{
+                white-space: nowrap;
+            }
+
+            &--item{
+                display: inline-block;
+                margin-right:calcRem(10rem);
+
+                &:last-child{
+                    margin-right:calcRem(20rem);
+                }
+            }
+
+            &--link{
+                display: block;
+                position: relative;
+                width:calcRem(80rem);
+
+                &:after{
+                    content:"";
+                    display: block;
+                    padding-bottom:100%;
+                }
+            }
+
+            &--img{
+                width:100%;
+                @include ab-center;
+            }
+        }
+
+        // 버튼
+        &__btn{
+            text-align: right;
+            font-size: calcRem(12rem);
+            font-weight: $light;
+            padding-top: calcRem(10rem);
+            &--modify,&--del{
+                text-decoration: underline;
+                margin-left: calcRem(10rem);
+            }
+        }
+    }
+
+}

@@ -94,5 +94,45 @@ jQuery(function () {
     }
   }
 
-  $(document).on('click', '.js-pop-tab-link', shippingTab);
+  $(document).on('click', '.js-pop-tab-link', shippingTab); //마이페이지::상품리뷰 이미지보기
+
+  function reviewImgSlideDraw() {
+    var item = $('.review-list__photo--item'),
+        slideWrap = $('.swiper-wrapper'),
+        slide = '',
+        imgSrc = [];
+
+    for (var i = 0, len = item.length; i < len; i++) {
+      imgSrc.push(item.eq(i).find('img').attr('src'));
+      slide += '<div class="swiper-slide"><img src="' + imgSrc[i] + '"></div>';
+    }
+
+    slideWrap.html(slide);
+  }
+
+  function reviewImgView() {
+    reviewImgSlideDraw();
+    var idx = $(this).parent('li').index();
+
+    if ($('.reviewImages__view').length > 0) {
+      var slide = new Swiper('.reviewImages__view .swiper-container', {
+        // observer: true,
+        // observeParents: true,
+        // watchOverflow: true,
+        slidesPerView: 1,
+        initialSlide: idx,
+        pagination: {
+          el: ".detail-thumb__pagination",
+          type: "fraction"
+        },
+        navigation: {
+          nextEl: ".detail-thumb--next",
+          prevEl: ".detail-thumb--prev"
+        }
+      });
+      console.log(idx);
+    }
+  }
+
+  $(document).on('click', '.js-imgView-open', reviewImgView);
 });
