@@ -93,27 +93,133 @@
     }
 }
 
-
-
-//별점
-.order-mypage__view{
-    &--list{}
-    &--item{
-        display: table-cell;
-        width: 80%;
-    }
-    &--date{
-        display: table-cell;
-        width: 20%;
-        text-align: right;
+.myReview-tab__info{
+    
+    .order-mypage__item{
+        .order-mypage__contents{
+            border-bottom:solid 1px $lightgray4;
+        }
     }
 
-    &--score{ 
-        float: left;
-        margin-top: 3px; 
-        margin-right: 5px;
+    // 리뷰리스트
+    .review-list{
+        padding-top:calcRem(30rem);
+
+        //평점
+        &__grade{
+            font-size:0;
+            line-height:0;
+            margin-bottom:calcRem(20rem);
+
+            &--text{
+                font-size:calcRem(12rem);
+                line-height:calclH(12,12);
+                font-weight: $regular;
+                vertical-align: middle;
+                display: inline-block;
+                margin-right:calcRem(5rem);
+            }
+
+            &--star{
+                vertical-align: middle;
+                display: inline-block;
+                overflow: hidden;
+
+                &-item{
+                    float:left;
+                    width:calcRem(13rem);
+                    height:calcRem(12rem);
+                    @include pageBackground('/images/common/ico_star.svg','no-repeat center center / contain');
+                    background-size: calcRem(13rem) calcRem(12rem);
+                    margin-right:calcRem(1rem);
+
+                    &:last-child{
+                        margin-right:0;
+                    }
+
+                    &.is-active{
+                        @include pageBackground('/images/common/ico_star_active.svg','no-repeat center center / contain');
+                    }
+                }
+            }
+
+            &--date{
+                float: right;    
+                font-size:calcRem(11rem);
+                line-height:calclH(17,11);
+                color: $darkgray;
+                margin-top: -3px;
+            }
+        }
+
+        //텍스트
+        &__text{
+            margin:0;
+            @include body3;
+        }
+        .review-list:not(.is-view) &__text{
+            @include line-clamp(3,calcRem(57rem));
+        }
+
+        &__photo{
+            margin:calcRem(30rem) calcRem(-20rem) calcRem(20rem);
+            overflow: hidden;
+            padding:0 calcRem(20rem);
+            overflow-x: scroll;
+            line-height:0;
+            font-size:0;
+            scrollbar-width: none;
+
+            .is-view &{
+                display: block;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &--list{
+                white-space: nowrap;
+            }
+
+            &--item{
+                display: inline-block;
+                margin-right:calcRem(10rem);
+
+                &:last-child{
+                    margin-right:calcRem(20rem);
+                }
+            }
+
+            &--link{
+                display: block;
+                position: relative;
+                width:calcRem(80rem);
+
+                &:after{
+                    content:"";
+                    display: block;
+                    padding-bottom:100%;
+                }
+            }
+
+            &--img{
+                width:100%;
+                @include ab-center;
+            }
+        }
+
+        // 버튼
+        &__btn{
+            text-align: right;
+            font-size: calcRem(12rem);
+            font-weight: $light;
+            padding-top: calcRem(10rem);
+            &--modify,&--del{
+                text-decoration: underline;
+                margin-left: calcRem(10rem);
+            }
+        }
     }
-    &--star{
-        span{}
-    }
+
 }

@@ -837,13 +837,13 @@ jQuery(function () {
         }
       }
     });
-  }
-  /*슬라이드 온클릭 시 자동슬라이드 정지*/
+    /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
+    $(document).on('click', mainNewSlide, function () {
+      mainNewSlide.autoplay.stop();
+    });
+  } //best 배너슬라이드
 
-  mainNewSlide.on('click', function () {
-    mainNewSlide.autoplay.stop();
-  }); //best 배너슬라이드
 
   if ($('.best-thumb').length > 0) {
     var bestSlide = new Swiper('.best-thumb__container', {

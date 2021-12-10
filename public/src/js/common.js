@@ -812,12 +812,12 @@ jQuery(function(){
                 }
             }
         });
-    }
 
-    /*슬라이드 온클릭 시 자동슬라이드 정지*/
-    mainNewSlide.on('click', function() {
-        mainNewSlide.autoplay.stop();
-    });
+        /*슬라이드 온클릭 시 자동슬라이드 정지*/
+        $(document).on('click',mainNewSlide, function() {
+            mainNewSlide.autoplay.stop();
+        });
+    }
 
     //best 배너슬라이드
     if($('.best-thumb').length > 0){
@@ -841,7 +841,6 @@ jQuery(function(){
                     var cate = slide.data("slide");
                     var slide = $('[data-link=' + cate + ']').parent('.main-best__tab--item').addClass('is-current').siblings('.main-best__tab--item').removeClass('is-current');
                 },
-
                 beforeTransitionStart: function () {
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var cate = slide.data("slide");
