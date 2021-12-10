@@ -789,6 +789,7 @@
 	// 검색결과명
 	&__top{
 		display: block;
+		padding-bottom: calcRem(30rem);
 	}
 	&__result{
 		font-size: calcRem(17rem);
@@ -806,4 +807,52 @@
 	}
 
 	// 검색결과 상품슬라이드
+	&__bottom{
+		padding-bottom: calcRem(30rem);
+	}
+
+	&__wrapper{
+		font-size: 0;
+		white-space: nowrap;
+		box-sizing: border-box;
+	}
+
+	&__item{
+		display: inline-table;
+		padding: 3px 7px;
+		color:  #000;
+		border: 1px solid #cbcbcb;
+		&.is-active{
+			color: #9B192F;
+			border: 1px solid #9B192F;
+		}
+	}
+	&__item + &__item{
+		margin-left: calcRem(10rem);
+	}
+
+	&__inner{
+		display: block;
+		font-size: calcRem(11rem);
+		font-weight: 300;
+		line-height: calcRem(17rem);
+		box-sizing: border-box;
+	}
+}
+
+//최근 본 상품페이지
+.main-viewed{
+	margin-top: calcRem(-20rem);
+	margin-bottom: calcRem(-50rem);
+	padding: calcRem(150rem) 0 calcRem(220rem);
+	&__wrap{
+		width: 100%;
+		display: block;
+	}
+	&__txt{
+		text-align: center;
+		font-size: calcRem(14rem);
+		font-weight: 300;
+		line-height: calcRem(22rem);
+	}
 }
