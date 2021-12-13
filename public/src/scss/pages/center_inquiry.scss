@@ -251,17 +251,19 @@
 
         &--inner{
             margin:0 calcRem(-5rem);
+            display: -webkit-box; display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center; -ms-flex-pack: center;
+            justify-content: center;
 
-            &:after{
-                @include block-reset;
-            }
+            // &:after{
+            //     @include block-reset;
+            // }
         }
 
         &--item{
-            width:50%;
-            float:left;
+            width: 50%;
             padding:0 calcRem(5rem);
-            box-sizing: border-box;
         }
     }
 }
