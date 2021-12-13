@@ -585,8 +585,7 @@ jQuery(function(){
             watchOverflow: true,
             slidesPerView: 6,
             loop: true,
-            initialSlide: 4,
-            /*centeredSlides: true,*/
+            /*initialSlide: 4,*/
         });
     }
 

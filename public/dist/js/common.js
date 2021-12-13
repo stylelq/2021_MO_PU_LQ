@@ -602,9 +602,8 @@ jQuery(function () {
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 6,
-      loop: true,
-      initialSlide: 4
-      /*centeredSlides: true,*/
+      loop: true
+      /*initialSlide: 4,*/
 
     });
   } //메인 배너슬라이드
