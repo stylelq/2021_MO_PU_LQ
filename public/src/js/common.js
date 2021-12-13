@@ -583,7 +583,7 @@ jQuery(function(){
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            slidesPerView: 6,
+            slidesPerView: 'auto',
             loop: true,
             /*initialSlide: 4,*/
         });

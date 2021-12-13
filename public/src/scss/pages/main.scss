@@ -782,6 +782,7 @@
 
 //검색 후 결과페이지
 .main-search{
+	overflow: hidden;
 	&__wrap{
 		padding: 0 calcRem(20rem);
 		text-align: center;
@@ -809,6 +810,9 @@
 	// 검색결과 상품슬라이드
 	&__bottom{
 		padding-bottom: calcRem(30rem);
+		margin-left: calcRem(-4rem);
+		margin-right: calcRem(-4rem);
+		position: relative;
 	}
 
 	&__wrapper{
@@ -817,18 +821,13 @@
 		box-sizing: border-box;
 	}
 
-	&__item{
-		display: inline-table;
-		padding: 3px 7px;
-		color:  #000;
-		border: 1px solid #cbcbcb;
-		&.is-active{
-			color: #9B192F;
-			border: 1px solid #9B192F;
-		}
+	&__container{
+		/*overflow: visible;*/
 	}
-	&__item + &__item{
-		margin-left: calcRem(10rem);
+
+	&__item{
+		width: auto;
+		padding: 0 calcRem(4rem);
 	}
 
 	&__inner{
@@ -837,6 +836,13 @@
 		font-weight: 300;
 		line-height: calcRem(17rem);
 		box-sizing: border-box;
+		padding: 3px 7px;
+		color:  #000;
+		border: 1px solid #cbcbcb;
+		&.is-active{
+			color: #9B192F;
+			border: 1px solid #9B192F;
+		}
 	}
 }
 
