@@ -1,0 +1,102 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "회원정보수정"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myInfoModify">
+            <div class="myInfoModify-center">                           
+                <!-- 컨텐츠 -->
+                <div class="myInfoModify-cont">
+                    <div class="myInfo-cont__text">개인정보를 안전하게 취급하며, 회원님의 동의 없이는 회원정보를 공개 및 변경 하지 않습니다.</div>
+                    <div class="myInfo-cont__table">
+                        <h3 class="myInfo-cont__table--title">기본정보</h3>
+                        <table class="basic-table list-table">
+                            <caption class="sr-only">기본정보</caption>
+                            <colgroup>
+                                <col style="width:25%;">
+                                <col style="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">가입 유형</th>
+                                    <td class="basic-table--left">[네이버]</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">아이디</th>
+                                    <td class="basic-table--left">youngv77</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이름</th>
+                                    <td class="basic-table--left">홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">휴대폰 번호</th>
+                                    <td class="basic-table--left">
+                                        010-1212-3434
+                                        <a href="#" class="basic-table--btn">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이메일</th>
+                                    <td class="basic-table--left">
+                                        abcedfg@gmail.com
+                                        <a href="#emailModify" class="basic-table--btn js-popup-open">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이벤트/<br>쇼핑정보</th>
+                                    <td class="basic-table--left">
+                                        <div class="form__checkbox form__checkbox--big">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="aggree1" id="aggree1">
+                                            <label class="form__checkbox--text" for="aggree1">SMS/LMS 문자 수신 동의</label>
+                                        </div>
+                                        <div class="form__checkbox form__checkbox--big">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="aggree2" id="aggree2">
+                                            <label class="form__checkbox--text" for="aggree2">이메일 수신 동의</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">성별</th>
+                                    <td class="basic-table--left">
+                                        <div class="form__radio form__radio--big form__radio--red">
+                                            <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_M">
+                                            <label class="form__radio--text" for="sex_M">남</label>
+                                        </div>
+                                        <div class="form__radio form__radio--big form__radio--red">
+                                            <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_F">
+                                            <label class="form__radio--text" for="sex_F">여</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">생년월일</th>
+                                    <td class="basic-table--left">
+                                        <div class="form-date__field">
+                                            <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- .컨텐츠 -->
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">주문/결제 시 안내 및 기타 중요 안내 사항은 이메일, SMS 수신 여부와 관계없이 발송됩니다.</li>
+                    <li class="center-bullet__item">본인이 아닌 타인의 실명을 도용하여 가입할 경우 회원자격이 박탈되고 형사상의 처벌을 받으실 수 있습니다.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_mypageFixButton %>
+<% include ../_popup/_emailModify %>
+<% include ../_popup/_emailModifyResult %>
+<% include ../_include/_footer %>

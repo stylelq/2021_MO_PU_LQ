@@ -493,7 +493,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">WISH LIST</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">회원정보수정</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -575,57 +575,89 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="wishList">
-            <div class="wishList-center">
-                <!-- item -->
-                <div class="order-mypage__item">
-                    <div class="order-mypage__header">
-                        <div class="checkbox-point order-mypage__checkbox">
-                            <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
-                            <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
-                        </div>
-                        <a href="javascript:void(0);" onclick="basketDelete()" class="order-mypage__close js-cart-close"><span class="sr-only">닫기</span></a>
-                        <!-- js-cart-close 클릭시 order-mypage 클래스 영역 삭제 -->
-                    </div>
-                    <div class="order-mypage__contents">
-                        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
-                        <div class="order-mypage__cont">
-                            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
-                        </div>
-                        <div class="order-mypage__price">
-                            <span class="order-mypage__price--current">289,290원</span>
-                            <span class="order-mypage__price--sale">328,000원</span>
-                            <a href="#benefitsPop" class="order-mypage__benefit js-popup-open">benefit</a>
-                        </div>
+        <section class="myInfoModify">
+            <div class="myInfoModify-center">                           
+                <!-- 컨텐츠 -->
+                <div class="myInfoModify-cont">
+                    <div class="myInfo-cont__text">개인정보를 안전하게 취급하며, 회원님의 동의 없이는 회원정보를 공개 및 변경 하지 않습니다.</div>
+                    <div class="myInfo-cont__table">
+                        <h3 class="myInfo-cont__table--title">기본정보</h3>
+                        <table class="basic-table list-table">
+                            <caption class="sr-only">기본정보</caption>
+                            <colgroup>
+                                <col style="width:25%;">
+                                <col style="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">가입 유형</th>
+                                    <td class="basic-table--left">[네이버]</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">아이디</th>
+                                    <td class="basic-table--left">youngv77</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이름</th>
+                                    <td class="basic-table--left">홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">휴대폰 번호</th>
+                                    <td class="basic-table--left">
+                                        010-1212-3434
+                                        <a href="#" class="basic-table--btn">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이메일</th>
+                                    <td class="basic-table--left">
+                                        abcedfg@gmail.com
+                                        <a href="#emailModify" class="basic-table--btn js-popup-open">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이벤트/<br>쇼핑정보</th>
+                                    <td class="basic-table--left">
+                                        <div class="form__checkbox form__checkbox--big">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="aggree1" id="aggree1">
+                                            <label class="form__checkbox--text" for="aggree1">SMS/LMS 문자 수신 동의</label>
+                                        </div>
+                                        <div class="form__checkbox form__checkbox--big">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="aggree2" id="aggree2">
+                                            <label class="form__checkbox--text" for="aggree2">이메일 수신 동의</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">성별</th>
+                                    <td class="basic-table--left">
+                                        <div class="form__radio form__radio--big form__radio--red">
+                                            <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_M">
+                                            <label class="form__radio--text" for="sex_M">남</label>
+                                        </div>
+                                        <div class="form__radio form__radio--big form__radio--red">
+                                            <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_F">
+                                            <label class="form__radio--text" for="sex_F">여</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">생년월일</th>
+                                    <td class="basic-table--left">
+                                        <div class="form-date__field">
+                                            <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <!-- .item -->
-                <!-- item -->
-                <div class="order-mypage__item">
-                    <div class="order-mypage__header">
-                        <div class="checkbox-point order-mypage__checkbox">
-                            <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
-                            <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
-                        </div>
-                        <a href="javascript:void(0);" onclick="basketDelete()" class="order-mypage__close js-cart-close"><span class="sr-only">닫기</span></a>
-                        <!-- js-cart-close 클릭시 order-mypage 클래스 영역 삭제 -->
-                    </div>
-                    <div class="order-mypage__contents">
-                        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/recommended_img.png" alt=""></a>
-                        <div class="order-mypage__cont">
-                            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
-                        </div>
-                        <div class="order-mypage__price">
-                            <span class="order-mypage__price--current">289,290원</span>
-                            <span class="order-mypage__price--sale">328,000원</span>
-                            <a href="#benefitsPop" class="order-mypage__benefit js-popup-open">benefit</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- .item -->
-            </div>
-            <div class="center-bullet">
-                <div class="center-bullet__item">판매중단, 일시 품절된 상품은 리스트에서 삭제될 수 있습니다.</div>
+                <!-- .컨텐츠 -->
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">주문/결제 시 안내 및 기타 중요 안내 사항은 이메일, SMS 수신 여부와 관계없이 발송됩니다.</li>
+                    <li class="center-bullet__item">본인이 아닌 타인의 실명을 도용하여 가입할 경우 회원자격이 박탈되고 형사상의 처벌을 받으실 수 있습니다.</li>
+                </ul>
             </div>
         </section>
     </div>
@@ -693,65 +725,86 @@
         COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
     </div>
 </footer>
-<!-- Benefits popup -->
-<section id="benefitsPop" class="small-popup">
-    <div class="small-popup__dim"></div>
-    <section class="small-popup__body">
-        <a class="small-popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
-        <div class="small-popup__header">
-            <h3 class="small-popup__header--title">혜택가 안내</h3>
-        </div>
-        <div class="small-popup__cont">
-            <!-- Benefits cont -->
-            <div class="pop-benefits">
-                <ul class="pop-benefits__list">
-                    <li class="pop-benefits__item">
-                        <dl class="pop-benefits__inner">
-                            <dt class="pop-benefits__title">소비자가</dt>
-                            <dd class="pop-benefits__text">498,000원</dd>
-                        </dl>
-                    </li>
-                    <li class="pop-benefits__item">
-                        <dl class="pop-benefits__inner">
-                            <dt class="pop-benefits__title">판매가</dt>
-                            <dd class="pop-benefits__text">250,000원</dd>
-                        </dl>
-                    </li>
-                    <li class="pop-benefits__item">
-                        <dl class="pop-benefits__inner">
-                            <dt class="pop-benefits__title">상품 쿠폰할인</dt>
-                            <dd class="pop-benefits__text">-25,000원</dd>
-                        </dl>
-                    </li>
-                    <li class="pop-benefits__item">
-                        <dl class="pop-benefits__inner">
-                            <dt class="pop-benefits__title">적립금 즉시할인</dt>
-                            <dd class="pop-benefits__text">-4,500원</dd>
-                        </dl>
-                    </li>
-                    <li class="pop-benefits__item pop-benefits__item--total">
-                        <dl class="pop-benefits__inner">
-                            <dt class="pop-benefits__title">혜택가</dt>
-                            <dd class="pop-benefits__text">220,500원<span class="pop-benefits__text--sale">56%할인</span></dd>
-                        </dl>
-                    </li>
-                </ul>
-                <p class="pop-benefits__info--text">혜택가는 고객님께서 최대 할인 받을수 있는 <br />예상 금액 입니다.</p>
-            </div>
-            <!-- .Benefits cont -->
-        </div>
-    </section>
-</section>
-<!-- Benefits popup -->
-
 <!-- fix -->
-<div class="myPage-fix myPage-fix__red">
+<div class="myPage-fix">
     <ul class="myPage-fix__list">
-        <li class="myPage-fix__item"><a class="myPage-fix__link" href="javascript:void(0);">Delete</a></li>
-        <li class="myPage-fix__item"><a class="myPage-fix__link" href="javascript:void(0);">Add To Cart</a></li>
+        <li class="myPage-fix__item"><a class="myPage-fix__link" href="javascript:void(0);">취소</a></li>
+        <li class="myPage-fix__item"><a class="myPage-fix__link" href="javascript:void(0);">저장</a></li>
     </ul>
 </div>
 <!-- .fix -->
+<!-- email modify popup -->
+<section id="emailModify" class="popup">
+    <header class="popup__header">
+        <h3 class="popup__tit">이메일 주소 수정</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <div class="wrap emailModify-wrap">
+            <div class="emailModify-list">
+                <div class="email-box__field">
+                    <input type="text" class="input-v1" placeholder="내용을 입력하세요">
+                    <div class="email-box__select">
+                        <select name="" id="" class="form__select js-placeholder is-check">
+                            <option value="0">직접입력</option>
+                            <option value="1">@naver.com</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <a class="popup-confirm__link js-popup-open" href="#emailModifyResult">인증메일 발송</a>
+        </div>
+    </section>
+</section>
+<!-- .email modify popup -->
+
+
+<!-- email-modify-result popup -->
+<section id="emailModifyResult" class="popup">
+    <header class="popup__header">
+        <h3 class="popup__tit">이메일 주소 수정</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <div class="wrap emailModify-wrap">
+            <div class="emailModify-list">
+                <div class="email-box__field">
+                    <input type="text" class="input-v1" placeholder="내용을 입력하세요">
+                    <div class="email-box__select">
+                        <select name="" id="" class="form__select js-placeholder is-check">
+                            <option value="0">직접입력</option>
+                            <option value="1">@naver.com</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emailModify-textBox">
+                <h4 class="emailModify-textBox__title">인증메일을 발송하였습니다.</h4>
+                <p class="emailModify-textBox__text">입력하신 메일을 확인 후 '완료' 버튼을 눌러 주세요.</p>
+            </div>
+
+            <div class="emailModify__btn">
+                <ul class="emailModify__btn--list">
+                    <li class="emailModify__btn--item">
+                        <a href="javascript:void(0)" class="popup-confirm__link btn-v1 type-primary">완료</a>
+                    </li>
+                    <li class="emailModify__btn--item">
+                        <a href="javascript:void(0)" class="popup-confirm__link btn-v1 type-white">인증메일 재발송</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="center-bullet">
+                <li class="center-bullet__item">이메일로 전송된 인증번호 유효기간은 30분입니다.</li>
+                <li class="center-bullet__item">10분 내 이메일을 받지 못하신 경우, 스팸메일함을 확인해 주시거나 '인증매일 재발송' 버튼을 눌러주세요</li>
+            </ul>
+        </div>
+    </section>
+</section>
+<!-- .email-modify-result popup -->
+
+
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	
