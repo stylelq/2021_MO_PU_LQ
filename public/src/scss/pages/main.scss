@@ -43,7 +43,7 @@
 		line-height: calcRem(28rem);
 	}
 	&__pagination{
-		bottom: calcRem(22rem);
+		bottom: calcRem(20rem);
 		width: 100%;
 		position: absolute;
 		color: #fff;
@@ -410,12 +410,13 @@
 	&__name {
 		font-size: calcRem(14rem);
 		font-weight: 300;
-		line-height: calcRem(28rem);
+		line-height: calcRem(20rem);
 	}
 	&__price {
+		padding-top: calcRem(5rem);
 		font-size: calcRem(14rem);
 		font-weight: 400;
-		line-height: calcRem(22rem);
+		line-height: calcRem(20rem);
 	}
 	&__pagination {
 		bottom: calcRem(18rem);
@@ -619,10 +620,10 @@
 	}
 	&__img{
 		width: calcRem(42rem);
-		width: calcRem(45rem);
+		height: calcRem(45rem);
 	}
 	&__info{
-		padding-bottom: calcRem(34rem);
+		padding-bottom: calcRem(35rem);
 		font-size: calcRem(12rem);
 		font-weight: 300;
 		line-height: calcRem(20rem);
@@ -648,14 +649,17 @@
 
 // 프로젝트
 .main-project{
-	padding-top: calcRem(60rem);
 	&__header{
-		padding-bottom: calcRem(60rem);
+		padding: calcRem(60rem) 0;
 		text-align: center;
 		font-size: calcRem(12rem);
 	}
+	&__brand{
+		font-weight: 400;
+	}
 	&__title{
 		font-size: calcRem(20rem);
+		font-weight: 400;
 	}
 	&__link{
 		display: block;
