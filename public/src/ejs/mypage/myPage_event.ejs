@@ -1,0 +1,112 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "이벤트 참여현황"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myEvent">
+            <div class="myEvent-center">          
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
+                 
+                <!-- 컨텐츠 -->
+                <div class="myEvent-cont">
+                    <div class="myEvent-cont__list">
+                        <!-- item -->
+                        <div class="order-mypage__item">
+                            <div class="order-mypage__header">
+                                <div class="order-mypage__header--state"><span class="state-item__ing">진행중</span></div>
+                                <!-- 진행중:state-item__ing 완료:state-item__end -->
+                                <a href="javascript:void(0);" class="order-mypage__header--title">Who Am I ? 저의 이름을 맞춰주세요!</a>
+                            </div>
+                            <div class="order-mypage__contents">
+                                <ul class="order-mypage__contents--list">
+                                    <li class="order-mypage__contents--item">
+                                        <dl class="order-mypage__inner">
+                                            <dt class="order-mypage__label">응모일</dt>
+                                            <dd class="order-mypage__date">2021.06.25</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="order-mypage__contents--item">
+                                        <dl class="order-mypage__inner">
+                                            <dt class="order-mypage__label">이벤트 기간</dt>
+                                            <dd class="order-mypage__date">2021.06.10 ~ 2021.06.16</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="order-mypage__contents--item">
+                                        <dl class="order-mypage__inner">
+                                            <dt class="order-mypage__label">당첨자 발표</dt>
+                                            <dd class="order-mypage__date">2021.05.30</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .item -->
+
+                        <!-- item -->
+                        <div class="order-mypage__item">
+                            <div class="order-mypage__header">
+                                <div class="order-mypage__header--state"><span class="state-item__end">완료</span></div>
+                                <!-- 진행중:state-item__ing 완료:state-item__end -->
+                                <a href="javascript:void(0);" class="order-mypage__header--title">이벤트 내용 2 제목 입니다.</a>
+                            </div>
+                            <div class="order-mypage__contents">
+                                <ul class="order-mypage__contents--list">
+                                    <li class="order-mypage__contents--item">
+                                        <dl class="order-mypage__inner">
+                                            <dt class="order-mypage__label">응모일</dt>
+                                            <dd class="order-mypage__date">2021.06.25</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="order-mypage__contents--item">
+                                        <dl class="order-mypage__inner">
+                                            <dt class="order-mypage__label">이벤트 기간</dt>
+                                            <dd class="order-mypage__date">2021.06.10 ~ 2021.06.16</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="order-mypage__contents--item">
+                                        <dl class="order-mypage__inner">
+                                            <dt class="order-mypage__label">당첨자 발표</dt>
+                                            <dd class="order-mypage__date">2021.05.30</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <ul class="center-bullet">
+                        <li class="center-bullet__item">최근 6개월간 참여한 이벤트 현황입니다.</li>
+                    </ul>
+                </div>
+                <!-- .컨텐츠 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

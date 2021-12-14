@@ -1,0 +1,72 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "재입고 알림 신청 내역"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myAllim">
+            <div class="myAllim-center">          
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
+                 
+                <!-- 컨텐츠 -->
+                <div class="myAllim-content">
+                     <!-- item -->
+                     <div class="order-mypage__item">
+                        <div class="order-mypage__header">
+                            <div class="order-mypage__header--date">신청일 : 2021.07.21</div>
+                            <a href="javascript:void(0);" class="order-mypage__header--btn">알림취소</a>
+                        </div>
+                        <div class="order-mypage__contents">
+                            <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/recommended_img.png" alt=""></a>
+                            <div class="order-mypage__cont">
+                                <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .item -->
+                    <!-- item -->
+                    <div class="order-mypage__item">
+                        <div class="order-mypage__header">
+                            <div class="order-mypage__header--date">신청일 : 2021.07.21</div>
+                            <a href="javascript:void(0);" class="order-mypage__header--btn">알림취소</a>
+                        </div>
+                        <div class="order-mypage__contents">
+                            <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/product_img2.png" alt=""></a>
+                            <div class="order-mypage__cont">
+                                <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .컨텐츠 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>
