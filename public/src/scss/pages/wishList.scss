@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.wishList{
+    .order-mypage{
+        &__item{
+            padding: calcRem(30rem) calcRem(20rem);
+        }
+
+        //header
+        &__header{
+            // padding:0 calcRem(20rem);
+            position: relative;
+            margin-bottom:calcRem(10rem);
+
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__checkbox{
+            float:left;
+        }
+
+        &__close{
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            width:calcRem(14rem);
+            height:calcRem(14rem);
+            @include pageBackground('/images/common/ico_cart_close.svg','no-repeat center center / contain');
+            background-size: calcRem(14rem) calcRem(14rem);
+        }
+
+
+        //contents
+        &__contents{
+            padding-bottom:0;
+        }
+
+        &__benefit{
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            display: block;
+            font-size:calcRem(12rem);
+            line-height:calclH(20,12);
+            color:$whiteColor;
+            padding:calcRem(2rem) calcRem(15rem);
+            background-color: $point1;
+            letter-spacing: $defaultLetter;
+        }
+    }
+    
+    .center-bullet{
+        padding:calcRem(20rem) calcRem(20rem) 0; 
+    }
+}
