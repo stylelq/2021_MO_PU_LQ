@@ -1,0 +1,41 @@
+/**********************
+  PAGE
+  주문배송조회
+**********************/
+// 배송까지 workflow 
+.myOrderList-workflow{
+    margin:calcRem(20rem) 0;
+    &__list{overflow: hidden;}
+    &__item{
+        float: left;
+        width: calcRem(60rem);
+        text-align: center;
+        @include body5;
+        position: relative;
+
+        &-figure{ 
+            color: $point1;
+            font-size:calcRem(12rem);
+            font-weight: $regular;
+        }
+
+        &:not(:last-child):after{
+            content: '';
+            position: absolute;
+            top: calcRem(26rem);
+            right: calcRem(-3rem);
+
+            width:calcRem(6rem);
+            height:calcRem(11rem);
+            @include pageBackground('/images/common/ico_more_gray.svg','no-repeat center center / contain');
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+/**********************
+  PAGE
+  회원정보수정 - 인증
+**********************/
+.myInfo-cont{
+    padding:0 calcRem(20rem);
+    &__text{
+        @include body3;
+    // line-height: calclH(19,12);
+    }
+
+    &__numberBox{
+        margin: calcRem(20rem) 0 calcRem(10rem);
+        padding: calcRem(15rem) calcRem(20rem);
+        
+        span{vertical-align: middle;}
+
+        .identi-num{
+            font-size: calcRem(20rem);
+            font-weight: $medium;
+            margin-left: calcRem(15rem);
+        }
+    }
+
+    .input-list{
+        &__item{
+            padding-top: calcRem(20rem);
+        }
+        .join-box__btn{
+            margin-top: calcRem(20rem); 
+        }
+    }
+}

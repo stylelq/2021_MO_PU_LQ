@@ -1,0 +1,167 @@
+/**********************
+  PAGE
+  쿠폰
+**********************/
+.myCoupon{
+    &__title{
+        @include title2;
+        margin-top:calcRem(10rem);
+        margin-bottom:calcRem(8rem);
+    }
+
+    // 유저정보
+    &-level{
+        $level : '.myCoupon-level';
+        overflow: hidden;
+        padding:0 calcRem(20rem) calcRem(25rem);
+
+        &__icon{
+            float: left;
+            width:calcRem(48rem);
+            height:calcRem(48rem);
+            margin-right: calcRem(15rem)
+        }
+        &.level-1{
+            #{$level}__icon{ @include background('/images/membership/membership_1.png','no-repeat center center / contain'); }
+        }
+        &.level-2 {
+            #{$level}__icon{ @include pageBackground('/images/membership/membership_2.png','no-repeat center center / contain'); }
+            #{$level}__name{ color:$gold; }
+        }
+        &.level-3{
+            #{$level}__icon{ @include pageBackground('/images/membership/membership_3.png','no-repeat center center / contain'); }
+            #{$level}__name{ color:$silver; }
+        }
+        &.level-4{
+            #{$level}__icon{ @include pageBackground('/images/membership/membership_4.png','no-repeat center center / contain'); }
+            #{$level}__name{ color:$club; }
+        }
+        &.level-5{
+            #{$level}__icon{ @include pageBackground('/images/membership/membership_5.png','no-repeat center center / contain'); }
+            #{$level}__name{ color:$clubPlus; }
+        }
+        &.level-6{
+            #{$level}__icon{ @include pageBackground('/images/membership/membership_6.png','no-repeat center center / contain'); }
+            #{$level}__name{ color:$web; }
+        }
+
+        &__user{
+            font-weight: $regular;
+            font-size: calcRem(14rem);
+            margin-top: calcRem(5rem);
+        }
+        &__name{
+            font-weight: $medium;
+        }
+    }
+
+
+    // 프로모션 폼
+    &-form{ 
+        padding:calcRem(20rem); 
+        border-top: 1px solid $black1;
+
+        &__inner{
+            margin-top: calcRem(20rem); 
+
+            &--btn{
+                position: relative;
+                padding-right:calcRem(87rem);
+    
+                .form__input--btn{
+                    @include body2;
+                    color:$whiteColor;
+                    padding:calcRem(9rem) calcRem(5rem);
+                    height:calcRem(38rem);
+                    text-align: center;
+                    width:calcRem(83rem);
+                    background-color: $darkgray;
+                    position: absolute;
+                    right:0;
+                    @include vertical-center;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    &-cont{ padding:calcRem(20rem); }
+    &__item{
+        border-bottom: 1px solid $lightgray4;
+        padding-bottom:calcRem(14rem);
+        &:last-child{
+            padding-top:calcRem(14rem);
+        }
+    }
+
+    // 쿠폰
+    &__price{      
+        display: table-cell;
+        vertical-align: top;
+        padding-right:calcRem(25rem);
+        width:calcRem(140rem);
+        box-sizing: border-box;
+
+        &--box{
+            border:solid 1px $point1;
+            border-radius: 0 calcRem(7rem) 0 calcRem(7rem);
+            height:calcRem(57rem);
+            width:100%;
+            position: relative;
+        }
+
+        &--inner{
+            @include ab-center;
+            width:100%;
+            text-align: center;
+        }
+
+        &--title{
+            @include body4;
+            font-weight: $medium;
+            color:$point1;
+            display: block;
+        }
+
+        &--text{
+            @include title1;
+            color:$point1;
+            font-weight: $regular;
+            display: block;
+        }
+
+        &--won{
+            @include body4;
+        }
+    }
+
+    // 쿠폰 설명
+    &__textBox{
+        margin:0;
+        display: table-cell;
+        vertical-align: top;
+        @include body2;
+
+        &--title{
+            margin: 0;
+        }
+        &--date{
+            margin: 0;
+            font-size: calcRem(11rem);
+            font-weight: $regular;
+            color: $darkgray;
+        }
+        &--text{
+            font-size: calcRem(11rem);
+            font-weight: $light;
+            margin-bottom: 0;
+        }
+    }
+
+    // 상세 안내
+    &-info{ padding:calcRem(20rem); }
+}
+
+
+
+

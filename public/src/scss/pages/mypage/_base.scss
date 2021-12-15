@@ -1,0 +1,306 @@
+/**********************
+  마이페이지 내 공통 사용
+**********************/
+
+//---- 3개월,6개월,1년 기간조회 버튼
+.myOrderList-filter{
+    $filter : ".myOrderList-filter";
+    padding: calcRem(20rem);
+    background: $lightgray2;
+
+    &__btnList{
+        overflow: hidden;
+        
+        #{$filter}__item{
+            float: left;
+            width:  calcRem(60rem);
+            height:  calcRem(26rem);
+            &:not(:last-child){ margin-right: calcRem(5rem); }
+
+            .myOrderList-btn{
+                height:  calcRem(26rem);
+                padding: 0;
+                box-sizing: border-box;
+                border-color: $gray2;
+                background: $whiteColor;
+                display: block;
+            }
+
+            &:last-child{
+                width:  calcRem(77rem);
+                float: right;
+            }
+
+            &.is-current{
+                .myOrderList-btn{
+                    background: $point1;
+                    color: $whiteColor;
+                    border-color: $point1;
+                }
+            }
+        }
+    }
+
+    //기간조회 detail
+    &__detail{
+        display: none;
+        margin-top:calcRem(20rem);
+        border-top: 1px solid $lightgray4;
+
+        #{$filter}__date{
+            height:calcRem(36rem);
+            margin:calcRem(18rem) 0;
+        }
+        #{$filter}__search-btn{
+            width: calcRem(210rem);
+            height:calcRem(36rem);
+            
+            @include body2;
+            color:$whiteColor;
+            text-align: center;
+            background-color: $darkgray;
+           
+            margin: auto;
+            padding:calcRem(9rem) calcRem(5rem);
+            box-sizing: border-box;
+        }
+        &.is-view{display: block;}
+    }
+    
+}
+
+//---- 마이페이지 리스트 공통 
+.order-mypage__item{
+    $orderList : '.order-mypage';
+
+    padding: calcRem(20rem);
+    border-top: 1px solid $black1;
+    &:last-child{ border-bottom: 1px solid $black1; }
+
+    // 주문번호, 진행 상태/step, 날짜
+    #{$orderList}__info{
+        padding:calcRem(10rem) 0 calcRem(30rem);
+        overflow: hidden;
+        @include body2;
+        border-bottom: 1px solid $lightgray4;
+
+        #{$orderList}__type{
+            float: left;
+        }
+        #{$orderList}__step{
+            float: right;
+        }
+
+        #{$orderList}__orderId-link{
+            margin-left:calcRem(5rem);
+            &:after{
+                content: '';
+                display: inline-block;
+                width:calcRem(6rem);
+                height:calcRem(10rem);
+                box-sizing: border-box;
+                margin-left: calcRem(10rem);
+                vertical-align: middle;
+                @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');
+            }
+        }
+        #{$orderList}__date{
+            @include body5;
+            color: $darkgray;
+        }
+        #{$orderList}__step{
+            margin-left:auto;
+            color:$point1;
+        }
+    }
+
+    // 배송조회/리뷰/확정 버튼
+    #{$orderList}__btn{
+        padding: calcRem(6rem) calcRem(10rem);
+        @include body2;
+        margin-bottom:calcRem(10rem);
+    }
+
+    // 상품명, 금액, 링크버튼
+    #{$orderList}__contents{
+        padding:calcRem(16rem) calcRem(10rem) calcRem(22rem) 0;      
+        overflow: hidden;
+
+        #{$orderList}__cont{
+            display: inline-block;
+            vertical-align: middle;
+            width: 48%;
+        }
+
+        #{$orderList}__title{ 
+            @include body2; 
+        }
+
+        #{$orderList}__deadline{
+            font-size:calcRem(12rem);
+            color: $darkgray;
+            font-weight: $light;
+            margin-top: calcRem(20rem);
+        }
+        
+        #{$orderList}__thumb{
+            // float: left;
+            margin-right:calcRem(15rem);
+            width:calcRem(120rem);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            vertical-align: middle;
+            
+            img,
+            #{$orderList}__img{ 
+                width:100%;
+                @include ab-center; 
+            }
+
+            &:after{
+                content: "";
+                display: block;
+                padding-bottom:100%;
+            }
+        }
+                
+        #{$orderList}__option{
+            margin-top:calcRem(12rem);
+    
+            &--item{
+                // margin-top:calcRem(5rem);
+    
+                &:after{
+                    @include block-reset;
+                }
+    
+                // &:first-child{
+                //     margin-top:0;
+                // }
+            }
+    
+            &--title{
+                display: block;
+                float:left;
+                margin-right:calcRem(5rem);
+                @include body3;
+            }
+    
+            &--text{
+                display: block;
+                overflow: hidden;
+                @include body3;
+            }
+        }
+        
+        #{$orderList}__price{
+            margin-top:calcRem(20rem);
+            clear: both;
+            padding-left:calcRem(20rem);
+            padding-right:calcRem(20rem);
+            position: relative;
+            line-height:0;
+            font-size:0;
+    
+            &--current{
+                @include title2;
+                margin-right:calcRem(12rem);
+                display: inline-block;
+                vertical-align: middle;
+            }
+    
+            &--sale{
+                @include title2;
+                color:$throughColor;
+                text-decoration: line-through;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 20px;
+            }
+
+            &.type-single{
+                padding:0;
+                @include title1;
+            }
+        }
+    }
+}
+
+//---- paging
+.paging{
+    margin-top: calcRem(25rem);
+}
+
+//---- 하단 픽시드 버튼
+.myPage-fix{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: $bgSiteColor;
+    z-index: $fixButtonZindex;
+
+    &__list{
+        overflow: hidden;
+    }
+
+    &__item{
+        float:left;
+        width:37%;
+        position: relative;
+
+        &:nth-child(2){
+            width:63%;
+
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        display:block;
+        @include title1;
+        color:$black1;
+        text-align: center;
+        padding:calcRem(9rem) calcRem(15rem);
+        border:solid 1px $gray2;
+
+        .myPage-fix__item:nth-child(2) &{
+            border-color:$point1;
+            background-color: $point1;
+            color:$whiteColor;
+        }
+    }
+    
+    &.myPage-fix__red{
+        border-color:$point1;
+        background-color: $point1;
+        color:$whiteColor;
+
+        .myPage-fix__item{
+            &:not(:last-child):after{
+                content: '';
+                position: absolute;
+                @include vertical-center;
+                right: 0;
+                width: 1px;
+                height: calcRem(14rem);
+                background:$bulletColor;
+            }
+        }
+
+        .myPage-fix__link{
+            border-color:$point1;
+            color:$whiteColor;
+        }
+    }
+}
+
+
+
+
+
+
+

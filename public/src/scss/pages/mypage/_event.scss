@@ -1,0 +1,71 @@
+/**********************
+  PAGE
+  이벤트 참여현황
+**********************/
+.myEvent-center{
+
+    .myEvent-cont{
+        margin-top: calcRem(35rem);
+    }
+    .order-mypage{
+        &__item{}
+        &__header{ 
+            overflow: hidden;
+            padding: calcRem(10rem) 0 calcRem(20rem);
+    
+            &--state{
+                float: left;
+            }
+            &--title{
+                float: left;
+                margin-left: calcRem(10rem);
+                @include title2;
+                font-family: 'noto-kr',Sans-Serif;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
+                // overflow: hidden;
+                max-width: 80%;
+            }
+        }
+        &__contents{
+            border-top: 1px solid $lightgray4;
+            padding: calcRem(20rem) 0 calcRem(10rem);
+            box-sizing: border-box;
+            @include body3;
+            line-height: calclH(19,11);
+        }
+        &__inner{
+            margin: 0;
+            margin-bottom: calcRem(4rem);
+        }
+        &__label{
+            display: inline-block;
+            width: calcRem(80rem);
+        }
+        &__date{
+            display: inline-block;
+            margin-left: 0;
+            font-weight: $regular;
+        }
+    }
+
+    .center-bullet{
+        padding: calcRem(30rem) calcRem(20rem) 0;
+    }
+}
+
+[class*=state-item__]{
+    padding: calcRem(2rem) calcRem(7rem);
+    @include body2;
+    border: 1px solid $lightgray4;
+    box-sizing: border-box;
+}
+.state-item__ing{
+    border-color: $point1;
+    color: $point1;
+}
+.state-item__end{
+    border-color: $gray1;
+    color: $gray1;
+}
+
