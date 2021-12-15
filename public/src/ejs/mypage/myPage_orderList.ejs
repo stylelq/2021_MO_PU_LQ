@@ -65,7 +65,10 @@ lnbTitle = "주문배송조회"
                  
                 <!-- 주문 상품 -->
                 <section class="myOrderList-section">
-                    <% include ../_include/_orderItemNoOptionState %>
+                    <div class="order-mypage__list">
+                        <% include ../_include/_orderItemNoOptionState %>
+                    </div>
+                    <% include ../_include/_paging %>
                 </section>
                 <!-- .주문 상품 -->
             </div>
