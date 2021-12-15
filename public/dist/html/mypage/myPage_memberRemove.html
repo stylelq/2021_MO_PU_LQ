@@ -488,7 +488,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">쿠폰</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">회원 탈퇴</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -570,79 +570,85 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="myCoupon">
-            <div class="myCoupon-center">
-                <!-- user level -->
-                <div class="myCoupon-level level-6">
-                    <div class="myCoupon-level__icon"></div>
-                    <div class="myCoupon-level__user">홍길동 고객님은<br><span class="myCoupon-level__name">WEB 회원</span>입니다.</div>
-                </div>
-                <!-- .user level -->
-
-                <!-- 프로모션 코드 입력 -->
-                <div class="myCoupon-form">
-                    <h2 class="myCoupon__title">프로모션 코드 입력</h2>
-                    <div class="myCoupon-form__inner myCoupon-form__inner--btn">
-                        <input type="text" class="form__input--text" title="입력하세요" placeholder="입력하세요" readonly="">
-                        <a href="#" class="form__input--btn">등록</a>
+        <section class="memberRemove">
+            <div class="memberRemove-center">                           
+                <!-- 컨텐츠 -->
+                <div class="memberRemove-cont">
+                    <div class="memberRemove-cont__title">그 동안 루이까또즈를 이용해 주셔서<br>
+                        감사합니다.</div>
+                    
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__text is-point">탈퇴를 하시면 회원만의 특별한 혜택을 누리실 수 없습니다.</div>
+                        <div class="memberRemove-cont__text is-point">탈퇴 후 30일 이내 재가입이 불가 합니다, 신중히 생각하신 후 탈퇴를 해주세요.</div>
+                        <ul class="center-bullet">
+                            <li class="center-bullet__item">진행중인 거래(주문, 교환, 반품) 내역이 있을 경우 즉시 회원 탈퇴가 불가능합니다. 거래내역 종료 후 탈퇴 신청을 완료해주세요.</li>
+                            <li class="center-bullet__item">회원탈퇴 시 보유하고 있는 적립금, 쿠폰은 모두 삭제됩니다.</li>
+                            <li class="center-bullet__item">탈퇴하신 아이디는 다시 사용할 수 없습니다.</li>
+                            <li class="center-bullet__item">회원탈퇴 후 재가입 시 신규 가입으로 처리되며, 탈퇴전 회원정보와 거래정보 및 적립금, 쿠폰 정보 등은 복구되지 않습니다</li>
+                        </ul>
                     </div>
-                </div>
-                <!-- .프로모션 코드 입력 -->
+                    
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__title">회원탈퇴 사유 (필수, 중복 체크 가능)</div>
+                        <ul class="memberRemove-cont__list">
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk1">
+                                    <label class="form__checkbox--text" for="chk1">상품의 다양성/가격 불만</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk2">
+                                    <label class="form__checkbox--text" for="chk2">회원혜택의 불만</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk3">
+                                    <label class="form__checkbox--text" for="chk3">사이트 시스템 및 속도 불안</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk4">
+                                    <label class="form__checkbox--text" for="chk4">자주 이용하지 않음</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk5">
+                                    <label class="form__checkbox--text" for="chk5">상담원의 고객응대 불만</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk6">
+                                    <label class="form__checkbox--text" for="chk6">기타</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- 쿠폰 -->
-                <div class="myCoupon-cont">
-                    <h2 class="myCoupon__title">나의 쿠폰</h2>
-                    <ul class="myCoupon__list">
-                        <li class="myCoupon__item">
-                            <dl class="myCoupon__inner">
-                                <dt class="myCoupon__price">
-                                    <div class="myCoupon__price--box">
-                                        <div class="myCoupon__price--inner">
-                                            <span class="myCoupon__price--title">COUPON</span>
-                                            <span class="myCoupon__price--text">5<span class="myCoupon__price--won">%</span></span>
-                                        </div>
-                                    </div>
-                                </dt>
-                                <dd class="myCoupon__textBox">
-                                    <p class="myCoupon__textBox--title">등급혜택 더블할인 5% 쿠폰</p>
-                                    <p class="myCoupon__textBox--date">2021.10.19 ~ 2021.12.31</p>
-                                    <p class="myCoupon__textBox--text">30,000원 이상 구매시<br>최대 100,000원 할인</p>
-                                </dd>
-                            </dl>
-                        </li>
-                        <li class="myCoupon__item">
-                            <dl class="myCoupon__inner">
-                                <dt class="myCoupon__price">
-                                    <div class="myCoupon__price--box">
-                                        <div class="myCoupon__price--inner">
-                                            <span class="myCoupon__price--title">COUPON</span>
-                                            <span class="myCoupon__price--text">5<span class="myCoupon__price--won">%</span></span>
-                                        </div>
-                                    </div>
-                                </dt> 
-                                <dd class="myCoupon__textBox">
-                                    <p class="myCoupon__textBox--title">등급혜택 더블할인 5% 쿠폰</p>
-                                    <p class="myCoupon__textBox--date">2021.10.19 ~ 2021.12.31</p>
-                                    <p class="myCoupon__textBox--text">30,000원 이상 구매시<br>최대 100,000원 할인</p>
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__title">회원탈퇴 안내사항을 모두 확인했으며,<br>
+                            탈퇴에 동의 하시겠습니까? </div>
+                        <div class="memberRemove-cont__text">동의하시면 ‘동의합니다’라고 입력해 주세요.</div>
+                        <div class="input-list">
+                            <ul class="input-list__list">
+                                <li class="input-list__item">
+                                    <input type="text" class="input-v1" placeholder="입력해 주세요.">
+                                </li>
+                                <li class="input-list__item">
+                                    <input type="password" class="input-v1" placeholder="비밀번호를 입력해 주세요.">
+                                </li>
+                            </ul>
+                            <button class="input-box__btn btn-v1 type-primary">탈퇴하기</button>
+                        </div>
+                    </div>
+                                        
                 </div>
-                <!-- .쿠폰 -->
-
-                <!-- info -->
-                <div class="myCoupon-info">
-                    <ul class="center-bullet">
-                        <li class="center-bullet__item">등급혜택 쿠폰은 매월 1일자로 자동으로 부여됩니다. (My Louis에서 확인하실 수 있습니다.)</li>
-                        <li class="center-bullet__item">등급혜택 쿠폰은 매월 30일을 기준으로 자동 소멸됩니다. (사용기간 : 30일)</li>
-                        <li class="center-bullet__item">모든 쿠폰은 사용가능 상품 및 방법에 제한이 있을 수 있습니다. (일부 상품 제외)</li>
-                        <li class="center-bullet__item">각 쿠폰마다 사용 가능한 최소금액이 있으며, 정율(%) 할인쿠폰의 경우 최대할인 금액이 있습니다.</li>
-                        <li class="center-bullet__item">주문 후 고객변심에 의한 취소, 반품, 환불의 경우 쿠폰은 재발행되지 않습니다.</li>
-                        <li class="center-bullet__item">기본쿠폰과 등급쿠폰은 중복 사용이 되지 않습니다.(중복쿠폰의 경우 추가할인 적용 가능)</li>
-                    </ul>
-                </div>
-                <!-- .info -->
+                <!-- .컨텐츠 -->
             </div>
         </section>
     </div>
@@ -716,8 +722,6 @@
 	
 	
 	<script src="../../js/common.js"></script>
-	
-		<script src="../../js/popup.js"></script>
 	
 	
 	

@@ -488,7 +488,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">쿠폰</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">배송지 관리</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -570,79 +570,65 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="myCoupon">
-            <div class="myCoupon-center">
-                <!-- user level -->
-                <div class="myCoupon-level level-6">
-                    <div class="myCoupon-level__icon"></div>
-                    <div class="myCoupon-level__user">홍길동 고객님은<br><span class="myCoupon-level__name">WEB 회원</span>입니다.</div>
-                </div>
-                <!-- .user level -->
-
-                <!-- 프로모션 코드 입력 -->
-                <div class="myCoupon-form">
-                    <h2 class="myCoupon__title">프로모션 코드 입력</h2>
-                    <div class="myCoupon-form__inner myCoupon-form__inner--btn">
-                        <input type="text" class="form__input--text" title="입력하세요" placeholder="입력하세요" readonly="">
-                        <a href="#" class="form__input--btn">등록</a>
-                    </div>
-                </div>
-                <!-- .프로모션 코드 입력 -->
-
-                <!-- 쿠폰 -->
-                <div class="myCoupon-cont">
-                    <h2 class="myCoupon__title">나의 쿠폰</h2>
-                    <ul class="myCoupon__list">
-                        <li class="myCoupon__item">
-                            <dl class="myCoupon__inner">
-                                <dt class="myCoupon__price">
-                                    <div class="myCoupon__price--box">
-                                        <div class="myCoupon__price--inner">
-                                            <span class="myCoupon__price--title">COUPON</span>
-                                            <span class="myCoupon__price--text">5<span class="myCoupon__price--won">%</span></span>
-                                        </div>
-                                    </div>
-                                </dt>
-                                <dd class="myCoupon__textBox">
-                                    <p class="myCoupon__textBox--title">등급혜택 더블할인 5% 쿠폰</p>
-                                    <p class="myCoupon__textBox--date">2021.10.19 ~ 2021.12.31</p>
-                                    <p class="myCoupon__textBox--text">30,000원 이상 구매시<br>최대 100,000원 할인</p>
-                                </dd>
-                            </dl>
+        <section class="myAddress">
+            <div class="myAddress-center">
+                <div class="myAddress-header">
+                    <a href="#" class="form-arrow__btn "><span class="form-arrow__btn--text">배송지등록</span></a>
+                </div>          
+                <!-- 컨텐츠 -->
+                <div class="myAddress-content">
+                     <ul class="order-mypage__item">
+                        <!-- item -->
+                        <li class="order-mypage__item--list">
+                            <div class="user-address">
+                                <div class="user-address__meta">
+                                    <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
+                                    <span class="user-address__meta--state">[기본배송지]</span>
+                                </div>
+                                <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                                <div class="user-address__tel">010-1234-5678</div>
+                            </div>
+                            <div class="user-address__btn">
+                                <a href="#" class="user-address__btn--modify">수정</a>
+                                <a href="#" class="user-address__btn--del">삭제</a>
+                            </div>
                         </li>
-                        <li class="myCoupon__item">
-                            <dl class="myCoupon__inner">
-                                <dt class="myCoupon__price">
-                                    <div class="myCoupon__price--box">
-                                        <div class="myCoupon__price--inner">
-                                            <span class="myCoupon__price--title">COUPON</span>
-                                            <span class="myCoupon__price--text">5<span class="myCoupon__price--won">%</span></span>
-                                        </div>
-                                    </div>
-                                </dt> 
-                                <dd class="myCoupon__textBox">
-                                    <p class="myCoupon__textBox--title">등급혜택 더블할인 5% 쿠폰</p>
-                                    <p class="myCoupon__textBox--date">2021.10.19 ~ 2021.12.31</p>
-                                    <p class="myCoupon__textBox--text">30,000원 이상 구매시<br>최대 100,000원 할인</p>
-                                </dd>
-                            </dl>
+                        <!-- .item -->
+                        <!-- item -->
+                        <li class="order-mypage__item--list">
+                            <div class="user-address">
+                                <div class="user-address__meta">
+                                    <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">홈</span>
+                                    <span class="user-address__meta--state"></span>
+                                </div>
+                                <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                                <div class="user-address__tel">010-1234-5678</div>
+                            </div>
+                            <div class="user-address__btn">
+                                <a href="#" class="user-address__btn--modify">수정</a>
+                                <a href="#" class="user-address__btn--del">삭제</a>
+                            </div>
                         </li>
-                    </ul>
+                        <!-- .item -->
+                     </ul>
                 </div>
-                <!-- .쿠폰 -->
+                <!-- .컨텐츠 -->
 
-                <!-- info -->
-                <div class="myCoupon-info">
-                    <ul class="center-bullet">
-                        <li class="center-bullet__item">등급혜택 쿠폰은 매월 1일자로 자동으로 부여됩니다. (My Louis에서 확인하실 수 있습니다.)</li>
-                        <li class="center-bullet__item">등급혜택 쿠폰은 매월 30일을 기준으로 자동 소멸됩니다. (사용기간 : 30일)</li>
-                        <li class="center-bullet__item">모든 쿠폰은 사용가능 상품 및 방법에 제한이 있을 수 있습니다. (일부 상품 제외)</li>
-                        <li class="center-bullet__item">각 쿠폰마다 사용 가능한 최소금액이 있으며, 정율(%) 할인쿠폰의 경우 최대할인 금액이 있습니다.</li>
-                        <li class="center-bullet__item">주문 후 고객변심에 의한 취소, 반품, 환불의 경우 쿠폰은 재발행되지 않습니다.</li>
-                        <li class="center-bullet__item">기본쿠폰과 등급쿠폰은 중복 사용이 되지 않습니다.(중복쿠폰의 경우 추가할인 적용 가능)</li>
-                    </ul>
-                </div>
-                <!-- .info -->
+                <!-- paging -->
+                <!-- paging -->
+<div class="paging">
+    <ul class="paging__list">
+        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
+        <li class="paging__item is-current"><span class="paging__link">1</span></li>
+        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
+        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
+    </ul>
+</div>
+<!-- .paging -->
+                <!-- .paging -->
             </div>
         </section>
     </div>

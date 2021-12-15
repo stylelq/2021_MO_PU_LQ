@@ -1,0 +1,124 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "배송지 관리"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myAddressModify">
+            <div class="myAddressModify-center">
+                <!-- 배송지 정보 -->
+                <div class="address-info__form">
+                    <!-- item -->
+                    <div class="address-info__item">
+                        <input type="text" class="form__input--text" title="배송지명" placeholder="배송지명" value="">
+                    </div>
+                    <!-- item -->
+                    <!-- item -->
+                    <div class="address-info__item">
+                        <input type="text" class="form__input--text" title="받는사람" placeholder="홍길동" value="">
+                    </div>
+                    <!-- item -->
+
+                    <!-- item -->
+                    <div class="address-info__item">
+                        <!-- inner -->
+                        <div class="address-info__inner">
+                            <ul class="address-info__inner--list">
+                                <li class="address-info__inner--item">
+                                    <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="선택">
+                                        <option value="" disabled="" selected>선택</option>
+                                        <option value="010" >010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                </li>
+                                <li class="address-info__inner--item">
+                                    <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="" value="" maxlength="4">
+                                </li>
+                                <li class="address-info__inner--item">
+                                    <input type="number" class="form__input--text" title="연락처1 마지막 번호" value="" maxlength="4">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- .inner -->
+                        <!-- inner -->
+                        <div class="address-info__inner">
+                            <ul class="address-info__inner--list">
+                                <li class="address-info__inner--item">
+                                    <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder" title="선택">
+                                        <option value="" disabled="" selected>선택</option>
+                                        <option value="02">02</option>
+                                        <option value="031">031</option>
+                                        <option value="032">032</option>
+                                        <option value="033">033</option>
+                                        <option value="041">041</option>
+                                        <option value="042">042</option>
+                                        <option value="043">043</option>
+                                        <option value="044">044</option>
+                                        <option value="051">051</option>
+                                        <option value="052">052</option>
+                                        <option value="053">053</option>
+                                        <option value="054">054</option>
+                                        <option value="055">055</option>
+                                        <option value="061">061</option>
+                                        <option value="062">062</option>
+                                        <option value="063">063</option>
+                                        <option value="064">064</option>
+                                        <option value="070">070</option>
+                                    </select>
+                                </li>
+                                <li class="address-info__inner--item">
+                                    <input type="number" class="form__input--text" title="연락처2 중간 번호" placeholder="연락처2" maxlength="4">
+                                </li>
+                                <li class="address-info__inner--item">
+                                    <input type="number" class="form__input--text" title="연락처2 마지막 번호" maxlength="4">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- .inner -->
+                    </div>
+                    <!-- item -->
+                    <!-- item -->
+                    <div class="address-info__item">
+                        <!-- inner -->
+                        <div class="address-info__inner address-info__inner--btn">
+                            <input type="text" class="form__input--text" title="우편번호" placeholder="우편번호" value="">
+                            <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
+                        </div>
+                        <!-- .inner -->
+                        <!-- inner -->
+                        <div class="address-info__inner">
+                            <input type="text" class="form__input--text" title="중간 주소" value="">
+                        </div>
+                        <!-- .inner -->
+                        <!-- inner -->
+                        <div class="address-info__inner">
+                            <input type="text" class="form__input--text" title="상세 주소" value="">
+                        </div>
+                        <!-- .inner -->
+                        <!-- inner -->
+                        <div class="address-info__inner">
+                            <div class="form__checkbox form__checkbox--big">
+                                <input class="form__checkbox--input sr-only" type="checkbox" name="addressList" id="addressList" >
+                                <label class="form__checkbox--text" for="addressList">기본 배송지로 설정</label>
+                            </div>
+                        </div>
+                        <!-- .inner -->
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .배송지 정보 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_popup/_addressSearch %>
+<% include ../_include/_footer %>

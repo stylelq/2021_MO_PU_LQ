@@ -20,10 +20,6 @@
                 float: left;
                 margin-left: calcRem(10rem);
                 @include title2;
-                font-family: 'noto-kr',Sans-Serif;
-                // white-space: nowrap;
-                // text-overflow: ellipsis;
-                // overflow: hidden;
                 max-width: 80%;
             }
         }

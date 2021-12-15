@@ -160,8 +160,9 @@
     // 답변
     &__cont--anc{
         margin-top: calcRem(20rem);
-        padding: calcRem(20rem) 0 calcRem(40rem);
-        padding-left: calcRem(17rem);
+        padding: calcRem(20rem) 0 calcRem(40rem) calcRem(17rem);
+        border-top: 1px solid $gray2;
+
         overflow: hidden;
         clear: both;
 

@@ -1,0 +1,62 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "배송지 관리"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="myAddress">
+            <div class="myAddress-center">
+                <div class="myAddress-header">
+                    <a href="#" class="form-arrow__btn "><span class="form-arrow__btn--text">배송지등록</span></a>
+                </div>          
+                <!-- 컨텐츠 -->
+                <div class="myAddress-content">
+                     <ul class="order-mypage__item">
+                        <!-- item -->
+                        <li class="order-mypage__item--list">
+                            <div class="user-address">
+                                <div class="user-address__meta">
+                                    <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">회사</span>
+                                    <span class="user-address__meta--state">[기본배송지]</span>
+                                </div>
+                                <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                                <div class="user-address__tel">010-1234-5678</div>
+                            </div>
+                            <div class="user-address__btn">
+                                <a href="#" class="user-address__btn--modify">수정</a>
+                                <a href="#" class="user-address__btn--del">삭제</a>
+                            </div>
+                        </li>
+                        <!-- .item -->
+                        <!-- item -->
+                        <li class="order-mypage__item--list">
+                            <div class="user-address">
+                                <div class="user-address__meta">
+                                    <span class="user-address__meta--name">홍길동</span>/<span class="user-address__meta--position">홈</span>
+                                    <span class="user-address__meta--state"></span>
+                                </div>
+                                <div class="user-address__address">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div>
+                                <div class="user-address__tel">010-1234-5678</div>
+                            </div>
+                            <div class="user-address__btn">
+                                <a href="#" class="user-address__btn--modify">수정</a>
+                                <a href="#" class="user-address__btn--del">삭제</a>
+                            </div>
+                        </li>
+                        <!-- .item -->
+                     </ul>
+                </div>
+                <!-- .컨텐츠 -->
+
+                <!-- paging -->
+                <% include ../_include/_paging %>
+                <!-- .paging -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

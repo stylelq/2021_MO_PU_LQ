@@ -4,7 +4,7 @@
 **********************/
 .myAddress{
     &-header{
-        padding:calcRem(20rem);
+        padding:0 calcRem(20rem) calcRem(20rem);
     }
 
     &-content{
