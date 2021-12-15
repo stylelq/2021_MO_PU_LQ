@@ -664,6 +664,10 @@ input {
 			position: absolute;
 			top:0;
 			left:0;
+
+			.form__radio--red &{
+				border-color: $point1;
+			}
 		}
 
 		&:after{
@@ -676,6 +680,10 @@ input {
 			top:calcRem(4rem);
 			left:calcRem(4rem);
 			opacity: 0;
+
+			.form__radio--red &{
+				background-color: $point1;
+			}
 		}
 	}
 

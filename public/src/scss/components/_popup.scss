@@ -1807,7 +1807,7 @@
     }
 }
 
-//마이페이지 상품리뷰 슬라이드
+//마이페이지 :: 상품리뷰 슬라이드
 .reviewImages__contents{
     position: relative;
     @include vertical-center;
@@ -1871,6 +1871,50 @@
                 }
             }
         }
+    }
+}
+
+//마이페이지 :: 이메일 주소수정 인증발송/결과
+.emailModify-wrap{
+    .email-box{
+        &__field{
+            position: relative;
+            padding-right: 7.375rem;
+            box-sizing: border-box;
+        }
+        &__select{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 7.4375rem;
+        }
+    }
+    
+    .popup-confirm__link{
+        margin-top: calcRem(20rem);
+
+        &.type-white{
+            background-color: $whiteColor;
+            color: $darkgray;
+        }
+    }
+
+    .emailModify-textBox{
+        text-align: center;
+
+        &__title{
+            @include title2;
+            margin:calcRem(30rem) 0 calcRem(10rem);
+        }
+        &__text{
+            @include body3;
+            margin-bottom: calcRem(10rem);
+        }
+    }
+
+    .center-bullet{
+        margin-top: calcRem(30rem);
     }
 }
 

@@ -547,6 +547,21 @@ jQuery(function(){
 
         }
         $(document).on('click', '.js-btn-dropDown', btnDropDown);
+
+        //마이페이지 :: qna 더보기(아코디언)
+        function myQnaMore() {
+            var parent = $(this).closest('.myQna-wrap__item');
+            var dd = $(this).closest('dd');
+            
+            if(parent.hasClass('is-active')){
+                parent.removeClass('is-active');
+            }else{
+                $('.myQna-wrap__item').removeClass('is-active');
+                parent.addClass('is-active');
+            }
+
+        }
+        $(document).on('click', '.js-myQna-more', myQnaMore);
     });
 
     //결제탭

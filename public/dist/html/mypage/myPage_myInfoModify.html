@@ -21,8 +21,12 @@
 <!-- 공통 css -->
 <link rel="stylesheet" href="../../css/common.css">
 
-	<link rel="stylesheet" href="../../css/pages/platform.css">
-	<link rel="stylesheet" href="../../css/pages/product.css">
+	<link rel="stylesheet" href="../../css/pages/myPage.css">
+	<link rel="stylesheet" href="../../css/pages/myPage_orderList.css">
+	<link rel="stylesheet" href="../../css/pages/myPage_coupon.css">
+	<link rel="stylesheet" href="../../css/pages/myPage_review.css">
+	<link rel="stylesheet" href="../../css/pages/wishList.css">
+	<link rel="stylesheet" href="../../css/pages/myPage_qna.css">
 
 </head>
 
@@ -489,7 +493,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">ALL WORKS</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">회원정보수정</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -497,32 +501,72 @@
         <ul class="lnb__list">
             <li class="lnb__item is-active">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">ALL Works</span>
+                    <span class="lnb__line">MY LOUIS</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">L Edition</span>
+                    <span class="lnb__line">주문배송조회</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Art Furniture</span>
+                    <span class="lnb__line">취소/반품</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Art Object</span>
+                    <span class="lnb__line">쿠폰</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Textile & Fashion</span>
+                    <span class="lnb__line">적립금</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Printed Matter</span>
+                    <span class="lnb__line">상품 리뷰</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">WISH LIST</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">1:1 문의</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 Q&A</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">재입고 알림 내역</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">이벤트 참여현황</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원정보수정</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">배송지 관리</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원 탈퇴</span>
                 </a>
             </li>
         </ul>
@@ -531,128 +575,90 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="platform">
-            <!-- platform video -->
-            <div class="platform-banner platform-banner--img"><!-- 안에 이미지가 들어갈시 platform-banner--img 클래스, 비디오 추가시 platform-banner--video 클래스 추가 -->
-                <img class="platform-banner__img" src="../../images/platform/mo_TextileFashion.jpg" alt="" />
-            </div>
-            <!-- .platform video -->
-            <!-- product post -->
-            <div class="product-post product-post--post">
-                <ul class="product-post__list">
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">SOLD OUT</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">NEW</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--sale">328,000원</span>
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
+        <section class="myInfoModify">
+            <div class="myInfoModify-center">                           
+                <!-- 컨텐츠 -->
+                <div class="myInfoModify-cont">
+                    <div class="myInfo-cont__text">개인정보를 안전하게 취급하며, 회원님의 동의 없이는 회원정보를 공개 및 변경 하지 않습니다.</div>
+                    <div class="myInfo-cont__table">
+                        <h3 class="myInfo-cont__table--title">기본정보</h3>
+                        <table class="basic-table list-table">
+                            <caption class="sr-only">기본정보</caption>
+                            <colgroup>
+                                <col style="width:25%;">
+                                <col style="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">가입 유형</th>
+                                    <td class="basic-table--left">[네이버]</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">아이디</th>
+                                    <td class="basic-table--left">youngv77</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이름</th>
+                                    <td class="basic-table--left">홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">휴대폰 번호</th>
+                                    <td class="basic-table--left">
+                                        010-1212-3434
+                                        <a href="#" class="basic-table--btn">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이메일</th>
+                                    <td class="basic-table--left">
+                                        abcedfg@gmail.com
+                                        <a href="#emailModify" class="basic-table--btn js-popup-open">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">이벤트/<br>쇼핑정보</th>
+                                    <td class="basic-table--left">
+                                        <div class="form__checkbox form__checkbox--big">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="aggree1" id="aggree1">
+                                            <label class="form__checkbox--text" for="aggree1">SMS/LMS 문자 수신 동의</label>
+                                        </div>
+                                        <div class="form__checkbox form__checkbox--big">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="aggree2" id="aggree2">
+                                            <label class="form__checkbox--text" for="aggree2">이메일 수신 동의</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">성별</th>
+                                    <td class="basic-table--left">
+                                        <div class="form__radio form__radio--big form__radio--red">
+                                            <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_M">
+                                            <label class="form__radio--text" for="sex_M">남</label>
+                                        </div>
+                                        <div class="form__radio form__radio--big form__radio--red">
+                                            <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_F">
+                                            <label class="form__radio--text" for="sex_F">여</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="basic-table--bold">생년월일</th>
+                                    <td class="basic-table--left">
+                                        <div class="form-date__field">
+                                            <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- .컨텐츠 -->
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">주문/결제 시 안내 및 기타 중요 안내 사항은 이메일, SMS 수신 여부와 관계없이 발송됩니다.</li>
+                    <li class="center-bullet__item">본인이 아닌 타인의 실명을 도용하여 가입할 경우 회원자격이 박탈되고 형사상의 처벌을 받으실 수 있습니다.</li>
                 </ul>
             </div>
-            <!-- .product post -->
         </section>
     </div>
 </div>
@@ -719,12 +725,86 @@
         COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
     </div>
 </footer>
-<!-- cart-fix -->
-<div class="cart-fix">
-    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
-    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+<!-- fix -->
+<div class="myPage-fix">
+    <ul class="myPage-fix__list">
+        <li class="myPage-fix__item"><a class="myPage-fix__link" href="javascript:void(0);">취소</a></li>
+        <li class="myPage-fix__item"><a class="myPage-fix__link" href="javascript:void(0);">저장</a></li>
+    </ul>
 </div>
-<!-- .cart-fix -->
+<!-- .fix -->
+<!-- email modify popup -->
+<section id="emailModify" class="popup">
+    <header class="popup__header">
+        <h3 class="popup__tit">이메일 주소 수정</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <div class="wrap emailModify-wrap">
+            <div class="emailModify-list">
+                <div class="email-box__field">
+                    <input type="text" class="input-v1" placeholder="내용을 입력하세요">
+                    <div class="email-box__select">
+                        <select name="" id="" class="form__select js-placeholder is-check">
+                            <option value="0">직접입력</option>
+                            <option value="1">@naver.com</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <a class="popup-confirm__link js-popup-open" href="#emailModifyResult">인증메일 발송</a>
+        </div>
+    </section>
+</section>
+<!-- .email modify popup -->
+
+
+<!-- email-modify-result popup -->
+<section id="emailModifyResult" class="popup">
+    <header class="popup__header">
+        <h3 class="popup__tit">이메일 주소 수정</h3>
+        <button class="popup__close js-popup-close">close</button>
+    </header>
+    <section class="popup__body">
+        <div class="wrap emailModify-wrap">
+            <div class="emailModify-list">
+                <div class="email-box__field">
+                    <input type="text" class="input-v1" placeholder="내용을 입력하세요">
+                    <div class="email-box__select">
+                        <select name="" id="" class="form__select js-placeholder is-check">
+                            <option value="0">직접입력</option>
+                            <option value="1">@naver.com</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emailModify-textBox">
+                <h4 class="emailModify-textBox__title">인증메일을 발송하였습니다.</h4>
+                <p class="emailModify-textBox__text">입력하신 메일을 확인 후 '완료' 버튼을 눌러 주세요.</p>
+            </div>
+
+            <div class="emailModify__btn">
+                <ul class="emailModify__btn--list">
+                    <li class="emailModify__btn--item">
+                        <a href="javascript:void(0)" class="popup-confirm__link btn-v1 type-primary">완료</a>
+                    </li>
+                    <li class="emailModify__btn--item">
+                        <a href="javascript:void(0)" class="popup-confirm__link btn-v1 type-white">인증메일 재발송</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="center-bullet">
+                <li class="center-bullet__item">이메일로 전송된 인증번호 유효기간은 30분입니다.</li>
+                <li class="center-bullet__item">10분 내 이메일을 받지 못하신 경우, 스팸메일함을 확인해 주시거나 '인증매일 재발송' 버튼을 눌러주세요</li>
+            </ul>
+        </div>
+    </section>
+</section>
+<!-- .email-modify-result popup -->
+
+
 
 	<script src="../../js/libs/jquery-3.6.0.min.js"></script>
 	
@@ -732,8 +812,12 @@
 	
 	<script src="../../js/common.js"></script>
 	
+		<script src="../../js/popup.js"></script>
 	
 	
+	
+	
+		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
 	
 </body>
 </html>

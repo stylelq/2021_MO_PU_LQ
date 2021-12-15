@@ -154,3 +154,177 @@
         }
     }
 }
+
+//하단 픽시드 버튼
+.myPage-fix{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: $bgSiteColor;
+    z-index: $fixButtonZindex;
+
+    &__list{
+        overflow: hidden;
+    }
+
+    &__item{
+        float:left;
+        width:37%;
+        position: relative;
+
+        &:nth-child(2){
+            width:63%;
+
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        display:block;
+        @include title1;
+        color:$black1;
+        text-align: center;
+        padding:calcRem(9rem) calcRem(15rem);
+        border:solid 1px $gray2;
+
+        .myPage-fix__item:nth-child(2) &{
+            border-color:$point1;
+            background-color: $point1;
+            color:$whiteColor;
+        }
+    }
+    
+    &.myPage-fix__red{
+        border-color:$point1;
+        background-color: $point1;
+        color:$whiteColor;
+
+        .myPage-fix__item{
+            &:not(:last-child):after{
+                content: '';
+                position: absolute;
+                @include vertical-center;
+                right: 0;
+                width: 1px;
+                height: calcRem(14rem);
+                background:$bulletColor;
+            }
+        }
+
+        .myPage-fix__link{
+            border-color:$point1;
+            color:$whiteColor;
+        }
+    }
+}
+
+
+
+
+/**********************
+  PAGE
+  회원정보수정 - 인증
+**********************/
+.myInfo-cont{
+    padding:0 calcRem(20rem);
+    &__text{
+        @include body3;
+    // line-height: calclH(19,12);
+    }
+
+    &__numberBox{
+        margin: calcRem(20rem) 0 calcRem(10rem);
+        padding: calcRem(15rem) calcRem(20rem);
+        
+        span{vertical-align: middle;}
+
+        .identi-num{
+            font-size: calcRem(20rem);
+            font-weight: $medium;
+            margin-left: calcRem(15rem);
+        }
+    }
+
+    .input-list{
+        &__item{
+            padding-top: calcRem(20rem);
+        }
+        .join-box__btn{
+            margin-top: calcRem(20rem); 
+        }
+    }
+}
+
+
+/**********************
+  PAGE
+  회원정보수정 - 수정
+**********************/
+.myInfoModify-center{
+    .myInfo-cont{
+        &__text{ padding:0 calcRem(20rem); }
+        &__table{
+            margin-top: calcRem(20rem);
+            border-top: 1px solid $black1;
+            border-bottom: 1px solid $black1;
+            padding:0 calcRem(20rem);
+
+            &--title{
+                margin:calcRem(30rem) 0 0;
+                @include title2;
+                text-align: center;
+                border-bottom: 1px solid $lightgray2;
+                padding-bottom: calcRem(20rem);
+            }
+        }
+    }
+
+    .center-bullet{
+        padding:calcRem(20rem) calcRem(20rem) 0;
+    }
+}
+.list-table{
+    border: 0;
+    margin-bottom: calcRem(20rem);
+
+    tbody{
+        tr:last-child th,
+        tr:last-child td{border:0;}
+        
+        .basic-table{
+            &--bold{
+                background: $whiteColor;
+                text-align: left;
+            }
+
+            &--btn{
+                float: right;
+                text-decoration: underline;
+            }
+        }
+
+        .form__checkbox{
+            margin-bottom:calcRem(10rem);
+        }
+
+        .form__radio{
+            display: inline-block;
+            &:not(:last-child){
+                margin-right:calcRem(10rem);
+            }
+        }
+
+        .form-date__field{
+            width:calcRem(143rem);
+        }
+    }
+}
+
+
+
+.paging{
+    margin-top: calcRem(25rem);
+}
