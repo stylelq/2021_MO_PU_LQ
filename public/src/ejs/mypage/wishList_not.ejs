@@ -1,0 +1,32 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "WISH LIST"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbMyPage %>
+    <div class="site-main">
+        <section class="wishList">
+            <!-- 데이터없음 -->
+            <div class="notData-wrap">
+                <div class="notData-wrap__title">
+                    <span class="notData-wrap__title--text">WISH LIST 내역이 없습니다.</span>
+                </div>
+                <div class="notData-wrap__textBox">
+                    <ul class="center-bullet">
+                        <li class="center-bullet__item">위시리스트에 담긴 상품은 장바구니에 담아 구매하실 수 있습니다.</li>
+                        <li class="center-bullet__item">장바구니 담기로 구매하는 경우 상품가격, 옵션, 사은품 내용은 위시리스트에 담은 시점이 아닌 구매시점 내용으로 반영됩니다.</li>
+                        <li class="center-bullet__item">판매중단, 일시 품절된 상품은 리스트에서 삭제될 수 있습니다. </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .데이터없음 -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_popup/_benefits %>
+<% include ../_include/_mypageFixRedButton %>
+<% include ../_include/_footer %>

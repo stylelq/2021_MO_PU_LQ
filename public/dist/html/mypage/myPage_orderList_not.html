@@ -488,7 +488,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">상품 Q&amp;A</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">주문배송조회</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -570,174 +570,79 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="myQna">
-            <div class="myQna-center">
-                <!-- list -->
-                <div class="myQna-wrap">
-                    <ul class="myQna-wrap__list myQna-waiting__list">
-                        <!-- item -->
-                        <li class="myQna-wrap__item">
-                            <div class="myQna-item">
-                                <dl class="myQna-item__inner">
-                                    <dt class="myQna-item__title">
-                                        <a href="#;" class="myQna-item__link js-myQna-more">
-                                            <div class="myQna-item__thumb">
-                                                <img class="myQna-item__img" src="../../images/dummy/detail-img1.jpg" alt="">
-                                            </div>
-                                            <div class="myQna-item__info">
-                                                <div class="myQna-item__state">
-                                                    <span class="myQna-item__tag inquiry-item__waiting">대기</span>
-                                                    <!-- 대기:inquiry-item__waiting 완료:inquiry-item__end -->
-                                                    <span class="myQna-item__state--title">매장 재고 여부</span>
-                                                </div>
-                                                <div class="myQna-item__pre">루이까또즈 1980 MONOGRAM 남성
-                                                    메신저백 MO4MG04NA</div>
-                                            </div>
-                                        </a>
-                                    </dt>
-                                    <dd class="myQna-item__cont">
-                                       <!-- 더미 -->
-                                        <div class="myQna-item__cont--head">
-                                            <div class="myQna-item__date">작성일 : 2021.06.25</div>
-                                            <div class="myQna-item__btn">
-                                                <a href="#" class="myQna-btn">수정</a>
-                                                <a href="#" class="myQna-btn">삭제</a>
-                                            </div>
-                                        </div>
-                                        <div class="myQna-item__cont--body">
-                                            <div class="myQna-item__bullet--string">Q.</div>
-                                            <div class="myQna-item__cont--text">매장 재고 여부</div>
-                                            <div class="myQna-item__cont--pre">
-                                            안녕하세요. 해당 상품을 매장에서 직접보고 구매하고싶은데 서울 지역 어느 매장을 방문하면 될까요?
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <!-- .item -->
+        <section class="myOrderList">
+            <div class="myOrderList-contents">
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small js-btn-dropDown">기간조회</button></li>
                     </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
 
-                    <ul class="myQna-wrap__list myQna-end__list">
-                        <!-- item -->
-                        <li class="myQna-wrap__item">
-                            <div class="myQna-item">
-                                <dl class="myQna-item__inner">
-                                    <dt class="myQna-item__title">
-                                        <a href="#;" class="myQna-item__link js-myQna-more">
-                                            <div class="myQna-item__thumb">
-                                                <img class="myQna-item__img" src="../../images/dummy/inquiry_thumbs.png" alt="">
-                                            </div>
-                                            <div class="myQna-item__info">
-                                                <div class="myQna-item__state">
-                                                    <span class="myQna-item__tag inquiry-item__end">완료</span>
-                                                    <!-- 대기:inquiry-item__waiting 완료:inquiry-item__end -->
-                                                    <span class="myQna-item__state--title">루이까또즈 LQ리그 모노그램 토트백 MO2PM02GA 상품에 대하여</span>
-                                                </div>
-                                                <div class="myQna-item__pre">루이까또즈 1980 MONOGRAM 남성
-                                                    메신저백 MO4MG04NA</div>
-                                            </div>
-                                        </a>
-                                    </dt>
-                                    <dd class="myQna-item__cont">
-                                        <!-- 더미 -->
-                                        <div class="myQna-item__cont--head">
-                                            <div class="myQna-item__date">작성일 : 2021.06.25</div>
-                                        </div>
-                                        <div class="myQna-item__cont--body">
-                                            <div class="myQna-item__bullet--string">Q.</div>
-                                            <div class="myQna-item__cont--text">루이까또즈 LQ리그 모노그램 토트백 MO2PM02GA 상품에 대하여</div>
-                                            <div class="myQna-item__cont--pre">
-                                                안녕하세요. 해당 상품을 매장에서 직접보고 구매하고 싶은데 서울 지역 어느 매장을 방문하면 될까요?
-                                            </div>
-                                        </div>
-                                        <div class="myQna-item__cont--anc bg-gray">
-                                            <div class="myQna-item__bullet--string">A.</div>
-                                            <div class="myQna-item__cont--pre">
-                                            안녕하세요.고객님<br>
-                                            루이까또즈 직영몰 담당자 입니다.<br>
-                                            항상 저희 루이까또즈를 찾아 주셔서 감사합니다.<br>
-                                            금일 오후 1시 이전까지 결제를 해주실 경우에는 당일출고가 되오며 금일 오후 1시 이후 주문건은 익일 출고가 됩니다.
-                                            </div>
-                                        </div>
-                                        <!-- .더미 -->
-                                    </dd>
-                                </dl>
-                            </div>
+                <!-- 배송현황 -->
+                <div class="myOrderList-workflow">
+                    <ul class="myOrderList-workflow__list">
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">주문<br>전체</p>
+                            <p class="myOrderList-workflow__item-figure">2</p>
                         </li>
-                        <!-- .item -->
-                        <!-- item -->
-                        <li class="myQna-wrap__item">
-                            <div class="myQna-item">
-                                <dl class="myQna-item__inner">
-                                    <dt class="myQna-item__title">
-                                        <a href="#;" class="myQna-item__link js-myQna-more">
-                                            <div class="myQna-item__thumb">
-                                                <img class="myQna-item__img" src="../../images/dummy/product_img2.png" alt="">
-                                            </div>
-                                            <div class="myQna-item__info">
-                                                <div class="myQna-item__state">
-                                                    <span class="myQna-item__tag inquiry-item__end">완료</span>
-                                                    <!-- 대기:inquiry-item__waiting 완료:inquiry-item__end -->
-                                                    <span class="myQna-item__state--title">루이까또즈 LQ리그 모노그램 토트백 MO2PM02GA 상품에 대하여</span>
-                                                </div>
-                                                <div class="myQna-item__pre">루이까또즈 1980 MONOGRAM 남성
-                                                    메신저백 MO4MG04NA</div>
-                                            </div>
-                                        </a>
-                                    </dt>
-                                    <dd class="myQna-item__cont">
-                                        <!-- 더미 -->
-                                        <div class="myQna-item__cont--head">
-                                            <div class="myQna-item__date">작성일 : 2021.06.25</div>
-                                        </div>
-                                        <div class="myQna-item__cont--body">
-                                            <div class="myQna-item__bullet--string">Q.</div>
-                                            <div class="myQna-item__cont--text">루이까또즈 LQ리그 모노그램 토트백 MO2PM02GA 상품에 대하여</div>
-                                            <div class="myQna-item__cont--pre">
-                                                안녕하세요. 해당 상품을 매장에서 직접보고 구매하고 싶은데 서울 지역 어느 매장을 방문하면 될까요?
-                                            </div>
-                                        </div>
-                                        <div class="myQna-item__cont--anc bg-gray">
-                                            <div class="myQna-item__bullet--string">A.</div>
-                                            <div class="myQna-item__cont--pre">
-                                            안녕하세요.고객님<br>
-                                            루이까또즈 직영몰 담당자 입니다.<br>
-                                            항상 저희 루이까또즈를 찾아 주셔서 감사합니다.<br>
-                                            금일 오후 1시 이전까지 결제를 해주실 경우에는 당일출고가 되오며 금일 오후 1시 이후 주문건은 익일 출고가 됩니다.
-                                            </div>
-                                        </div>
-                                        <!-- .더미 -->
-                                    </dd>
-                                </dl>
-                            </div>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">입금<br>대기</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
                         </li>
-                        <!-- .item -->
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">결제<br>완료</p>
+                            <p class="myOrderList-workflow__item-figure">1</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">상품<br>준비중</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">상품<br>배송중</p>
+                            <p class="myOrderList-workflow__item-figure">0</p>
+                        </li>
+                        <li class="myOrderList-workflow__item">
+                            <p class="myOrderList-workflow__item-name">배송<br>완료</p>
+                            <p class="myOrderList-workflow__item-figure">1</p>
+                        </li>
                     </ul>
                 </div>
-                <!-- list -->
-                <!-- paging -->
-<div class="paging">
-    <ul class="paging__list">
-        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
-        <li class="paging__item is-current"><span class="paging__link">1</span></li>
-        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
-        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
-        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
-    </ul>
-</div>
-<!-- .paging -->
+                <!-- .배송현황 -->
+                 
+                <!-- 주문 상품 -->
+                <section class="myOrderList-section">
+                    <!-- 데이터없음 -->
+                    <div class="notData-wrap">
+                        <div class="notData-wrap__title">
+                            <span class="notData-wrap__title--text">주문배송조회 목록이 없습니다.</span>
+                        </div>
+                        <div class="notData-wrap__textBox">
+                            <ul class="center-bullet">
+                                <li class="center-bullet__item">현금영수증은 PC용 사이트에서만 신청하실 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .데이터없음 -->
+                </section>
+                <!-- .주문 상품 -->
             </div>
-            <!-- 유의사항 -->
-            <div class="myQna-info">
-                <ul class="center-bullet">
-                    <li class="center-bullet__item">상품과 관계가 없는 내용이나 비방성 글은 등록자에게 사전 동의 없이 임의로 삭제될 수 있습니다.</li>
-                    <li class="center-bullet__item">답변완료된 문의는 수정, 삭제 하실 수 없습니다.</li>
-                </ul>
-            </div>
-            <!-- .유의사항 -->
         </section>
     </div>
 </div>

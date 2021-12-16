@@ -1488,41 +1488,41 @@
 
 
 //[팝업 공통사용]  _form에 center-bullet__item style
-@mixin popupBulletItem {
-    *[class *= -bullet__item],
-    *[class *= __bullet__item]{
-        padding-left:calcRem(7rem);
-        position: relative;
-        @include body3;
-        // color:$darkgray;
-        margin:calcRem(5rem) 0 0;
+// @mixin popupBulletItem {
+//     *[class *= -bullet__item],
+//     *[class *= __bullet__item]{
+//         padding-left:calcRem(7rem);
+//         position: relative;
+//         @include body3;
+//         // color:$darkgray;
+//         margin:calcRem(5rem) 0 0;
 
-        .type-small &{
-            @include body5;
-            font-size:calcRem(12rem);
-            margin:calcRem(5rem) 0 0;
-        }
+//         .type-small &{
+//             @include body5;
+//             font-size:calcRem(12rem);
+//             margin:calcRem(5rem) 0 0;
+//         }
 
-        &:after{
-            content:"";
-            width:calcRem(2rem);
-            height:calcRem(2rem);
-            border-radius: 100%;
-            position: absolute;
-            top:calcRem(8rem);
-            left:0;
-            background:$darkgray;
+//         &:after{
+//             content:"";
+//             width:calcRem(2rem);
+//             height:calcRem(2rem);
+//             border-radius: 100%;
+//             position: absolute;
+//             top:calcRem(8rem);
+//             left:0;
+//             background:$darkgray;
 
-            .type-small &{
-                background:$bulletColor;
-            }
-        }
+//             .type-small &{
+//                 background:$bulletColor;
+//             }
+//         }
 
-        &:first-child{
-            margin-top:0;
-        }
-    }
-}
+//         &:first-child{
+//             margin-top:0;
+//         }
+//     }
+// }
 
 //멤버쉽 전환
 .membership-join{
@@ -1546,7 +1546,7 @@
 
     &__contBox-bullet{
         margin-bottom: calcRem(30rem);
-        @include popupBulletItem;
+        // @include popupBulletItem;
     }
 }
 
@@ -1568,7 +1568,7 @@
     }
 
     &__bullet{
-        @include popupBulletItem;
+        // @include popupBulletItem;
     }
 
     &__link{
@@ -1918,3 +1918,161 @@
     }
 }
 
+//마이페이지 :: 주문취소
+.return-orderCancel__contents{   
+    margin-bottom: calcRem(50rem);  
+    overflow: hidden;
+    
+    .order-mypage__body--top{
+        padding:0 calcRem(20rem);
+        border-top: 1px solid $black1;
+        border-bottom: 1px solid $black1;
+        box-sizing: border-box;
+    }
+    .order-mypage__body--bottom{
+        padding:0 calcRem(20rem);
+
+        .order-mypage__title{ 
+            @include title2; 
+        }
+    }
+
+    .order-mypage__cont{
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+    }
+
+    .order-mypage__title{ 
+        @include body2; 
+    }
+
+    .order-mypage__type.no-step{
+        padding: calcRem(30rem) 0;
+    }
+    
+    .order-mypage__thumb{
+        margin-right:calcRem(15rem);
+        width:calcRem(120rem);
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        
+        img,
+        .order-mypage__img{ 
+            width:100%;
+            @include ab-center; 
+        }
+
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom:100%;
+        }
+    }
+            
+    .order-mypage__option{
+        margin-top:calcRem(12rem);
+    
+        &--item{    
+            &:after{
+                @include block-reset;
+            }
+        }
+    
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body3;
+        }
+    
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body3;
+        }
+    }
+
+    .order-mypage__info{
+        border: 0;
+        padding: calcRem(30rem) 0 calcRem(5rem);
+    }
+    
+    .order-mypage__price{
+        margin-top:calcRem(20rem);
+        clear: both;
+        padding:0 calcRem(20rem) calcRem(30rem);
+        position: relative;
+        line-height:0;
+        font-size:0;
+
+        &--current{
+            @include title1;
+            margin-right:calcRem(12rem);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        &--sale{
+            @include title2;
+            font-weight: $light;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+
+        &.type-single{
+            padding:0;
+            @include title1;
+        }
+    }
+
+    //message
+    .order-mypage__message{
+        margin-top:calcRem(30rem);
+        margin-bottom:calcRem(30rem);
+        padding-bottom:calcRem(30rem);
+        border-bottom: 1px solid $lightgray4;
+
+        &.is-active{
+            display: block;
+        }
+        select{
+            margin-bottom:calcRem(20rem);
+        }
+        textarea{
+            height:calcRem(85rem);
+        }
+    }
+
+    .order-mypage__text{ 
+        @include body3; 
+        margin: calcRem(30rem) 0;
+    }
+
+    .order-mypage__textBox{
+        margin-bottom: calcRem(30rem);
+
+        &--title{
+            margin-bottom: calcRem(10rem);
+            @include body2;
+        }
+        .center-bullet{
+            &__item{
+                color: $black1;
+                &:not(:nth-child(1)){ margin-top:calcRem(8rem); }
+            }
+
+            &.type-small{
+                .center-bullet__item{
+                    margin-top:calcRem(8rem);
+                    color: $darkgray;
+                } 
+            }
+        }
+    }
+
+}

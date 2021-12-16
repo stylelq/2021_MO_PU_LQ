@@ -859,7 +859,7 @@ input {
 		position: relative;
 		@include body3;
 		color:$darkgray;
-		margin:calcRem(9rem) 0 0;
+		margin:calcRem(10rem) 0 0;
 
 		.type-small &{
 			@include body5;
@@ -887,6 +887,33 @@ input {
 		}
 	}
 }
+
+// 불릿 - 숫자형
+.center-bullet-number{
+	&__item{
+		padding-left:calcRem(10rem);
+		position: relative;
+		@include body3;
+		color:$darkgray;
+		margin:calcRem(10rem) 0 0;
+
+		&:before{
+			content: '';
+			position: absolute;
+			left: -3px;
+		}
+		@for $i from 1 to 10{
+			&:nth-child(#{$i}):before{
+				content: '#{$i}.';
+			}
+		}
+		
+		&:after{
+			display: none;
+		}
+	}
+}
+
 
 //공통 테이블
 .basic-table{
