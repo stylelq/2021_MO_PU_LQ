@@ -1,0 +1,66 @@
+/**********************
+  PAGE
+  회원정보수정 - 수정
+**********************/
+.myInfoModify-center{
+    .myInfo-cont{
+        &__text{ padding:0 calcRem(20rem); }
+        &__table{
+            margin-top: calcRem(20rem);
+            border-top: 1px solid $black1;
+            border-bottom: 1px solid $black1;
+            padding:0 calcRem(20rem);
+
+            &--title{
+                margin:calcRem(30rem) 0 0;
+                @include title2;
+                text-align: center;
+                border-bottom: 1px solid $lightgray2;
+                padding-bottom: calcRem(20rem);
+            }
+        }
+    }
+
+    .center-bullet{
+        padding:calcRem(20rem) calcRem(20rem) 0;
+    }
+}
+.list-table{
+    border: 0;
+    margin-bottom: calcRem(20rem);
+
+    tbody{
+        tr:last-child th,
+        tr:last-child td{border:0;}
+        
+        .basic-table{
+            &--bold{
+                background: $whiteColor;
+                text-align: left;
+            }
+
+            &--btn{
+                float: right;
+                text-decoration: underline;
+            }
+        }
+
+        .form__checkbox{
+            margin-bottom:calcRem(10rem);
+        }
+
+        .form__radio{
+            display: inline-block;
+            &:not(:last-child){
+                margin-right:calcRem(10rem);
+            }
+        }
+
+        .form-date__field{
+            width:calcRem(143rem);
+        }
+    }
+}
+
+
+

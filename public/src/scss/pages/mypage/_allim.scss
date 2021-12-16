@@ -1,0 +1,24 @@
+/**********************
+  PAGE
+  재입고 알림 신청내역
+**********************/
+.myAllim-content{
+    margin-top: calcRem(35rem);
+
+    .order-mypage__header{
+        @include body5;
+        color: $darkgray;
+        overflow: hidden;
+        clear: both;
+    
+        &--date{
+            float: left;
+        }
+        &--btn{
+            float: right;
+            color: $black1;
+            text-decoration: underline;
+            margin-left: calcRem(10rem);
+        }
+    }
+}

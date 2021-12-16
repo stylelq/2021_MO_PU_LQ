@@ -1,0 +1,72 @@
+/**********************
+  PAGE
+  배송지관리
+**********************/
+.myAddress{
+    &-header{
+        padding:0 calcRem(20rem) calcRem(20rem);
+    }
+
+    &-content{
+        margin-top:calcRem(20rem);
+    }
+
+    .order-mypage__item--list{
+        padding: calcRem(10rem) 0 calcRem(10rem);
+        
+
+        &:not(:last-child){
+            padding-bottom: calcRem(30rem);
+            margin-bottom: calcRem(20rem);
+            border-bottom: 1px solid $lightgray4;
+        }
+    }
+
+    .user-address{
+        &__meta{
+            margin-bottom:calcRem(3rem);
+            @include body3;
+    
+            &--name{
+                @include body3;
+                margin-right:calcRem(4rem);
+            }
+    
+            &--position{
+                @include body3;
+                margin-left:calcRem(4rem);
+            }
+
+            &--state{
+                color: $gray2;
+                font-weight: $regular;
+            }
+        }
+
+        &__tel{
+            @include body3;
+            margin-bottom:calcRem(2rem);
+        }
+    
+        &__address{
+            @include body3;
+            margin-top:calcRem(10rem);
+        }
+
+        &__state{
+            @include body3;
+            margin-top:calcRem(20rem);
+        }
+
+        &__btn{
+            @include body3;
+            margin-top:calcRem(30rem);
+            text-align: right;
+            text-decoration: underline;
+
+            &--modify, &--del{
+                margin-left: calcRem(10rem);
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+/**********************
+  PAGE
+  적립금
+**********************/
+.myReserves-section{
+    &__list{
+        margin-top:calcRem(40rem);
+        border-top: 1px solid $black1;
+        border-bottom: 1px solid $black1;
+    }
+    .paging{margin-top: 25px;}
+}
+
+// 현재 적립금/소멸 적립금
+.myReserves-pay{
+    padding:0 calcRem(20rem) calcRem(30rem);
+
+    .payment-total{
+        $this:&;
+    
+        &__title{
+            margin: 0;
+            margin-bottom:calcRem(20rem);
+            
+            .payment-total__text{  @include title2;  }
+            .payment-total__price{  
+                @include body3; 
+                span{
+                    font-size: calcRem(14rem);
+                    font-weight: $regular;
+                    color: $point1;
+                }
+            }
+        }
+    
+        &__inner{
+            margin:0;
+    
+            &:after{
+                @include block-reset;
+            }
+        }
+    
+        &__text{
+            float:left;
+            @include body3;
+    
+            #{$this}__title &{
+                @include title2;
+            }
+        }
+    
+        &__price{
+            overflow: hidden;
+            text-align: right;
+            @include body3;
+    
+            #{$this}__title &{
+                @include title2;
+            }
+        }
+    
+    }
+}
+
+//리스트
+.mypage-reserve{
+    &__item{
+        padding:calcRem(20rem);
+        &:not(:last-child){
+            border-bottom: 1px solid $lightgray4;
+        }
+    }
+    &__date,&__info,&__point{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &__date{
+        font-size:calcRem(10rem);
+        color: $darkgray;
+    }
+
+    &__info{ 
+        padding:0 calcRem(15rem); 
+        width: 80%;
+        line-height:calcRem(19rem); 
+    }
+    &__type{
+        font-size:calcRem(12rem);
+        font-weight: $medium;
+    }
+    &__orderId{
+        font-size:calcRem(11rem);
+        .order-number{ font-size:calcRem(12rem); }
+    }
+
+    &__point{
+        font-size:calcRem(10rem);
+        color: $darkgray;
+        width: 20%;
+        text-align: right;
+
+        &.num-plus{
+            color: $point1;
+        }
+    }
+    
+}

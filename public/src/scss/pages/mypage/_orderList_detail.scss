@@ -1,0 +1,321 @@
+/**********************
+  PAGE
+  주문배송조회 상세
+**********************/
+//주문 상품정보 
+.myOrderListDetail-type{
+    padding: calcRem(20rem);
+    border-top: 1px solid $black1;
+
+    //주문 번호
+    .myOrderListDetail-title{
+        padding-bottom:  calcRem(20rem);
+        border-bottom: 1px solid $lightgray4;
+        @include body2;
+
+        &__date{
+            @include body5;
+            color: $darkgray;
+        }
+    } 
+
+    .myOrderListDetail-cont{
+        //주문 상품정보 title
+        &__title{
+            @include title2;
+            margin:calcRem(20rem) 0;
+        }
+
+        //주문상품 현재 상태
+        &__state{
+            @include body2;
+            overflow: hidden;
+
+            &--title{
+                color: $point1;
+                width: calcRem(77rem);
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &--list{ 
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &--item{
+                display: inline-block;
+                vertical-align: middle;
+                width: calcRem(77rem);
+                .myOrderList-btn{
+                    box-sizing: border-box;
+                    border-color: $gray2;
+                    background: $whiteColor;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .order-mypage__item{
+        border:0;
+        padding-top: 0;
+
+        .order-mypage__contents{
+            padding:calcRem(30rem) calcRem(10rem) calcRem(10rem) 0;
+        }
+
+        .order-mypage__price{
+            margin-top:calcRem(20rem);
+            clear: both;
+            padding-right:calcRem(20rem);
+            position: relative;
+            line-height:0;
+            font-size:0;
+    
+            &--current{
+                @include title2;
+                margin-right:calcRem(12rem);
+                display: inline-block;
+                vertical-align: middle;
+            }
+    
+            &--sale{
+                @include title2;
+                color:$throughColor;
+                text-decoration: line-through;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+
+        //메세지 카드
+        .order-mypage__meta{
+            margin-top:calcRem(15rem);
+            line-height:0;
+            // padding-left:calcRem(20rem);
+            // padding-right:calcRem(20rem);
+
+            &--state{
+                @include body2;
+                margin-top:calcRem(25rem);
+            }
+
+            &--list{
+                margin:0 calcRem(-15rem);
+                &:after{
+                    @include block-reset;
+                }
+            }
+
+            &--item{
+                float:left;
+                margin:0 calcRem(15rem);
+                position: relative;
+                padding-right:calcRem(24rem);
+            }
+
+            &--btn{
+                width:calcRem(16rem);
+                height:calcRem(16rem);
+                position: absolute;
+                right:0;
+                @include vertical-center;
+                @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+                background-size:calcRem(16rem) calcRem(16rem) ;
+            }
+        } 
+
+        //message
+        .order-mypage__message{
+            margin-top:calcRem(15rem);
+            // padding-left:calcRem(20rem);
+            // padding-right:calcRem(20rem);
+            // display: none;
+    
+            &.is-active{
+                display: block;
+            }
+    
+            textarea{
+                height:calcRem(57rem);
+            }
+        }
+    }
+}
+
+// 배송정보
+.myOrderListDetail-info{
+    padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+    border-top: 1px solid $gray1;
+
+    .myOrderListDetail-title{
+        @include title2;
+        margin-top:calcRem(10rem);
+        margin-bottom:calcRem(8rem);
+
+        .info-more{
+            float: right;
+            @include body2;
+
+            &:after{
+                content: '';
+                display: inline-block;
+                width:calcRem(4rem);
+                height:calcRem(9rem);
+                box-sizing: border-box;
+                margin-left: calcRem(5rem);
+                @include pageBackground('/images/common/ico_address_more.svg','no-repeat center center / contain');    
+            }
+        }
+    }
+
+    .user-address{
+        &__meta{
+            margin-bottom:calcRem(3rem);
+            @include body3;
+    
+            &--name{
+                @include body3;
+                margin-right:calcRem(4rem);
+            }
+    
+            &--position{
+                @include body3;
+                margin-left:calcRem(4rem);
+            }
+        }
+
+        &__tel{
+            @include body3;
+            margin-bottom:calcRem(2rem);
+        }
+    
+        &__address{
+            @include body3;
+        }
+
+        &__state{
+            @include body3;
+            margin-top:calcRem(20rem);
+        }
+    }
+}
+
+
+.myOrderListDetail-payment{
+    padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+
+    .payment-total{
+        $this:&;
+
+        &__title{
+            margin: 0;
+            margin-bottom:calcRem(20rem);
+            
+            .payment-total__text{  @include title2;  }
+            .payment-total__price{  
+                @include title2;  
+                color: $point1;
+            }
+        }
+    
+        &__inner{
+            margin:0;
+    
+            &:after{
+                @include block-reset;
+            }
+        }
+    
+        &__text{
+            float:left;
+            @include body3;
+    
+            #{$this}__title &{
+                @include title2;
+            }
+        }
+    
+        &__price{
+            overflow: hidden;
+            text-align: right;
+            @include body3;
+    
+            #{$this}__title &{
+                @include title2;
+                color:$point1;
+            }
+        }
+    
+        &__item{
+            margin-top:calcRem(10rem);
+    
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+    }
+    
+}
+
+//결제방식
+.myOrderListDetail-paymentMethod{
+    padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+
+    .payment-info{
+        &__title{
+            @include title2;
+            margin-top:calcRem(10rem);
+            margin-bottom:calcRem(8rem);
+        }
+    
+        &__item{
+            @include body3;
+        }
+    }
+}
+
+//주문자 정보
+.myOrderListDetail-user{
+    padding:calcRem(20rem) calcRem(20rem) calcRem(0);
+    border-top: 1px solid $gray1;
+
+    .myOrderListDetail-title{
+        @include title2;
+        margin-top:calcRem(10rem);
+        margin-bottom:calcRem(8rem);
+    }
+    .order-info{
+        &__title{
+            &--inner{
+                font-size:0;
+                line-height:0;
+                margin:0;
+    
+                &:after{
+                    @include block-reset;
+                }
+            }
+    
+            &--name{
+                display: block;
+                vertical-align: middle;
+                @include body3;
+                font-weight: $regular;
+            }
+    
+            &--tel{
+                display: block;
+                vertical-align: middle;
+                @include body3;
+                margin:calcRem(4rem) 0 0;
+            }
+        }
+    
+        &__email{
+            margin-top:calcRem(4rem);
+            @include body3;
+        }
+    }
+}
