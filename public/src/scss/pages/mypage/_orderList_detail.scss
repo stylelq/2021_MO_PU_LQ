@@ -294,8 +294,9 @@
 
 //주문자 정보
 .myOrderListDetail-user{
-    padding:calcRem(20rem) calcRem(20rem) calcRem(0);
+    padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
     border-top: 1px solid $gray1;
+    border-bottom: 1px solid $black1;
 
     .myOrderListDetail-title{
         @include title2;

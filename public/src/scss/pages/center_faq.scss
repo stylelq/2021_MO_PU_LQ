@@ -167,3 +167,26 @@
         }
     }
 }
+
+
+//데이터 없음
+.service-center{
+    .notData-wrap{
+        margin-top:calcRem(30rem);
+
+        &__title{
+            text-align: center;
+            padding: calcRem(30rem) 0 calcRem(30rem);
+            @include body3;
+
+            &.is-point{
+                @include title2;
+                padding: 0;
+
+                .notData-wrap__title--text{
+                    color: $point1;
+                }
+            }
+        }
+    }
+}

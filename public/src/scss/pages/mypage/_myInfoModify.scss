@@ -15,7 +15,7 @@
                 margin:calcRem(30rem) 0 0;
                 @include title2;
                 text-align: center;
-                border-bottom: 1px solid $lightgray2;
+                border-bottom: 1px solid $lightgray4;
                 padding-bottom: calcRem(20rem);
             }
         }
@@ -30,8 +30,13 @@
     margin-bottom: calcRem(20rem);
 
     tbody{
+        th,td{
+            border-color: $lightgray4;
+        }
         tr:last-child th,
-        tr:last-child td{border:0;}
+        tr:last-child td{
+            border:0;
+        }
         
         .basic-table{
             &--bold{

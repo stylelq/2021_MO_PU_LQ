@@ -159,7 +159,10 @@
     }
 
     // 상세 안내
-    &-info{ padding:calcRem(20rem); }
+    &-info{ 
+        padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+        border-bottom: 1px solid $black1; 
+    }
 }
 
 

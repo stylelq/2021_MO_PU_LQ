@@ -1,0 +1,80 @@
+<%
+type = "center"
+page = "center"
+popup = "false"
+lnbTitle = "FAQ"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <% include ../_include/_lnbSelectCenter %>
+    <div class="site-main">
+        <section class="service-center">
+            <div class="center-filter">
+                <div class="wrap">
+                    <!-- search -->
+                    <div class="center-search">
+                        <div class="address-search__form">
+                            <div class="form__search">
+                                <input type="text" class="form__search--input" name="keyword" id="keyword" autocomplete="off" placeholder="검색어를 입력해주세요." required="">
+                                <button type="submit" class="form__search--btn"><span class="sr-only">검색</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .search -->
+
+                    <!-- 데이터없음 -->
+                    <div class="notData-wrap">
+                        <div class="notData-wrap__title is-point">
+                            <span class="notData-wrap__title--text">"배숑"</span> 검색결과 총 <span class="notData-wrap__title--text">0</span>개 입니다.
+                        </div>
+                    </div>
+                    <!-- .데이터없음 -->
+
+                    <!-- tab -->
+                    <div class="center-tab">
+                        <ul class="center-tab__list">
+                            <li class="center-tab__item is-current"><!-- 현재 소팅부분에 is-current -->
+                                <a href="javascript:void(0)" class="center-tab__link">전체</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">상품</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">주문/결제</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">교환/반품</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">쿠폰/적립금</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">A/S</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">포장</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">회원</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .tab -->
+                </div>
+            </div>
+            <div class="center-faq">
+                <!-- 데이터없음 -->
+                <div class="notData-wrap">
+                    <div class="notData-wrap__title">
+                        <span class="notData-wrap__title--text">검색결과가 없습니다.<br>
+                            검색어를 다시 확인하시고 입력해주세요.</span>
+                    </div>
+                </div>
+                <!-- .데이터없음 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
