@@ -75,26 +75,28 @@
 // 유저 정보 :: 쿠폰,적립금,위시리스트,최근본상품
 .myLouis-info{
     &__list{ 
-        padding:calcRem(24rem) 0 calcRem(20rem); 
-        overflow: hidden;
-        // display: -webkit-flex;display: -ms-flexbox;
-        // display: flex;
-        // -webkit-box-pack: justify;-ms-flex-pack: justify;
-        // -webkit-justify-content: space-between;
-        // justify-content: space-between;
+        // padding:calcRem(24rem) 0 calcRem(20rem); 
+        // overflow: hidden;
+
+        padding:calcRem(24rem) calcRem(20rem) calcRem(20rem);
+        display: -webkit-flex;display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;-ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
     }
 
     &__item{
-        float: left;
-        min-width:calcRem(60rem);
+        // float: left;
+        // min-width:calcRem(60rem);
         text-align: center;
 
-        &:nth-child(1){ 
-            margin-left:calcRem(4rem);
-            margin-right: calcRem(20rem); 
-        }
-        &:nth-child(2){ margin-right: calcRem(36rem); }
-        &:nth-child(3){ margin-right: calcRem(38rem); }
+        // &:nth-child(1){ 
+        //     margin-left:calcRem(4rem);
+        //     margin-right: calcRem(20rem); 
+        // }
+        // &:nth-child(2){ margin-right: calcRem(36rem); }
+        // &:nth-child(3){ margin-right: calcRem(38rem); }
 
         &-icon{
             box-sizing: border-box;

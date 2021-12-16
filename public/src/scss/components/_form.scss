@@ -919,7 +919,7 @@ input {
 .basic-table{
 	$this:&;
 	margin-bottom:calcRem(25rem);
-	border-top:solid 1px $black1;
+	border-top:solid 1px $grayTextColor;
 	width:100%;
 
 	thead{

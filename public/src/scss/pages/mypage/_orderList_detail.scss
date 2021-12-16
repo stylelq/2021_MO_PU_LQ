@@ -9,8 +9,9 @@
 
     //주문 번호
     .myOrderListDetail-title{
-        padding-bottom:  calcRem(20rem);
+        padding:calcRem(10rem) 0 calcRem(30rem);
         border-bottom: 1px solid $lightgray4;
+        box-sizing: border-box;
         @include body2;
 
         &__date{
@@ -66,7 +67,6 @@
         .order-mypage__price{
             margin-top:calcRem(20rem);
             clear: both;
-            padding-right:calcRem(20rem);
             position: relative;
             line-height:0;
             font-size:0;
