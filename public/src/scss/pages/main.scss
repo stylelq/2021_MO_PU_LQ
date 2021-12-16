@@ -254,30 +254,31 @@
 		line-height:0;
 	}
 	&__source{
-		display: block;
+		/*display: block;
 		height: calcRem(540rem);
 		&--img{
 		}
 		&--video{
-		}
+		}*/
 	}
 	&__img{
 		max-width: 100%;
 		height: 100%;
 		width: 100%;
-		object-fit: cover;
 	}
 	&__video{
 		width: 100%;
+		height: calcRem(410rem);
+		object-fit: cover;
 	}
 	&__content{
 		bottom: calcRem(50rem);
 		position: absolute;
 	}
 	&__name{
-		color: #fff;
 		font-size: calcRem(16rem);
 		line-height: calcRem(28rem);
+		color: #fff;
 	}
 	&__pagination{
 		bottom: calcRem(22rem);
@@ -288,6 +289,7 @@
 		z-index: 100;
 		font-size:0;
 		line-height:0;
+		color: #fff;
 
 		.swiper-pagination{
 			&-current {
@@ -300,7 +302,7 @@
 					content: "";
 					width: 1px;
 					height: calcRem(10rem);
-					background-color: $gray1;
+					background-color: #fff;
 					position: absolute;
 					right: 0;
 					@include vertical-center;
@@ -387,7 +389,7 @@
 		margin: 0 calcRem(18rem);
 	}
 	&__item{
-		padding: 0 calcRem(1.5rem);
+		padding: 0 calcRem(2.5rem);
 		box-sizing: border-box;
 	}
 	&__inner {
@@ -419,9 +421,10 @@
 		line-height: calcRem(20rem);
 	}
 	&__pagination {
-		bottom: calcRem(18rem);
+		/*bottom: calcRem(20rem);*/
+		padding: calcRem(20rem) 0 0;
 		width: 100%;
-		position: absolute;
+		position: relative;
 		color: #000;
 		text-align: center;
 		z-index: 100;
@@ -455,14 +458,17 @@
 	}
 	&__more{
 		display: block;
+		padding-top: calcRem(25rem);
 	}
 	&__link{
 		display: block;
 	}
 	&__button{
-		margin: calcRem(20rem) calcRem(75rem) 0;
+		margin: 0 auto;
+		width: calcRem(210rem);
 		padding: calcRem(8rem) 0;
 		border: 1px solid #000;
+		font-size: calcRem(12rem);
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -691,6 +697,7 @@
 .best-thumb{
 	//썸네일
 	&__inner{
+		padding: calcRem(20rem) 0 calcRem(50rem) ;
 		position: relative;
 		width:100%;
 		display: block;
@@ -776,6 +783,7 @@
 
 	&__name{
 		@include body3;
+		padding-bottom: calcRem(5rem);
 	}
 
 	&__price {
