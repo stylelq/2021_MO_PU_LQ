@@ -1488,41 +1488,41 @@
 
 
 //[팝업 공통사용]  _form에 center-bullet__item style
-// @mixin popupBulletItem {
-//     *[class *= -bullet__item],
-//     *[class *= __bullet__item]{
-//         padding-left:calcRem(7rem);
-//         position: relative;
-//         @include body3;
-//         // color:$darkgray;
-//         margin:calcRem(5rem) 0 0;
+@mixin popupBulletItem {
+    *[class *= -bullet__item],
+    *[class *= __bullet__item]{
+        padding-left:calcRem(7rem);
+        position: relative;
+        @include body3;
+        // color:$darkgray;
+        margin:calcRem(5rem) 0 0;
 
-//         .type-small &{
-//             @include body5;
-//             font-size:calcRem(12rem);
-//             margin:calcRem(5rem) 0 0;
-//         }
+        .type-small &{
+            @include body5;
+            font-size:calcRem(12rem);
+            margin:calcRem(5rem) 0 0;
+        }
 
-//         &:after{
-//             content:"";
-//             width:calcRem(2rem);
-//             height:calcRem(2rem);
-//             border-radius: 100%;
-//             position: absolute;
-//             top:calcRem(8rem);
-//             left:0;
-//             background:$darkgray;
+        &:after{
+            content:"";
+            width:calcRem(2rem);
+            height:calcRem(2rem);
+            border-radius: 100%;
+            position: absolute;
+            top:calcRem(8rem);
+            left:0;
+            background:$darkgray;
 
-//             .type-small &{
-//                 background:$bulletColor;
-//             }
-//         }
+            .type-small &{
+                background:$bulletColor;
+            }
+        }
 
-//         &:first-child{
-//             margin-top:0;
-//         }
-//     }
-// }
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
 
 //멤버쉽 전환
 .membership-join{
@@ -1530,7 +1530,7 @@
 
     &__contBox-img{
         height: calcRem(120rem);
-        border: 1px solid $lightgray1;
+        border: 1px solid $lightgray4;
         margin-bottom: calcRem(15rem);
         position: relative;
         box-sizing: border-box;
@@ -1546,7 +1546,7 @@
 
     &__contBox-bullet{
         margin-bottom: calcRem(30rem);
-        // @include popupBulletItem;
+        @include popupBulletItem;
     }
 }
 
@@ -1568,7 +1568,7 @@
     }
 
     &__bullet{
-        // @include popupBulletItem;
+        @include popupBulletItem;
     }
 
     &__link{
@@ -1577,15 +1577,15 @@
         @include body2;
         color: $point1;
 
-        & a:after{
-            content: '';
-            display: inline-block;
-            width:calcRem(6rem);
-            height:calcRem(10rem);
-            box-sizing: border-box;
-            margin-left: calcRem(10rem);
-            @include pageBackground('/images/common/ico_red_arrow.svg','no-repeat center center / contain');
-        }
+        // & a:after{
+        //     content: '';
+        //     display: inline-block;
+        //     width:calcRem(6rem);
+        //     height:calcRem(10rem);
+        //     box-sizing: border-box;
+        //     margin-left: calcRem(10rem);
+        //     @include pageBackground('/images/common/ico_red_arrow.svg','no-repeat center center / contain');
+        // }
     }
 }
 
@@ -1780,7 +1780,7 @@
             display: block;
         }
         select{
-            margin-bottom:calcRem(20rem);
+            margin-bottom:calcRem(1         0rem);
         }
         textarea{
             height:calcRem(85rem);

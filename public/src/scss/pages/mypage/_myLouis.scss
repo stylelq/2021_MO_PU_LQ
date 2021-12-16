@@ -70,21 +70,31 @@
 .myLouis-contents{
     border-top: 1px solid $black1;
     border-bottom: 1px solid $black1;
-    padding-bottom: calcRem(9rem);
-    margin-bottom:calcRem(17rem);
 }
 
 // 유저 정보 :: 쿠폰,적립금,위시리스트,최근본상품
 .myLouis-info{
     &__list{ 
-        padding:calcRem(24rem) calcRem(20rem) calcRem(20rem); 
+        padding:calcRem(24rem) 0 calcRem(20rem); 
         overflow: hidden;
+        // display: -webkit-flex;display: -ms-flexbox;
+        // display: flex;
+        // -webkit-box-pack: justify;-ms-flex-pack: justify;
+        // -webkit-justify-content: space-between;
+        // justify-content: space-between;
     }
 
     &__item{
         float: left;
-        width: 25%;
+        min-width:calcRem(60rem);
         text-align: center;
+
+        &:nth-child(1){ 
+            margin-left:calcRem(4rem);
+            margin-right: calcRem(20rem); 
+        }
+        &:nth-child(2){ margin-right: calcRem(36rem); }
+        &:nth-child(3){ margin-right: calcRem(38rem); }
 
         &-icon{
             box-sizing: border-box;
@@ -96,7 +106,7 @@
             height:calcRem(18rem);
         }
         &:nth-child(2) &-icon{ 
-            @include pageBackground('/images/common/ico_wallet.svg','no-repeat center center / contain'); 
+            @include pageBackground('/images/common/ico_point.svg','no-repeat center center / contain'); 
             width:calcRem(20rem);
             height:calcRem(19rem);
         }
@@ -129,13 +139,21 @@
     &__list{
         border-top: 1px solid $gray2;
         padding: calcRem(5rem) calcRem(20rem) 0;
+        box-sizing: border-box;
+        &:first-child{
+            padding-top: calcRem(10rem);
+            border-top: 1px solid $black1;
+        }
+        &:last-child{
+            padding-bottom: calcRem(5rem);
+        }
     }
 
     &__item{
-        padding: calcRem(11rem) calcRem(10rem) calcRem(13rem);
+        padding: calcRem(10rem) 0 calcRem(14rem);
         @include body3;
         &:not(:last-child){
-            border-bottom: 1px solid $bgColor;
+            border-bottom: 1px solid $lightgray4;
         }
 
         position: relative;
@@ -144,9 +162,11 @@
             position: absolute;
             right:calcRem(10rem);
             @include vertical-center;
-            @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');
-            width:calcRem(6rem);
-            height:calcRem(10rem);
+            @include pageBackground('/images/common/ico_list_more.svg','no-repeat center center / contain');
+            // width:calcRem(6rem);
+            // height:calcRem(10rem);
+            width:6px;
+            height:10px;
         }
     }
 }

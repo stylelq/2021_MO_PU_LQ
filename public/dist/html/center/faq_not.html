@@ -21,8 +21,13 @@
 <!-- 공통 css -->
 <link rel="stylesheet" href="../../css/common.css">
 
-	<link rel="stylesheet" href="../../css/pages/platform.css">
+	<link rel="stylesheet" href="../../css/pages/center_notice.css">
+	<link rel="stylesheet" href="../../css/pages/center_faq.css">
+	<link rel="stylesheet" href="../../css/pages/center_inquiry.css">
 	<link rel="stylesheet" href="../../css/pages/product.css">
+	<link rel="stylesheet" href="../../css/pages/center_membership.css">
+	<link rel="stylesheet" href="../../css/pages/center_store_inquiry.css">
+		<link rel="stylesheet" href="../../css/pages/center_stores.css">
 
 </head>
 
@@ -489,7 +494,7 @@
 <div class="lnb">
     <div class="lnb__tit">
         <a href="" class="lnb__back js-lnb-back">back</a>
-        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">ALL WORKS</span></a>
+        <a href="#;" class="lnb__btn js-lnb-btn"><span class="lnb__arrow">FAQ</span></a>
     </div>
     <!-- lnbMenu -->
     <div class="lnb__dim js-lnb-close">dim</div>
@@ -497,32 +502,42 @@
         <ul class="lnb__list">
             <li class="lnb__item is-active">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">ALL Works</span>
+                    <span class="lnb__line">공지사항</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">L Edition</span>
+                    <span class="lnb__line">FAQ</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Art Furniture</span>
+                    <span class="lnb__line">1:1문의하기</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Art Object</span>
+                    <span class="lnb__line">MEMBERSHIP</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Textile & Fashion</span>
+                    <span class="lnb__line">REVIEW</span>
                 </a>
             </li>
             <li class="lnb__item ">
                 <a href="" class="lnb__link">
-                    <span class="lnb__line">Printed Matter</span>
+                    <span class="lnb__line">알리미</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">STORES</span>
+                </a>
+            </li>
+            <li class="lnb__item ">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">대량구매 / 입점문의</span>
                 </a>
             </li>
         </ul>
@@ -531,122 +546,70 @@
 </div>
 <!-- .lnb -->
     <div class="site-main">
-        <section class="platform">
-            <!-- platform video -->
-            <div class="platform-banner platform-banner--img"><!-- 안에 이미지가 들어갈시 platform-banner--img 클래스, 비디오 추가시 platform-banner--video 클래스 추가 -->
-                <img class="platform-banner__img" src="../../images/platform/mo_ArtObject.jpg" alt="" />
+        <section class="service-center">
+            <div class="center-filter">
+                <div class="wrap">
+                    <!-- search -->
+                    <div class="center-search">
+                        <div class="address-search__form">
+                            <div class="form__search">
+                                <input type="text" class="form__search--input" name="keyword" id="keyword" autocomplete="off" placeholder="검색어를 입력해주세요." required="">
+                                <button type="submit" class="form__search--btn"><span class="sr-only">검색</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .search -->
+
+                    <!-- 데이터없음 -->
+                    <div class="notData-wrap">
+                        <div class="notData-wrap__title is-point">
+                            <span class="notData-wrap__title--text">"배숑"</span> 검색결과 총 <span class="notData-wrap__title--text">0</span>개 입니다.
+                        </div>
+                    </div>
+                    <!-- .데이터없음 -->
+
+                    <!-- tab -->
+                    <div class="center-tab">
+                        <ul class="center-tab__list">
+                            <li class="center-tab__item is-current"><!-- 현재 소팅부분에 is-current -->
+                                <a href="javascript:void(0)" class="center-tab__link">전체</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">상품</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">주문/결제</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">교환/반품</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">쿠폰/적립금</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">A/S</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">포장</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="javascript:void(0)" class="center-tab__link">회원</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .tab -->
+                </div>
             </div>
-            <!-- .platform video -->
-            <!-- product post -->
-            <div class="product-post product-post--post">
-                <ul class="product-post__list">
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">SOLD OUT</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy4-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">플랫폼엘 MingYes project Rug (Medium 1)</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__state">NEW</div>
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy4-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">플랫폼엘 MingYes project Rug (Medium 1)</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy4-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">플랫폼엘 MingYes project Rug (Medium 1)</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy4-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">플랫폼엘 MingYes project Rug (Medium 1)</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy4-1.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">플랫폼엘 MingYes project Rug (Medium 1)</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--current">289,290원</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                    <li class="product-post__item">
-                        <!-- item -->
-                        <div class="product-item">
-                            <a href="" class="product-item__link">
-                                <div class="product-item__thumb">
-                                    <img class="product-item__img" src="../../images/dummy/platform-dummy4-2.jpg" alt="" />
-                                </div>
-                                <div class="product-item__cont">
-                                    <div class="product-item__title">플랫폼엘 MingYes project Rug (Medium 1)</div>
-                                    <div class="product-item__price">
-                                        <span class="product-item__price--current">판매가 별도문의</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- .item -->
-                    </li>
-                </ul>
+            <div class="center-faq">
+                <!-- 데이터없음 -->
+                <div class="notData-wrap">
+                    <div class="notData-wrap__title">
+                        <span class="notData-wrap__title--text">검색결과가 없습니다.<br>
+                            검색어를 다시 확인하시고 입력해주세요.</span>
+                    </div>
+                </div>
+                <!-- .데이터없음 -->
             </div>
-            <!-- .product post -->
         </section>
     </div>
 </div>
@@ -726,8 +689,8 @@
 	
 	<script src="../../js/common.js"></script>
 	
-		<script src="../../js/popup.js"></script>
 	
+		<script src="../../js/libs/swiper-4.5.0.min.js"></script>
 	
 	
 	
