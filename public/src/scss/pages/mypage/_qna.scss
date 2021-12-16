@@ -3,7 +3,7 @@
 
 /**********************
   PAGE
-  상품 Q&A
+  상품 Q&A 
 **********************/
 //레이아웃
 .myQna{
@@ -19,6 +19,11 @@
         &:not(:last-child){
             border-bottom:solid 1px $lightgray4;
         }
+    }
+
+    //유의사항
+    &-info{
+        padding: calcRem(30rem) calcRem(20rem) 0;
     }
 }
 
@@ -173,6 +178,7 @@
           
    
 }
+
 
 
 

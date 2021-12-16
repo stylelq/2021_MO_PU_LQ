@@ -70,159 +70,172 @@
 }
 
 //---- 마이페이지 리스트 공통 
-.order-mypage__item{
+.order-mypage{
     $orderList : '.order-mypage';
 
-    padding: calcRem(20rem);
-    border-top: 1px solid $black1;
-    &:last-child{ border-bottom: 1px solid $black1; }
-
-    // 주문번호, 진행 상태/step, 날짜
-    #{$orderList}__info{
+    // 리스트 레이아웃
+    &__item{
+        padding: calcRem(20rem);
+        border-top: 1px solid $black1;
+        &:last-child{ border-bottom: 1px solid $black1; }
+    }
+    &__info{
         padding:calcRem(10rem) 0 calcRem(30rem);
         overflow: hidden;
         @include body2;
         border-bottom: 1px solid $lightgray4;
+    }
+    &__contents{
+        padding:calcRem(16rem) calcRem(10rem) calcRem(22rem) 0;      
+        overflow: hidden; 
+    }
 
-        #{$orderList}__type{
-            float: left;
-        }
-        #{$orderList}__step{
-            float: right;
-        }
+    // 문구
+    &__header{
+        padding:calcRem(10rem) 0 calcRem(30rem);
+        text-align: center;
 
-        #{$orderList}__orderId-link{
-            margin-left:calcRem(5rem);
-            &:after{
-                content: '';
-                display: inline-block;
-                width:calcRem(6rem);
-                height:calcRem(10rem);
-                box-sizing: border-box;
-                margin-left: calcRem(10rem);
-                vertical-align: middle;
-                @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');
-            }
-        }
-        #{$orderList}__date{
-            @include body5;
-            color: $darkgray;
-        }
-        #{$orderList}__step{
-            margin-left:auto;
-            color:$point1;
+        &--title{
+            margin: 0;
+            @include title2;
         }
     }
 
+    // 주문번호, 진행 상태/step, 날짜
+    &__type{
+        float: left;
+
+        &.no-step{
+            float: none;
+
+            padding-bottom: calcRem(30rem);
+            border-bottom: 1px solid $lightgray4;
+            @include body2;
+        }
+    }
+    &__step{
+        float: right;
+    }
+    &__orderId-link{ //더보기
+        margin-left:calcRem(5rem);
+        &:after{
+            content: '';
+            display: inline-block;
+            width:calcRem(6rem);
+            height:calcRem(10rem);
+            box-sizing: border-box;
+            margin-left: calcRem(10re m);
+            vertical-align: middle;
+            @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');
+        }
+    }
+    &__date{
+        @include body5;
+        color: $darkgray;
+    }
+    &__step{
+        margin-left:auto;
+        color:$point1;
+    }
+
     // 배송조회/리뷰/확정 버튼
-    #{$orderList}__btn{
+    &__btn{
         padding: calcRem(6rem) calcRem(10rem);
         @include body2;
         margin-bottom:calcRem(10rem);
     }
 
     // 상품명, 금액, 링크버튼
-    #{$orderList}__contents{
-        padding:calcRem(16rem) calcRem(10rem) calcRem(22rem) 0;      
+    &__cont{
+        display: inline-block;
+        vertical-align: middle;
+        width: 48%;
+    }
+    &__title{ 
+        @include body2; 
+    }
+    &__deadline{
+        font-size:calcRem(12rem);
+        color: $darkgray;
+        font-weight: $light;
+        margin-top: calcRem(20rem);
+    }
+    &__thumb{
+        margin-right:calcRem(15rem);
+        width:calcRem(120rem);
+        display: inline-block;
+        position: relative;
         overflow: hidden;
-
-        #{$orderList}__cont{
-            display: inline-block;
-            vertical-align: middle;
-            width: 48%;
-        }
-
-        #{$orderList}__title{ 
-            @include body2; 
-        }
-
-        #{$orderList}__deadline{
-            font-size:calcRem(12rem);
-            color: $darkgray;
-            font-weight: $light;
-            margin-top: calcRem(20rem);
-        }
+        vertical-align: middle;
         
-        #{$orderList}__thumb{
-            // float: left;
-            margin-right:calcRem(15rem);
-            width:calcRem(120rem);
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            vertical-align: middle;
-            
-            img,
-            #{$orderList}__img{ 
-                width:100%;
-                @include ab-center; 
-            }
-
+        img,
+        #{$orderList}__img{ 
+            width:100%;
+            @include ab-center; 
+        }
+    
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom:100%;
+        }
+    }
+    &__option{
+        margin-top:calcRem(12rem);
+    
+        &--item{
+            // margin-top:calcRem(5rem);
+    
             &:after{
-                content: "";
-                display: block;
-                padding-bottom:100%;
+                @include block-reset;
             }
+    
+            // &:first-child{
+            //     margin-top:0;
+            // }
         }
-                
-        #{$orderList}__option{
-            margin-top:calcRem(12rem);
     
-            &--item{
-                // margin-top:calcRem(5rem);
-    
-                &:after{
-                    @include block-reset;
-                }
-    
-                // &:first-child{
-                //     margin-top:0;
-                // }
-            }
-    
-            &--title{
-                display: block;
-                float:left;
-                margin-right:calcRem(5rem);
-                @include body3;
-            }
-    
-            &--text{
-                display: block;
-                overflow: hidden;
-                @include body3;
-            }
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body3;
         }
-        
-        #{$orderList}__price{
-            margin-top:calcRem(20rem);
-            clear: both;
-            padding-left:calcRem(20rem);
-            padding-right:calcRem(20rem);
-            position: relative;
-            line-height:0;
-            font-size:0;
     
-            &--current{
-                @include title2;
-                margin-right:calcRem(12rem);
-                display: inline-block;
-                vertical-align: middle;
-            }
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body3;
+        }
+    }
+    &__price{
+        margin-top:calcRem(20rem);
+        clear: both;
+        padding-left:calcRem(20rem);
+        padding-right:calcRem(20rem);
+        position: relative;
+        line-height:0;
+        font-size:0;
     
-            &--sale{
-                @include title2;
-                color:$throughColor;
-                text-decoration: line-through;
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 20px;
-            }
-
-            &.type-single{
-                padding:0;
-                @include title1;
-            }
+        &--current{
+            @include title1;
+            margin-right:calcRem(12rem);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        &--sale{
+            @include title2;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+    
+        &.type-single{
+            padding:0;
+            @include title1;
         }
     }
 }
@@ -294,6 +307,50 @@
         .myPage-fix__link{
             border-color:$point1;
             color:$whiteColor;
+        }
+    }
+}
+
+//---- 데이터 없는 페이지
+.notData-wrap{
+    padding: 0 calcRem(20rem);
+
+    &__title{
+        @include body3;
+        box-sizing: border-box;
+        position: relative;
+        height: calcRem(200rem);
+        border-bottom: 1px solid $lightgray4;
+
+        &--text{
+            @include ab-center;
+            top: 40%;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    &__textBox{
+        margin-top: calcRem(30rem);
+
+        &--title{
+            @include title2;
+            margin: calcRem(10rem) 0;
+        }
+        &--text{
+            @include body2;
+            margin: calcRem(10rem) 0;
+        }
+        [class *= center-bullet ]{
+            color: $black1;
+        }
+        .center-bullet__item{
+            .center-bullet{
+                margin-top: calcRem(10rem);
+                &__item{
+                    margin-top: calcRem(5rem); 
+                }
+            }
         }
     }
 }

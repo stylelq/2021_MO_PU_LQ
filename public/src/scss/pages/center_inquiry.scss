@@ -515,3 +515,29 @@
         z-index: $childZindex;
     }
 }
+
+
+//데이터 없음
+.center-inquiry{
+    .notData-wrap{
+        padding: 0 calcRem(20rem);
+    
+        &__title{
+            @include body3;
+            box-sizing: border-box;
+            position: relative;
+            height: calcRem(200rem);
+            border-bottom: 1px solid $lightgray4;
+    
+            &--text{
+                @include ab-center;
+                top: 40%;
+            }
+        }
+        
+        &__textBox{
+            margin-top: calcRem(30rem);
+        }
+    }
+}
+

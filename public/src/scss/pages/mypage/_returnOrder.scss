@@ -80,3 +80,14 @@
         }
     }
 }
+
+.myReturnOrder{
+    .center-bullet-number__item{
+        .center-bullet.type-small{
+            .center-bullet__item{
+                margin-top: calcRem(9rem);
+                color: $darkgray;
+            }
+        }
+    }
+}

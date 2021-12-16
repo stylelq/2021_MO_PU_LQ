@@ -9,6 +9,16 @@
         border-bottom: 1px solid $black1;
     }
     .paging{margin-top: 25px;}
+
+    //---- 데이터 없는 페이지
+    .notData-wrap{
+        &__title{
+            &--text{
+                @include ab-center;
+            }
+        }
+    }
+
 }
 
 // 현재 적립금/소멸 적립금

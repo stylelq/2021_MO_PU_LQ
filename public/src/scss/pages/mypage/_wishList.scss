@@ -52,4 +52,12 @@
     .center-bullet{
         padding:calcRem(20rem) calcRem(20rem) 0; 
     }
+
+
+    //not data
+    .notData-wrap{
+        .center-bullet{
+            padding: 0;
+        }
+    }
 }
