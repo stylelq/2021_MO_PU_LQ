@@ -125,19 +125,35 @@
             }
         } 
 
-        //message
+        //선물 포장 message
         .order-mypage__message{
             margin-top:calcRem(15rem);
-            // padding-left:calcRem(20rem);
-            // padding-right:calcRem(20rem);
-            // display: none;
-    
+            position: relative;
+
             &.is-active{
                 display: block;
             }
     
-            textarea{
-                height:calcRem(57rem);
+            .form__input{
+                &--textarea{
+                    width: calc(100% - 45px);
+                    height:calcRem(57rem);
+                }
+
+                &--btn{
+                    border: 0;
+                    @include body2;
+                    color: $whiteColor;
+                    width: calcRem(60rem);
+                    height: 100%;
+                    text-align: center;
+                    background-color: $darkgray;
+                    position: absolute;
+                    right: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    box-sizing: border-box;
+                }
             }
         }
     }
@@ -201,7 +217,7 @@
     }
 }
 
-
+// 최종결제금액
 .myOrderListDetail-payment{
     padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
 
