@@ -47,7 +47,7 @@
                 &:first-child{
                     margin-top:0;
                 }
-
+                
                 &--btn{
                     position: relative;
                     padding-right:calcRem(87rem);
@@ -81,6 +81,10 @@
                     float:left;
                     padding-right:calcRem(5rem);
                     box-sizing: border-box;
+                }
+
+                .form__checkbox{
+                    padding-top:calcRem(10rem);
                 }
             }
 

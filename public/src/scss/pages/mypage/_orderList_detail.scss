@@ -9,8 +9,9 @@
 
     //주문 번호
     .myOrderListDetail-title{
-        padding-bottom:  calcRem(20rem);
+        padding:calcRem(10rem) 0 calcRem(30rem);
         border-bottom: 1px solid $lightgray4;
+        box-sizing: border-box;
         @include body2;
 
         &__date{
@@ -58,102 +59,102 @@
     .order-mypage__item{
         border:0;
         padding-top: 0;
+        padding-bottom: 10px;
+    }
 
-        .order-mypage__contents{
-            padding:calcRem(30rem) calcRem(10rem) calcRem(10rem) 0;
+    .order-mypage__contents{
+        padding:calcRem(30rem) calcRem(10rem) calcRem(10rem) 0;
+    }
+
+    .order-mypage__price{
+        margin-top:calcRem(15rem);
+        clear: both;
+        position: relative;
+        line-height:0;
+        font-size:0;
+
+        &--current{
+            @include title2;
+            margin-right:calcRem(12rem);
+            display: inline-block;
+            vertical-align: middle;
         }
 
-        .order-mypage__price{
-            margin-top:calcRem(20rem);
-            clear: both;
-            padding-right:calcRem(20rem);
+        &--sale{
+            @include title2;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+
+    //메세지 카드
+    .order-mypage__meta{
+        // margin-top:calcRem(30rem);
+        line-height:0;
+        // padding-left:calcRem(20rem);
+        // padding-right:calcRem(20rem);
+
+        &--state{
+            @include body2;
+            margin-top:calcRem(30rem);
+        }
+
+        &--list{
+            margin:0 calcRem(-15rem);
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &--item{
+            float:left;
+            margin:0 calcRem(15rem);
             position: relative;
-            line-height:0;
-            font-size:0;
-    
-            &--current{
-                @include title2;
-                margin-right:calcRem(12rem);
-                display: inline-block;
-                vertical-align: middle;
-            }
-    
-            &--sale{
-                @include title2;
-                color:$throughColor;
-                text-decoration: line-through;
-                display: inline-block;
-                vertical-align: middle;
-            }
+            padding-right:calcRem(24rem);
         }
 
+        &--btn{
+            width:calcRem(16rem);
+            height:calcRem(16rem);
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+            background-size:calcRem(16rem) calcRem(16rem) ;
+        }
+    } 
 
-        //메세지 카드
-        .order-mypage__meta{
-            margin-top:calcRem(15rem);
-            line-height:0;
-            // padding-left:calcRem(20rem);
-            // padding-right:calcRem(20rem);
+    //선물 포장 message
+    .order-mypage__message{
+        margin-top:calcRem(15rem);
+        position: relative;
 
-            &--state{
-                @include body2;
-                margin-top:calcRem(25rem);
-            }
+        &.is-active{
+            display: block;
+        }
 
-            &--list{
-                margin:0 calcRem(-15rem);
-                &:after{
-                    @include block-reset;
-                }
-            }
-
-            &--item{
-                float:left;
-                margin:0 calcRem(15rem);
-                position: relative;
-                padding-right:calcRem(24rem);
+        .form__input{
+            &--textarea{
+                width: calc(100% - 45px);
+                height:calcRem(57rem);
             }
 
             &--btn{
-                width:calcRem(16rem);
-                height:calcRem(16rem);
+                border: 0;
+                @include body2;
+                color: $whiteColor;
+                width: calcRem(60rem);
+                height: 100%;
+                text-align: center;
+                background-color: $darkgray;
                 position: absolute;
-                right:0;
-                @include vertical-center;
-                @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
-                background-size:calcRem(16rem) calcRem(16rem) ;
-            }
-        } 
-
-        //선물 포장 message
-        .order-mypage__message{
-            margin-top:calcRem(15rem);
-            position: relative;
-
-            &.is-active{
-                display: block;
-            }
-    
-            .form__input{
-                &--textarea{
-                    width: calc(100% - 45px);
-                    height:calcRem(57rem);
-                }
-
-                &--btn{
-                    border: 0;
-                    @include body2;
-                    color: $whiteColor;
-                    width: calcRem(60rem);
-                    height: 100%;
-                    text-align: center;
-                    background-color: $darkgray;
-                    position: absolute;
-                    right: -20px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    box-sizing: border-box;
-                }
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                box-sizing: border-box;
             }
         }
     }
@@ -219,7 +220,7 @@
 
 // 최종결제금액
 .myOrderListDetail-payment{
-    padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+    padding:calcRem(30rem) calcRem(20rem);
 
     .payment-total{
         $this:&;

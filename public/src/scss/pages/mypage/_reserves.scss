@@ -27,25 +27,29 @@
 
     .payment-total{
         $this:&;
-    
+        
+        //현재 사용 가능한 적립금
         &__title{
             margin: 0;
             margin-bottom:calcRem(20rem);
             
-            .payment-total__text{  @include title2;  }
+            .payment-total__text{  
+                @include body2;  
+                font-weight: $medium;
+            }
             .payment-total__price{  
-                @include body3; 
+                @include body2;  
+                font-weight: $medium;
                 span{
-                    font-size: calcRem(14rem);
-                    font-weight: $regular;
+                    @include title2; 
                     color: $point1;
                 }
             }
         }
-    
+        
+        //이달 소멸 예상 적립금
         &__inner{
             margin:0;
-    
             &:after{
                 @include block-reset;
             }
@@ -54,20 +58,17 @@
         &__text{
             float:left;
             @include body3;
-    
-            #{$this}__title &{
-                @include title2;
-            }
         }
     
         &__price{
             overflow: hidden;
             text-align: right;
             @include body3;
-    
-            #{$this}__title &{
+            
+            span{
                 @include title2;
             }
+            font-weight: $medium;
         }
     
     }
@@ -102,7 +103,10 @@
     }
     &__orderId{
         font-size:calcRem(11rem);
-        .order-number{ font-size:calcRem(12rem); }
+        font-weight: $light;
+        .order-number{ 
+            font-size:calcRem(12rem); 
+        }
     }
 
     &__point{
