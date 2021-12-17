@@ -18,11 +18,17 @@
         &.is-point{
             color: $point1;
         }
+        &:nth-child(2){
+            margin-bottom:calcRem(20rem);
+        }
     }
 
     &__item{
         margin-bottom: calcRem(15rem);
         &:last-child{ margin-bottom: calcRem(30rem); }
+    }
+    .center-bullet__item{
+        margin-top: calcRem(7rem);
     }
 
     &__textBox{

@@ -104,6 +104,7 @@
     &__pre{
         line-height: calclH(17,11);
         font-weight: $light;
+        font-size: calcRem(11rem)
     }
  
     //==[dd]=====
@@ -156,7 +157,7 @@
         width: 93%;
     }
     &__cont--pre{
-        margin-top: calcRem(9rem);
+        margin-top: calcRem(10rem);
         margin-left: calcRem(20rem);
         line-height: calclH(17,11);
         font-weight: $light;

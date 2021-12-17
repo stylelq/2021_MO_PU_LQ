@@ -169,7 +169,7 @@
     vertical-align: middle;
     
     img,
-    #{$orderList}__img{ 
+    .order-mypage__img{ 
         width:100%;
         @include ab-center; 
     }
@@ -306,6 +306,7 @@
         }
 
         .myPage-fix__link{
+            font-size: calcRem(12rem);
             border-color:$point1;
             color:$whiteColor;
         }

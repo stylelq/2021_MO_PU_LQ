@@ -90,11 +90,15 @@
     }
 }
 
+//-- 상품 상세 내용
 .myReview-tab__info{
     
     .order-mypage__item{
         .order-mypage__view{
             border-top:solid 1px $lightgray4;
+        }
+        .order-mypage__contents{
+            padding:calcRem(10rem) 0 calcRem(20rem);
         }
     }
 
@@ -206,12 +210,13 @@
             }
         }
 
-        // 버튼
+        // 버튼:: 수정/삭제
         &__btn{
             text-align: right;
             font-size: calcRem(12rem);
             font-weight: $light;
-            padding-top: calcRem(10rem);
+            padding: calcRem(10rem) 0;
+
             &--modify,&--del{
                 text-decoration: underline;
                 margin-left: calcRem(10rem);

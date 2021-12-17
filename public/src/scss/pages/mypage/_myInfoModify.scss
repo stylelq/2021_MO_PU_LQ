@@ -22,7 +22,7 @@
     }
 
     .center-bullet{
-        padding:calcRem(20rem) calcRem(20rem) 0;
+        padding:calcRem(30rem) calcRem(20rem) 0;
     }
 }
 .list-table{
@@ -32,6 +32,7 @@
     tbody{
         th,td{
             border-color: $lightgray4;
+            padding: calcRem(16rem) 0;
         }
         tr:last-child th,
         tr:last-child td{

@@ -5,15 +5,18 @@
 .myCoupon{
     &__title{
         @include title2;
-        margin-top:calcRem(10rem);
-        margin-bottom:calcRem(8rem);
+        margin: 0;
+        padding: 0;
+        line-height: calclH(22,14);
+        // margin-top:calcRem(10rem);
+        // margin-bottom:calcRem(8rem);
     }
 
     // 유저정보
     &-level{
         $level : '.myCoupon-level';
         overflow: hidden;
-        padding:0 calcRem(20rem) calcRem(25rem);
+        padding:0 calcRem(20rem) calcRem(30rem);
 
         &__icon{
             float: left;
@@ -55,14 +58,13 @@
         }
     }
 
-
     // 프로모션 폼
     &-form{ 
-        padding:calcRem(20rem); 
+        padding:calcRem(30rem) calcRem(20rem) calcRem(20rem); 
         border-top: 1px solid $black1;
 
         &__inner{
-            margin-top: calcRem(20rem); 
+            margin-top: calcRem(10rem); 
 
             &--btn{
                 position: relative;
@@ -85,16 +87,16 @@
         }
     }
 
-    &-cont{ padding:calcRem(20rem); }
+    // 쿠폰
+    &-cont{ padding:calcRem(20rem) calcRem(20rem) 0 }
     &__item{
         border-bottom: 1px solid $lightgray4;
         padding-bottom:calcRem(14rem);
         &:last-child{
             padding-top:calcRem(14rem);
         }
-    }
+    } 
 
-    // 쿠폰
     &__price{      
         display: table-cell;
         vertical-align: top;
@@ -122,14 +124,12 @@
             color:$point1;
             display: block;
         }
-
         &--text{
             @include title1;
             color:$point1;
             font-weight: $regular;
             display: block;
         }
-
         &--won{
             @include body4;
         }
@@ -160,8 +160,13 @@
 
     // 상세 안내
     &-info{ 
-        padding:calcRem(20rem) calcRem(20rem) calcRem(30rem);
+        padding:calcRem(30rem) calcRem(20rem);
         border-bottom: 1px solid $black1; 
+    }
+
+    //유의사항
+    .center-bullet__item{
+        margin-top: calcRem(5rem);
     }
 }
 

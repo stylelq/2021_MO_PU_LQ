@@ -1602,7 +1602,7 @@
                 }
 
                 &--message{
-                    margin-top:calcRem(25rem);
+                    margin-top:calcRem(20rem);
                 }
             }
 
@@ -1613,7 +1613,7 @@
                 line-height:calclH(18,11);
                 letter-spacing: $defaultLetter;
                 color:$darkgray;
-                margin:calcRem(15rem) 0 0;
+                margin:calcRem(20rem) 0 0;
 
                 &:after{
                     content:"";
@@ -1694,6 +1694,11 @@
         width: 48%;
     }
 
+    .order-mypage__info{
+        padding: 0 0 calcRem(5rem);
+        border: 0;
+    }
+    
     .order-mypage__title{ 
         @include body2; 
     }
@@ -1780,7 +1785,7 @@
             display: block;
         }
         select{
-            margin-bottom:calcRem(1         0rem);
+            margin-bottom:calcRem(10rem);
         }
         textarea{
             height:calcRem(85rem);
@@ -1789,11 +1794,12 @@
 
     .order-mypage__text{ 
         @include body3; 
-        margin: calcRem(30rem) 0;
+        margin: calcRem(20rem) 0;
     }
 
     .order-mypage__textBox{
-        margin-bottom: calcRem(30rem);
+        margin-bottom: calcRem(20rem);
+        padding-top: calcRem(20rem);
 
         &--title{
             margin:0;
@@ -1802,7 +1808,7 @@
         }
         .center-bullet__item{
             color: $black1;
-            &:not(:nth-child(1)){ margin-top:calcRem(8rem); }
+            &:not(:nth-child(1)){ margin-top:calcRem(7rem); }
         }
     }
 }
@@ -1892,11 +1898,12 @@
     }
     
     .popup-confirm__link{
-        margin-top: calcRem(20rem);
+        margin-top: calcRem(30rem);
 
         &.type-white{
             background-color: $whiteColor;
             color: $darkgray;
+            margin-top: calcRem(20rem);
         }
     }
 
@@ -1934,6 +1941,7 @@
 
         .order-mypage__title{ 
             @include title2; 
+            line-height: calclH(22,14);
         }
     }
 
@@ -2041,7 +2049,7 @@
             display: block;
         }
         select{
-            margin-bottom:calcRem(20rem);
+            margin-bottom:calcRem(10rem);
         }
         textarea{
             height:calcRem(85rem);
