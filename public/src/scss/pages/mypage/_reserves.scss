@@ -90,6 +90,7 @@
     &__date{
         font-size:calcRem(10rem);
         color: $darkgray;
+        min-width:calcRem(60rem);
     }
 
     &__info{ 

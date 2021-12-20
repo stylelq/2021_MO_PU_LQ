@@ -63,7 +63,7 @@
     }
 
     .order-mypage__contents{
-        padding:calcRem(30rem) calcRem(10rem) calcRem(10rem) 0;
+        padding:calcRem(30rem) 0 calcRem(10rem);
     }
 
     .order-mypage__price{
@@ -221,6 +221,9 @@
 // 최종결제금액
 .myOrderListDetail-payment{
     padding:calcRem(30rem) calcRem(20rem);
+    &.bg-gray{
+        background:$lightgray1;
+    }
 
     .payment-total{
         $this:&;

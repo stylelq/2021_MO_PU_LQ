@@ -65,6 +65,9 @@
 
         &__inner{
             margin-top: calcRem(10rem); 
+            .form__input--text{
+                background: $lightgray3;
+            }
 
             &--btn{
                 position: relative;
@@ -100,9 +103,8 @@
     &__price{      
         display: table-cell;
         vertical-align: top;
+        width:calcRem(90rem);
         padding-right:calcRem(25rem);
-        width:calcRem(140rem);
-        box-sizing: border-box;
 
         &--box{
             border:solid 1px $point1;
