@@ -7,6 +7,8 @@
     background-color: $bgSiteColor;
     z-index: $fixButtonZindex;
 
+    display:table;
+
     &.is-on:not(.sold-out){
         background-color: $point1;
     }
@@ -16,52 +18,75 @@
     }
 
     &__item{
-        float: left;
+        //---- table layout
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        box-sizing: border-box;
         position: relative;
+        min-width: calcRem(60rem);
 
-        div:not(.sold-out) &:nth-child(1){
-            width:18%;
-        }
-
-        div:not(.sold-out) &:nth-child(2){
-            width:30%;
-        }
-
-        div:not(.sold-out) &:nth-child(3){
-            width:26%;
-        }
-
-        div:not(.sold-out) &:nth-child(4){
-            width:26%;
-        }
-
-        .sold-out &:nth-child(1){
-            width:18%;
-        }
-
-        .sold-out &:nth-child(2){
-            width:41%;
-        }
-
-        .sold-out &:nth-child(3){
-            width:41%;
-        }
-
-        &:after{
-            content:"";
+        &:not(:last-child):after{
+            content: '';
             width:1px;
             height:calcRem(14rem);
+            background-color:$gray2;
             position: absolute;
-            background-color:$gray2 ;
             right:0;
             @include vertical-center;
         }
 
-        &:last-child{
-            &:after{
-                display: none;
-            }
+        &:first-child{
+            width: 15%;
         }
+
+        //---- float layout
+        // float: left;
+        // position: relative;
+
+        // div:not(.sold-out) &:nth-child(1){
+        //     width:18%;
+        // }
+
+        // div:not(.sold-out) &:nth-child(2){
+        //     width:30%;
+        // }
+
+        // div:not(.sold-out) &:nth-child(3){
+        //     width:26%;
+        // }
+
+        // div:not(.sold-out) &:nth-child(4){
+        //     width:26%;
+        // }
+
+        // .sold-out &:nth-child(1){
+        //     width:18%;
+        // }
+
+        // .sold-out &:nth-child(2){
+        //     width:41%;
+        // }
+
+        // .sold-out &:nth-child(3){
+        //     width:41%;
+        // }
+
+        // &:after{
+        //     content:"";
+        //     width:1px;
+        //     height:calcRem(14rem);
+        //     position: absolute;
+        //     background-color:$gray2 ;
+        //     right:0;
+        //     @include vertical-center;
+        // }
+
+        // &:last-child{
+        //     &:after{
+        //         display: none;
+        //     }
+        // }
     }
 
     &__link{
