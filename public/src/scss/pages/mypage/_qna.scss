@@ -43,7 +43,7 @@
             background-size: calcRem(8rem) calcRem(4rem);
             position: absolute;
             right:0;
-            top:calcRem(28rem);
+            top:calcRem(10rem);
 
             .is-active &{
                 transform: rotate(180deg);
