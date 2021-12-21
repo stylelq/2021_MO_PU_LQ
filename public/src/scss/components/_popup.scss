@@ -1265,6 +1265,12 @@
 
         .form__radio--text{
             font-weight: $medium;
+            &:before{
+                border-color: $point1;
+            }
+            &:after{
+                background: $point1;
+            }
         }
     }
 

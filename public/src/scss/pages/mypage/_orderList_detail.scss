@@ -30,22 +30,30 @@
         //주문상품 현재 상태
         &__state{
             @include body2;
-            overflow: hidden;
+            // overflow: hidden;
+            display: flex;
+            align-items: center;
 
             &--title{
                 color: $point1;
-                width: calcRem(77rem);
+                // width: calcRem(77rem);
                 display: inline-block;
                 vertical-align: middle;
             }
-            &--list{ 
-                display: inline-block;
-                vertical-align: middle;
+            &--list{
+                margin-left: auto;
+                // display: inline-block;
+                // vertical-align: middle;
+                // width: 80%;
+                // text-align: right;
             }
             &--item{
                 display: inline-block;
                 vertical-align: middle;
                 width: calcRem(77rem);
+                &:not(:first-child){
+                    margin-left: 10px;
+                }
                 .myOrderList-btn{
                     box-sizing: border-box;
                     border-color: $gray2;
