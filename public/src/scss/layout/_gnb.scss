@@ -95,7 +95,7 @@
         display:inline-block;
         list-style:none;
         & + &{
-            margin-left:calcRem(14rem)
+            margin-left:calcRem(10rem) //14
         }
     }
 
@@ -122,6 +122,8 @@
     &__link{
         display:block;
         @include title2();
+        letter-spacing: -0.02em; //0.06em
+        text-transform: capitalize;
     }
 }
 .gnb-body{

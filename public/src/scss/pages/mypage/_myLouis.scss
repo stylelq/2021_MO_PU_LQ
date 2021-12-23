@@ -157,7 +157,10 @@
         &:not(:last-child){
             border-bottom: 1px solid $lightgray4;
         }
-
+        a{
+            display: block;
+        }
+        
         position: relative;
         &:after{
             content: '';

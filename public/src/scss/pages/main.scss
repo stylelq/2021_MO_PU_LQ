@@ -387,6 +387,10 @@
 	&__slide{
 		position: relative;
 		margin: 0 calcRem(18rem);
+		//롤링슬라이드
+		.swiper-wrapper{
+			transition-timing-function: linear;
+		}
 	}
 	&__item{
 		padding: 0 calcRem(2.5rem);
