@@ -145,8 +145,10 @@
         }
 
         .form__input{
+            $num : calcRem(45rem);
+
             &--textarea{
-                width: calc(100% - 45px);
+                width: calc(100% - #{$num});
                 height:calcRem(57rem);
             }
 

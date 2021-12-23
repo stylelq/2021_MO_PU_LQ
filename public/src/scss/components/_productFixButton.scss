@@ -36,9 +36,13 @@
             @include vertical-center;
         }
 
-        &:first-child{
+        .fix-button__link--like &{
             width: 15%;
         }
+
+        // div:not(.sold-out) &:first-child{
+        //     width: 15%;
+        // }
 
         //---- float layout
         // float: left;

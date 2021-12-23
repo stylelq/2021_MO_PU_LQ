@@ -570,7 +570,6 @@ jQuery(function () {
 
     function myQnaMore() {
       var parent = $(this).closest('.myQna-wrap__item');
-      var dd = $(this).closest('dd');
 
       if (parent.hasClass('is-active')) {
         parent.removeClass('is-active');
@@ -735,7 +734,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
