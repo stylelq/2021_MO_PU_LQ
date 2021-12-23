@@ -28,14 +28,49 @@
         flex: 1;
         padding: 3px 0;
         text-align: center;
-        font-size: calcRem(11rem);
+        font-size: calcRem(12rem);
         border: 1px solid #cbcbcb;
         &.is-active{
             color: #9b192f;
             border: 1px solid #9b192f;
         }
     }
+    &__inner{
+        display: block;
+    }
 
 }
 
 //하단 배너
+.gift-banner{
+    position: relative;
+    padding-top: calcRem(50rem);
+    &__visual{
+        position: relative;
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: calcRem(240rem);
+        object-fit: cover;
+    }
+    &__wrap{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+    }
+    &__box{
+        padding: 0 20px;
+    }
+    &__inner{
+        display: block;
+    }
+    &__button{
+        padding: 0.625rem 0;
+        color: #fff;
+        border: 1px solid #fff;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+}
