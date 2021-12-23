@@ -551,7 +551,6 @@ jQuery(function(){
         //마이페이지 :: qna 더보기(아코디언)
         function myQnaMore() {
             var parent = $(this).closest('.myQna-wrap__item');
-            var dd = $(this).closest('dd');
             
             if(parent.hasClass('is-active')){
                 parent.removeClass('is-active');

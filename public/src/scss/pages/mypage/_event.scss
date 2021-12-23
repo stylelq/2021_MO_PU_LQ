@@ -12,15 +12,16 @@
         &__header{ 
             overflow: hidden;
             padding: calcRem(10rem) 0 calcRem(20rem);
+            text-align: left;
     
             &--state{
                 float: left;
             }
             &--title{
                 float: left;
-                margin-left: calcRem(10rem);
+                padding-left: 3%; //calcRem(10rem);
                 @include title2;
-                max-width: 80%;
+                max-width: 75%;
             }
         }
         &__contents{

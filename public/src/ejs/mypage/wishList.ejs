@@ -10,58 +10,59 @@ lnbTitle = "WISH LIST"
     <div class="site-main">
         <section class="wishList">
             <div class="wishList-center">
-                <!-- item -->
-                <div class="order-mypage__item">
-                    <div class="order-mypage__header">
-                        <div class="checkbox-point order-mypage__checkbox">
-                            <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
-                            <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                <div class="wishList__list">
+                    <!-- item -->
+                    <div class="order-mypage__item">
+                        <div class="order-mypage__header">
+                            <div class="checkbox-point order-mypage__checkbox">
+                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
+                                <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                            </div>
+                            <a href="javascript:void(0);" onclick="basketDelete()" class="order-mypage__close js-cart-close"><span class="sr-only">닫기</span></a>
+                            <!-- js-cart-close 클릭시 order-mypage 클래스 영역 삭제 -->
                         </div>
-                        <a href="javascript:void(0);" onclick="basketDelete()" class="order-mypage__close js-cart-close"><span class="sr-only">닫기</span></a>
-                        <!-- js-cart-close 클릭시 order-mypage 클래스 영역 삭제 -->
+                        <div class="order-mypage__contents">
+                            <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+                            <div class="order-mypage__cont">
+                                <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                            </div>
+                            <div class="order-mypage__price">
+                                <span class="order-mypage__price--current">289,290원</span>
+                                <span class="order-mypage__price--sale">328,000원</span>
+                                <a href="#benefitsPop" class="order-mypage__benefit js-popup-open">benefit</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="order-mypage__contents">
-                        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
-                        <div class="order-mypage__cont">
-                            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                    <!-- .item -->
+                    <!-- item -->
+                    <div class="order-mypage__item">
+                        <div class="order-mypage__header">
+                            <div class="checkbox-point order-mypage__checkbox">
+                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
+                                <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                            </div>
+                            <a href="javascript:void(0);" onclick="basketDelete()" class="order-mypage__close js-cart-close"><span class="sr-only">닫기</span></a>
+                            <!-- js-cart-close 클릭시 order-mypage 클래스 영역 삭제 -->
                         </div>
-                        <div class="order-mypage__price">
-                            <span class="order-mypage__price--current">289,290원</span>
-                            <span class="order-mypage__price--sale">328,000원</span>
-                            <a href="#benefitsPop" class="order-mypage__benefit js-popup-open">benefit</a>
+                        <div class="order-mypage__contents">
+                            <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/recommended_img.png" alt=""></a>
+                            <div class="order-mypage__cont">
+                                <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                            </div>
+                            <div class="order-mypage__price">
+                                <span class="order-mypage__price--current">289,290원</span>
+                                <span class="order-mypage__price--sale">328,000원</span>
+                                <a href="#benefitsPop" class="order-mypage__benefit js-popup-open">benefit</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- .item -->
                 </div>
-                <!-- .item -->
-                <!-- item -->
-                <div class="order-mypage__item">
-                    <div class="order-mypage__header">
-                        <div class="checkbox-point order-mypage__checkbox">
-                            <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2" checked>
-                            <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
-                        </div>
-                        <a href="javascript:void(0);" onclick="basketDelete()" class="order-mypage__close js-cart-close"><span class="sr-only">닫기</span></a>
-                        <!-- js-cart-close 클릭시 order-mypage 클래스 영역 삭제 -->
-                    </div>
-                    <div class="order-mypage__contents">
-                        <a href="#;" class="order-mypage__thumb"><img class="order-mypage__img" src="../../images/dummy/recommended_img.png" alt=""></a>
-                        <div class="order-mypage__cont">
-                            <div class="order-mypage__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
-                        </div>
-                        <div class="order-mypage__price">
-                            <span class="order-mypage__price--current">289,290원</span>
-                            <span class="order-mypage__price--sale">328,000원</span>
-                            <a href="#benefitsPop" class="order-mypage__benefit js-popup-open">benefit</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- .item -->
+
+                <!-- paging -->
+                <% include ../_include/_paging %>
+                <!-- .paging -->
             </div>
-
-            <!-- paging -->
-            <% include ../_include/_paging %>
-            <!-- .paging -->
-
             <div class="center-bullet">
                 <div class="center-bullet__item">판매중단, 일시 품절된 상품은 리스트에서 삭제될 수 있습니다.</div>
             </div>

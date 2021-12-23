@@ -13,7 +13,8 @@
         
         #{$filter}__item{
             float: left;
-            width:  calcRem(60rem);
+            width: 20%;
+            max-width:  calcRem(60rem);
             height:  calcRem(26rem);
             &:not(:last-child){ margin-right: calcRem(5rem); }
 
@@ -69,9 +70,9 @@
     
 }
 
-//---- 마이페이지 리스트 공통 
+//---- 마이페이지 리스트 공통사용
+// 레이아웃
 .order-mypage{
-    // 리스트 레이아웃
     &__item{
         padding: calcRem(20rem);
         border-top: 1px solid $black1;
@@ -88,158 +89,163 @@
         padding:calcRem(20rem) 0 calcRem(25rem);      
         overflow: hidden; 
     }
-}
-
-// 문구
-.order-mypage__header{
-    padding:calcRem(10rem) 0 calcRem(30rem);
-    text-align: center;
-
-    &--title{
-        margin: 0;
-        @include title2;
-    }
-}
-
-// 주문번호, 진행 상태/step, 날짜
-.order-mypage__type{
-    float: left;
-
-    &.no-step{
-        float: none;
-
-        padding-bottom: calcRem(30rem);
-        border-bottom: 1px solid $lightgray4;
-        @include body2;
-    }
-}
-.order-mypage__step{
-    float: right;
-}
-.order-mypage__orderId-link{ //더보기
-    margin-left:calcRem(5rem);
-    &:after{
-        content: '';
-        display: inline-block;
-        width:calcRem(6rem);
-        height:calcRem(10rem);
-        box-sizing: border-box;
-        margin-left: calcRem(10rem);
-        vertical-align: middle;
-        @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');
-    }
-}
-.order-mypage__date{
-    @include body5;
-    color: $darkgray;
-}
-.order-mypage__step{
-    margin-left:auto;
-    color:$point1;
-}
-
-// 배송조회/리뷰/확정 버튼
-.order-mypage__btn{
-    padding: calcRem(7rem) calcRem(10rem);
-    @include body2;
-    margin-bottom:calcRem(10rem);
-}
-
-// 상품명, 금액, 링크버튼
-.order-mypage__cont{
-    display: inline-block;
-    vertical-align: middle;
-    width: 48%;
-}
-.order-mypage__title{ 
-    @include body2; 
-}
-.order-mypage__deadline{
-    font-size:calcRem(12rem);
-    color: $darkgray;
-    font-weight: $light;
-    margin-top: calcRem(20rem);
-}
-.order-mypage__thumb{
-    margin-right:calcRem(15rem);
-    width:calcRem(120rem);
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    vertical-align: middle;
+    &__header{
+        padding:calcRem(10rem) 0 calcRem(30rem);
+        text-align: center;
     
-    img,
-    .order-mypage__img{ 
-        width:100%;
-        @include ab-center; 
-    }
-
-    &:after{
-        content: "";
-        display: block;
-        padding-bottom:100%;
+        &--title{
+            margin: 0;
+            @include title2;
+        }
     }
 }
-.order-mypage__option{
-    margin-top:calcRem(12rem);
 
-    &--item{
-        // margin-top:calcRem(5rem);
-
+// 디테일
+.order-mypage{
+    // 주문번호/진행 상태/step/날짜
+    &__type{
+        float: left;
+    
+        &.no-step{
+            float: none;
+    
+            padding-bottom: calcRem(30rem);
+            border-bottom: 1px solid $lightgray4;
+            @include body2;
+        }
+    }
+    &__step{
+        float: right;
+        margin-left:auto;
+        color:$point1;
+    }
+    &__orderId-link{ //더보기
+        margin-left:calcRem(5rem);
         &:after{
-            @include block-reset;
+            content: '';
+            display: inline-block;
+            width:calcRem(6rem);
+            height:calcRem(10rem);
+            box-sizing: border-box;
+            margin-left: calcRem(10rem);
+            vertical-align: middle;
+            @include pageBackground('/images/common/ico_paging_next.svg',
+            'no-repeat center center / contain');
+        }
+    }
+    &__date{
+        @include body5;
+        color: $darkgray;
+    }
+
+    // 배송조회/리뷰/확정 버튼
+    &__btn{
+        padding: calcRem(7rem) calcRem(10rem);
+        @include body2;
+        margin-bottom:calcRem(10rem);
+    }
+
+    // 상품/썸네일/기간 링크버튼
+    &__cont{
+        display: inline-block;
+        vertical-align: middle;
+        width: 48%;
+    }
+    &__title{ 
+        @include body2; 
+    }
+    &__deadline{
+        font-size:calcRem(12rem);
+        color: $darkgray;
+        font-weight: $light;
+        margin-top: calcRem(20rem);
+    }
+    &__thumb{
+        margin-right:2%; //calcRem(10rem)
+        width:calcRem(120rem);
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        vertical-align: middle;
+        
+        img,
+        .order-mypage__img{ 
+            width:100%;
+            @include ab-center; 
         }
 
-        // &:first-child{
-        //     margin-top:0;
-        // }
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom:100%;
+        }
     }
 
-    &--title{
-        display: block;
-        float:left;
-        margin-right:calcRem(5rem);
-        @include body3;
+    // 상세 : 색상/옵션/수량/배송
+    &__option{
+        margin-top:calcRem(12rem);
+    
+        &--item{
+            // margin-top:calcRem(5rem);
+    
+            &:after{
+                @include block-reset;
+            }
+    
+            // &:first-child{
+            //     margin-top:0;
+            // }
+        }
+    
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body3;
+        }
+    
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body3;
+        }
     }
 
-    &--text{
-        display: block;
-        overflow: hidden;
-        @include body3;
+    //가격 :: 금액/할인금액
+    &__price{
+        margin-top:calcRem(20rem);
+        clear: both;
+        // padding-left:calcRem(20rem);
+        // padding-right:calcRem(20rem);
+        position: relative;
+        line-height:0;
+        font-size:0;
+    
+        &--current{
+            @include title1;
+            font-weight: $medium !important;
+            margin-right: 0 !important;
+            // margin-right:calcRem(12rem);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    
+        &--sale{
+            @include title2;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 12px;
+        }
+    
+        &.type-single{
+            padding:0;
+            @include title1;
+        }
     }
 }
-.order-mypage__price{
-    margin-top:calcRem(20rem);
-    clear: both;
-    // padding-left:calcRem(20rem);
-    // padding-right:calcRem(20rem);
-    position: relative;
-    line-height:0;
-    font-size:0;
 
-    &--current{
-        @include title1;
-        font-weight: $medium !important;
-        margin-right: 0 !important;
-        // margin-right:calcRem(12rem);
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    &--sale{
-        @include title2;
-        color:$throughColor;
-        text-decoration: line-through;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 12px;
-    }
-
-    &.type-single{
-        padding:0;
-        @include title1;
-    }
-}
 
 //---- paging
 .paging{

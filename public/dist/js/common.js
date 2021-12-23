@@ -570,7 +570,6 @@ jQuery(function () {
 
     function myQnaMore() {
       var parent = $(this).closest('.myQna-wrap__item');
-      var dd = $(this).closest('dd');
 
       if (parent.hasClass('is-active')) {
         parent.removeClass('is-active');
