@@ -498,6 +498,45 @@
             }
         }
     }
+
+    // 개인정보처리방침
+    &-policy{
+        &__list{
+            border:solid 1px $boxgray;
+            padding:calcRem(20rem) calcRem(15rem);
+            margin-bottom:calcRem(15rem);
+        }
+
+        &__item{
+            margin-top:calcRem(10rem);
+
+            &:after{
+                @include block-reset;
+            }
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__bullet{
+            float:left;
+            margin-right:calcRem(5rem);
+            display: block;
+            @include body3;
+        }
+
+        &__text{
+            overflow: hidden;
+            display: block;
+            @include body3;
+        }
+
+        &__title{
+            @include title2;
+            margin-bottom:calcRem(12rem);
+        }
+    }
 }
 
 //이미지 첨부 item
