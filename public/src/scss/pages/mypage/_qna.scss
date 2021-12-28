@@ -58,7 +58,8 @@
     &__info{
         margin-left:calcRem(15rem);
         @include body2;
-        width: 70%;
+        $mg:calcRem(75rem); //thumWid + margin-left
+        width: calc(100% - #{$mg});
     }
 
     // 썸네일
@@ -71,7 +72,7 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-            max-width:calcRem(160rem);
+            max-width:calcRem(170rem);
             vertical-align: middle;
         }
     }
