@@ -257,7 +257,15 @@
             @include title2;
             margin:0 0 calcRem(12rem);
         }
-    }
+    } 
 }
 
+// 적립금 안내 > 적립금 사용 
+.basic-table{
+    tbody{
+        th{
+            background-color: transparent;
+        }
+    }  
+}
 

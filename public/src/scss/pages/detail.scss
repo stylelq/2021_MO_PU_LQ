@@ -271,7 +271,7 @@
     &__title{
         margin:0;
         @include title2;
-        font-width:$light;
+        font-weight:$light;
     }
 
     &__price{
@@ -669,8 +669,10 @@
             height:calcRem(14rem);
             @include pageBackground('/images/common/ico_big_like_black.svg','no-repeat center center / contain');
             background-size: calcRem(14rem) calcRem(14rem);
-            top:calcRem(40rem);
-            right:calcRem(69rem);
+            // top:calcRem(40rem);
+            // right:calcRem(69rem);
+            top:calcRem(20rem);
+            right:calcRem(10rem);
             z-index: $childZindex;
 
             &.is-active{
@@ -697,6 +699,7 @@
 //상품상세탭
 .product-detail__info{
     line-height:0;
+    padding:0 calcRem(20rem);
 
     &--text{
         @include body3;
