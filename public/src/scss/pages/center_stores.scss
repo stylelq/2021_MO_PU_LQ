@@ -102,7 +102,7 @@
 
     //location list
     &-location{
-        border-top:solid 1px $black1;
+        // border-top:solid 1px $black1;
         border-bottom:solid 1px $black1;
         margin-left:calcRem(-20rem);
         margin-right:calcRem(-20rem);
@@ -230,16 +230,29 @@
 .stores{
     &-global{
         &__section{
-            margin-top:calcRem(50rem);
+            margin-top:calcRem(60rem);
 
             &:first-child{
                 margin-top:0;
             }
+            &:last-child{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: calcRem(-20rem);
+                    left: -20%;
+                    width: 140%;
+                    height: 1px;
+                    background: $black1;
+                }
+            }
         }
 
         &__title{
-            margin-bottom:calcRem(20rem);
+            padding-bottom:calcRem(15rem); //20
             @include title2;
+            border-bottom:solid 1px $lightgray1;
         }
 
         &__list {
