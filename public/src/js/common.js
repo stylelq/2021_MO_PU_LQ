@@ -213,6 +213,7 @@ jQuery(function(){
         }
         $(document).on('click', '.js-share-btn', detailShareOpen);
 
+/* 2021-12-29 wn.kim : jsp에서 제어
         //수량 카운트하기
         function quantityPlus(e){
             e.preventDefault();
@@ -236,7 +237,7 @@ jQuery(function(){
             $('.quantity__text--current').val(num);
         }
         $(document).on('click', '.js-minus', quantityMinus);
-
+*/
         //제품 서브메뉴 스크롤 픽시드
         if($('.detail-tab').length > 0) {
             $(window).scroll(function () {
@@ -1146,7 +1147,7 @@ jQuery(function(){
             }
         }
     }
-
+/* 2021-12-29 wn.kim : jsp에서 제어
     //네이버 팝업
     if($('.product-detail').length > 0) {
         var naver_param = $(location).attr('href').split("?");
@@ -1158,6 +1159,7 @@ jQuery(function(){
             }
         }
     }
+*/
 });
 
 //입고알림 버튼클릭시
@@ -1209,3 +1211,10 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
         this.parentNode.classList.remove('is-hover');
     });
 });
+
+
+
+// [ui추가] productFixButton :: 좋아요버튼 너비값
+$('.fix-button__link--like').parent().css({
+    width: '15%'
+  });

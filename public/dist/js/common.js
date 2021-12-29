@@ -222,33 +222,33 @@ jQuery(function () {
       }
     }
 
-    $(document).on('click', '.js-share-btn', detailShareOpen); //수량 카운트하기
-
-    function quantityPlus(e) {
-      e.preventDefault();
-      var stat = $('.quantity__text--current').val();
-      var num = parseInt(stat, 10);
-      num++;
-      $('.quantity__text--current').val(num);
-    }
-
-    $(document).on('click', '.js-plus', quantityPlus);
-
-    function quantityMinus(e) {
-      e.preventDefault();
-      var stat = $('.quantity__text--current').val();
-      var num = parseInt(stat, 10);
-      num--;
-
-      if (num <= 0) {
-        alert('구매 최소수량은 1개입니다.');
-        num = 1;
-      }
-
-      $('.quantity__text--current').val(num);
-    }
-
-    $(document).on('click', '.js-minus', quantityMinus); //제품 서브메뉴 스크롤 픽시드
+    $(document).on('click', '.js-share-btn', detailShareOpen);
+    /* 2021-12-29 wn.kim : jsp에서 제어
+            //수량 카운트하기
+            function quantityPlus(e){
+                e.preventDefault();
+                var stat = $('.quantity__text--current').val();
+                var num = parseInt(stat,10);
+                num++;
+    
+                $('.quantity__text--current').val(num);
+            }
+            $(document).on('click', '.js-plus', quantityPlus);
+    
+            function quantityMinus(e){
+                e.preventDefault();
+                var stat = $('.quantity__text--current').val();
+                var num = parseInt(stat,10);
+                num--;
+                if(num<=0){
+                    alert('구매 최소수량은 1개입니다.');
+                    num =1;
+                }
+                $('.quantity__text--current').val(num);
+            }
+            $(document).on('click', '.js-minus', quantityMinus);
+    */
+    //제품 서브메뉴 스크롤 픽시드
 
     if ($('.detail-tab').length > 0) {
       $(window).scroll(function () {
@@ -734,7 +734,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                    $('.main-banner__progressbar').removeClass("animate");
+                   $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
@@ -1160,20 +1160,21 @@ jQuery(function () {
         $('.stores-tab__info').removeClass('is-current').eq(2).addClass('is-current');
       }
     }
-  } //네이버 팝업
-
-
-  if ($('.product-detail').length > 0) {
-    var naver_param = $(location).attr('href').split("?");
-    var param = naver_param[1];
-
-    if (param) {
-      if (param.indexOf('PRD_MST_CD') != -1) {
-        $('html').addClass('is-hidden');
-        $('#naverPop').addClass('is-active');
-      }
-    }
   }
+  /* 2021-12-29 wn.kim : jsp에서 제어
+      //네이버 팝업
+      if($('.product-detail').length > 0) {
+          var naver_param = $(location).attr('href').split("?");
+          var param = (naver_param[1]);
+          if(param){
+              if (param.indexOf('PRD_MST_CD') != -1 ) {
+                  $('html').addClass('is-hidden');
+                  $('#naverPop').addClass('is-active');
+              }
+          }
+      }
+  */
+
 }); //입고알림 버튼클릭시
 
 function stoNtsAsk() {
@@ -1219,4 +1220,8 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
   collaboElem.addEventListener('mouseleave', function (e) {
     this.parentNode.classList.remove('is-hover');
   });
+}); // [ui추가] productFixButton :: 좋아요버튼 너비값
+
+$('.fix-button__link--like').parent().css({
+  width: '15%'
 });
