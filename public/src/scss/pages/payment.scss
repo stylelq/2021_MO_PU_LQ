@@ -139,14 +139,12 @@
 
         &--name{
             display: block;
-            vertical-align: middle;
             @include body3;
             font-weight: $regular;
         }
 
         &--tel{
             display: block;
-            vertical-align: middle;
             @include body3;
             margin:calcRem(4rem) 0 0;
         }
