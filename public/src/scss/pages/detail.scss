@@ -271,7 +271,7 @@
     &__title{
         margin:0;
         @include title2;
-        font-width:$light;
+        font-weight:$light;
     }
 
     &__price{
@@ -699,6 +699,7 @@
 //상품상세탭
 .product-detail__info{
     line-height:0;
+    padding:0 calcRem(20rem);
 
     &--text{
         @include body3;
