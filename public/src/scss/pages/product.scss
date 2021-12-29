@@ -1,5 +1,10 @@
 @import "../base/variables";
 @import "../base/mixins";
+
+.product-wrap{
+    display: block;
+}
+
 //product top banner
 .product-banner{
     margin-bottom:calcRem(20rem);
