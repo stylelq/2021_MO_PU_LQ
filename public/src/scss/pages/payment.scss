@@ -359,7 +359,12 @@
 
         &--total{
             margin-bottom:calcRem(10rem);
-            @include body2;
+            // @include body2;
+            font-size: calcRem(12rem);
+            font-weight: $light;
+            .coupon-info__list--count{
+                font-weight: $medium;
+            }
         }
 
         &--cont{
@@ -386,7 +391,10 @@
             display: block;
             @include body3;
 
-            #{$this}__price--item-total &{
+            // #{$this}__price--item-total &{
+            //     font-weight: $medium;
+            // }
+            #{$this}__price--text{
                 font-weight: $medium;
             }
         }

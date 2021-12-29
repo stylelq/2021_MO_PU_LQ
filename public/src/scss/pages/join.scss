@@ -283,7 +283,7 @@
 			&:before{
 				width:calcRem(25rem);
 				height:calcRem(27rem);
-				@include pageBackground('/images/join/coin_icon.png','no-repeat center center / contain')
+				@include pageBackground('/images/join/coin_icon.svg','no-repeat center center / contain')
 			}
 		}
 
@@ -292,7 +292,7 @@
 			&:before{
 				width:calcRem(28rem);
 				height:calcRem(28rem);
-				@include pageBackground('/images/join/coupon_icon.png','no-repeat center center / contain')
+				@include pageBackground('/images/join/coupon_icon.svg','no-repeat center center / contain')
 			}
 		}
 
@@ -301,7 +301,7 @@
 			&:before{
 				width:calcRem(30rem);
 				height:calcRem(30rem);
-				@include pageBackground('/images/join/birth_icon.png','no-repeat center center / contain')
+				@include pageBackground('/images/join/birth_icon.svg','no-repeat center center / contain')
 			}
 		}
 
