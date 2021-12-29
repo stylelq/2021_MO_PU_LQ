@@ -35,10 +35,11 @@
         }
         &__price{
             margin:calcRem(25rem) 0 calcRem(10rem);
+            padding: 0 calcRem(20rem);
         }
         &__benefit{
             position: absolute;
-            right:0;
+            right:calcRem(20rem);
             @include vertical-center;
             display: block;
             font-size:calcRem(12rem);
