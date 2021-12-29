@@ -110,11 +110,12 @@
 
         &--state{
             @include body2;
+            margin: 0;
             margin-top:calcRem(30rem);
         }
 
         &--list{
-            margin:0 calcRem(-15rem);
+            margin:calcRem(15rem) calcRem(-15rem) 0;
             &:after{
                 @include block-reset;
             }
@@ -219,7 +220,7 @@
 
         &__tel{
             @include body3;
-            margin-bottom:calcRem(2rem);
+            margin-bottom:calcRem(3rem);
         }
     
         &__address{
@@ -307,6 +308,9 @@
     
         &__item{
             @include body3;
+            &:not(:last-child){
+                margin-bottom:calcRem(3rem);
+            }
         }
     }
 }
@@ -339,18 +343,21 @@
                 vertical-align: middle;
                 @include body3;
                 font-weight: $regular;
+                margin-bottom:calcRem(3rem);
             }
     
             &--tel{
                 display: block;
                 vertical-align: middle;
                 @include body3;
-                margin:calcRem(4rem) 0 0;
+                // margin:calcRem(4rem) 0 0;
+                margin: 0;
+                margin-bottom:calcRem(3rem);
             }
         }
     
         &__email{
-            margin-top:calcRem(4rem);
+            // margin-top:calcRem(4rem);
             @include body3;
         }
     }

@@ -263,7 +263,10 @@
 
         &--item{
             width: 50%;
-            padding:0 calcRem(5rem);
+            // padding:0 calcRem(5rem);
+            &:not(:last-child){
+                padding-right: calcRem(5rem);
+            }
         }
     }
 }

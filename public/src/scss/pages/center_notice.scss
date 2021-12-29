@@ -16,7 +16,7 @@
             border-bottom:solid 1px $lightgray2;
 
             &.notice-list__item--notice{
-                border-bottom-color: $gray1;
+                border-bottom-color: $lightgray4; //$gray1
             }
 
             &:last-child{
