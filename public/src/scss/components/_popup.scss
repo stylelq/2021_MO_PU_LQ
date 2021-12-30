@@ -422,6 +422,8 @@
             margin:0;
             @include body4;
             text-align: center;
+
+            font-size: calcRem(11rem);
         }
     }
 }
