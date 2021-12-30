@@ -340,7 +340,6 @@
     
             &--name{
                 display: block;
-                vertical-align: middle;
                 @include body3;
                 font-weight: $regular;
                 margin-bottom:calcRem(3rem);
@@ -348,7 +347,6 @@
     
             &--tel{
                 display: block;
-                vertical-align: middle;
                 @include body3;
                 // margin:calcRem(4rem) 0 0;
                 margin: 0;
