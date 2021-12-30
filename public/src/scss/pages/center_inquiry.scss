@@ -400,8 +400,10 @@
         }
 
         &__text{
-            @include body5;
+            @include body5; 
             margin:calcRem(5rem) 0 0;
+
+            font-size:calcRem(12rem);
         }
 
         &__body{
@@ -448,8 +450,10 @@
         }
 
         &__text{
-            @include body5;
+            @include body5; 
             margin:calcRem(5rem) 0 0;
+
+            font-size:calcRem(12rem);
         }
 
         //이미지 스크롤

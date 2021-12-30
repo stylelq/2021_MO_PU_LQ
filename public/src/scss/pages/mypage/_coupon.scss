@@ -149,12 +149,14 @@
         }
         &--date{
             margin: 0;
-            font-size: calcRem(11rem);
+            // font-size: calcRem(11rem);
+            font-size:calcRem(12rem);
             font-weight: $regular;
             color: $darkgray;
         }
         &--text{
-            font-size: calcRem(11rem);
+            // font-size: calcRem(11rem);
+            font-size:calcRem(12rem);
             font-weight: $light;
             margin-bottom: 0;
         }
