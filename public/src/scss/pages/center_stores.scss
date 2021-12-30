@@ -161,6 +161,8 @@
             font-weight: $regular;
             margin-bottom:calcRem(7rem);
             text-transform: uppercase;
+
+            font-size:calcRem(12rem);
         }
 
         &__title{
@@ -185,8 +187,10 @@
         }
 
         &__address{
-            @include body5;
+            @include body5; 
             margin-top:calcRem(5rem);
+
+            font-size:calcRem(12rem);
         }
 
         &__meta{
@@ -196,11 +200,13 @@
 
             &--navi{
                 display: inline-block;
-                @include body5;
+                @include body5; 
                 position: relative;
                 padding-right:calcRem(11rem);
                 margin-right:calcRem(10rem);
                 color:$darkgray;
+
+                font-size:calcRem(12rem);
 
                 &:after{
                     content: "";
@@ -219,8 +225,10 @@
 
             &--tel{
                 display: inline-block;
-                @include body5;
+                @include body5; 
                 color:$darkgray;
+
+                font-size:calcRem(12rem);
             }
         }
     }

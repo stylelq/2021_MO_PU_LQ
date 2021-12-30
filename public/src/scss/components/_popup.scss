@@ -464,6 +464,7 @@
         //상세 값
         &__info{
             margin-top:calcRem(10rem);
+            font-size: calcRem(12rem);
         }
 
         &__thumb{
@@ -749,7 +750,8 @@
             vertical-align: middle;
             width:calcRem(100rem);
             @include body3;
-            font-size: calcRem(11rem);
+            // font-size: calcRem(11rem);
+            font-size:calcRem(12rem);
         }
 
         &--quantity{
@@ -1166,8 +1168,9 @@
 
     &__item{
         margin-top:calcRem(20rem);
-        font-size:calcRem(11rem);
-        line-height:calclH(18,11);
+        // font-size:calcRem(11rem);
+        font-size:calcRem(12rem);
+        line-height:calclH(18,12);
         letter-spacing: $defaultLetter;
         font-weight:$light;
         position: relative;
