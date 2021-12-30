@@ -271,7 +271,7 @@
     &__title{
         margin:0;
         @include title2;
-        font-width:$light;
+        font-weight:$light;
     }
 
     &__price{
@@ -584,7 +584,7 @@
         }
 
         &.detail-tab__info--detail{
-            margin:0 calcRem(-19rem);
+            margin:0 calcRem(-19.8rem);
         }
     }
 }

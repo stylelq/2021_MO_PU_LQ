@@ -48,14 +48,16 @@
             }
         }
 
-        &--text{
+        &--text{           
             font-size:calcRem(11rem);
             padding-left:calcRem(7rem);
             position: relative;
             line-height:calclH(18,11);
             letter-spacing: $defaultLetter;
             color:$darkgray;
-            margin:calcRem(15rem) 0 0;
+            // margin:calcRem(15rem) 0 0;
+            margin:calcRem(10rem) 0 0;
+            font-weight: $light;
 
             &:after{
                 content:"";
@@ -139,14 +141,12 @@
 
         &--name{
             display: block;
-            vertical-align: middle;
             @include body3;
             font-weight: $regular;
         }
 
         &--tel{
             display: block;
-            vertical-align: middle;
             @include body3;
             margin:calcRem(4rem) 0 0;
         }

@@ -237,7 +237,7 @@
             }
             &:last-child{
                 position: relative;
-                &::before{
+                &:before{
                     content: '';
                     position: absolute;
                     top: calcRem(-20rem);
@@ -246,13 +246,16 @@
                     height: 1px;
                     background: $black1;
                 }
+
+                .stores-global__title{
+                    border-bottom:solid 1px $lightgray1;
+                }
             }
         }
 
         &__title{
             padding-bottom:calcRem(15rem); //20
             @include title2;
-            border-bottom:solid 1px $lightgray1;
         }
 
         &__list {

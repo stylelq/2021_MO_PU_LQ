@@ -182,7 +182,7 @@
     &__meta{
         border-top:solid 1px $lightgray1;
         margin-top:calcRem(25rem);
-        padding:0 calcRem(20rem);
+        // padding:0 calcRem(20rem);
 
         &:after{
             @include block-reset;
