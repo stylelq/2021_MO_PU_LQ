@@ -109,6 +109,8 @@
             @include body5;
             color:$grayTextColor;
             text-transform: uppercase;
+
+            font-size: calcRem(12rem);
         }
     }
 
@@ -160,6 +162,8 @@
 
         &__condition{
             @include body5;
+
+            font-size: calcRem(12rem);
         }
 
         &__coupon{

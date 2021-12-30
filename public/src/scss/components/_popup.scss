@@ -750,8 +750,7 @@
             vertical-align: middle;
             width:calcRem(100rem);
             @include body3;
-            // font-size: calcRem(11rem);
-            font-size:calcRem(12rem);
+            font-size: calcRem(11rem);
         }
 
         &--quantity{

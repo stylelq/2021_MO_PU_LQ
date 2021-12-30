@@ -51,7 +51,8 @@
 
         &__tag{
             display: block;
-            font-size:calcRem(11rem);
+            // font-size:calcRem(11rem);
+            font-size:calcRem(12rem);
             line-height:calclH(18,11);
             letter-spacing: $defaultLetter;
             font-weight:$medium;
