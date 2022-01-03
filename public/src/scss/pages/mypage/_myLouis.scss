@@ -38,6 +38,8 @@
         @include body4;
         font-weight: 400;
         margin-top: calcRem(7rem);
+
+        font-size: calcRem(12rem);
     }
     
     @mixin moreArrow {
