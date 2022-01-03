@@ -96,7 +96,7 @@
         margin-bottom: calcRem(-60rem);
     }
     &-product{
-        position: relative;
+        // position: relative;
         &__header{
           padding: 0 20px;
           text-align: center;
@@ -114,6 +114,25 @@
           width: 50%;
           float: left;
           padding: calcRem(20rem) 0 calcRem(60rem);
+          position: relative;
+          box-sizing: border-box;
+
+          .product-item{
+            &__state{
+              text-transform: uppercase;
+
+              &.type-circle{
+                color: $whiteColor;
+                text-align: center;
+                padding-top: calcRem(8rem);
+                box-sizing: border-box;
+              }
+            }
+          }
+          
+          &:nth-child(odd){
+            clear:both;
+          }
         }
     }
 
