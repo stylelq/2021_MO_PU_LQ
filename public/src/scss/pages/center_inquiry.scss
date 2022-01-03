@@ -475,7 +475,7 @@
 
             &--inner{
                 white-space: nowrap;
-                padding:calcRem(25rem) 0 calcRem(15rem);
+                // padding:calcRem(25rem) 0 calcRem(15rem);
             }
 
             &--item{
@@ -483,6 +483,8 @@
                 margin-right:calcRem(10rem);
                 width:calcRem(77rem);
                 position: relative;
+                
+                padding:calcRem(25rem) 0 calcRem(15rem);
 
                 &:last-child{
                     margin-right:calcRem(20rem);
