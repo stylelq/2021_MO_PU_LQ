@@ -1214,7 +1214,8 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
 
 
 
-// [ui추가] productFixButton :: 좋아요버튼 너비값
+// [ui추가] 
+// productFixButton :: 좋아요버튼 너비값
 $('.fix-button__link--like').parent().css({
     width: '15%'
-  });
+});

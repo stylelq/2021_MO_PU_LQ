@@ -53,4 +53,10 @@
 //html hidden(popup, menu open)
 html.is-hidden{
     overflow: hidden;
+
+    body{
+        position:fixed;
+        overflow: hidden;
+        width: 100vw;
+    }
 }

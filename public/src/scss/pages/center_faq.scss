@@ -32,8 +32,9 @@
 
     &__link{
         display: block;
-        font-size:calcRem(11rem);
-        line-height:calclH(18,11);
+        // font-size:calcRem(11rem);
+        font-size:calcRem(12rem);
+        line-height:calclH(18,12);
         letter-spacing: $defaultLetter;
         font-weight:$light;
         color:$darkgray;

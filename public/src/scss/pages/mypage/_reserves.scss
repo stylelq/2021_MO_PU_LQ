@@ -103,10 +103,11 @@
         font-weight: $medium;
     }
     &__orderId{
-        font-size:calcRem(11rem);
+        // font-size:calcRem(11rem);
+        font-size:calcRem(12rem); 
         font-weight: $light;
         .order-number{ 
-            font-size:calcRem(12rem); 
+            // font-size:calcRem(12rem); 
         }
     }
 

@@ -9,8 +9,9 @@
 
         &__text{
             position: relative;
-            font-size:calcRem(11rem);
-            line-height:calclH(18,11);
+            // font-size:calcRem(11rem);
+            font-size:calcRem(12rem);
+            line-height:calclH(18,12);
             letter-spacing: $defaultLetter;
             font-weight:$light;
             color:$darkgray;
@@ -30,9 +31,11 @@
     }
 
     &-list__no-cart{
-        @include body5;
+        @include body5; 
         text-align: center;
         padding:calcRem(20rem) calcRem(20rem);
+
+        font-size:calcRem(12rem);
     }
 }
 
@@ -182,7 +185,7 @@
     &__meta{
         border-top:solid 1px $lightgray1;
         margin-top:calcRem(25rem);
-        padding:0 calcRem(20rem);
+        // padding:0 calcRem(20rem);
 
         &:after{
             @include block-reset;

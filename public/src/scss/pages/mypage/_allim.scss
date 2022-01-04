@@ -11,6 +11,8 @@
         overflow: hidden;
         clear: both;
         padding: 0;
+
+        font-size: calcRem(12rem);
     
         &--date{
             float: left;

@@ -78,8 +78,9 @@
     }
     &__tag{
         display: inline-block;
-        font-size:calcRem(11rem);
-        line-height:calclH(18,11);
+        // font-size:calcRem(11rem);
+        font-size:calcRem(12rem);
+        line-height:calclH(18,12);
         letter-spacing: $defaultLetter;
         font-weight:$medium;
         padding:0 calcRem(5rem);
@@ -102,7 +103,8 @@
     &__pre{
         line-height: calclH(17,11);
         font-weight: $light;
-        font-size: calcRem(11rem)
+        // font-size: calcRem(11rem)
+        font-size: calcRem(12rem)
     }
  
     //==[dd]=====

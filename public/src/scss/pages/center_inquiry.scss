@@ -51,7 +51,8 @@
 
         &__tag{
             display: block;
-            font-size:calcRem(11rem);
+            // font-size:calcRem(11rem);
+            font-size:calcRem(12rem);
             line-height:calclH(18,11);
             letter-spacing: $defaultLetter;
             font-weight:$medium;
@@ -263,10 +264,10 @@
 
         &--item{
             width: 50%;
-            // padding:0 calcRem(5rem);
-            &:not(:last-child){
-                padding-right: calcRem(5rem);
-            }
+            padding:0 calcRem(5rem);
+            // &:not(:last-child){
+            //     padding-right: calcRem(5rem);
+            // }
         }
     }
 }
@@ -400,8 +401,10 @@
         }
 
         &__text{
-            @include body5;
+            @include body5; 
             margin:calcRem(5rem) 0 0;
+
+            font-size:calcRem(12rem);
         }
 
         &__body{
@@ -448,8 +451,10 @@
         }
 
         &__text{
-            @include body5;
+            @include body5; 
             margin:calcRem(5rem) 0 0;
+
+            font-size:calcRem(12rem);
         }
 
         //이미지 스크롤
@@ -470,7 +475,7 @@
 
             &--inner{
                 white-space: nowrap;
-                padding:calcRem(25rem) 0 calcRem(15rem);
+                // padding:calcRem(25rem) 0 calcRem(15rem);
             }
 
             &--item{
@@ -478,6 +483,8 @@
                 margin-right:calcRem(10rem);
                 width:calcRem(77rem);
                 position: relative;
+                
+                padding:calcRem(25rem) 0 calcRem(15rem);
 
                 &:last-child{
                     margin-right:calcRem(20rem);

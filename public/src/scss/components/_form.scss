@@ -967,7 +967,8 @@ input {
 
 			.basic-table__sub{
 				display: block;
-				font-size: calcRem(11rem);
+				// font-size: calcRem(11rem);
+				font-size: calcRem(12rem);
 				color:$gray2;
 			}
 
@@ -975,5 +976,9 @@ input {
 				text-align: left;
 			}
 		}
+	}
+
+	.weight-light{
+		font-weight: 300;
 	}
 }

@@ -10,7 +10,7 @@
     }
 
     &__numberBox{
-        margin: calcRem(20rem) 0 calcRem(10rem);
+        margin: calcRem(20rem) 0 calcRem(30rem);
         padding: calcRem(15rem) calcRem(20rem);
         
         span{vertical-align: middle;}
@@ -24,10 +24,10 @@
 
     .input-list{
         &__item{
-            padding-top: calcRem(20rem);
-        }
-        .join-box__btn{
-            margin-top: calcRem(20rem); 
+            margin: 0;padding:0;
+            .input-v1{
+                margin-bottom: calcRem(20rem);
+            }
         }
     }
 }

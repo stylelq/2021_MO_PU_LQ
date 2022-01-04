@@ -310,6 +310,7 @@
     }
 }
 
+
 //제품 구매시 정보
 .detail-purchase{
     padding:calcRem(30rem) calcRem(20rem) calcRem(30rem);
@@ -584,10 +585,45 @@
         }
 
         &.detail-tab__info--detail{
-            margin:0 calcRem(-19rem);
+            margin:0 calcRem(-20rem);
         }
     }
 }
+
+//----[2021.12.30]추후 지울것-------------------
+// [sample 상세뷰 이미지 사이즈]
+// 1. 이미지 full
+.product-detail-full{
+    .detail-tab{
+        &__info{
+            &.detail-tab__info--detail{
+                margin:0 calcRem(-20rem);
+            }
+        }
+    }
+}
+//2. 1px
+.product-detail-px{
+    .detail-tab{
+        &__info{
+            &.detail-tab__info--detail{
+                margin:0 calcRem(-19rem);
+            }
+        }
+    }
+}
+//3. 여백 20px
+.product-detail-margin{
+    .detail-tab{
+        &__info{
+            &.detail-tab__info--detail{
+                margin:0 calcRem(-20rem);
+                padding:0 calcRem(20rem) calcRem(70rem);
+            }
+        }
+    }
+}
+//----------------------------------
 
 //연관제품
 .recommended{
@@ -699,7 +735,6 @@
 //상품상세탭
 .product-detail__info{
     line-height:0;
-    padding:0 calcRem(20rem);
 
     &--text{
         @include body3;

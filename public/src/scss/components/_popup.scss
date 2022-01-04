@@ -422,6 +422,8 @@
             margin:0;
             @include body4;
             text-align: center;
+
+            font-size: calcRem(11rem);
         }
     }
 }
@@ -462,6 +464,7 @@
         //상세 값
         &__info{
             margin-top:calcRem(10rem);
+            font-size: calcRem(12rem);
         }
 
         &__thumb{
@@ -1164,8 +1167,9 @@
 
     &__item{
         margin-top:calcRem(20rem);
-        font-size:calcRem(11rem);
-        line-height:calclH(18,11);
+        // font-size:calcRem(11rem);
+        font-size:calcRem(12rem);
+        line-height:calclH(18,12);
         letter-spacing: $defaultLetter;
         font-weight:$light;
         position: relative;
