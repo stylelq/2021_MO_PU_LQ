@@ -13,12 +13,14 @@
         margin: calcRem(20rem) 0 calcRem(30rem);
         padding: calcRem(15rem) calcRem(20rem);
         
-        span{vertical-align: middle;}
+        span{ vertical-align: middle; }
 
         .identi-num{
             font-size: calcRem(20rem);
             font-weight: $medium;
             margin-left: calcRem(15rem);
+            display: inline-block;
+            width: 45%;
         }
     }
 
