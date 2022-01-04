@@ -245,6 +245,16 @@
                 padding: calcRem(80rem) 0;
                 background: #f2f2f2 !important;
             }
+            &.bg-gray{
+                background: #f6f6f6 !important;
+            }
+        }
+        &__second{
+            padding: calcRem(30rem) 0 0;
+            font-size: calcRem(10rem);
+            font-weight: 300;
+            line-height: 1.8;
+            background: #ffffff !important;
         }
         &__title{
             padding: calcRem(50rem) 0 calcRem(20rem);
