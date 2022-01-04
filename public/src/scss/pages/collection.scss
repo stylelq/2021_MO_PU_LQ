@@ -256,6 +256,10 @@
             line-height: 1.8;
             background: #ffffff !important;
         }
+        &__top{
+            margin-top: 0;
+            font-size: calcRem(20rem);
+        }
         &__title{
             padding: calcRem(50rem) 0 calcRem(20rem);
             font-size: calcRem(14rem);

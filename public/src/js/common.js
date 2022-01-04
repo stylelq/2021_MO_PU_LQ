@@ -401,6 +401,7 @@ jQuery(function(){
                 loop: true,
                 autoplay: {
                     delay: 3000,
+                    disableOnInteraction : false,
                 },
                 pagination : {
                     el : '.collection-slide-pagination',
@@ -424,6 +425,7 @@ jQuery(function(){
                 loop: true,
                 autoplay: {
                     delay: 3000,
+                    disableOnInteraction : false,
                 },
                 pagination : {
                     el : '.collection-slide-paginationSecond',
