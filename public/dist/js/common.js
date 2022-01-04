@@ -736,7 +736,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
@@ -1227,4 +1227,8 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
 
 $('.fix-button__link--like').parent().css({
   width: '15%'
-});
+}); //loading
+
+window.onload = function () {
+  $('.loading').hide();
+};

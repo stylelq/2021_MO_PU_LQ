@@ -28,6 +28,9 @@
         width:25%;
         float: left;
         text-align: center;
+        &:nth-child(4n+1){
+            clear: both;
+        }
     }
 
     &__link{
