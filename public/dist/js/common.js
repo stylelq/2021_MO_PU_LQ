@@ -1225,4 +1225,8 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
 
 $('.fix-button__link--like').parent().css({
   width: '15%'
-});
+}); //loading
+
+window.onload = function () {
+  $('.loading').hide();
+};
