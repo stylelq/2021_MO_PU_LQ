@@ -12,28 +12,53 @@ jQuery(function(){
     }
     $(document).on('click', '.js-popup-open', openPopup);
 
+    //zoom option
+    var zoomOption = {
+        bounds:{
+            top: 150,
+            right: 50,
+            bottom: 50,
+            left:250,
+        },
+        // bounds:true,
+        boundsPadding: 0.4,
+        // boundsDisabledForZoom: true,
+        maxZoom: 3,
+        minZoom: 0.5,
+        // transformOrigin: {x: 0, y: 0}
+        // contain: false
+    }
+
     //제품 팝업 확대축소(플러그인 panzoom)
     function productZoom(){
         var area = document.querySelectorAll('.js-product-zoom');
         var instance = "";
         for (var i = 0; i < area.length; i++) {
             var item = area.item(i);
-            instance  = panzoom(item);
+            // item.style.border = '1px solid'
+            instance  = panzoom(item, zoomOption);
         }
     }
     
-    //확대축소(플러그인 panzoom):play
-    if($('.product-zoom').length > 0) {
-        productZoom();
-    }
-
     //확대축소(플러그인 panzoom):reset-슬라이드 이동시, 닫기시
     function resetPanZoom(){
         var area = document.querySelectorAll('.js-product-zoom');
         var instance = "";
         for (var i = 0; i < area.length; i++) {
             var item = area.item(i);
-            instance  = panzoom(item).zoomAbs( 0, 0, 1 );
+            instance  = panzoom(item, zoomOption).zoomAbs( 0, 0, 1 );
+        }
+    }
+
+    function mobileDevice() {
+        if( ['Win16','Win32','Win64','Mac','MacIntel'].find(element => element == navigator.platform) ) {return false;}
+        else {return true;}
+    }
+
+    if( mobileDevice() != true ){
+        //확대축소(플러그인 panzoom):play
+        if($('.product-zoom').length > 0) {
+            productZoom();
         }
     }
 
@@ -43,7 +68,7 @@ jQuery(function(){
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            allowTouchMove: false,
+            // allowTouchMove: false,
             slidesPerView: 1,
             navigation: {
                 nextEl: ".popup-slider__button--next",
@@ -51,7 +76,10 @@ jQuery(function(){
             },
             on: {
                 slideChange: function () {
-                    resetPanZoom();
+                    if( mobileDevice() != true ){
+                        //확대축소 reset
+                        resetPanZoom();
+                    }
                 }
             }
         });

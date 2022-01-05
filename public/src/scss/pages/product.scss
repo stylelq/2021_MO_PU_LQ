@@ -81,6 +81,7 @@
         top:calcRem(20rem);
         left:calcRem(20rem);
         z-index: $childZindex;
+        text-transform: uppercase;
 
         &.type-circle{
             border-radius: 100%;
