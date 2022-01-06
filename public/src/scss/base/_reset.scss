@@ -39,8 +39,7 @@ body{
   word-wrap:break-word;
   word-break:keep-all;
   font-weight:$regular;
-
-  touch-action: pan-y;
+  // touch-action: pan-y;
 }
 
 input[type="text"],

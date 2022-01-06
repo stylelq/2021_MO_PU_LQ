@@ -14,9 +14,11 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.js-popup-open', openPopup); //zoom option
+  $(document).on('click', '.js-popup-open', openPopup); //Panzoom = https://github.com/inuyaksa/jquery.panzoom
+  //zoom option
 
   var zoomOption = {
+    // bound: 'outer',
     bounds: {
       top: 150,
       right: 50,
@@ -28,7 +30,7 @@ jQuery(function () {
     // boundsDisabledForZoom: true,
     maxZoom: 2,
     minZoom: 0.5,
-    zoomDoubleClickSpeed: 1 //제품 팝업 확대축소(플러그인 panzoom)
+    $reset: $(".popup-slider__button, .slide-popup__close, .js-popup-close") //제품 팝업 확대축소(플러그인 panzoom)
 
   };
 
@@ -51,9 +53,7 @@ jQuery(function () {
     for (var i = 0; i < area.length; i++) {
       var item = area.item(i); // instance  = panzoom(item).zoomAbs( 0, 0, 1 );
 
-      instance = panzoom(item);
-      instance.zoomAbs(0, 0, 1);
-      instance.moveTo(0, 0);
+      instance = panzoom(item, zoomOption);
     }
   } //확대축소(플러그인 panzoom):play
 
@@ -88,10 +88,8 @@ jQuery(function () {
       },
       on: {
         slideChange: function slideChange() {
-          if (mobileDevice() != true) {
-            //확대축소 reset
-            resetPanZoom();
-          }
+          //확대축소 reset
+          resetPanZoom(); // if( mobileDevice() != true ){}
         }
       }
     });

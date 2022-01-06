@@ -1248,6 +1248,11 @@
             }
         }
     }
+    .zipcode-address__cont{
+        &--zip{
+            margin-top: calcRem(10rem);
+        }
+    }
 }
 
 //주문내역
@@ -2105,10 +2110,3 @@
     }
 
 }
-
-//zoom
-// #zoomPop{
-//     .swiper-slide.popup-slider__item{
-//         height: 100vh;
-//     }
-// }
