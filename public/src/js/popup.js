@@ -12,21 +12,22 @@ jQuery(function(){
     }
     $(document).on('click', '.js-popup-open', openPopup);
 
+    //Panzoom = https://github.com/inuyaksa/jquery.panzoom
     //zoom option
     var zoomOption = {
+        // bound: 'outer',
         bounds:{
             top: 150,
             right: 50,
             bottom: 50,
-            left:250,
+            left: 250,
         },
         // bounds:true,
         boundsPadding: 0.4,
         // boundsDisabledForZoom: true,
-        maxZoom: 3,
+        maxZoom: 2,
         minZoom: 0.5,
-        // transformOrigin: {x: 0, y: 0}
-        // contain: false
+        $reset: $(".popup-slider__button, .slide-popup__close, .js-popup-close")
     }
 
     //제품 팝업 확대축소(플러그인 panzoom)
@@ -46,21 +47,28 @@ jQuery(function(){
         var instance = "";
         for (var i = 0; i < area.length; i++) {
             var item = area.item(i);
-            instance  = panzoom(item, zoomOption).zoomAbs( 0, 0, 1 );
+            // instance  = panzoom(item).zoomAbs( 0, 0, 1 );
+            instance  = panzoom(item, zoomOption);
         }
     }
-
-    function mobileDevice() {
-        if( ['Win16','Win32','Win64','Mac','MacIntel'].find(element => element == navigator.platform) ) {return false;}
-        else {return true;}
+    //확대축소(플러그인 panzoom):play
+    if($('.product-zoom').length > 0) {
+        productZoom();
     }
 
-    if( mobileDevice() != true ){
-        //확대축소(플러그인 panzoom):play
-        if($('.product-zoom').length > 0) {
-            productZoom();
-        }
-    }
+    // function mobileDevice() {
+    //     if( ['Win16','Win32','Win64','Mac','MacIntel'].find(ele => ele == navigator.platform) ) {return false;}
+    //     else {return true;}
+    // }
+
+    // if( mobileDevice() != true ){
+    //     //확대축소(플러그인 panzoom):play
+    //     if($('.product-zoom').length > 0) {
+    //         productZoom();
+    //     }
+    // }else{
+    //     $('.product-zoom').css({touchAction : 'manipulation' });
+    // }
 
     //팝업에 사용되는 슬라이드(확대축소팝업, 360도 회전 팝업)
     if($('.popup-slider').length > 0){
@@ -68,7 +76,7 @@ jQuery(function(){
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            // allowTouchMove: false,
+            allowTouchMove: true,
             slidesPerView: 1,
             navigation: {
                 nextEl: ".popup-slider__button--next",
@@ -76,10 +84,9 @@ jQuery(function(){
             },
             on: {
                 slideChange: function () {
-                    if( mobileDevice() != true ){
-                        //확대축소 reset
-                        resetPanZoom();
-                    }
+                    //확대축소 reset
+                    resetPanZoom();
+                    // if( mobileDevice() != true ){}
                 }
             }
         });
