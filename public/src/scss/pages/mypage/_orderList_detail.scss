@@ -126,6 +126,13 @@
             margin:0 calcRem(15rem);
             position: relative;
             padding-right:calcRem(24rem);
+
+            &:last-child{
+                .form__checkbox{
+                    @include body2;
+                    font-weight: $regular;
+                }
+            }
         }
 
         &--btn{
