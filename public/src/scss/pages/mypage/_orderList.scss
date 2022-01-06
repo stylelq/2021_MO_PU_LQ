@@ -6,10 +6,13 @@
 .myOrderList-workflow{
     margin:calcRem(30rem) 0;
 
-    &__list{overflow: hidden;}
+    &__list{
+        overflow: hidden;
+    }
     &__item{
         float: left;
-        width: calcRem(60rem);
+        // width: calcRem(60rem);
+        width: calc(100% / 6);
         text-align: center;
         @include body5;
         position: relative;

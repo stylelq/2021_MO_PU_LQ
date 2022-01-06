@@ -89,7 +89,7 @@ jQuery(function () {
       on: {
         slideChange: function slideChange() {
           //확대축소 reset
-          resetPanZoom(); // if( mobileDevice() != true ){}
+          resetPanZoom();
         }
       }
     });

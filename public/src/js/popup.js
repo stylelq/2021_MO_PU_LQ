@@ -86,7 +86,6 @@ jQuery(function(){
                 slideChange: function () {
                     //확대축소 reset
                     resetPanZoom();
-                    // if( mobileDevice() != true ){}
                 }
             }
         });
