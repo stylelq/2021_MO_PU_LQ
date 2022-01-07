@@ -6,7 +6,7 @@ jQuery(function () {
     var el = '';
 
     if (this.tagName === 'BUTTON') {
-      el = this.dataset.popupId;
+      el = this.dataset.popup;
     }
 
     if (this.tagName === "A") {
