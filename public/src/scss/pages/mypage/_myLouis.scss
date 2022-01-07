@@ -37,7 +37,7 @@
     &__name{
         @include body4;
         font-weight: 400;
-        margin-top: calcRem(7rem);
+        padding-top: calcRem(5rem);
 
         font-size: calcRem(12rem);
     }
@@ -52,6 +52,8 @@
     }
     &__more--userInfo{
         @include title1;
+        float: left;
+        width: 55%;
         &:after{ 
             @include moreArrow;
             @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');
@@ -60,7 +62,7 @@
     &__more--membership{
         @include body2;
         float: right;
-        margin-top: 3px;
+        margin-top: 26px;
         color: $point1;
         &:after{
             @include moreArrow;
