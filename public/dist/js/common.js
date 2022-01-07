@@ -22,7 +22,6 @@ jQuery(function () {
         $('.type-1depth').addClass('is-active');
         $('.dim').addClass('is-active');
         $('.header').addClass('is-bg-view');
-        $('.header').addClass('is-active');
         $('html').addClass('is-hidden');
 
         if ($(window).scrollTop() == 0) {
@@ -33,7 +32,7 @@ jQuery(function () {
       return false;
     }
 
-    $(document).on('click', '.js-menu-btn,header .dim', GnbMenu); //Gnb 메뉴 클릭시 공통액션
+    $(document).on('click', '.js-menu-btn, header .dim', GnbMenu); //Gnb 메뉴 클릭시 공통액션
 
     $('.gnb-body__link').off('click').on('click', function (e) {
       e.preventDefault();
@@ -1231,4 +1230,10 @@ $('.fix-button__link--like').parent().css({
 
 window.onload = function () {
   $('.loading').hide();
-};
+}; //madin section full
+
+
+$('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull'); // console.log( $('.sectionFull').eq(0).offset().top )
+// console.log( $('.sectionFull').eq(1).offset().top )
+// console.log( $('.sectionFull').eq(2).offset().top )
+// console.log( $('.sectionFull').eq(3).offset().top )

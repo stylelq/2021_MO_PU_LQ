@@ -35,8 +35,13 @@
         text-decoration: underline
     ;}
     &__copy{
-        margin-top:calcRem(22rem);
-        @include body4();
+        // margin-top:calcRem(22rem);
+        // @include body4();
+        @include body5();
+        font-weight: $regular;
+        width: 55%;
+        margin:calcRem(30rem) auto 0;
+        color: $darkgray;
     }
     &__txt{
         margin-top:calcRem(18rem);
