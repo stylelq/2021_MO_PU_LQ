@@ -12,9 +12,11 @@
 //메인 탑배너슬라이드
 .main-banner{
 	position: relative;
+	height: 100vh;
+
 	&__inner{
 		display: block;
-		width:100%;
+		width:100vw;
 		height: auto;
 		line-height:0;
 	}
@@ -39,7 +41,7 @@
 	}
 	&__name{
 		color: #fff;
-		font-size: calcRem(16rem);
+		font-size: calcRem(17rem); //16
 		line-height: calcRem(28rem);
 	}
 	&__pagination{
@@ -368,6 +370,7 @@
 	position: relative;
 	overflow: hidden;
 	padding-top: calcRem(60rem);
+
 	&__header{
 		position: absolute;
 		width: 100%;
@@ -380,6 +383,7 @@
 		font-size: calcRem(20rem);
 		line-height: calcRem(32rem);
 		z-index: 90;
+		font-weight: $medium;
 	}
 	&__container{
 		overflow: visible;
@@ -407,14 +411,15 @@
 	}
 
 	&__content {
-		bottom: calcRem(50rem);
+		// bottom: calcRem(50rem);
+		top: calcRem(319rem);
 		position: absolute;
 		color: #000;
 		text-align: center;
 	}
 
 	&__name {
-		font-size: calcRem(14rem);
+		font-size: calcRem(12rem); //14
 		font-weight: 300;
 		line-height: calcRem(20rem);
 	}
@@ -470,17 +475,19 @@
 	&__button{
 		margin: 0 auto;
 		width: calcRem(210rem);
-		padding: calcRem(8rem) 0;
+		padding: calcRem(9rem) 0;
 		border: 1px solid #000;
 		font-size: calcRem(12rem);
 		text-align: center;
 		text-transform: uppercase;
+		font-weight: $medium;
 	}
 }
 
 //구매자 베스트
 .main-best{
 	padding-top: calcRem(60rem);
+
 	&__header{
 		margin-bottom:calcRem(20rem);
 		text-align: center;
@@ -519,6 +526,7 @@
 			@include body3;
 			opacity: 0.5;
 			text-transform: uppercase;
+			font-weight: $regular;
 
 			.is-current &{
 				opacity: 1;
@@ -530,7 +538,8 @@
 //메인 컬렉션
 .main-collection{
 	position: relative;
-	padding-top: calcRem(60rem);
+	margin-top: calcRem(60rem);
+
 	&__center{
 		position: absolute;
 		width: 100%;
@@ -552,6 +561,7 @@
 		color: #fff;
 		border: 1px solid #fff;
 		text-transform: uppercase;
+		font-size: calcRem(14rem);
 	}
 }
 
@@ -585,11 +595,13 @@
 	&__txt{
 		line-height: calcRem(20rem);
 		font-size: calcRem(12rem);
-		font-weight: 400;
+		font-weight: $medium;
+		padding-top: calcRem(40rem);
+		margin-bottom: 4px;
 	}
 	&__info{
 		@include body3;
-		padding: calcRem(40rem) calcRem(20rem) calcRem(45rem);
+		padding: 0 calcRem(20rem) calcRem(45rem);
 		color: #fff;
 		text-align: center;
 	}
@@ -605,6 +617,8 @@
 		border: 1px solid #fff;
 		text-align: center;
 		text-transform: uppercase;
+		font-weight: $regular;
+		font-size: calcRem(14rem);
 	}
 	&__link + &__link{
 		margin-top: calcRem(30rem);
@@ -651,7 +665,7 @@
 		color: #fff;
 		background: #9b192f;
 		font-size: calcRem(12rem);
-		font-weight: 400;
+		font-weight: $medium;
 		line-height: calcRem(20rem);
 		text-transform: uppercase;
 	}
@@ -660,7 +674,7 @@
 // 프로젝트
 .main-project{
 	&__header{
-		padding: calcRem(60rem) 0;
+		padding: calcRem(60rem) 0 calcRem(40rem);
 		text-align: center;
 		font-size: calcRem(12rem);
 	}
@@ -788,12 +802,105 @@
 	&__name{
 		@include body3;
 		padding-bottom: calcRem(5rem);
+		font-weight: $regular;
 	}
 
 	&__price {
 		@include body2;
 	}
 }
+
+/**********
+* [QA - 디자인팀::2022-01-06]
+* - 모바일 풀페이지 메인세션 1~ 4번까지만 적용
+* - 디바이스 높이값 상관없이 full 이미지처리
+**********/
+//section height:100vh
+.sectionFull{
+	box-sizing: border-box;
+	height: 100vh;
+	//section1
+	&.main-banner{
+		$this:'.main-banner';
+
+		#{$this}__source{
+			#{$this}--img{
+				height: 100vh;
+			}
+			#{$this}--video{
+				height: 100vh;
+			}
+		}
+		#{$this}__img{
+			max-width: fit-content;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: 100vh;
+			font-size: 0;
+	
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	
+	//section3
+	&.main-banner2{
+		$this:'.main-banner2';
+
+		padding-top: 0;
+
+		#{$this}__img{
+			max-width: inherit;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: 100vh;
+		}
+
+		#{$this}__video{
+			width: auto;
+			height: 100vh;
+		}
+	}
+
+
+	@media screen and (min-height: 641px){
+		// section2 : 세로640px 이상부터는 중앙정렬 
+		&.main-new{
+			$this:'.main-new';
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+	
+			#{$this}__header{
+				top: 27%;
+				padding: 0;
+			}
+
+			#{$this}__content {
+				top:76%;
+			}
+		}
+	}
+
+	@media screen and (min-width: 768px){
+		&.main-banner{
+			$this:'.main-banner';
+
+			#{$this}__img{
+				max-width: inherit;
+				min-width: 100%;
+				min-height: 100%;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
 
 
 //검색 후 결과페이지
