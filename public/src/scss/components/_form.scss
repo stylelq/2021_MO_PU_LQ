@@ -806,15 +806,18 @@ input {
 			}
 		}
 		input[type="date"]::-webkit-calendar-picker-indicator{
-			width: calcRem(14rem);
-			height: calcRem(14rem);
-			@include background('/images/common/ico_calendar.png','no-repeat center center / auto');
+			// width: calcRem(14rem);
+			// height: calcRem(14rem);
+			// @include background('/images/common/ico_calendar.png','no-repeat center center / auto');
+			display: none;
 		}
-		input[type="text"]+span{
+		input[type="text"]+span,
+		input[type="date"]+span{
 			position: absolute;
 			top: 50%;
 			right: calcRem(11rem);
 			transform: translateY(-50%);
+			
 			width: calcRem(14rem);
 			height: calcRem(14rem);
 			@include background('/images/common/ico_calendar.png','no-repeat center center / contain');
