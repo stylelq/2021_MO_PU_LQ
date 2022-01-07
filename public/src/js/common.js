@@ -50,6 +50,9 @@ jQuery(function(){
                 $("." + dataPage).addClass('is-active');
                 $("." + dataPage).find('.gnb-body__item').eq(0).addClass('is-active');
                 $("." + dataPage).find('.gnb-3depth').eq(0).addClass('is-active');
+            } else if (dataPage == "none"){
+                e.preventDefault();
+                location.href = "../promotion/promotion_list.html";
             }
         });
 
