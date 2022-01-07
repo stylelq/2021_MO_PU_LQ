@@ -851,6 +851,17 @@
 			height: 100vh;
 		}
 	}
+
+	//section2
+	&.main-new{
+		$this:'.main-new';
+		padding: 0;
+
+		#{$this}__container,
+		#{$this}__wrapper{
+			height: auto;
+		}
+	}
 	
 	//section3
 	&.main-banner2{

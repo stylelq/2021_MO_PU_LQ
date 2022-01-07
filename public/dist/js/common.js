@@ -1028,6 +1028,12 @@ jQuery(function () {
     if (height > 0) {
       $('.header').addClass('is-bg-view');
     } else {
+      if (!$('.type-1depth').is(':visible')) {
+        $('.header').addClass('is-bg-view');
+      }
+    }
+
+    if ($('.header').hasClass('type-bg')) {
       $('.header').removeClass('is-bg-view');
     }
   }); //메세지 카드 체크시 노출
