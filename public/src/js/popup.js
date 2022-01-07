@@ -1,7 +1,14 @@
 jQuery(function(){
     //팝업열기(공통)
-    function openPopup() {
-        var el = $(this).attr('href').replace("#","");
+     function openPopup() {
+        var el='';
+        if( this.tagName === 'BUTTON' ){
+            el = this.dataset.popupId;
+        }
+        if( this.tagName === "A" ){
+            el = $(this).attr('href').replace("#","");
+        }
+
         if($('.popup.is-active').length <= 1) {
         }else{
             $('.popup').removeClass('is-active');
@@ -173,6 +180,7 @@ jQuery(function(){
     }
     $(document).on('click', '.js-imgView-open', reviewImgView);
     //----
+
 });
 
 
