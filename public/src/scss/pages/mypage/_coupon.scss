@@ -51,7 +51,8 @@
         &__user{
             font-weight: $regular;
             font-size: calcRem(14rem);
-            margin-top: calcRem(5rem);
+            // margin-top: calcRem(5rem);
+            transform: translateY(72%);
         }
         &__name{
             font-weight: $medium;
