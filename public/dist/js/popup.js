@@ -13,6 +13,8 @@ jQuery(function () {
       el = $(this).attr('href').replace("#", "");
     }
 
+    console.log(this);
+
     if ($('.popup.is-active').length <= 1) {} else {
       $('.popup').removeClass('is-active');
     }
