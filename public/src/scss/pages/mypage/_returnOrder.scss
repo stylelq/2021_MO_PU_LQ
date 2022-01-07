@@ -96,13 +96,4 @@
         }
     }
 
-    //데이터 없는경우
-    .no-result{
-        @include body3;
-        border-bottom: 1px solid $lightgray4;
-        padding:calcRem(90rem) 0 calcRem(110rem);
-        text-align: center;
-        margin:0 calcRem(20rem);
-    }
-
 }
