@@ -843,6 +843,13 @@
 			left: 50%;
 			transform: translateX(-50%);
 		}
+
+		#{$this}__video{
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: 100vh;
+		}
 	}
 	
 	//section3
