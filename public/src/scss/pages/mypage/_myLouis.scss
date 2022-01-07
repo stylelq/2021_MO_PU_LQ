@@ -62,7 +62,7 @@
     &__more--membership{
         @include body2;
         float: right;
-        margin-top: 26px;
+        margin-top: 3px;
         color: $point1;
         &:after{
             @include moreArrow;
