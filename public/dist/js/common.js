@@ -58,7 +58,8 @@ jQuery(function () {
         $("." + dataPage).find('.gnb-3depth').eq(0).addClass('is-active');
       } else if (dataPage == "none") {
         e.preventDefault();
-        location.href = "../promotion/promotion_list.html";
+        var el = $(this).attr('href');
+        location.href = el;
       }
     }); //Gnb 2뎁스 닫기
 
@@ -738,7 +739,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
