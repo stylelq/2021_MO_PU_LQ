@@ -72,7 +72,7 @@
 
       #planListArea{
        // 프로모션 상세 :: 스테이징 구조에 따른 스타일적용
-        &__link{
+        .promotion-list__link{
           margin-bottom: calcRem(36rem);
         }
       }
