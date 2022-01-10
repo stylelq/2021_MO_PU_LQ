@@ -770,7 +770,7 @@ jQuery(function () {
 
 
   if ($('.main-banner2').length > 0) {
-    var mainSlide = new Swiper('.main-banner2__container', {
+    var mainSlideOpt = {
       observer: true,
       observeParents: true,
       watchOverflow: true,
@@ -823,7 +823,16 @@ jQuery(function () {
           }
         }
       }
-    });
+    };
+
+    if ($('.swiper-slide.main-banner2__item').length > 1) {
+      mainSlideOpt;
+    } else {
+      mainSlideOpt.loop = false;
+      mainSlideOpt.autoplay = false;
+    }
+
+    var mainSlide = new Swiper('.main-banner2__container', mainSlideOpt);
   } //메인 배너슬라이드3
 
 
