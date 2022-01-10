@@ -34,6 +34,12 @@
             display: flex;
             align-items: center;
 
+            &:not(:nth-child(2)):nth-child(2n){
+                margin-top: calcRem(20rem);
+                padding-top: calcRem(20rem);
+                border-top: 1px solid $lightgray4;
+            }
+
             &--title{
                 color: $point1;
                 // width: calcRem(77rem);
@@ -112,6 +118,7 @@
             @include body2;
             margin: 0;
             margin-top:calcRem(30rem);
+
         }
 
         &--list{
