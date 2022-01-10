@@ -548,7 +548,7 @@
     &__link{
         display: block;
         @include body3;
-        padding:calcRem(8rem) calcRem(5rem);
+        padding:calcRem(8rem) 0; //calcRem(8rem) calcRem(5rem)
         position: relative;
 
         .is-current &{

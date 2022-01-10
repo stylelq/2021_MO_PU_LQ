@@ -855,7 +855,6 @@
 	//section2
 	&.main-new{
 		$this:'.main-new';
-		// padding: 0;
 
 		#{$this}__container,
 		#{$this}__wrapper{
@@ -878,8 +877,10 @@
 		}
 
 		#{$this}__video{
-			width: auto;
-			height: 100vh;
+			// width: auto;
+			// height: 100vh;
+			min-width: 100%;
+			min-height: 100%;
 		}
 	}
 
