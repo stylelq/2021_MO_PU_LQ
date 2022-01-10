@@ -56,7 +56,6 @@ jQuery(function(){
                 location.href=el;
             }
         });
-
         //Gnb 2뎁스 닫기
         $('.js-gnb-back').off('click').on('click',function(e){
             e.preventDefault();
