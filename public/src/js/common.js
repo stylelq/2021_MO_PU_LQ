@@ -1237,7 +1237,3 @@ window.onload = function(){
 
 //madin section full
 $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
-// console.log( $('.sectionFull').eq(0).offset().top )
-// console.log( $('.sectionFull').eq(1).offset().top )
-// console.log( $('.sectionFull').eq(2).offset().top )
-// console.log( $('.sectionFull').eq(3).offset().top )
