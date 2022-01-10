@@ -18,7 +18,8 @@ jQuery(function () {
     }
 
     $('#' + el).addClass('is-active');
-    $('html').addClass('is-hidden');
+    $('html').addClass('is-hidden'); //body스크롤 허용되는 레이어 팝업
+
     var scrollId = ['benefitsPop', 'giftPop', 'messagePop', 'installmentPop'];
     scrollId.forEach(function (item) {
       return el === item && $('html').removeClass('is-hidden');
