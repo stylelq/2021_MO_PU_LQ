@@ -42,25 +42,24 @@
         padding: calcRem(30rem) 0 calcRem(71rem);
         .swiper{
             &-button{
-                &-next{
+                @mixin swiperButtonStyle {
                     @include vertical-center;
                     display: inline-block;
                     width: calcRem(10rem);
                     height: calcRem(20rem);
                     position: absolute;
-                    right: calcRem(10rem);
-                    background: url('../../images/collection/collection_slide_next.png') no-repeat center center /contain;
+                    top:30%;
                     z-index: 100;
                 }
+                &-next{
+                    @include swiperButtonStyle;
+                    right: calcRem(10rem);
+                    background: url('../../images/collection/collection_slide_next.png') no-repeat center center /contain;
+                }
                 &-prev{
-                    @include vertical-center;
-                    display: inline-block;
-                    width: calcRem(10rem);
-                    height: calcRem(20rem);
-                    position: absolute;
+                    @include swiperButtonStyle;
                     left: calcRem(10rem);
                     background: url('../../images/collection/collection_slide_prev.png') no-repeat center center /contain;
-                    z-index: 100;
                 }
             }
         }
