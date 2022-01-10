@@ -823,13 +823,11 @@
 	&.main-banner{
 		$this:'.main-banner';
 
-		#{$this}__source{
-			#{$this}--img{
-				height: 100vh;
-			}
-			#{$this}--video{
-				height: 100vh;
-			}
+		#{$this}__source--img{
+			height: 100vh;
+		}
+		#{$this}__source--video{
+			height: 100vh;
 		}
 		#{$this}__img{
 			max-width: fit-content;
