@@ -69,13 +69,6 @@
           font-size: calcRem(14rem);
           font-weight: 100;
         }
-
-      #planListArea{
-       // 프로모션 상세 :: 스테이징 구조에 따른 스타일적용
-        .promotion-list__link{
-          margin-bottom: calcRem(36rem);
-        }
-      }
     }
 
     // 프로모션 뷰 비주얼
@@ -151,4 +144,11 @@
 // 프로모션 상세 :: 스테이징 구조에 따른 스타일적용
 .container + .promotion-wrap{
   padding-top: 0;
+
+  #planListArea{
+    // 프로모션 상세 :: 스테이징 구조에 따른 스타일적용
+     .promotion-list__link{
+       margin-bottom: calcRem(36rem);
+     }
+   }
 }
