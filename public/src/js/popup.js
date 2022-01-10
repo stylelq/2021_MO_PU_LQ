@@ -8,13 +8,19 @@ jQuery(function(){
         if( this.tagName === "A" ){
             el = $(this).attr('href').replace("#","");
         }
-        console.log(this)
+
         if($('.popup.is-active').length <= 1) {
         }else{
             $('.popup').removeClass('is-active');
         }
         $('#' + el).addClass('is-active');
         $('html').addClass('is-hidden');
+
+        var scrollId = ['benefitsPop','giftPop','messagePop','installmentPop']
+        scrollId.forEach(function(item){
+            return el === item && $('html').removeClass('is-hidden');
+        });
+
         return false;
     }
     $(document).on('click', '.js-popup-open', openPopup);
