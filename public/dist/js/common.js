@@ -705,11 +705,10 @@ jQuery(function () {
   //         },
   //     });
   // }
-  //메인 배너슬라이드
+  // 메인 배너슬라이드
 
 
-  if ($('.main-banner__item').length > 0) {
-    // 첫번째 제외한 슬라이드
+  if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
     var mainBannerProgressbarOpt = {
       init: function init() {
         var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
@@ -765,18 +764,11 @@ jQuery(function () {
       },
       on: mainBannerProgressbarOpt
     };
-
-    if ($('.swiper-slide.main-banner__item, .js-main-slide').length > 1) {
-      mainBannerOption;
-    } else {
-      // main banner 1개 일때
-      mainBannerOption.loop = false;
-      mainBannerOption.autoplay = false;
-      mainBannerOption.pagination = false;
-      mainBannerOption.on = {};
-    }
-
-    var mainSlide = new Swiper('.main-banner__container', mainBannerOption);
+    var mainSlide = new Swiper('.main-banner__container', mainBannerOption); // 1장이하일 경우
+    // mainBannerOption.loop = false;
+    // mainBannerOption.autoplay = false;
+    // mainBannerOption.pagination = false;
+    // mainBannerOption.on = {};
   } // 메인 배너슬라이드
 
   /*var mainbannerSlide = $('.swiper-slide.js-top-slide').length;
@@ -810,7 +802,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
@@ -840,47 +832,8 @@ jQuery(function () {
   //메인 배너슬라이드2
 
 
-  if ($('.main-banner2__item').length > 0) {
-    var mainSlideProgressbarOpt = {
-      init: function init() {
-        var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
-        var bg = slide.data("bg");
-
-        if ($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-          $('body').removeClass('is-black');
-          $('body').addClass('is-white');
-        } else {
-          $('body').removeClass('is-white');
-          $('body').addClass('is-black');
-        }
-
-        $('.main-banner2__progressbar').removeClass("animate");
-        $('.main-banner2__progressbar').removeClass("active");
-        $('.main-banner2__progressbar').eq(0).addClass("animate");
-        $('.main-banner2__progressbar').eq(0).addClass("active");
-      },
-      slideChangeTransitionStart: function slideChangeTransitionStart() {
-        $('.main-banner2__progressbar').removeClass("animate");
-        $('.main-banner2__progressbar').removeClass("active");
-        $('.main-banner2__progressbar').eq(0).addClass("active");
-      },
-      slideChangeTransitionEnd: function slideChangeTransitionEnd() {
-        $('.main-banner2__progressbar').eq(0).addClass("animate");
-      },
-      beforeTransitionStart: function beforeTransitionStart() {
-        var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
-        var bg = slide.data("bg");
-
-        if ($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-          $('body').removeClass('is-black');
-          $('body').addClass('is-white');
-        } else {
-          $('body').removeClass('is-white');
-          $('body').addClass('is-black');
-        }
-      }
-    };
-    var mainSlideOpt = {
+  if ($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1) {
+    var mainSlide = new Swiper('.main-banner2__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
@@ -894,24 +847,50 @@ jQuery(function () {
         el: ".main-banner2__pagination",
         type: "fraction"
       },
-      on: mainSlideProgressbarOpt
-    };
+      on: {
+        init: function init() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
 
-    if ($('.swiper-slide.main-banner2__item').length > 1) {
-      mainSlideOpt;
-    } else {
-      //메인 배너슬라이드2 1장일 경우 슬라이드 옵션변경
-      mainSlideOpt.loop = false;
-      mainSlideOpt.autoplay = false;
-      mainSlideOpt.pagination = false;
-      mainSlideOpt.on = {};
-    }
+          if ($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
 
-    var mainSlide = new Swiper('.main-banner2__container', mainSlideOpt);
+          $('.main-banner2__progressbar').removeClass("animate");
+          $('.main-banner2__progressbar').removeClass("active");
+          $('.main-banner2__progressbar').eq(0).addClass("animate");
+          $('.main-banner2__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          $('.main-banner2__progressbar').removeClass("animate");
+          $('.main-banner2__progressbar').removeClass("active");
+          $('.main-banner2__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+          $('.main-banner2__progressbar').eq(0).addClass("animate");
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+          } else {
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+          }
+        }
+      }
+    });
   } //메인 배너슬라이드3
 
 
-  if ($('.main-banner3__item').length > 0) {
+  if ($('.main-banner3').length > 0 && $('.main-banner3__item').length > 1) {
     var mainSlide = new Swiper('.main-banner3__container', {
       observer: true,
       observeParents: true,
@@ -969,7 +948,7 @@ jQuery(function () {
   } //new 배너슬라이드
 
 
-  if ($('.main-new').length > 0) {
+  if ($('.main-new').length > 0 && $('.main-new__item').length > 1) {
     var eventSliderTouch = false;
     var mainNewSlide = new Swiper('.main-new__container', {
       observer: true,
@@ -1034,7 +1013,7 @@ jQuery(function () {
   } //best 배너슬라이드
 
 
-  if ($('.best-thumb').length > 0) {
+  if ($('.best-thumb').length > 0 && $('.best-thumb__item').length > 1) {
     var bestSlide = new Swiper('.best-thumb__container', {
       observer: true,
       observeParents: true,

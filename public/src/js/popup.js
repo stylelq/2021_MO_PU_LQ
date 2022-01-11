@@ -6,21 +6,33 @@ jQuery(function(){
             el = this.dataset.popup;
         }
         if( this.tagName === "A" ){
-            el = $(this).attr('href').replace("#","");
+            var href = $(this).attr('href');
+            
+            if( href.indexOf('#') > -1){
+                el = href.slice(href.indexOf('#')+1).replace();
+            } 
+            if( href.indexOf('_') > -1 ){
+                el = href.slice(0, href.indexOf('_')).replace();
+            }  
+            
         }
-
+        
         if($('.popup.is-active').length <= 1) {
         }else{
             $('.popup').removeClass('is-active');
         }
         $('#' + el).addClass('is-active');
-        $('html').addClass('is-hidden');
+        
+        
+        // 전체 팝업 body scroll 없앰
+        // $('html').addClass('is-hidden'); 
 
-        //body스크롤 허용되는 레이어 팝업
-        var scrollId = ['benefitsPop','giftPop','messagePop','installmentPop']
-        scrollId.forEach(function(item){
-            return el === item && $('html').removeClass('is-hidden');
-        });
+        // //[부분적용] body스크롤 허용되는 레이어 팝업
+        // var scrollId = ['benefitsPop','giftPop','messagePop','installmentPop']
+        // scrollId.forEach(function(item){
+        //     var btnId = el.slice(0,el.indexOf('_')).replace();
+        //     return btnId === item && $('html').removeClass('is-hidden');
+        // });
 
         return false;
     }
@@ -69,20 +81,6 @@ jQuery(function(){
     if($('.product-zoom').length > 0) {
         productZoom();
     }
-
-    // function mobileDevice() {
-    //     if( ['Win16','Win32','Win64','Mac','MacIntel'].find(ele => ele == navigator.platform) ) {return false;}
-    //     else {return true;}
-    // }
-
-    // if( mobileDevice() != true ){
-    //     //확대축소(플러그인 panzoom):play
-    //     if($('.product-zoom').length > 0) {
-    //         productZoom();
-    //     }
-    // }else{
-    //     $('.product-zoom').css({touchAction : 'manipulation' });
-    // }
 
     //팝업에 사용되는 슬라이드(확대축소팝업, 360도 회전 팝업)
     if($('.popup-slider').length > 0){
