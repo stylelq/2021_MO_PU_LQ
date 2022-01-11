@@ -275,6 +275,7 @@
             line-height:0;
             font-size:0;
             scrollbar-width: none;
+            touch-action: pan-x;
 
             &::-webkit-scrollbar {
                 display: none;
