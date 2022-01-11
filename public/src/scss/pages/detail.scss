@@ -1,5 +1,16 @@
 @import "../base/variables";
 @import "../base/mixins";
+
+//등록된 Q&A없는 경우
+.product-detail{
+    .notData-wrap{
+        @include body5;
+        text-align: center;
+        padding:calcRem(20rem) calcRem(20rem);
+        font-size:calcRem(12rem);
+    }
+}
+
 //Layout
 .detail{
     &-info{
