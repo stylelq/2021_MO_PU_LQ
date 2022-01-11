@@ -276,8 +276,9 @@
             font-size:0;
             scrollbar-width: none;
             touch-action: pan-x;
+            -webkit-overflow-scrolling: auto; //ios
 
-            &::-webkit-scrollbar {
+            ::-webkit-scrollbar {
                 display: none;
             }
         }
