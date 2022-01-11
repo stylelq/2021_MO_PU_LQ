@@ -61,6 +61,14 @@
             width:100%;
         }
     }
+
+    //등록된 상품 없을 시
+    &__no-product{
+        @include body5;
+        text-align: center;
+        padding:calcRem(20rem) calcRem(20rem);
+        font-size:calcRem(12rem);
+    }
 }
 
 //product Post Item
