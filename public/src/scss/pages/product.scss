@@ -3,6 +3,12 @@
 
 .product-wrap{
     display: block;
+    .notData-wrap{
+        @include body5;
+        text-align: center;
+        padding:calcRem(20rem) calcRem(20rem);
+        font-size:calcRem(12rem);
+    }
 }
 
 //product top banner
