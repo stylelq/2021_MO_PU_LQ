@@ -806,10 +806,13 @@ input {
 			}
 		}
 		input[type="date"]::-webkit-calendar-picker-indicator{
-			// width: calcRem(14rem);
+			width: calcRem(14rem);
 			// height: calcRem(14rem);
 			// @include background('/images/common/ico_calendar.png','no-repeat center center / auto');
-			display: none;
+			// display: none;
+			background-image: none;
+			position: relative;
+			z-index: 10;
 		}
 		input[type="text"]+span,
 		input[type="date"]+span{
@@ -821,6 +824,7 @@ input {
 			width: calcRem(14rem);
 			height: calcRem(14rem);
 			@include background('/images/common/ico_calendar.png','no-repeat center center / contain');
+			z-index: 0;
 		}
 		
 	}
