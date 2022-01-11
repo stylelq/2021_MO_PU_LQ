@@ -11,14 +11,7 @@ jQuery(function () {
 
     if (this.tagName === "A") {
       var href = $(this).attr('href');
-
-      if (href.indexOf('#') > -1) {
-        el = href.slice(href.indexOf('#') + 1).replace();
-      }
-
-      if (href.indexOf('_') > -1) {
-        el = href.slice(0, href.indexOf('_')).replace();
-      }
+      el = href.replace('#', '');
     }
 
     if ($('.popup.is-active').length <= 1) {} else {
