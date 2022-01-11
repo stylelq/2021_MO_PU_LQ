@@ -21,8 +21,6 @@ jQuery(function () {
       }
     }
 
-    console.log(el);
-
     if ($('.popup.is-active').length <= 1) {} else {
       $('.popup').removeClass('is-active');
     }
