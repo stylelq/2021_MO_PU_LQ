@@ -1116,6 +1116,7 @@ jQuery(function () {
     if (height > 0) {
       $('.header').addClass('is-bg-view');
     } else {
+      $('.header').removeClass('is-bg-view');
       $('.header').hasClass('is-active') ? $('.header').addClass('is-bg-view') : $('.header').removeClass('is-bg-view');
     }
 
