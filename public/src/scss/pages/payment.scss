@@ -877,6 +877,11 @@
 
     &__address{
         @include body3;
+        margin-bottom:calcRem(2rem);
+    }
+
+    &__message{
+        @include body3;
     }
 }
 
