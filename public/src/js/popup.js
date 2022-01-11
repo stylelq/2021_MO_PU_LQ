@@ -7,23 +7,15 @@ jQuery(function(){
         }
         if( this.tagName === "A" ){
             var href = $(this).attr('href');
-            
-            if( href.indexOf('#') > -1){
-                el = href.slice(href.indexOf('#')+1).replace();
-            } 
-            if( href.indexOf('_') > -1 ){
-                el = href.slice(0, href.indexOf('_')).replace();
-            }  
-            
+            el = href.replace('#','');            
         }
-        
+
         if($('.popup.is-active').length <= 1) {
         }else{
             $('.popup').removeClass('is-active');
         }
         $('#' + el).addClass('is-active');
-        
-        
+           
         // 전체 팝업 body scroll 없앰
         // $('html').addClass('is-hidden'); 
 
