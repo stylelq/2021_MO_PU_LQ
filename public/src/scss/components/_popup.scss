@@ -1256,10 +1256,8 @@
             }
         }
     }
-    .zipcode-address__cont{
-        &--zip{
-            margin-top: calcRem(10rem);
-        }
+    input[type="hidden"] + .zipcode-address__cont--zip{
+        margin-top: calcRem(10rem);
     }
 }
 
