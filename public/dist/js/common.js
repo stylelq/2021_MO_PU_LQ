@@ -3,6 +3,8 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 jQuery(function () {
+  //madin section full
+  $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
   $(document).ready(function () {
     /*
     //Gnb
@@ -1302,7 +1304,4 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
 
 window.onload = function () {
   $('.loading').hide();
-}; //madin section full
-
-
-$('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+};

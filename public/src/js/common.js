@@ -1,4 +1,7 @@
 jQuery(function(){
+    //madin section full
+    $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+    
     $(document).ready(function(){
         /*
         //Gnb
@@ -1304,5 +1307,4 @@ window.onload = function(){
     $('.loading').hide();
 }
 
-//madin section full
-$('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+
