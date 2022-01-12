@@ -589,7 +589,7 @@
 	&__title{
 		line-height: calcRem(32rem);
 		font-size: calcRem(20rem);
-		font-weight: 500;
+		font-weight: 400;
 		text-transform: uppercase;
 	}
 	&__txt{
@@ -601,9 +601,12 @@
 	}
 	&__info{
 		@include body3;
-		padding: 0 calcRem(20rem) calcRem(45rem);
+		padding: calcRem(20rem) 0 calcRem(30rem);
 		color: #fff;
 		text-align: center;
+		&--cont2{
+			padding-top: calcRem(10rem);
+		}
 	}
 	&__gender{
 		padding: 0 calcRem(20rem);
