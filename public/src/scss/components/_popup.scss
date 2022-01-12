@@ -6,8 +6,7 @@
     top:0;
     left:0;
     right:0;
-    // min-height:100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    min-height:100vh;
     background-color:#fff;
     z-index:$popupZindex;
     &.is-active{
@@ -48,10 +47,10 @@
     
     &__body{
         overflow:auto;
-        // height:calc(100vh - #{calcRem(58rem)});
+        height:calc(100vh - #{calcRem(58rem)});
         // height: -webkit-fill-available;
         // height: fill-available;
-        height: calc(var(--vh, 1vh) * 100 - #{calcRem(58rem)} );
+        // height: calc(var(--vh, 1vh) * 100 - #{calcRem(58rem)} );
         
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
@@ -69,10 +68,11 @@
 
         //하단버튼 fixed 하지 않기
         .type-notFixed &{
-            padding-bottom: 1.5px;
+            padding-bottom: 0;
 
             [class $= __footer ]{
                 position: static;
+                padding-top: calcRem(30rem); 
             }
         }
 
@@ -1733,7 +1733,7 @@
 //마이페이지 :: 반품신청
 .return-order__contents{
     padding:0 calcRem(20rem);    
-    margin-bottom: calcRem(50rem);  
+    // margin-bottom: calcRem(50rem);  
     overflow: hidden;
     overflow-y: scroll;
 
