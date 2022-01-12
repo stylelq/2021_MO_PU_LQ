@@ -18,7 +18,10 @@ jQuery(function () {
       $('.popup').removeClass('is-active');
     }
 
-    $('#' + el).addClass('is-active'); // 전체 팝업 body scroll 없앰
+    $('#' + el).addClass('is-active'); // mobile 디바이스 하단 네비게이션 버튼 바
+
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px'); // 전체 팝업 body scroll 없앰
     // $('html').addClass('is-hidden'); 
     // //[부분적용] body스크롤 허용되는 레이어 팝업
     // var scrollId = ['benefitsPop','giftPop','messagePop','installmentPop']

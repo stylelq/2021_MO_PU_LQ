@@ -1,11 +1,13 @@
 //Layout
+
 .popup{
     display:none;
     position:fixed;
     top:0;
     left:0;
     right:0;
-    min-height:100vh;
+    // min-height:100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-color:#fff;
     z-index:$popupZindex;
     &.is-active{
@@ -43,9 +45,14 @@
         @include background('/images/common/close.svg','no-repeat center center / contain');
         text-indent: -9999px;
     }
+    
     &__body{
         overflow:auto;
         height:calc(100vh - #{calcRem(58rem)});
+        // height: -webkit-fill-available;
+        // height: fill-available;
+        // height: calc(var(--vh, 1vh) * 100);
+        
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
         box-sizing: border-box;
