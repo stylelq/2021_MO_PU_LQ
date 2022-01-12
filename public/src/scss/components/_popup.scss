@@ -6,8 +6,7 @@
     top:0;
     left:0;
     right:0;
-    // min-height:100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    min-height:100vh;
     background-color:#fff;
     z-index:$popupZindex;
     &.is-active{
@@ -51,7 +50,7 @@
         height:calc(100vh - #{calcRem(58rem)});
         // height: -webkit-fill-available;
         // height: fill-available;
-        // height: calc(var(--vh, 1vh) * 100);
+        // height: calc(var(--vh, 1vh) * 100 - #{calcRem(58rem)} );
         
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
@@ -65,6 +64,16 @@
         //qna 글쓰기 팝업
         .type-write &{
             height:calc(100vh - #{calcRem(100rem)});
+        }
+
+        //하단버튼 fixed 하지 않기
+        .type-notFixed &{
+            padding-bottom: 0;
+
+            [class $= __footer ]{
+                position: static;
+                padding-top: calcRem(30rem); 
+            }
         }
 
         //배송정보 팝업
@@ -1724,8 +1733,9 @@
 //마이페이지 :: 반품신청
 .return-order__contents{
     padding:0 calcRem(20rem);    
-    margin-bottom: calcRem(50rem);  
+    // margin-bottom: calcRem(50rem);  
     overflow: hidden;
+    overflow-y: scroll;
 
     .order-mypage__cont{
         display: inline-block;
