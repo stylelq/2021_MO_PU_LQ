@@ -9,6 +9,9 @@
     &__list{
         overflow: hidden;
     }
+    &__link{
+        display: block;
+    }
     &__item{
         float: left;
         // width: calcRem(60rem);
