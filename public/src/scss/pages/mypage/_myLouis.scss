@@ -53,7 +53,7 @@
     &__more--userInfo{
         @include title1;
         float: left;
-        width: 55%;
+        // width: 55%;
         &:after{ 
             @include moreArrow;
             @include pageBackground('/images/common/ico_paging_next.svg','no-repeat center center / contain');

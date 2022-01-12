@@ -6,8 +6,7 @@ jQuery(function(){
             el = this.dataset.popup;
         }
         if( this.tagName === "A" ){
-            var href = $(this).attr('href');
-            el = href.replace('#','');            
+            el = $(this).attr('href').replace('#','');            
         }
 
         if($('.popup.is-active').length <= 1) {
@@ -17,13 +16,25 @@ jQuery(function(){
         $('#' + el).addClass('is-active');
 
         // mobile 디바이스 하단 네비게이션 버튼 바
-        var vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', vh+'px');
+        // var vh = window.innerHeight * 0.01;
+        // document.documentElement.style.setProperty('--vh', vh+'px');
            
         // 전체 팝업 body scroll 없앰
-        // $('html').addClass('is-hidden'); 
+        $('html').addClass('is-hidden'); 
 
-        // //[부분적용] body스크롤 허용되는 레이어 팝업
+        // 예외 modal-pop
+        var type1 = ['small-popup','button-popup','modal-pop'];
+        var popId = $('#' + el);
+        type1.forEach(function(name){
+            if( popId.hasClass(name) ){
+                $('html').removeClass('is-hidden');
+                $('.popup__body').scrollTop(0);
+            }
+            return false;
+        })
+        
+
+        // //[부분적용] body스크롤 허용되는 레이어 팝업 ::href값으로
         // var scrollId = ['benefitsPop','giftPop','messagePop','installmentPop']
         // scrollId.forEach(function(item){
         //     var btnId = el.slice(0,el.indexOf('_')).replace();
