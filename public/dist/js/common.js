@@ -3,6 +3,8 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 jQuery(function () {
+  //madin section full
+  $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
   $(document).ready(function () {
     /*
     //Gnb
@@ -802,7 +804,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
@@ -1302,7 +1304,4 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
 
 window.onload = function () {
   $('.loading').hide();
-}; //madin section full
-
-
-$('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+};
