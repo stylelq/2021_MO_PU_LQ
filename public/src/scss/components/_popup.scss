@@ -6,7 +6,11 @@
     top:0;
     left:0;
     right:0;
-    min-height:100vh;
+    bottom: 0;
+    //mobile 디바이스 브라우저별 높이값처리
+    height: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); 
     background-color:#fff;
     z-index:$popupZindex;
     &.is-active{
@@ -47,10 +51,10 @@
     
     &__body{
         overflow:auto;
-        height:calc(100vh - #{calcRem(58rem)});
+        // height:calc(100vh - #{calcRem(58rem)});
         // height: -webkit-fill-available;
         // height: fill-available;
-        // height: calc(var(--vh, 1vh) * 100 - #{calcRem(58rem)} );
+        height: calc(var(--vh, 1vh) * 100 );
         
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
@@ -58,21 +62,39 @@
 
         //필터 팝업
         .type-footer &{
-            height:calc(100vh - #{calcRem(171rem)});
+            // height:calc(100vh - #{calcRem(171rem)});
+            // height:calc(var(--vh, 1vh) * 100 );
+            padding-bottom: calcRem(171rem);
         }
 
         //qna 글쓰기 팝업
         .type-write &{
-            height:calc(100vh - #{calcRem(100rem)});
+            // height:calc(100vh - #{calcRem(100rem)});
+            // height:calc(var(--vh, 1vh) * 100 );
+            padding-bottom: calcRem(100rem);
+
+            [class $= __footer ]{
+                .popup-write__list{
+                    padding: 0 calcRem(20rem);
+                    box-sizing: border-box;
+                }
+            }
         }
 
         //하단버튼 fixed 하지 않기
         .type-notFixed &{
-            padding-bottom: 0;
+            height:calc(var(--vh, 1vh) * 100 );
 
             [class $= __footer ]{
                 position: static;
-                padding-top: calcRem(30rem); 
+                margin-bottom:calcRem(20rem);
+
+                .popup-write__list{    
+                    .popup-write__item:nth-child(1){
+                        width: calc(37% - #{calcRem(5rem)});
+                        margin-right: calcRem(5rem);
+                    }
+                }
             }
         }
 
@@ -1991,6 +2013,8 @@
         .order-mypage__title{ 
             @include title2; 
             line-height: calclH(22,14);
+            padding-top: calcRem(20rem);
+            margin-top: 0;
         }
     }
 
@@ -2090,9 +2114,9 @@
     //message
     .order-mypage__message{
         margin-top:calcRem(30rem);
-        margin-bottom:calcRem(30rem);
-        padding-bottom:calcRem(30rem);
-        border-bottom: 1px solid $lightgray4;
+        margin-bottom:calcRem(20rem);
+        // padding-bottom:calcRem(30rem);
+        // border-bottom: 1px solid $lightgray4;
 
         &.is-active{
             display: block;
