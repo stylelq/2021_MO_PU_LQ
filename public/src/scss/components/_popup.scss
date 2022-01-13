@@ -1636,51 +1636,53 @@
             z-index: 100;
         }
     }
-}
-
-.collabo-wrap{
-    // 콜라보 컨텐츠
-    &__title{
-        /*margin: calcRem(30rem) 0 calcRem(30rem);*/
-        padding-top: calcRem(30rem);
-        text-align: center;
-    }
-    &__item{
-        padding-bottom: calcRem(40rem);
-        position: relative;
-        img{
-            display: block !important;
-            width: 100% !important;
+    .collabo-wrap{
+        // 콜라보 컨텐츠
+        &__title{
+            /*margin: calcRem(30rem) 0 calcRem(30rem);*/
+            padding-top: calcRem(30rem);
+            text-align: center;
+        }
+        &__item{
+            padding-bottom: calcRem(40rem);
+            position: relative;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        &__name{
+            padding: calcRem(20rem) 0 calcRem(40rem);
+            border-top: 1px solid #f5f5f2;
+            font-size: calcRem(18rem);
+            font-weight: 400;
+        }
+        &__list{
+            position: relative;
+            padding-bottom: calcRem(40rem);
+        }
+        &__img{
+            width: 100%;
+            display: block;
+        }
+        &__video{
+            width: 100%;
+        }
+        &__sound{
+            display: block;
+            position: absolute;
+            right: calcRem(20rem);
+            bottom: 10%;
+            overflow: hidden;
+            width: calcRem(30rem);
+            height: calcRem(30rem);
+            background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png") no-repeat center center/contain;
         }
     }
-    &__name{
-        padding: calcRem(20rem) 0 calcRem(40rem);
-        border-top: 1px solid #f5f5f2;
-        font-size: calcRem(18rem);
-        font-weight: 400;
-    }
-    &__list{
-        position: relative;
-        padding-bottom: calcRem(40rem);
-    }
-    &__img{
-        width: 100%;
-        display: block;
-    }
-    &__video{
-        width: 100%;
-    }
-    &__sound{
-        display: block;
-        position: absolute;
-        right: calcRem(20rem);
-        bottom: 10%;
-        overflow: hidden;
-        width: calcRem(30rem);
-        height: calcRem(30rem);
-        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png") no-repeat center center/contain;
-    }
+
 }
+
+
 
 
 
