@@ -129,7 +129,7 @@
         width: 3px;
         height: 3px;
         border-radius: 3px;
-        background: #888;
+        background: $grayTextColor;
     }
 }
 @mixin numStyle {
@@ -162,7 +162,7 @@
         left:3px;
         width: 3px;
         height: 1px;
-        background: #888;
+        background: $grayTextColor;
     }
 }
 .section-terms{ 
@@ -173,7 +173,8 @@
 
     ol.etc__dot, ul.etc__dot{ margin:calcRem(10rem) 0; &>li{ @include dotStyle; } }
     ol.etc__num, ul.etc__num{ margin:calcRem(10rem) 0; &>li{@include numStyle;} }
-    ol.etc__line, ul.etc__line{ margin:calcRem(10rem) 0; &>li{@include lineStyle;} }
+    ol.etc__line, ul.etc__line, ol.list, ul.list{ margin:calcRem(10rem) 0; &>li{@include lineStyle;} }
+    ol.reset, ul.reset{ &>li{ list-style: none; }}
 
     .etc__dot:not(ul):not(ol){@include dotStyle;}
     .etc__num:not(ul):not(ol){@include numStyle;}
@@ -181,9 +182,36 @@
 
     p{@include body3();}
     strong{font-weight: 400;}
-    .etc__title{ 
+    .etc__title,.title{ 
         margin:calcRem(30rem) 0 calcRem(10rem); 
         @include body2();
+    }
+
+    table{
+        margin: 5px 0;
+
+        border-top: 2px solid $grayTextColor;
+        border-right: 1px solid $lightgray4;
+        box-sizing: border-box;
+        text-align: center;
+
+        caption{display: none;}
+        thead{
+            th{  background-color: $lightgray2; }
+        }
+        th,td{
+            border-left: 1px solid $lightgray4;
+            border-bottom: 1px solid $lightgray4;
+            @include body4();
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    }
+    .frame{
+        margin: 5px 0;
+        padding: calcRem(5rem) 4%;
+        box-sizing: border-box;
+        background: #f5f5f5;
     }
 }
 .etc{
@@ -215,16 +243,18 @@
         margin: 5px 0;
 
         table{
-            border-top: 2px solid #888;
+            border-top: 2px solid $grayTextColor;
+            border-right: 1px solid $lightgray4;
+            box-sizing: border-box;
             text-align: center;
 
             caption{display: none;}
             thead{
-                th{  background-color: #f5f5f5; }
+                th{  background-color: $lightgray2; }
             }
             th,td{
-                border-left: 1px solid #e3e3e3;
-                border-bottom: 1px solid #e3e3e3;
+                border-left: 1px solid $lightgray4;
+                border-bottom: 1px solid $lightgray4;
                 @include body4();
                 padding: 5px;
                 box-sizing: border-box;
