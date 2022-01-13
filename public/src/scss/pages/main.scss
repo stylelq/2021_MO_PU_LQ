@@ -836,8 +836,8 @@
 			max-width: fit-content;
 			min-width: 100%;
 			min-height: 100%;
-			width: auto;
-			height: 100vh;
+			// width: auto;
+			// height: 100vh;
 			font-size: 0;
 	
 			position: relative;
@@ -848,8 +848,8 @@
 		#{$this}__video{
 			min-width: 100%;
 			min-height: 100%;
-			width: auto;
-			height: 100vh;
+			// width: auto;
+			// height: 100vh;
 			object-fit: cover;
 		}
 	}
@@ -874,15 +874,15 @@
 			max-width: inherit;
 			min-width: 100%;
 			min-height: 100%;
-			width: auto;
-			height: 100vh;
+			// width: auto;
+			// height: 100vh;
 		}
 
 		#{$this}__video{
 			min-width: 100%;
 			min-height: 100%;
-			width: auto;
-			height: 100vh;
+			// width: auto;
+			// height: 100vh;
 			object-fit: cover;
 		}
 
@@ -927,7 +927,7 @@
 				min-width: 100%;
 				min-height: 100%;
 				width: 100%;
-				height: auto;
+				// height: auto;
 			}
 		}
 	}
