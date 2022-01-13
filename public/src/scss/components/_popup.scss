@@ -129,7 +129,7 @@
         width: 3px;
         height: 3px;
         border-radius: 3px;
-        background: #888;
+        background: $grayTextColor;
     }
 }
 @mixin numStyle {
@@ -162,7 +162,7 @@
         left:3px;
         width: 3px;
         height: 1px;
-        background: #888;
+        background: $grayTextColor;
     }
 }
 .section-terms{ 
@@ -215,16 +215,18 @@
         margin: 5px 0;
 
         table{
-            border-top: 2px solid #888;
+            border-top: 2px solid $grayTextColor;
+            border-right: 1px solid $lightgray4;
+            box-sizing: border-box;
             text-align: center;
 
             caption{display: none;}
             thead{
-                th{  background-color: #f5f5f5; }
+                th{  background-color: $lightgray2; }
             }
             th,td{
-                border-left: 1px solid #e3e3e3;
-                border-bottom: 1px solid #e3e3e3;
+                border-left: 1px solid $lightgray4;
+                border-bottom: 1px solid $lightgray4;
                 @include body4();
                 padding: 5px;
                 box-sizing: border-box;
