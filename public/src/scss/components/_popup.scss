@@ -1532,6 +1532,9 @@
     &__item{
         padding-bottom: calcRem(40rem);
         position: relative;
+        img{
+            @include imageBlock;
+        }
     }
     &__name{
         padding: calcRem(20rem) 0 calcRem(40rem);
