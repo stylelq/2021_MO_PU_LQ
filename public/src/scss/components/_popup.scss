@@ -53,6 +53,7 @@
         overflow:auto;
         // height:calc(100vh - #{calcRem(58rem)});
         height: calc(var(--vh, 1vh) * 100 - #{calcRem(59rem)} );
+        width: 100vw;
         
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
@@ -71,7 +72,7 @@
 
             [class $= __footer ]{
                 .popup-write__list{
-                    padding: 0 calcRem(20rem);
+                    // padding: 0 calcRem(20rem);
                     box-sizing: border-box;
                 }
             }
