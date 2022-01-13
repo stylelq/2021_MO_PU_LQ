@@ -1649,8 +1649,8 @@
         padding-bottom: calcRem(40rem);
         position: relative;
         img{
-            display: block;
-            width: 100%;
+            display: block !important;
+            width: 100% !important;
         }
     }
     &__name{
