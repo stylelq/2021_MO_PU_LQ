@@ -17,7 +17,8 @@ jQuery(function () {
       $('.popup').removeClass('is-active');
     }
 
-    $('#' + el).addClass('is-active'); // mobile 디바이스 하단 네비게이션 버튼 바
+    $('#' + el).addClass('is-active');
+    $('.popup__body').scrollTop(0); // mobile 디바이스 하단 네비게이션 버튼 바
 
     var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', vh + 'px');
@@ -33,9 +34,9 @@ jQuery(function () {
 
     $('html').addClass('is-hidden'); // 예외 modal-pop
 
-    var type1 = ['small-popup', 'button-popup', 'modal-pop'];
+    var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
     var popId = $('#' + el);
-    type1.forEach(function (name) {
+    typeModal.forEach(function (name) {
       if (popId.hasClass(name)) {
         $('html').removeClass('is-hidden');
         $('.popup__body').scrollTop(0);
@@ -77,8 +78,7 @@ jQuery(function () {
     var instance = "";
 
     for (var i = 0; i < area.length; i++) {
-      var item = area.item(i); // item.style.border = '1px solid'
-
+      var item = area.item(i);
       instance = panzoom(item, zoomOption);
     }
   } //확대축소(플러그인 panzoom):reset-슬라이드 이동시, 닫기시

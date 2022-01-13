@@ -52,9 +52,7 @@
     &__body{
         overflow:auto;
         // height:calc(100vh - #{calcRem(58rem)});
-        // height: -webkit-fill-available;
-        // height: fill-available;
-        height: calc(var(--vh, 1vh) * 100 );
+        height: calc(var(--vh, 1vh) * 100 - #{calcRem(59rem)} );
         
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
@@ -63,14 +61,12 @@
         //필터 팝업
         .type-footer &{
             // height:calc(100vh - #{calcRem(171rem)});
-            // height:calc(var(--vh, 1vh) * 100 );
             padding-bottom: calcRem(171rem);
         }
 
         //qna 글쓰기 팝업
         .type-write &{
             // height:calc(100vh - #{calcRem(100rem)});
-            // height:calc(var(--vh, 1vh) * 100 );
             padding-bottom: calcRem(100rem);
 
             [class $= __footer ]{
@@ -83,8 +79,10 @@
 
         //하단버튼 fixed 하지 않기
         .type-notFixed &{
-            height:calc(var(--vh, 1vh) * 100 );
-
+            // height:calc(var(--vh, 1vh) * 100 );
+            [class $= __contents]{
+                padding-bottom: calcRem(30rem);
+            }
             [class $= __footer ]{
                 position: static;
                 margin-bottom:calcRem(20rem);
@@ -95,6 +93,15 @@
                         margin-right: calcRem(5rem);
                     }
                 }
+            }
+        }
+        #couponPop.type-notFixed &{
+            .wrap{
+                padding-bottom: calcRem(50rem);
+            }
+            [class $= __footer ]{
+                position: absolute;
+                margin-bottom: 0;
             }
         }
 
