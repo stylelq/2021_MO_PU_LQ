@@ -1308,3 +1308,15 @@ window.onload = function(){
 }
 
 
+
+// 프로젝트페이지 - 주소복사 기능
+function CopyUrlToClipboard(e){
+    e.preventDefault();
+    var obShareUrl = document.getElementById("ShareUrl");
+    obShareUrl.select();
+    document.execCommand("copy");
+    obShareUrl.blur();
+}
+
+const copyBtn = document.querySelector('.js-url-copy');
+copyBtn.addEventListener('click',CopyUrlToClipboard)

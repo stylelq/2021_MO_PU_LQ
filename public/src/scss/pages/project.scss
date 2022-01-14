@@ -1387,6 +1387,18 @@
                 width: calcVw(96vw);
             }
         }
+        &__input{
+            overflow: hidden;
+            position: absolute;
+            top: auto;
+            width: calcVw(1vw);
+            height: calcVw(1vw);
+            padding: 0;
+            margin: calcVw(-1vw);
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            user-select: auto;
+        }
         &__link{
             display: block;
             line-height: 0;
