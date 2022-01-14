@@ -62,13 +62,15 @@
         //필터 팝업
         .type-footer &{
             // height:calc(100vh - #{calcRem(171rem)});
-            padding-bottom: calcRem(171rem);
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(171rem)} );
+            // padding-bottom: calcRem(171rem);
         }
 
         //qna 글쓰기 팝업
         .type-write &{
             // height:calc(100vh - #{calcRem(100rem)});
-            padding-bottom: calcRem(100rem);
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)} );
+            // padding-bottom: calcRem(100rem);
 
             [class $= __footer ]{
                 .popup-write__list{
@@ -108,7 +110,8 @@
 
         //배송정보 팝업
         .type-tab &{
-            height:calc(100vh - #{calcRem(136rem)});
+            // height:calc(100vh - #{calcRem(136rem)}); 
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(200rem)} );
             padding-top:calcRem(30rem);
             padding-bottom:calcRem(30rem);
         }
@@ -309,7 +312,7 @@
                     top: 50%;left: 50%;
                     transform: translate(-53%,-50%);
                     width: 110%;height: 150%;
-                    background: $lightgray5;
+                    background: $lightgray1;
                 }
             }
         }
