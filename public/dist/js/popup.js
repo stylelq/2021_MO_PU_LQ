@@ -13,6 +13,9 @@ jQuery(function () {
       el = $(this).attr('href').replace('#', '');
     }
 
+    console.log(this);
+    console.log();
+
     if ($('.popup.is-active').length <= 1) {} else {
       $('.popup').removeClass('is-active');
     }
@@ -32,7 +35,12 @@ jQuery(function () {
       document.documentElement.style.setProperty('--vh', vh + 'px');
     }); // 전체 팝업 body scroll 없앰
 
-    $('html').addClass('is-hidden'); // 예외 modal-pop
+    $('html').addClass('is-hidden');
+
+    if (this.parentNode.className === 'inquiry-order__header' || this.parentNode.className === 'user-address__header') {
+      $('html').addClass('is-hidden');
+    } // 예외 modal-pop
+
 
     var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
     var popId = $('#' + el);
@@ -213,5 +221,5 @@ jQuery(function () {
     $(this).parent().addClass('is-active');
   }
 
-  $(document).on('input', '.list-radio', inputActive);
+  $(document).on('input,click,touchstart', '.list-radio', inputActive);
 });
