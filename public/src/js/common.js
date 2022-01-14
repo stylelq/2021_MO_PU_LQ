@@ -1319,6 +1319,6 @@ function CopyUrlToClipboard(e){
 }
 
 var copyBtn = document.querySelector('.js-url-copy');
-if (copyBtn !== undefined) {
+if (copyBtn) {
     copyBtn.addEventListener('click', CopyUrlToClipboard);
 } 
