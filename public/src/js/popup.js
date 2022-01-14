@@ -203,6 +203,7 @@ jQuery(function(){
     $(document).on('click', '.js-imgView-open', reviewImgView);
     //----
     
+    
     // 필터 팝업 active event
     function inputActive (){
         $('.popup-checkform__item').removeClass('is-active');
