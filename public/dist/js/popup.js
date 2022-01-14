@@ -206,4 +206,12 @@ jQuery(function () {
   }
 
   $(document).on('click', '.js-imgView-open', reviewImgView); //----
+  // 필터 팝업 active event
+
+  function inputActive() {
+    $('.popup-checkform__item').removeClass('is-active');
+    $(this).parent().addClass('is-active');
+  }
+
+  $(document).on('input', '.list-radio', inputActive);
 });
