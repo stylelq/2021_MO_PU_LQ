@@ -10,9 +10,6 @@ jQuery(function(){
             el = $(this).attr('href').replace('#','');            
         }
         
-        console.log(this)
-        console.log()
-
         if($('.popup.is-active').length <= 1) {
         }else{
             $('.popup').removeClass('is-active');
@@ -36,8 +33,8 @@ jQuery(function(){
         // 전체 팝업 body scroll 없앰
         $('html').addClass('is-hidden'); 
 
-        if( this.parentNode.className === 'inquiry-order__header' ||
-            this.parentNode.className === 'user-address__header' ){
+        if( this === $('.user-address__header .user-address__link')[0] ||
+            this === $('.inquiry-order__header .form-arrow__btn')[0] ){
             $('html').addClass('is-hidden'); 
         }
 
