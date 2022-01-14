@@ -751,6 +751,11 @@
 .product-detail__info{
     line-height:0;
 
+    img{
+        width: 100%;
+        display: block;
+    }
+
     &--text{
         @include body3;
         margin:0 0 calcRem(20rem);
