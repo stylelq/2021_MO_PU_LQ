@@ -54,6 +54,7 @@
         // height:calc(100vh - #{calcRem(58rem)});
         width: 100vw;
         height: calc(var(--vh, 1vh) * 100 - #{calcRem(59rem)} );
+        
         padding-top:calcRem(20rem);
         padding-bottom:calcRem(20rem);
         box-sizing: border-box;
@@ -71,7 +72,7 @@
 
             [class $= __footer ]{
                 .popup-write__list{
-                    padding: 0 calcRem(20rem);
+                    // padding: 0 calcRem(20rem);
                     box-sizing: border-box;
                 }
             }
