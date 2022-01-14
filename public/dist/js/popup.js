@@ -213,6 +213,5 @@ jQuery(function () {
     $(this).parent().addClass('is-active');
   }
 
-  $(document).on('input', '.list-radio', inputActive); // console.log( $('.list-radio__input').checked )
-  // $('.list-radio__input').attr('checked').addClass('is-active');
+  $(document).on('input', '.list-radio', inputActive);
 });
