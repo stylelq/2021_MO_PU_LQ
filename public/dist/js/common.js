@@ -804,7 +804,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
