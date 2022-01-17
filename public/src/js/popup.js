@@ -56,10 +56,13 @@ jQuery(function(){
     }
     $(document).on('click', '.js-popup-open', openPopup);
 
-    if( $('.popup.page-delivery').hasClass('is-active') || 
+    $(document).on('click',function(){
+        if( $('.popup.page-delivery').hasClass('is-active') || 
         $('#inquiryOrderPop').hasClass('is-active') ){
         $('html').addClass('is-hidden');
+        console.log('ddd')
     }
+    })
     // if( this === $('.user-address__header .user-address__link')[0] ||
     //     this === $('.inquiry-order__header .form-arrow__btn')[0] ){
     //     $('html').addClass('is-hidden'); 
