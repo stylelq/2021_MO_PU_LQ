@@ -4,7 +4,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 jQuery(function () {
   //madin section full
-  $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+  $('.main-banner,.main-new,.main-banner2').addClass('sectionFull');
   $(document).ready(function () {
     /*
     //Gnb
