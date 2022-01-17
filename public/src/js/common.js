@@ -1,6 +1,16 @@
 jQuery(function(){
-    //madin section full
-    $('.main-banner,.main-new,.main-banner2').addClass('sectionFull');
+    //main section full
+    $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+    //main section full :: paging animate
+    $(window).on('wheel',function(e){
+        e.preventDefault();
+        console.log(e.originalEvent.deltaY);
+        if(e.originalEvent.deltaY < 0){
+            //up
+        }else{
+            //down
+        }
+    })
     
     $(document).ready(function(){
         /*
