@@ -56,17 +56,17 @@ jQuery(function(){
     }
     $(document).on('click', '.js-popup-open', openPopup);
 
-    $(document).on('click',function(){
+    $(document).on('click',function(e){
+        // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
         if( $('.popup.page-delivery').hasClass('is-active') || 
-        $('#inquiryOrderPop').hasClass('is-active') ){
-        $('html').addClass('is-hidden');
-        console.log('ddd')
-    }
+            $('#inquiryOrder').length > 0 ){
+            $('html').addClass('is-hidden');
+        }
+        if(e.target.className === 'popup__close'){
+            $('html').removeClass('is-hidden');
+        }
     })
-    // if( this === $('.user-address__header .user-address__link')[0] ||
-    //     this === $('.inquiry-order__header .form-arrow__btn')[0] ){
-    //     $('html').addClass('is-hidden'); 
-    // }
+    
 
     //Panzoom = https://github.com/inuyaksa/jquery.panzoom
     //zoom option
