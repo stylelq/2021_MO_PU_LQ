@@ -62,15 +62,13 @@
         //필터 팝업
         .type-footer &{
             // height:calc(100vh - #{calcRem(171rem)});
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(171rem)} );
-            // padding-bottom: calcRem(171rem);
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(175rem)} );
         }
 
         //qna 글쓰기 팝업
         .type-write &{
             // height:calc(100vh - #{calcRem(100rem)});
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)} );
-            // padding-bottom: calcRem(100rem);
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(150rem)} );
 
             [class $= __footer ]{
                 .popup-write__list{

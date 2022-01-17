@@ -929,7 +929,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			height: 100%;
+			height: 100vh;
 	
 			#{$this}__header{
 				top: 23vh;
@@ -939,6 +939,13 @@
 			#{$this}__content {
 				top:76%;
 			}
+		}
+
+		&.main-best{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
 		}
 	}
 
