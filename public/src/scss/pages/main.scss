@@ -822,6 +822,8 @@
 .sectionFull{
 	box-sizing: border-box;
 	height: 100vh;
+	transition-timing-function: ease-in-out;
+
 	//section1::main-banner
 	&.main-banner{
 		$this:'.main-banner';
