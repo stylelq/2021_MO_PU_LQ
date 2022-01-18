@@ -68,7 +68,7 @@
         //qna 글쓰기 팝업
         .type-write &{
             // height:calc(100vh - #{calcRem(100rem)});
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(280rem)} );
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(175rem)} );
 
             [class $= __footer ]{
                 .popup-write__list{
@@ -109,7 +109,7 @@
         //배송정보 팝업
         .type-tab &{
             // height:calc(100vh - #{calcRem(136rem)}); 
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(280rem)} );
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(175rem)} );
             padding-top:calcRem(30rem);
             padding-bottom:calcRem(30rem);
         }
