@@ -822,7 +822,8 @@
 .sectionFull{
 	box-sizing: border-box;
 	height: 100vh;
-	transition-timing-function: ease-in-out;
+	// transition-timing-function: ease-in-out;
+	// transition: all 1s;
 
 	//section1::main-banner
 	&.main-banner{
@@ -867,6 +868,7 @@
 	//section2::main-new
 	&.main-new{
 		$this:'.main-new';
+		background-color:#fff;
 
 		#{$this}__container,
 		#{$this}__wrapper{
@@ -878,7 +880,8 @@
 	&.main-banner2{
 		$this:'.main-banner2';
 		box-sizing: inherit;
-		// padding-top: 0;
+		padding-top: 0;
+		background-color:#fff;
 
 		#{$this}__img{
 			min-width: 100%;
