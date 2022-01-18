@@ -104,6 +104,7 @@
             height: calcRem(40rem);
             line-height: 1.25;
             background-color: #b8a7ed;
+
             &.type-black{background-color: #525252;}
             &.type-khaki{background-color:#a6a189}
             &.type-tan{background-color:#ce9d6c;}
@@ -125,7 +126,9 @@
                 height: inherit;
                 vertical-align: middle;
                 text-align: center;
+                color: $whiteColor;
             }
+            
         }
 
         &--expected{
