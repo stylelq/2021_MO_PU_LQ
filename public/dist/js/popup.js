@@ -223,5 +223,5 @@ jQuery(function () {
     $(this).parent().addClass('is-active');
   }
 
-  $(document).on('input,click,touchstart', '.list-radio', inputActive);
+  $(document).on('input click touchstart', '.list-radio', inputActive);
 });

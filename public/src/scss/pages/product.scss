@@ -118,6 +118,14 @@
             &.type-butter_yellow { background-color: #f9e55f;}
             &.type-purple { background-color: #b8a7ed;}
             &.type-brown { background-color: #60322C;}
+
+            .product-mark__circle {
+                display: table-cell;
+                width: 1%;
+                height: inherit;
+                vertical-align: middle;
+                text-align: center;
+            }
         }
 
         &--expected{

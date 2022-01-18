@@ -1241,7 +1241,7 @@ jQuery(function(){
     }
 */
 
-    // $(document).ready(function(){
+    $(document).ready(function(){
     //     /********* 
     //     * main section full 
     //     * :: style
@@ -1354,37 +1354,37 @@ jQuery(function(){
 
 
 
-    //     // https://scrollmagic.io/examples/advanced/section_wipes_manual.html
-    //     var controller = new ScrollMagic.Controller({
-	// 		globalSceneOptions: {
-	// 			triggerHook: 'onLeave',
-	// 			duration: "200%" // this works just fine with duration 0 as well
-	// 			// However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
-	// 			// Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
-	// 		}
-	// 	});
+        // https://scrollmagic.io/examples/advanced/section_wipes_manual.html
+        // var controller = new ScrollMagic.Controller({
+		// 	globalSceneOptions: {
+		// 		triggerHook: 'onLeave',
+		// 		duration: "200%" // this works just fine with duration 0 as well
+		// 		// However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+		// 		// Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+		// 	}
+		// });
 
-	// 	var wipeAnimation = new TimelineMax()
-    //     .fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-    //     .fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-    //     .fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+		// var wipeAnimation = new TimelineMax()
+        // .fromTo("section.panel.turqoise", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone})  
+        // .fromTo("section.panel.green",    1, {y:  "-100%"}, {y: "0%", ease: Linear.easeNone})  
+        // .fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); 
 
-	// 	// get all slides
-	// 	var mainSectionFull = $('.sectionFull');
+		// // get all slides
+		// var mainSectionFull = $('.sectionFull');
 
-	// 	// create scene for every slide
-	// 	for (var i=0; i<mainSectionFull.length; i++) {
-	// 		new ScrollMagic.Scene({
-	// 			triggerElement: mainSectionFull[i]
-	// 		})
-	// 		.setPin( mainSectionFull[i], {pushFollowers: false})
-    //         .setTween(wipeAnimation)
-	// 		// .addIndicators() // add indicators (requires plugin)
-	// 		.addTo(controller);
-	// 	}
+		// // create scene for every slide
+		// for (var i=0; i<mainSectionFull.length; i++) {
+		// 	new ScrollMagic.Scene({
+		// 		triggerElement: mainSectionFull[i]
+		// 	})
+		// 	.setPin( mainSectionFull[i], {pushFollowers: false})
+        //     .setTween(wipeAnimation)
+		// 	// .addIndicators() // add indicators (requires plugin)
+		// 	.addTo(controller);
+		// }
 
     //     /*********************/
-    // })
+    })
 
 
 });
