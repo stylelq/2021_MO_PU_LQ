@@ -98,4 +98,14 @@
             }
         }
     }
+
+    .myPage-fix{
+        position: inherit;
+        margin-top: calcRem(40rem);
+
+        &__item:nth-child(1){
+            width: calc( 37% - #{calcRem(5rem)} );
+            margin-right:calcRem(5rem);
+        }
+    }
 }
