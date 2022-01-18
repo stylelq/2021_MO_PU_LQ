@@ -3,11 +3,11 @@
 @import "../pages/product";
 
 //메인 레이아웃
-.page-main{
-	.section-body{
-		padding-bottom:calcRem(50rem);
-	}
-}
+// .page-main{
+// 	.section-body{
+// 		padding-bottom:calcRem(50rem);
+// 	}
+// }
 
 //메인 탑배너슬라이드
 .main-banner{
@@ -538,7 +538,7 @@
 //메인 컬렉션
 .main-collection{
 	position: relative;
-	margin-top: calcRem(60rem);
+	padding-top: calcRem(60rem);
 
 	&__center{
 		position: absolute;
@@ -568,7 +568,8 @@
 //선물 추천
 .main-gift{
 	position: relative;
-	margin-top: calcRem(60rem);
+	padding-top: calcRem(60rem);
+
 	&__visual{
 		position: relative;
 	}
@@ -632,6 +633,8 @@
 .main-membership{
 	color: #9B192F;
 	border-bottom: 1px solid #cbcbcb;
+	position: relative;
+
 	.membership-wrap{
 		padding: calcRem(60rem) 0;
 		text-align: center;
@@ -676,6 +679,9 @@
 
 // 프로젝트
 .main-project{
+	position: relative;
+	padding-bottom:calcRem(50rem);
+
 	&__header{
 		padding: calcRem(60rem) 0 calcRem(40rem);
 		text-align: center;
@@ -822,8 +828,8 @@
 .sectionFull{
 	box-sizing: border-box;
 	height: 100vh;
-	// transition-timing-function: ease-in-out;
-	// transition: all 1s;
+	padding-top: 0;
+	transition: all 1s;
 
 	//section1::main-banner
 	&.main-banner{
@@ -868,7 +874,6 @@
 	//section2::main-new
 	&.main-new{
 		$this:'.main-new';
-		background-color:#fff;
 
 		#{$this}__container,
 		#{$this}__wrapper{
@@ -880,7 +885,7 @@
 	&.main-banner2{
 		$this:'.main-banner2';
 		box-sizing: inherit;
-		padding-top: 0;
+		// padding-top: 0;
 		background-color:#fff;
 
 		#{$this}__img{
