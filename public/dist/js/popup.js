@@ -55,13 +55,15 @@ jQuery(function () {
 
   $(document).on('click', '.js-popup-open', openPopup);
   $(document).on('click', function (e) {
-    // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
-    if ($('.popup.page-delivery').hasClass('is-active') || $('#inquiryOrder').length > 0) {
-      $('html').addClass('is-hidden');
-    }
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+      // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
+      if ($('.popup.page-delivery').hasClass('is-active') || $('#inquiryOrder').length > 0) {
+        $('html').addClass('is-hidden');
+      }
 
-    if (e.target.className === 'popup__close') {
-      $('html').removeClass('is-hidden');
+      if (e.target.className === 'popup__close') {
+        $('html').removeClass('is-hidden');
+      }
     }
   }); //Panzoom = https://github.com/inuyaksa/jquery.panzoom
   //zoom option
