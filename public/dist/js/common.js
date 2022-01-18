@@ -1247,134 +1247,134 @@ jQuery(function () {
           }
       }
   */
-  // $(document).ready(function(){
-  //     /********* 
-  //     * main section full 
-  //     * :: style
-  //     */
-  //     // $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
-  //     var mainFullArray = ['main-banner','main-new','main-banner2','main-best'];
-  //     mainFullArray.forEach(function(ele,i){
-  //         $('.'+ele).addClass('sectionFull')
-  //                   .attr('id','sectionFull-move'+(i+1));
-  //     })
-  //     /*********
-  //     * main section full 
-  //     * :: paging animate
-  //     */
-  //     // mouse wheel
-  //     var mainHeight =  window.outerHeight;  
-  //     var eventCnt = 0;      
-  //     function mouseWheelEvent(e){
-  //         e.cancelable && e.preventDefault();
-  //         if($('html,body').is(":animated")) return;
-  //         if( window.scrollY < mainHeight * mainFullArray.length){ 
-  //             if( e.originalEvent.deltaY < 0 ){
-  //                 if( eventCnt === 0 ) return;
-  //                 eventCnt--;    
-  //             }else{
-  //                 if( eventCnt === mainFullArray.length ) return;
-  //                 eventCnt++;
-  //             }
-  //         }else return;
-  //         $('html,body').stop().animate({ 
-  //             scrollTop: mainHeight * Math.abs( eventCnt ),
-  //         },800)
-  //         console.log('scroll : ', eventCnt );
-  //     }
-  //     //mouse drag
-  //     var drag_y = false;
-  //     function mouseDragPosition(e){
-  //         drag_y = e.offsetY;
-  //     }
-  //     function mouseDragEvent(e){
-  //         if(drag_y){
-  //             if(e.offsetY - drag_y > 100) {
-  //                 if( eventCnt === mainFullArray.length ) return;
-  //                 eventCnt++; 
-  //             }
-  //             if(e.offsetY - drag_y < -100) {
-  //                 if( eventCnt === 0 ) return;
-  //                 eventCnt--;
-  //             }
-  //             $('html,body').animate({ 
-  //                 scrollTop: mainHeight * Math.abs( eventCnt ),
-  //             },800)
-  //         }else {
-  //             $('html,body').stop();
-  //             return;
-  //         };
-  //     }
-  //     //mobile touch
-  //     var touchScroll = false;
-  //     var startX,startY,endX,endY = false;
-  //     function touchPosition(e){
-  //         startX = e.originalEvent.changedTouches[0].screenX;
-  //         startY = e.originalEvent.changedTouches[0].screenY;
-  //         touchScroll = true;
-  //     }
-  //     function touchEvent(e){
-  //         e.cancelable && e.preventDefault();
-  //         if($('html,body').is(":animated")) return;
-  //         endX = e.originalEvent.changedTouches[0].screenX;
-  //         endY = e.originalEvent.changedTouches[0].screenY;
-  //         if( touchScroll ){ 
-  //             if( startY-endY > 50 ){
-  //                 if( eventCnt === mainFullArray.length ) return;
-  //                 eventCnt++;   
-  //             }
-  //             if( startY-endY < -50 ) {
-  //                 if( eventCnt === 0 ) return;
-  //                 eventCnt--; 
-  //             }
-  //             $('html,body').animate({ 
-  //                 scrollTop: mainHeight * Math.abs( eventCnt ),
-  //             },800)
-  //         }else {
-  //             touchScroll = false;
-  //             $('html,body').stop();
-  //             return;
-  //         };
-  //         console.log( 'touchCnt : ',eventCnt )
-  //     }
-  //     // 메인 스크롤 이벤트 init;
-  //     // $(window).on({
-  //     //     mousewheel: function(e){ mouseWheelEvent(e) },
-  //     //     DOMMouseScroll: function(e){ mouseWheelEvent(e) },
-  //     //     wheel: function(e){ mouseWheelEvent(e) },  
-  //     //     mousedown: function(e) { mouseDragPosition(e) }, 
-  //     //     mouseup: function(e) { mouseDragEvent(e) },         
-  //     //     touchstart: function(e) { touchPosition(e) },         
-  //     //     touchend: function(e) { touchEvent(e) },         
-  //     // })
-  //     // https://scrollmagic.io/examples/advanced/section_wipes_manual.html
-  //     var controller = new ScrollMagic.Controller({
-  // 		globalSceneOptions: {
-  // 			triggerHook: 'onLeave',
-  // 			duration: "200%" // this works just fine with duration 0 as well
-  // 			// However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
-  // 			// Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
-  // 		}
-  // 	});
-  // 	var wipeAnimation = new TimelineMax()
-  //     .fromTo("section.panel.turqoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-  //     .fromTo("section.panel.green",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-  //     .fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
-  // 	// get all slides
-  // 	var mainSectionFull = $('.sectionFull');
-  // 	// create scene for every slide
-  // 	for (var i=0; i<mainSectionFull.length; i++) {
-  // 		new ScrollMagic.Scene({
-  // 			triggerElement: mainSectionFull[i]
-  // 		})
-  // 		.setPin( mainSectionFull[i], {pushFollowers: false})
-  //         .setTween(wipeAnimation)
-  // 		// .addIndicators() // add indicators (requires plugin)
-  // 		.addTo(controller);
-  // 	}
-  //     /*********************/
-  // })
 
+
+  $(document).ready(function () {//     /********* 
+    //     * main section full 
+    //     * :: style
+    //     */
+    //     // $('.main-banner,.main-new,.main-banner2,.main-best').addClass('sectionFull');
+    //     var mainFullArray = ['main-banner','main-new','main-banner2','main-best'];
+    //     mainFullArray.forEach(function(ele,i){
+    //         $('.'+ele).addClass('sectionFull')
+    //                   .attr('id','sectionFull-move'+(i+1));
+    //     })
+    //     /*********
+    //     * main section full 
+    //     * :: paging animate
+    //     */
+    //     // mouse wheel
+    //     var mainHeight =  window.outerHeight;  
+    //     var eventCnt = 0;      
+    //     function mouseWheelEvent(e){
+    //         e.cancelable && e.preventDefault();
+    //         if($('html,body').is(":animated")) return;
+    //         if( window.scrollY < mainHeight * mainFullArray.length){ 
+    //             if( e.originalEvent.deltaY < 0 ){
+    //                 if( eventCnt === 0 ) return;
+    //                 eventCnt--;    
+    //             }else{
+    //                 if( eventCnt === mainFullArray.length ) return;
+    //                 eventCnt++;
+    //             }
+    //         }else return;
+    //         $('html,body').stop().animate({ 
+    //             scrollTop: mainHeight * Math.abs( eventCnt ),
+    //         },800)
+    //         console.log('scroll : ', eventCnt );
+    //     }
+    //     //mouse drag
+    //     var drag_y = false;
+    //     function mouseDragPosition(e){
+    //         drag_y = e.offsetY;
+    //     }
+    //     function mouseDragEvent(e){
+    //         if(drag_y){
+    //             if(e.offsetY - drag_y > 100) {
+    //                 if( eventCnt === mainFullArray.length ) return;
+    //                 eventCnt++; 
+    //             }
+    //             if(e.offsetY - drag_y < -100) {
+    //                 if( eventCnt === 0 ) return;
+    //                 eventCnt--;
+    //             }
+    //             $('html,body').animate({ 
+    //                 scrollTop: mainHeight * Math.abs( eventCnt ),
+    //             },800)
+    //         }else {
+    //             $('html,body').stop();
+    //             return;
+    //         };
+    //     }
+    //     //mobile touch
+    //     var touchScroll = false;
+    //     var startX,startY,endX,endY = false;
+    //     function touchPosition(e){
+    //         startX = e.originalEvent.changedTouches[0].screenX;
+    //         startY = e.originalEvent.changedTouches[0].screenY;
+    //         touchScroll = true;
+    //     }
+    //     function touchEvent(e){
+    //         e.cancelable && e.preventDefault();
+    //         if($('html,body').is(":animated")) return;
+    //         endX = e.originalEvent.changedTouches[0].screenX;
+    //         endY = e.originalEvent.changedTouches[0].screenY;
+    //         if( touchScroll ){ 
+    //             if( startY-endY > 50 ){
+    //                 if( eventCnt === mainFullArray.length ) return;
+    //                 eventCnt++;   
+    //             }
+    //             if( startY-endY < -50 ) {
+    //                 if( eventCnt === 0 ) return;
+    //                 eventCnt--; 
+    //             }
+    //             $('html,body').animate({ 
+    //                 scrollTop: mainHeight * Math.abs( eventCnt ),
+    //             },800)
+    //         }else {
+    //             touchScroll = false;
+    //             $('html,body').stop();
+    //             return;
+    //         };
+    //         console.log( 'touchCnt : ',eventCnt )
+    //     }
+    //     // 메인 스크롤 이벤트 init;
+    //     // $(window).on({
+    //     //     mousewheel: function(e){ mouseWheelEvent(e) },
+    //     //     DOMMouseScroll: function(e){ mouseWheelEvent(e) },
+    //     //     wheel: function(e){ mouseWheelEvent(e) },  
+    //     //     mousedown: function(e) { mouseDragPosition(e) }, 
+    //     //     mouseup: function(e) { mouseDragEvent(e) },         
+    //     //     touchstart: function(e) { touchPosition(e) },         
+    //     //     touchend: function(e) { touchEvent(e) },         
+    //     // })
+    // https://scrollmagic.io/examples/advanced/section_wipes_manual.html
+    // var controller = new ScrollMagic.Controller({
+    // 	globalSceneOptions: {
+    // 		triggerHook: 'onLeave',
+    // 		duration: "200%" // this works just fine with duration 0 as well
+    // 		// However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+    // 		// Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+    // 	}
+    // });
+    // var wipeAnimation = new TimelineMax()
+    // .fromTo("section.panel.turqoise", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone})  
+    // .fromTo("section.panel.green",    1, {y:  "-100%"}, {y: "0%", ease: Linear.easeNone})  
+    // .fromTo("section.panel.bordeaux", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); 
+    // // get all slides
+    // var mainSectionFull = $('.sectionFull');
+    // // create scene for every slide
+    // for (var i=0; i<mainSectionFull.length; i++) {
+    // 	new ScrollMagic.Scene({
+    // 		triggerElement: mainSectionFull[i]
+    // 	})
+    // 	.setPin( mainSectionFull[i], {pushFollowers: false})
+    //     .setTween(wipeAnimation)
+    // 	// .addIndicators() // add indicators (requires plugin)
+    // 	.addTo(controller);
+    // }
+    //     /*********************/
+  });
 }); //입고알림 버튼클릭시
 
 function stoNtsAsk() {
