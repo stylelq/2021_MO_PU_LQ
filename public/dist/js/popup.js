@@ -55,8 +55,9 @@ jQuery(function () {
 
   $(document).on('click', '.js-popup-open', openPopup);
   $(document).on('click', function (e) {
-    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
-      // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
+    // 예외처리
+    // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.tagName === 'DIV') {
       if ($('.popup.page-delivery').hasClass('is-active') || $('#inquiryOrder').length > 0) {
         $('html').addClass('is-hidden');
       }
