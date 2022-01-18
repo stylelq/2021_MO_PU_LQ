@@ -109,7 +109,7 @@
         //배송정보 팝업
         .type-tab &{
             // height:calc(100vh - #{calcRem(136rem)}); 
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(175rem)} );
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(190rem)} );
             padding-top:calcRem(30rem);
             padding-bottom:calcRem(30rem);
         }
