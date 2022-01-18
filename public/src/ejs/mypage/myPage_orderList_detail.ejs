@@ -42,6 +42,33 @@ lnbTitle = "주문배송조회"
             </section>
             <!-- .주문 상품 -->
 
+            <!-- 주문 상품 -->
+            <section class="myOrderListDetail-type">
+                <div class="myOrderListDetail-title">
+                    <div class="myOrderListDetail-title__orderId">주문번호 P20210812142407</div>
+                    <div class="myOrderListDetail-title__date">2021.10.19 오후 04:10</div>
+                </div>
+
+                <div class="myOrderListDetail-cont">
+                    <h2 class="myOrderListDetail-cont__title">주문 상품정보</h2>
+
+                    <div class="myOrderListDetail-cont__state">
+                        <div class="myOrderListDetail-cont__state--title">배송중</div>
+                        <ul class="myOrderListDetail-cont__state--list">
+                            <li class="myOrderListDetail-cont__state--item">
+                                <a href="#returnOrderCancel" class="myOrderList-btn btn-v1 btn-v1--small js-popup-open">주문취소</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="myOrderListDetail-cont__detail">
+                        <% include ../_include/_orderItem %>
+                    </div>
+                </div>
+
+            </section>
+            <!-- .주문 상품 -->
+
             <!-- 배송정보 -->
             <section class="myOrderListDetail-info ">
                 <h2 class="myOrderListDetail-title">
