@@ -78,6 +78,11 @@
                 }
             }
         }
+        //이용약관,개인정보처리방침,
+        #provisionPop.type-write &,
+        #privacyPop.type-write {
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)});
+        }
 
         //하단버튼 fixed 하지 않기
         .type-notFixed &{
