@@ -71,6 +71,7 @@
             height: calc(var(--vh, 1vh) * 100 - #{calcRem(200rem)} );
 
             [class $= __footer ]{
+                position: fixed;
                 .popup-write__list{
                     // padding: 0 calcRem(20rem);
                     box-sizing: border-box;
