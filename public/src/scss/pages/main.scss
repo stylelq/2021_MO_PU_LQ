@@ -412,8 +412,8 @@
 	}
 
 	&__content {
-		// bottom: calcRem(50rem);
-		top: calcRem(319rem);
+		bottom: calcRem(50rem);
+		// top: calcRem(319rem);
 		position: absolute;
 		color: #000;
 		text-align: center;
@@ -515,6 +515,22 @@
 }
 .main-new{
 	height: auto;
+	max-height: inherit;
+}
+.main-banner{
+	max-height: 100vh;
+}
+@media screen and (min-device-height:720px) {
+	.main-banner2{
+		max-height: inherit;
+	}
+}
+@media screen and (min-device-height:920px) {
+	.main-new{
+		&__content{
+			bottom: 100px;
+		}
+	}
 }
 //----------------------------------
 
@@ -615,6 +631,7 @@
 		position: absolute;
 		width: 100%;
 		@include vertical-center;
+		top: 54%;
 	}
 	&__header{
 		padding: 0 calcRem(20rem);
@@ -636,12 +653,12 @@
 	}
 	&__info{
 		@include body3;
-		padding: calcRem(20rem) 0 calcRem(30rem);
+		padding: calcRem(40rem) 0 calcRem(45rem); //20, 30
 		color: #fff;
 		text-align: center;
-		&--cont2{
-			padding-top: calcRem(10rem);
-		}
+		// &--cont2{
+		// 	padding-top: calcRem(10rem);
+		// }
 	}
 	&__gender{
 		padding: 0 calcRem(20rem);
