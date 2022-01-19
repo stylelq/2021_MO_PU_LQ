@@ -493,8 +493,21 @@
 	.main-banner__inner{
 		width: auto;
 	}
+
 	.main-banner__source--img{
-		height: 640px;
+		height: 100vh;
+	}
+	.main-banner__video{
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+		
+		position: absolute;
+		top: -9999px;
+		bottom: -9999px;
+		left: -9999px;
+		right: -9999px;
+		margin: auto;
 	}
 	.main-banner__img,
 	.main-banner2__img{

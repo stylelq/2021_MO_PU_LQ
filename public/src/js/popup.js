@@ -72,7 +72,7 @@ jQuery(function(){
         }
 
         if( e.target.parentNode.parentNode.classList.contains('js-order-open') ){
-            document.html.classList.add('is-hidden')
+            document.html.classList.add('is-hidden');
         }
     })
     
