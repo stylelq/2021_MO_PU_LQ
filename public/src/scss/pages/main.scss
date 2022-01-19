@@ -488,8 +488,8 @@
 //------- 640fixed  -----------------
 .main-banner,.main-banner2,.main-new{
 	height: 100vh;
-	max-height: 640px;
-	box-sizing: border-box;
+	// max-height: 640px;
+	// box-sizing: border-box;
 	.main-banner__inner{
 		width: auto;
 	}
@@ -497,7 +497,8 @@
 	.main-banner__source--img{
 		height: 100vh;
 	}
-	.main-banner__video{
+	.main-banner__video,
+	.main-banner2__video{
 		min-width: 100%;
 		min-height: 100%;
 		object-fit: cover;
@@ -528,16 +529,16 @@
 }
 .main-new{
 	height: auto;
-	max-height: inherit;
+	// max-height: inherit;
 }
-.main-banner{
-	max-height: 100vh;
-}
-@media screen and (min-device-height:720px) {
-	.main-banner2{
-		max-height: inherit;
-	}
-}
+// .main-banner{
+// 	max-height: 100vh;
+// }
+// @media screen and (min-device-height:720px) {
+// 	.main-banner2{
+// 		max-height: inherit;
+// 	}
+// }
 @media screen and (min-device-height:920px) {
 	.main-new{
 		&__content{
