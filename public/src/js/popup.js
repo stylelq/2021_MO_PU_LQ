@@ -55,27 +55,6 @@ jQuery(function(){
         return false;
     }
     $(document).on('click', '.js-popup-open', openPopup);
-
-    $(document).on('click',function(e){
-        // 예외처리
-        // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
-        if( e.target.tagName === 'A' || 
-            e.target.tagName === 'BUTTON' ||  
-            e.target.tagName === 'DIV'  ){
-            
-            if( $('.popup.page-delivery').hasClass('is-active') || 
-                $('#inquiryOrder').length > 0 ){
-                $('html').addClass('is-hidden');
-            }
-            if(e.target.className === 'popup__close'){
-                $('html').removeClass('is-hidden');
-            }
-        }
-
-        if( e.target.parentNode.parentNode.classList.contains('js-order-open') ){
-            document.html.classList.add('is-hidden');
-        }
-    })
     
 
     //Panzoom = https://github.com/inuyaksa/jquery.panzoom
@@ -157,6 +136,7 @@ jQuery(function(){
     }
     $(document).on('click', '.js-popup-close', closePopup);
 
+
     //배송지 정보 탭
     function shippingTab() {
         var idx = $(this).parent('li').index();
@@ -232,6 +212,49 @@ jQuery(function(){
         $(this).parent().addClass('is-active');
     }
     $(document).on('input click touchstart','.list-radio',inputActive);
+
+
+    //------[스테이징 기준] ---------
+    //취소나, 확인 버튼 클래스 추가
+    function htmlClassRemove(){
+        $(this).closest('.popup').removeClass('is-active');
+        $('html').removeClass('is-hidden');
+    }
+    $(document).on('click','.js-html-scroll',htmlClassRemove);
+
+    //버튼 예외처리
+    $(document).on('click',function(e){
+        // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
+        if( e.target.tagName === 'A' || 
+            e.target.tagName === 'BUTTON' ||  
+            e.target.tagName === 'DIV'  ){
+            
+            if( $('.popup.page-delivery').hasClass('is-active') || 
+                $('#inquiryOrder').length > 0 ){
+                $('html').addClass('is-hidden');
+            }
+            if(e.target.className === 'popup__close'){
+                $('html').removeClass('is-hidden');
+            }
+        }
+
+        if( e.target.parentNode.parentNode.classList.contains('js-order-open') ){
+            $(this).closest('.popup').removeClass('is-active');
+            $('html').removeClass('is-hidden');
+        }
+    })
+    // 이용약관,개인정보처리방침 close
+    var popupId = ['privacyPop','provisionPop','shippingPop','inquiryOrderPop']
+    $(document).on('click', '[class $= -close], [class $= __close],[class $= __footer] [class $= __link]', function(){
+        for(var i=0,len=popupId.length;i<len;i++){
+            if( this.closest('#'+popupId[i]) ){
+                $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+                $('html').removeClass('is-hidden');
+            }
+        }
+    });
+    //-------------------------
+
 });
 
 
