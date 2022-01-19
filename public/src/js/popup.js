@@ -61,7 +61,7 @@ jQuery(function(){
         // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
         if( e.target.tagName === 'A' || 
             e.target.tagName === 'BUTTON' ||  
-            e.target.tagName === 'DIV' ){
+            e.target.tagName === 'DIV'  ){
             if( $('.popup.page-delivery').hasClass('is-active') || 
                 $('#inquiryOrder').length > 0 ){
                 $('html').addClass('is-hidden');
@@ -69,6 +69,10 @@ jQuery(function(){
             if(e.target.className === 'popup__close'){
                 $('html').removeClass('is-hidden');
             }
+        }
+
+        if( e.target.parentNode.parentNode.classList.contains('js-order-open') ){
+            document.html.classList.add('is-hidden')
         }
     })
     
