@@ -66,6 +66,10 @@ jQuery(function () {
         $('html').removeClass('is-hidden');
       }
     }
+
+    if (e.target.parentNode.parentNode.classList.contains('js-order-open')) {
+      document.html.classList.add('is-hidden');
+    }
   }); //Panzoom = https://github.com/inuyaksa/jquery.panzoom
   //zoom option
 
