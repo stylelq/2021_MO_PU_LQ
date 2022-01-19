@@ -62,6 +62,7 @@ jQuery(function(){
         if( e.target.tagName === 'A' || 
             e.target.tagName === 'BUTTON' ||  
             e.target.tagName === 'DIV'  ){
+            
             if( $('.popup.page-delivery').hasClass('is-active') || 
                 $('#inquiryOrder').length > 0 ){
                 $('html').addClass('is-hidden');
