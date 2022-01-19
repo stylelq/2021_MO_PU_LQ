@@ -3,16 +3,15 @@
 @import "../pages/product";
 
 //메인 레이아웃
-// .page-main{
-// 	.section-body{
-// 		padding-bottom:calcRem(50rem);
-// 	}
-// }
+.page-main{
+	.section-body{
+		padding-bottom:calcRem(50rem);
+	}
+}
 
 //메인 탑배너슬라이드
 .main-banner{
 	position: relative;
-	height: 100vh;
 
 	&__inner{
 		display: block;
@@ -134,6 +133,7 @@
 .main-banner2{
 	position: relative;
 	padding-top: calcRem(60rem);
+
 	&__inner{
 		display: block;
 		width:100%;
@@ -143,10 +143,10 @@
 	&__source{
 		display: block;
 		&--img{
-			height: auto;
+			height: 100%;
 		}
 		&--video{
-			height: 100vh;
+			height: auto;
 		}
 	}
 	&__img{
@@ -250,6 +250,7 @@
 .main-banner3{
 	position: relative;
 	padding-top: calcRem(60rem);
+
 	&__inner{
 		display: block;
 		width:100%;
@@ -483,6 +484,39 @@
 		font-weight: $medium;
 	}
 }
+
+//------- 640fixed  -----------------
+.main-banner,.main-banner2,.main-new{
+	height: 100vh;
+	max-height: 640px;
+	box-sizing: border-box;
+	.main-banner__inner{
+		width: auto;
+	}
+	.main-banner__source--img{
+		height: 640px;
+	}
+	.main-banner__img,
+	.main-banner2__img{
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		object-fit: cover;
+		font-size: 0;
+		
+		position: absolute;
+		top: -9999px;
+		bottom: -9999px;
+		left: -9999px;
+		right: -9999px;
+		margin: auto;
+	}
+}
+.main-new{
+	height: auto;
+}
+//----------------------------------
 
 //구매자 베스트
 .main-best{
@@ -825,152 +859,152 @@
 * - 디바이스 높이값 상관없이 full 이미지처리
 **********/
 //section height:100vh
-.sectionFull{
-	box-sizing: border-box;
-	height: 100vh;
-	padding-top: 0;
-	transition: all 1s;
+// .sectionFull{
+// 	box-sizing: border-box;
+// 	height: 100vh;
+// 	padding-top: 0;
+// 	transition: all 1s;
 
-	//section1::main-banner
-	&.main-banner{
-		$this:'.main-banner';
+// 	//section1::main-banner
+// 	&.main-banner{
+// 		$this:'.main-banner';
 
-		#{$this}__source--img{
-			height: 100vh;
-		}
-		#{$this}__source--video{
-			height: 100vh;
-		}
-		#{$this}__img{
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			object-fit: cover;
-			font-size: 0;
+// 		#{$this}__source--img{
+// 			height: 100vh;
+// 		}
+// 		#{$this}__source--video{
+// 			height: 100vh;
+// 		}
+// 		#{$this}__img{
+// 			min-width: 100%;
+// 			min-height: 100%;
+// 			width: auto;
+// 			height: auto;
+// 			object-fit: cover;
+// 			font-size: 0;
 			
-			position: absolute;
-			top: -9999px;
-			bottom: -9999px;
-			left: -9999px;
-			right: -9999px;
-			margin: auto;
-		}
+// 			position: absolute;
+// 			top: -9999px;
+// 			bottom: -9999px;
+// 			left: -9999px;
+// 			right: -9999px;
+// 			margin: auto;
+// 		}
 
-		#{$this}__video{
-			min-width: 100%;
-			min-height: 100%;
-			object-fit: cover;
+// 		#{$this}__video{
+// 			min-width: 100%;
+// 			min-height: 100%;
+// 			object-fit: cover;
 			
-			position: absolute;
-			top: -9999px;
-			bottom: -9999px;
-			left: -9999px;
-			right: -9999px;
-			margin: auto;
-		}
-	}
+// 			position: absolute;
+// 			top: -9999px;
+// 			bottom: -9999px;
+// 			left: -9999px;
+// 			right: -9999px;
+// 			margin: auto;
+// 		}
+// 	}
 
-	//section2::main-new
-	&.main-new{
-		$this:'.main-new';
+// 	//section2::main-new
+// 	&.main-new{
+// 		$this:'.main-new';
 
-		#{$this}__container,
-		#{$this}__wrapper{
-			height: auto;
-		}
-	}
+// 		#{$this}__container,
+// 		#{$this}__wrapper{
+// 			height: auto;
+// 		}
+// 	}
 	
-	//section3::main-banner2
-	&.main-banner2{
-		$this:'.main-banner2';
-		box-sizing: inherit;
-		// padding-top: 0;
-		background-color:#fff;
+// 	//section3::main-banner2
+// 	&.main-banner2{
+// 		$this:'.main-banner2';
+// 		box-sizing: inherit;
+// 		// padding-top: 0;
+// 		background-color:#fff;
 
-		#{$this}__img{
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			object-fit: cover;
-			font-size: 0;
+// 		#{$this}__img{
+// 			min-width: 100%;
+// 			min-height: 100%;
+// 			width: auto;
+// 			height: auto;
+// 			object-fit: cover;
+// 			font-size: 0;
 			
-			position: absolute;
-			top: -9999px;
-			bottom: -9999px;
-			left: -9999px;
-			right: -9999px;
-			margin: auto;
-		}
+// 			position: absolute;
+// 			top: -9999px;
+// 			bottom: -9999px;
+// 			left: -9999px;
+// 			right: -9999px;
+// 			margin: auto;
+// 		}
 
-		#{$this}__video{
-			min-width: 100%;
-			min-height: 100%;
-			object-fit: cover;
-			font-size: 0;
+// 		#{$this}__video{
+// 			min-width: 100%;
+// 			min-height: 100%;
+// 			object-fit: cover;
+// 			font-size: 0;
 			
-			position: absolute;
-			top: -9999px;
-			bottom: -9999px;
-			left: -9999px;
-			right: -9999px;
-			margin: auto;
-		}
+// 			position: absolute;
+// 			top: -9999px;
+// 			bottom: -9999px;
+// 			left: -9999px;
+// 			right: -9999px;
+// 			margin: auto;
+// 		}
 
-		#{$this}__container{
-			height: 100vh;
-		}
-	}
+// 		#{$this}__container{
+// 			height: 100vh;
+// 		}
+// 	}
 
-	//section4::main-best
-	// &.main-best{
-	// 	$this:'.main-best';
-	// }
+// 	//section4::main-best
+// 	// &.main-best{
+// 	// 	$this:'.main-best';
+// 	// }
 
 
-	@media screen and (min-height: 641px){
-		// section2 : 세로640px 이상부터는 중앙정렬 
-		&.main-new{
-			$this:'.main-new';
+// 	@media screen and (min-height: 641px){
+// 		// section2 : 세로640px 이상부터는 중앙정렬 
+// 		&.main-new{
+// 			$this:'.main-new';
 
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			height: 100vh;
+// 			display: flex;
+// 			flex-direction: column;
+// 			justify-content: center;
+// 			height: 100vh;
 	
-			#{$this}__header{
-				top: 23vh;
-				padding: 0;
-			}
+// 			#{$this}__header{
+// 				top: 23vh;
+// 				padding: 0;
+// 			}
 
-			#{$this}__content {
-				top:76%;
-			}
-		}
+// 			#{$this}__content {
+// 				top:76%;
+// 			}
+// 		}
 
-		&.main-best{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			height: 100vh;
-		}
-	}
+// 		&.main-best{
+// 			display: flex;
+// 			flex-direction: column;
+// 			justify-content: center;
+// 			height: 100vh;
+// 		}
+// 	}
 
-	// @media screen and (min-width: 768px){
-	// 	&.main-banner{
-	// 		$this:'.main-banner';
+// 	// @media screen and (min-width: 768px){
+// 	// 	&.main-banner{
+// 	// 		$this:'.main-banner';
 
-	// 		#{$this}__img{
-	// 			max-width: inherit;
-	// 			min-width: 100%;
-	// 			min-height: 100%;
-	// 			width: 100%;
-	// 			height: auto;
-	// 		}
-	// 	}
-	// }
-}
+// 	// 		#{$this}__img{
+// 	// 			max-width: inherit;
+// 	// 			min-width: 100%;
+// 	// 			min-height: 100%;
+// 	// 			width: 100%;
+// 	// 			height: auto;
+// 	// 		}
+// 	// 	}
+// 	// }
+// }
 
 
 

@@ -1254,19 +1254,17 @@ jQuery(function () {
     * main section full 
     * :: style
     */
-    var mainFullArray = ['main-banner', 'main-new', 'main-banner2', 'main-best'];
-    mainFullArray.forEach(function (ele, i) {
-      $('.' + ele).addClass('sectionFull').attr('aria-moveId', 'sectionFull-move' + (i + 1));
-    }); //full bg-color
+    // var mainFullArray = ['main-banner','main-new','main-banner2','main-best'];
+    // mainFullArray.forEach(function(ele,i){
+    //     $('.'+ele).addClass('sectionFull')
+    //               .attr('aria-moveId','sectionFull-move'+(i+1));
+    // })
+    // //full bg-color
+    // if( $('.section-body>div').hasClass('sectionFull') ){
+    //     $('.section-body').css({background:'#fff'});
+    //     $('.section-body>div').css({background:'#fff'})
+    // }else return false;
 
-    if ($('.section-body>div').hasClass('sectionFull')) {
-      $('.section-body').css({
-        background: '#fff'
-      });
-      $('.section-body>div').css({
-        background: '#fff'
-      });
-    } else return false;
     /*********
     * main section full 
     * :: paging animate
@@ -1289,7 +1287,6 @@ jQuery(function () {
     // }
 
     /*********************/
-
   });
 }); //입고알림 버튼클릭시
 

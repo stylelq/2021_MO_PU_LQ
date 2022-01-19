@@ -112,6 +112,9 @@
             height: calc(var(--vh, 1vh) * 100 - #{calcRem(250rem)} );
             // padding-top:calcRem(30rem);
             // padding-bottom:calcRem(30rem);
+            [class $= __footer ]{
+                position: fixed;
+            }
         }
     }
 }
