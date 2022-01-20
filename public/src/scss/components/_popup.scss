@@ -109,12 +109,20 @@
             }
         }
         #couponPop.type-notFixed &{
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(200rem)} );
             .wrap{
                 padding-bottom: calcRem(50rem);
             }
             [class $= __footer ]{
-                position: absolute;
+                position: fixed;
                 margin-bottom: 0;
+
+                .popup-write__list{    
+                    .popup-write__item:nth-child(1){
+                        width: 37%;
+                        margin-right: calcRem(0);
+                    }
+                }
             }
         }
 
