@@ -244,26 +244,24 @@ jQuery(function(){
         $('html').removeClass('is-hidden');
     }
     $(document).on('click','.js-html-scroll',htmlClassRemove);
-    // popup 닫기 -> 이벤트 설정 안된 버튼들/submit/cancel/close 
-    var popupId = ['privacyPop','provisionPop','shippingPop','inquiryOrderPop']
-    $(document).on('click', 
-    '[class $= __footer] [class $= __link], [class $= -close], [class $= __close]', 
-    function(){
-        for(var i=0,len=popupId.length;i<len;i++){
-            if( this.closest('#'+popupId[i]) ){
-                if( popupId[i] === 'privacyPop' || popupId[i] === 'provisionPop' ){
-                    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-                }else{
-                    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-                    $('html').removeClass('is-hidden');
+    // // popup 닫기 -> 이벤트 설정 안된 버튼들/submit/cancel/close 
+    // var popupId = ['privacyPop','provisionPop','shippingPop','inquiryOrderPop']
+    // $(document).on('click', 
+    // '[class $= __footer] [class $= __link], [class $= -close], [class $= __close]', 
+    // function(){
+    //     for(var i=0,len=popupId.length;i<len;i++){
+    //         if( this.closest('#'+popupId[i]) ){
+    //             if( popupId[i] === 'inquiryOrderPop' ){
+    //                 $('.popup').removeClass('is-active');
+    //                 $('html').removeClass('is-hidden');
 
-                    setTimeout(function(){
-                        $('html').removeClass('is-hidden');
-                    },50)
-                }
-            }
-        }
-    });
+    //                 setTimeout(function(){
+    //                     $('html').removeClass('is-hidden');
+    //                 },50)
+    //             }
+    //         }
+    //     }
+    // });
     //-------------------------
 
 });
