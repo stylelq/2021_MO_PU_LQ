@@ -215,13 +215,6 @@ jQuery(function(){
 
 
     //------[스테이징 기준] ---------
-    //취소나, 확인 버튼 클래스 추가
-    function htmlClassRemove(){
-        $(this).closest('.popup').removeClass('is-active');
-        $('html').removeClass('is-hidden');
-    }
-    $(document).on('click','.js-html-scroll',htmlClassRemove);
-
     //버튼 예외처리
     $(document).on('click',function(e){
         // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
@@ -243,13 +236,31 @@ jQuery(function(){
             $('html').removeClass('is-hidden');
         }
     })
-    // 이용약관,개인정보처리방침 close
+    
+    //취소나, 확인 버튼 클래스 추가
+    function htmlClassRemove(){
+        $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+        $(this).closest('.popup').removeClass('is-active');
+        $('html').removeClass('is-hidden');
+    }
+    $(document).on('click','.js-html-scroll',htmlClassRemove);
+    // popup 닫기 -> 이벤트 설정 안된 버튼들/submit/cancel/close 
     var popupId = ['privacyPop','provisionPop','shippingPop','inquiryOrderPop']
-    $(document).on('click', '[class $= -close], [class $= __close],[class $= __footer] [class $= __link]', function(){
+    $(document).on('click', 
+    '[class $= __footer] [class $= __link], [class $= -close], [class $= __close]', 
+    function(){
         for(var i=0,len=popupId.length;i<len;i++){
             if( this.closest('#'+popupId[i]) ){
-                $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-                $('html').removeClass('is-hidden');
+                if( popupId[i] === 'privacyPop' || popupId[i] === 'provisionPop' ){
+                    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+                }else{
+                    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+                    $('html').removeClass('is-hidden');
+
+                    setTimeout(function(){
+                        $('html').removeClass('is-hidden');
+                    },50)
+                }
             }
         }
     });

@@ -68,7 +68,7 @@
         //qna 글쓰기 팝업
         .type-write &{
             // height:calc(100vh - #{calcRem(100rem)});
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(250rem)} );
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(150rem)} );
 
             [class $= __footer ]{
                 position: fixed;
@@ -78,9 +78,15 @@
                 }
             }
         }
-        //이용약관,개인정보처리방침,
-        #provisionPop.type-write &,
-        #privacyPop.type-write {
+        //[스테이징에 맞춤]이용약관
+        #provisionPop.type-write &{
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)});
+            #termsPop>.popup__body>.wrap>.container{
+                padding-top: 0;
+            }
+        }
+        //[스테이징에 맞춤]개인정보처리방침
+        #privacyPop.type-write &{
             height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)});
         }
 
@@ -115,7 +121,7 @@
         //배송정보 팝업
         .type-tab &{
             // height:calc(100vh - #{calcRem(136rem)}); 
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(250rem)} );
+            height: calc(var(--vh, 1vh) * 100 - #{calcRem(150rem)} );
             // padding-top:calcRem(30rem);
             // padding-bottom:calcRem(30rem);
             [class $= __footer ]{
