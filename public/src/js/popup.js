@@ -260,8 +260,6 @@ jQuery(function(){
                         $('html').removeClass('is-hidden');
                     },50)
                 }
-                
-                console.log(this.closest('#'+popupId[i]))
             }
         }
     });
