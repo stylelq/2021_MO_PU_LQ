@@ -550,7 +550,7 @@
 
 //구매자 베스트
 .main-best{
-	padding-top: calcRem(60rem);
+	margin-top: calcRem(60rem);
 
 	&__header{
 		margin-bottom:calcRem(20rem);
@@ -602,7 +602,7 @@
 //메인 컬렉션
 .main-collection{
 	position: relative;
-	padding-top: calcRem(60rem);
+	margin-top: calcRem(60rem);
 
 	&__center{
 		position: absolute;
@@ -632,7 +632,7 @@
 //선물 추천
 .main-gift{
 	position: relative;
-	padding-top: calcRem(60rem);
+	margin-top: calcRem(60rem);
 
 	&__visual{
 		position: relative;
@@ -645,7 +645,6 @@
 		position: absolute;
 		width: 100%;
 		@include vertical-center;
-		top: 54%;
 	}
 	&__header{
 		padding: 0 calcRem(20rem);
