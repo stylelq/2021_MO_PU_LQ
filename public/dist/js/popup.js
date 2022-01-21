@@ -43,21 +43,14 @@ jQuery(function () {
       }
 
       return false;
-    }); // //[부분적용] body스크롤 허용되는 레이어 팝업 ::href값으로
-    // var scrollId = ['benefitsPop','giftPop','messagePop','installmentPop']
-    // scrollId.forEach(function(item){
-    //     var btnId = el.slice(0,el.indexOf('_')).replace();
-    //     return btnId === item && $('html').removeClass('is-hidden');
-    // });
-
+    });
     return false;
   }
 
-  $(document).on('click', '.js-popup-open', openPopup); //Panzoom = https://github.com/inuyaksa/jquery.panzoom
+  $(document).on('click', '.js-popup-open', openPopup); //Panzoom 참고사이트 = https://github.com/inuyaksa/jquery.panzoom
   //zoom option
 
   var zoomOption = {
-    // bound: 'outer',
     bounds: {
       top: 150,
       right: 50,
@@ -153,7 +146,7 @@ jQuery(function () {
     }
   }
 
-  $(document).on('click', '.js-pop-tab-link', shippingTab); //---- 마이페이지::상품리뷰 이미지보기
+  $(document).on('click', '.js-pop-tab-link', shippingTab); //---- [임시-퍼블용] 마이페이지::상품리뷰 이미지보기 ------
   // 상품리뷰 이미지 팝업 오픈
 
   function reviewImgOpen(id) {
@@ -205,7 +198,7 @@ jQuery(function () {
     });
   }
 
-  $(document).on('click', '.js-imgView-open', reviewImgView); //----
+  $(document).on('click', '.js-imgView-open', reviewImgView); //--------------------------------
   // 필터 팝업 active event
 
   function inputActive() {
@@ -213,8 +206,15 @@ jQuery(function () {
     $(this).parent().addClass('is-active');
   }
 
-  $(document).on('input click touchstart', '.list-radio', inputActive); //------[스테이징 기준] ---------
-  // Ajax데이터바인딩 버튼 예외처리
+  $(document).on('input click touchstart', '.list-radio', inputActive); //------[스테이징 기준] ---------------------------
+  // - Ajax데이터바인딩 버튼 예외처리
+  // - 아래 버튼들은 add/remove class 이벤트가 없어 추가된것.
+  //
+  // ps. 버튼을 고정시키지 않고 스크롤시 딸려 올라오게 처리가 되었으나, 
+  //     디바이스별로 (하단/상단/주소 바 등) 높이가 상이하고 질질끄는형식의 터치가 이루어졌을때 
+  //     팝업 아래 깔린 부모DOM객체가 보여져(dim이 없는 풀팝업) 부모 스크롤 hidden 처리로 방식을 바꿧으나(html 'is-hidden'클래스추가),
+  //     현재 버튼을 fixed처리 하고, .popup-body 기준 높이값을 적게 처리하여 굳이 html태그에 is-hidden 처리를 하지 않아도 될듯함.
+  //     그런데 ajax 처리할때도(팝업open/close) html태그에 is-hidden 처리 하게 되어 있으므로 이점 참고 바람.
 
   $(document).on('click', function (e) {
     // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
@@ -232,14 +232,7 @@ jQuery(function () {
       $(this).closest('.popup').removeClass('is-active');
       $('html').removeClass('is-hidden');
     }
-  }); // //취소나, 확인 버튼 클래스 추가
-  // function htmlClassRemove(){
-  //     $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-  //     $(this).closest('.popup').removeClass('is-active');
-  //     $('html').removeClass('is-hidden');
-  // }
-  // $(document).on('click','.js-html-scroll',htmlClassRemove);
-  // is-hidden :: remove
+  }); // is-hidden :: remove - ajax success 이후 처리되도록
 
   function viewHtmlClassRemove() {
     setTimeout(function () {
@@ -248,19 +241,20 @@ jQuery(function () {
   } // popup 닫기 -> 이용약관, 개인정보처리방침, 1:1문의쪽 주문검색 취소&확인버튼 
 
 
-  var popupId = ['privacyPop', 'provisionPop', 'shippingPop', 'inquiryOrderPop'];
+  var popupId = ['privacyPop', 'provisionPop', 'shippingPop', 'inquiryOrderPop', 'fileList0'];
   $(document).on('click', '[class $= __footer] [class $= __link], [class $= -close], [class $= __close]', function () {
     for (var i = 0, len = popupId.length; i < len; i++) {
       if (this.closest('#' + popupId[i])) {
         $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+        viewHtmlClassRemove(); // if( popupId[i] === 'inquiryOrderPop' || popupId[i] === 'shippingPop' ){
+        //     viewHtmlClassRemove();
+        // }
+      } // 첨부이미지파일 :: 미리보기 삭제버튼
 
-        if (popupId[i] === 'inquiryOrderPop' || popupId[i] === 'shippingPop') {
-          $('html').removeClass('is-hidden');
-          viewHtmlClassRemove();
-        }
+
+      if (this.closest('#' + popupId[4])) {
+        viewHtmlClassRemove();
       }
     }
-  }); // 첨부이미지파일 :: 미리보기 삭제버튼
-
-  $(document).on('click', '.view-image__close', viewHtmlClassRemove); //-------------------------
+  }); //-------------------------------------------
 });
