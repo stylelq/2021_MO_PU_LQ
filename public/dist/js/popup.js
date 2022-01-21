@@ -214,7 +214,7 @@ jQuery(function () {
   }
 
   $(document).on('input click touchstart', '.list-radio', inputActive); //------[스테이징 기준] ---------
-  //버튼 예외처리
+  // Ajax데이터바인딩 버튼 예외처리
 
   $(document).on('click', function (e) {
     // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
@@ -232,15 +232,21 @@ jQuery(function () {
       $(this).closest('.popup').removeClass('is-active');
       $('html').removeClass('is-hidden');
     }
-  }); //취소나, 확인 버튼 클래스 추가
+  }); // //취소나, 확인 버튼 클래스 추가
+  // function htmlClassRemove(){
+  //     $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+  //     $(this).closest('.popup').removeClass('is-active');
+  //     $('html').removeClass('is-hidden');
+  // }
+  // $(document).on('click','.js-html-scroll',htmlClassRemove);
+  // is-hidden :: remove
 
-  function htmlClassRemove() {
-    $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-    $(this).closest('.popup').removeClass('is-active');
-    $('html').removeClass('is-hidden');
-  }
+  function viewHtmlClassRemove() {
+    setTimeout(function () {
+      $('html').removeClass('is-hidden');
+    }, 50);
+  } // popup 닫기 -> 이용약관, 개인정보처리방침, 1:1문의쪽 주문검색 취소&확인버튼 
 
-  $(document).on('click', '.js-html-scroll', htmlClassRemove); // popup 닫기 -> 이용약관, 개인정보처리방침, 1:1문의쪽 주문검색 취소&확인버튼 
 
   var popupId = ['privacyPop', 'provisionPop', 'shippingPop', 'inquiryOrderPop'];
   $(document).on('click', '[class $= __footer] [class $= __link], [class $= -close], [class $= __close]', function () {
@@ -250,11 +256,11 @@ jQuery(function () {
 
         if (popupId[i] === 'inquiryOrderPop' || popupId[i] === 'shippingPop') {
           $('html').removeClass('is-hidden');
-          setTimeout(function () {
-            $('html').removeClass('is-hidden');
-          }, 50);
+          viewHtmlClassRemove();
         }
       }
     }
-  }); //-------------------------
+  }); // 첨부이미지파일 :: 미리보기 삭제버튼
+
+  $(document).on('click', '.view-image__close', viewHtmlClassRemove); //-------------------------
 });

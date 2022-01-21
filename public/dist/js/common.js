@@ -990,26 +990,24 @@ jQuery(function () {
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
           }
-        },
-        touchMove: function touchMove() {
-          eventSliderTouch = true;
-        },
-        touchEnd: function touchEnd() {
-          if (eventSliderTouch) {
-            eventSliderTouch = false;
-            this.params.speed = 500;
-          }
-        },
-        transitionEnd: function transitionEnd() {
-          this.params.speed = 10000;
-        }
-      }
-    });
-    /*슬라이드 온클릭 시 자동슬라이드 정지*/
+        } // touchMove: function() {
+        //     eventSliderTouch = true;
+        // },
+        // touchEnd: function() {
+        //     if (eventSliderTouch) {
+        //         eventSliderTouch = false;
+        //         this.params.speed = 500;
+        //     }
+        // },
+        // transitionEnd: function() {
+        //     this.params.speed = 10000;
+        // }
 
-    $(document).on('click', mainNewSlide, function () {
-      mainNewSlide.autoplay.stop();
-    });
+      }
+    }); // /*슬라이드 온클릭 시 자동슬라이드 정지*/
+    // $(document).on('click',mainNewSlide, function() {
+    //     mainNewSlide.autoplay.stop();
+    // });
   } //best 배너슬라이드
 
 
@@ -1333,12 +1331,7 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
   collaboElem.addEventListener('mouseleave', function (e) {
     this.parentNode.classList.remove('is-hover');
   });
-}); // [ui추가] 
-// productFixButton :: 좋아요버튼 너비값
-// $('.fix-button__link--like').parent().css({
-//     width: '15%'
-// });
-//loading
+}); //loading
 
 window.onload = function () {
   $('.loading').hide();
