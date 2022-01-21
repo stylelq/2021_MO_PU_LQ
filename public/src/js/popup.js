@@ -213,7 +213,6 @@ jQuery(function(){
     }
     $(document).on('input click touchstart','.list-radio',inputActive);
 
-
     //------[스테이징 기준] ---------
     // Ajax데이터바인딩 버튼 예외처리
     $(document).on('click',function(e){
