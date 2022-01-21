@@ -200,20 +200,20 @@ jQuery(function () {
     //상품상세 상단 배너슬라이드
 
     if ($('.detail-thumb').length > 0) {
-      var _ref;
+      var _Swiper;
 
-      var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref = {
+      var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper = {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1
-      }, _defineProperty(_ref, "slidesPerView", 1), _defineProperty(_ref, "pagination", {
+      }, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "pagination", {
         el: ".detail-thumb__pagination",
         type: "fraction"
-      }), _defineProperty(_ref, "navigation", {
+      }), _defineProperty(_Swiper, "navigation", {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
-      }), _ref));
+      }), _Swiper));
     } //상품상세 쉐어 버튼 열기/닫기
 
 
@@ -389,13 +389,20 @@ jQuery(function () {
 
 
     if ($('.collection-more-slide').length > 0) {
+      var eventSliderTouch = false;
       var collectionSlide = new Swiper('.collection-more__container', {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1,
-        loop: true,
         centeredSlides: true,
+        rewind: true,
+        speed: 10000,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: true
+        },
         navigation: {
           nextEl: ".more-next-btn",
           prevEl: ".more-prev-btn"
@@ -403,7 +410,31 @@ jQuery(function () {
         pagination: {
           el: ".swiper-pagination",
           type: "fraction"
+        },
+        on: {
+          init: function init() {
+            $('.collection-more__wrapper').css({
+              transitionTimingFunction: 'linear'
+            });
+          },
+          touchMove: function touchMove() {
+            eventSliderTouch = true;
+          },
+          touchEnd: function touchEnd() {
+            if (eventSliderTouch) {
+              eventSliderTouch = false;
+              this.params.speed = 500;
+            }
+          },
+          transitionEnd: function transitionEnd() {
+            this.params.speed = 10000;
+          }
         }
+      });
+      /*슬라이드 온클릭 시 자동슬라이드 정지*/
+
+      $(document).on('click', collectionMoreSlide, function () {
+        collectionMoreSlide.autoplay.stop();
       });
     } // 컬렉션 모델슬라이드(상단)
 
@@ -633,20 +664,20 @@ jQuery(function () {
   }
 
   if ($('.detail-thumb').length > 0) {
-    var _ref2;
+    var _Swiper2;
 
-    var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref2 = {
+    var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper2 = {
       observer: true,
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 1
-    }, _defineProperty(_ref2, "slidesPerView", 1), _defineProperty(_ref2, "pagination", {
+    }, _defineProperty(_Swiper2, "slidesPerView", 1), _defineProperty(_Swiper2, "pagination", {
       el: ".detail-thumb__pagination",
       type: "fraction"
-    }), _defineProperty(_ref2, "navigation", {
+    }), _defineProperty(_Swiper2, "navigation", {
       nextEl: ".detail-thumb--next",
       prevEl: ".detail-thumb--prev"
-    }), _ref2));
+    }), _Swiper2));
   } // //메인 배너슬라이드
   // if($('.js-first-slide').length == 0){   //첫번째 슬라이드
   //     $('.main-banner__pagination').hide();
@@ -802,7 +833,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                    $('.main-banner__progressbar').removeClass("animate");
+                   $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");

@@ -119,6 +119,10 @@
         }
         &__slide{
             padding: 0 calcRem(44rem);
+            //롤링슬라이드
+            .swiper-wrapper{
+                transition-timing-function: linear;
+            }
         }
         &__item{
             padding: 0 calcRem(5rem);

@@ -375,13 +375,20 @@ jQuery(function(){
 
         // 컬렉션 더보기 슬라이드
         if($('.collection-more-slide').length > 0){
+            var eventSliderTouch = false;
             var collectionSlide = new Swiper('.collection-more__container', {
                 observer: true,
                 observeParents: true,
                 watchOverflow: true,
                 slidesPerView: 1,
-                loop: true,
                 centeredSlides: true,
+                rewind:true,
+                speed: 10000,
+                loop:true,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: true,
+                },
                 navigation: {
                     nextEl: ".more-next-btn",
                     prevEl: ".more-prev-btn",
@@ -390,6 +397,28 @@ jQuery(function(){
                     el: ".swiper-pagination",
                     type: "fraction",
                 },
+                on:{
+                    init:function(){
+                        $('.collection-more__wrapper').css({transitionTimingFunction:'linear'})
+                    },
+                    touchMove: function() {
+                        eventSliderTouch = true;
+                    },
+                    touchEnd: function() {
+                        if (eventSliderTouch) {
+                            eventSliderTouch = false;
+                            this.params.speed = 500;
+                        }
+                    },
+                    transitionEnd: function() {
+                        this.params.speed = 10000;
+                    }
+                }
+            });
+
+            /*슬라이드 온클릭 시 자동슬라이드 정지*/
+            $(document).on('click',collectionMoreSlide, function() {
+                collectionMoreSlide.autoplay.stop();
             });
         }
 
