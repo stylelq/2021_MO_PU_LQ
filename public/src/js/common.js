@@ -976,25 +976,25 @@ jQuery(function(){
                         $('body').addClass('is-black');
                     }
                 },
-                touchMove: function() {
-                    eventSliderTouch = true;
-                },
-                touchEnd: function() {
-                    if (eventSliderTouch) {
-                        eventSliderTouch = false;
-                        this.params.speed = 500;
-                    }
-                },
-                transitionEnd: function() {
-                    this.params.speed = 10000;
-                }
+                // touchMove: function() {
+                //     eventSliderTouch = true;
+                // },
+                // touchEnd: function() {
+                //     if (eventSliderTouch) {
+                //         eventSliderTouch = false;
+                //         this.params.speed = 500;
+                //     }
+                // },
+                // transitionEnd: function() {
+                //     this.params.speed = 10000;
+                // }
             }
         });
 
-        /*슬라이드 온클릭 시 자동슬라이드 정지*/
-        $(document).on('click',mainNewSlide, function() {
-            mainNewSlide.autoplay.stop();
-        });
+        // /*슬라이드 온클릭 시 자동슬라이드 정지*/
+        // $(document).on('click',mainNewSlide, function() {
+        //     mainNewSlide.autoplay.stop();
+        // });
     }
 
     //best 배너슬라이드
@@ -1282,6 +1282,7 @@ jQuery(function(){
 		// }
         /*********************/
     })
+    
 
 
 });
@@ -1337,18 +1338,10 @@ Array.prototype.forEach.call(collaboElemAll, function (collaboElem) {
 });
 
 
-
-// [ui추가] 
-// productFixButton :: 좋아요버튼 너비값
-// $('.fix-button__link--like').parent().css({
-//     width: '15%'
-// });
-
 //loading
 window.onload = function(){ 
     $('.loading').hide();
 }
-
 
 
 // 프로젝트페이지 - 주소복사 기능

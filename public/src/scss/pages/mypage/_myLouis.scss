@@ -147,7 +147,7 @@
         padding: calcRem(5rem) calcRem(20rem) 0;
         box-sizing: border-box;
         &:first-child{
-            padding-top: calcRem(10rem);
+            // padding-top: calcRem(10rem);
             border-top: 1px solid $black1;
         }
         &:last-child{
@@ -156,7 +156,7 @@
     }
 
     &__item{
-        padding: calcRem(10rem) 0 calcRem(14rem);
+        padding: calcRem(10rem) 0;
         @include body3;
         &:not(:last-child){
             border-bottom: 1px solid $lightgray4;
