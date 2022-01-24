@@ -90,6 +90,10 @@
     }
 }
 
+.paging{
+    margin-bottom: calcRem(30rem);
+}
+
 //-- 상품 상세 내용
 .myReview-tab__info{
     
@@ -224,4 +228,51 @@
         }
     }
 
+}
+
+
+// 라이브러리 커스텀
+.widget_managing_reviews{
+    padding: 8px 20px 0 20px;
+    border-top:solid 1px $gray1;
+
+    &__head{
+        .managing_reviews_header{
+            &__tab_list{
+                border-bottom: 0;
+            }
+
+            &__tab{
+                width: 50%;
+                @include body3;
+                text-align: center;
+    
+                &--active{
+                    position: relative;
+    
+                    .managing_reviews_header__tab_link{
+                        border: 0;padding: 0;
+                    }
+                    
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: -9px;
+                        left: 0;
+                        width: 100%;
+                        height:calcRem(2rem);
+                        background-color: $black1;
+                    }
+                }
+            }
+
+            &__message{
+                @include body3;
+            }
+        }
+    }
+    &__list{}
+}
+.managing_reviews_header__tab+.managing_reviews_header__tab{
+    margin-left: 0;
 }

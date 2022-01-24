@@ -103,7 +103,7 @@
 
     //location list
     &-location{
-        // border-top:solid 1px $black1;
+        border-top:solid 1px $black1;
         border-bottom:solid 1px $black1;
         margin-left:calcRem(-20rem);
         margin-right:calcRem(-20rem);
@@ -238,6 +238,7 @@
 //글로벌
 .stores{
     &-global{
+        .stores-location{border-top: 0;}
         &__section{
             margin-top:calcRem(60rem);
 
@@ -370,7 +371,7 @@
 //슬라이드
 .special-slide{
     margin-bottom:calcRem(32rem);
-
+ 
     &__inner{
         line-height:0;
         width:100%;
@@ -410,6 +411,33 @@
                 font-size:calcRem(12rem);
                 line-height:calclH(19,12);
                 padding-left:calcRem(10rem);
+            }
+        }
+    }
+
+    // 버튼
+    &__container{
+        position: relative;
+    }
+    .swiper{
+        &-button{
+            &-next{
+                @include vertical-center;
+                width: calcRem(10rem);
+                height: calcRem(20rem);
+                position: absolute;
+                right: calcRem(10rem);
+                background: url('../../images/collection/collection_slide_next_w.png') no-repeat center center /contain;
+                z-index: 100;
+            }
+            &-prev{
+                @include vertical-center;
+                width: calcRem(10rem);
+                height: calcRem(20rem);
+                position: absolute;
+                left: calcRem(10rem);
+                background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
+                z-index: 100;
             }
         }
     }

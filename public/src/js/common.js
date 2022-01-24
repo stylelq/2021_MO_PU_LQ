@@ -375,7 +375,26 @@ jQuery(function(){
 
         // 컬렉션 더보기 슬라이드
         if($('.collection-more-slide').length > 0){
+<<<<<<< HEAD
             var eventSliderTouch = false;
+=======
+            // var collectionSlide = new Swiper('.collection-more__container', {
+            //     observer: true,
+            //     observeParents: true,
+            //     watchOverflow: true,
+            //     slidesPerView: 1,
+            //     loop: true,
+            //     centeredSlides: true,
+            //     navigation: {
+            //         nextEl: ".more-next-btn",
+            //         prevEl: ".more-prev-btn",
+            //     },
+            //     pagination: {
+            //         el: ".swiper-pagination",
+            //         type: "fraction",
+            //     },
+            // });
+>>>>>>> 8d3b9e8a8b07ad93d8140cbc5674526d1b47fbb5
             var collectionSlide = new Swiper('.collection-more__container', {
                 observer: true,
                 observeParents: true,
@@ -383,11 +402,19 @@ jQuery(function(){
                 slidesPerView: 1,
                 centeredSlides: true,
                 rewind:true,
+<<<<<<< HEAD
+=======
+                loadOnTransitionStart:true, //초기에 새 이미지 로드
+>>>>>>> 8d3b9e8a8b07ad93d8140cbc5674526d1b47fbb5
                 speed: 10000,
                 loop:true,
                 autoplay: {
                     delay: 0,
+<<<<<<< HEAD
                     disableOnInteraction: true,
+=======
+                    disableOnInteraction: false,
+>>>>>>> 8d3b9e8a8b07ad93d8140cbc5674526d1b47fbb5
                 },
                 navigation: {
                     nextEl: ".more-next-btn",
@@ -399,6 +426,7 @@ jQuery(function(){
                 },
                 on:{
                     init:function(){
+<<<<<<< HEAD
                         $('.collection-more__wrapper').css({transitionTimingFunction:'linear'})
                     },
                     touchMove: function() {
@@ -419,6 +447,23 @@ jQuery(function(){
             /*슬라이드 온클릭 시 자동슬라이드 정지*/
             $(document).on('click',collectionMoreSlide, function() {
                 collectionMoreSlide.autoplay.stop();
+=======
+                        $('.collection-more__wrapper').css({transitionTimingFunction:'linear'});
+                    },
+                    touchMove: function() {
+                        eventSliderTouch = true;
+                        this.params.delay = 0;
+                    },
+                    touchEnd: function() {
+                        eventSliderTouch = false;
+                        this.params.speed = 500;
+                        this.params.delay = 1000;
+                    },
+                    transitionEnd: function() {
+                        this.params.speed = 10000;
+                    },
+                }
+>>>>>>> 8d3b9e8a8b07ad93d8140cbc5674526d1b47fbb5
             });
         }
 
@@ -621,6 +666,10 @@ jQuery(function(){
                 el: ".special-slide__pagination",
                 type: "fraction",
             },
+            navigation: {
+                nextEl: ".special-slide__next",
+                prevEl: ".special-slide__prev",
+            }
         });
     }
 
@@ -644,7 +693,6 @@ jQuery(function(){
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            slidesPerView: 1,
             slidesPerView: 1,
             pagination: {
                 el: ".detail-thumb__pagination",
@@ -1025,6 +1073,7 @@ jQuery(function(){
             mainNewSlide.autoplay.stop();
         });
     }
+
 
     //best 배너슬라이드
     if($('.best-thumb').length > 0 && $('.best-thumb__item').length > 1){

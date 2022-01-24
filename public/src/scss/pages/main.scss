@@ -412,7 +412,7 @@
 	}
 
 	&__content {
-		bottom: calcRem(50rem);
+		bottom: calcRem(35rem);
 		// top: calcRem(319rem);
 		position: absolute;
 		color: #000;
@@ -422,7 +422,8 @@
 	&__name {
 		font-size: calcRem(12rem); //14
 		font-weight: 300;
-		line-height: calcRem(20rem);
+		line-height: calcRem(19rem); //20
+		padding: 0 calcRem(10rem);
 	}
 	&__price {
 		padding-top: calcRem(5rem);
@@ -1089,15 +1090,16 @@
 	}
 
 	&__inner{
-		display: block;
+		// display: block;
 		// font-size: calcRem(11rem);
 		font-size: calcRem(12rem);
 		font-weight: 300;
-		line-height: calclH(17,12);
+		line-height: 1;
 		box-sizing: border-box;
-		padding: 3px 7px;
+		padding: 5px 7px;
 		color:  #000;
 		border: 1px solid #cbcbcb;
+		
 		&.is-active{
 			color: #9B192F;
 			border: 1px solid #9B192F;

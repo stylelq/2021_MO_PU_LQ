@@ -132,6 +132,7 @@
             color:$point1;
             font-weight: $regular;
             display: block;
+            strong{ font-weight: $regular; }
         }
         &--won{
             @include body4;

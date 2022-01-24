@@ -3,10 +3,12 @@
 
 .product-wrap{
     display: block;
+
+    //데이터 없음
     .notData-wrap{
         @include body5;
         text-align: center;
-        padding:calcRem(20rem) calcRem(20rem);
+        padding:calcRem(80rem) calcRem(20rem);
         font-size:calcRem(12rem);
     }
 }
