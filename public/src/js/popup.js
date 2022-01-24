@@ -127,6 +127,15 @@ jQuery(function(){
     $(document).on('click', '.js-popup-close', closePopup);
 
 
+    //팝업닫기(메인)
+    function closemainPopup() {
+        if($('.notice-popup').length <= 1) {
+            $('#mainPopup').css('display','none');
+        }
+    }
+    $(document).on('click', '.js-popup-close', closemainPopup);
+
+
     //배송지 정보 탭
     function shippingTab() {
         var idx = $(this).parent('li').index();
