@@ -123,8 +123,9 @@
     &__link{
         display:block;
         @include title2();
-        letter-spacing: -0.02em; //0.06em  
+        letter-spacing: 0.03em;//-0.02em; //0.06em  
         text-transform: capitalize; 
+        font-weight: $light;
     }
 
     &__item:last-child{

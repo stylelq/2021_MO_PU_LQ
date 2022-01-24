@@ -389,13 +389,37 @@ jQuery(function () {
 
 
     if ($('.collection-more-slide').length > 0) {
+      // var collectionSlide = new Swiper('.collection-more__container', {
+      //     observer: true,
+      //     observeParents: true,
+      //     watchOverflow: true,
+      //     slidesPerView: 1,
+      //     loop: true,
+      //     centeredSlides: true,
+      //     navigation: {
+      //         nextEl: ".more-next-btn",
+      //         prevEl: ".more-prev-btn",
+      //     },
+      //     pagination: {
+      //         el: ".swiper-pagination",
+      //         type: "fraction",
+      //     },
+      // });
       var collectionSlide = new Swiper('.collection-more__container', {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1,
-        loop: true,
         centeredSlides: true,
+        rewind: true,
+        loadOnTransitionStart: true,
+        //초기에 새 이미지 로드
+        speed: 10000,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false
+        },
         navigation: {
           nextEl: ".more-next-btn",
           prevEl: ".more-prev-btn"
@@ -403,6 +427,25 @@ jQuery(function () {
         pagination: {
           el: ".swiper-pagination",
           type: "fraction"
+        },
+        on: {
+          init: function init() {
+            $('.collection-more__wrapper').css({
+              transitionTimingFunction: 'linear'
+            });
+          },
+          touchMove: function touchMove() {
+            eventSliderTouch = true;
+            this.params.delay = 0;
+          },
+          touchEnd: function touchEnd() {
+            eventSliderTouch = false;
+            this.params.speed = 500;
+            this.params.delay = 1000;
+          },
+          transitionEnd: function transitionEnd() {
+            this.params.speed = 10000;
+          }
         }
       });
     } // 컬렉션 모델슬라이드(상단)
@@ -613,6 +656,10 @@ jQuery(function () {
       pagination: {
         el: ".special-slide__pagination",
         type: "fraction"
+      },
+      navigation: {
+        nextEl: ".special-slide__next",
+        prevEl: ".special-slide__prev"
       }
     });
   }
@@ -633,20 +680,20 @@ jQuery(function () {
   }
 
   if ($('.detail-thumb').length > 0) {
-    var _ref2;
-
-    var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref2 = {
+    var detailThumbSlide = new Swiper('.detail-thumb__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
-      slidesPerView: 1
-    }, _defineProperty(_ref2, "slidesPerView", 1), _defineProperty(_ref2, "pagination", {
-      el: ".detail-thumb__pagination",
-      type: "fraction"
-    }), _defineProperty(_ref2, "navigation", {
-      nextEl: ".detail-thumb--next",
-      prevEl: ".detail-thumb--prev"
-    }), _ref2));
+      slidesPerView: 1,
+      pagination: {
+        el: ".detail-thumb__pagination",
+        type: "fraction"
+      },
+      navigation: {
+        nextEl: ".detail-thumb--next",
+        prevEl: ".detail-thumb--prev"
+      }
+    });
   } // //메인 배너슬라이드
   // if($('.js-first-slide').length == 0){   //첫번째 슬라이드
   //     $('.main-banner__pagination').hide();

@@ -42,7 +42,8 @@ jQuery(function(){
                 $('.popup__body').scrollTop(0);
             }
             return false;
-        })
+        });
+
         return false;
     }
     $(document).on('click', '.js-popup-open', openPopup);
@@ -210,9 +211,11 @@ jQuery(function(){
     //
     // ps. 버튼을 고정시키지 않고 스크롤시 딸려 올라오게 처리가 되었으나, 
     //     디바이스별로 (하단/상단/주소 바 등) 높이가 상이하고 질질끄는형식의 터치가 이루어졌을때 
-    //     팝업 아래 깔린 부모DOM객체가 보여져(dim이 없는 풀팝업) 부모 스크롤 hidden 처리로 방식을 바꿧으나(html 'is-hidden'클래스추가),
+    //     dim이 없는 풀팝업일 경우 아래 깔린 부모DOM객체가 보여져 부모 스크롤 hidden 처리로 방식을 바꿧으나(html 'is-hidden'클래스추가),
+    //     AJAX에서 데이터 바인딩시 succes후 is-hidden 클래스 삭제를 추가해야하는 번거러움이 생김.
+    //        ㄴ 닫기버튼, 취소나 확인 버튼 누르고 나왔을때 body가 스크롤 안되는 부분때문
     //     현재 버튼을 fixed처리 하고, .popup-body 기준 높이값을 적게 처리하여 굳이 html태그에 is-hidden 처리를 하지 않아도 될듯함.
-    //     그런데 ajax 처리할때도(팝업open/close) html태그에 is-hidden 처리 하게 되어 있으므로 이점 참고 바람.
+
     $(document).on('click',function(e){
         // [개발기준작업] 주문서-배송지정보, 1:1문의-주문검색 팝업
         if( e.target.tagName === 'A' || 
@@ -240,7 +243,6 @@ jQuery(function(){
             $('html').removeClass('is-hidden');
         },50)
     }
-
     // popup 닫기 -> 이용약관, 개인정보처리방침, 1:1문의쪽 주문검색 취소&확인버튼 
     var popupId = ['privacyPop','provisionPop','shippingPop','inquiryOrderPop','fileList0']
     $(document).on('click', 
