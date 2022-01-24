@@ -125,8 +125,10 @@
     }
 }
 .footer-sns{
-    margin-top:calcRem(20rem);
+    // margin-top:calcRem(20rem);
+    margin-top:calcRem(30rem);
     $this:&;
+    
     &__list{
         margin:0;
         padding:0;
