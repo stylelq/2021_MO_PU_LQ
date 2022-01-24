@@ -200,20 +200,20 @@ jQuery(function () {
     //상품상세 상단 배너슬라이드
 
     if ($('.detail-thumb').length > 0) {
-      var _Swiper;
+      var _ref;
 
-      var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper = {
+      var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref = {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1
-      }, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "pagination", {
+      }, _defineProperty(_ref, "slidesPerView", 1), _defineProperty(_ref, "pagination", {
         el: ".detail-thumb__pagination",
         type: "fraction"
-      }), _defineProperty(_Swiper, "navigation", {
+      }), _defineProperty(_ref, "navigation", {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
-      }), _Swiper));
+      }), _ref));
     } //상품상세 쉐어 버튼 열기/닫기
 
 
@@ -644,6 +644,10 @@ jQuery(function () {
       pagination: {
         el: ".special-slide__pagination",
         type: "fraction"
+      },
+      navigation: {
+        nextEl: ".special-slide__next",
+        prevEl: ".special-slide__prev"
       }
     });
   }
@@ -664,20 +668,20 @@ jQuery(function () {
   }
 
   if ($('.detail-thumb').length > 0) {
-    var _Swiper2;
-
-    var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper2 = {
+    var detailThumbSlide = new Swiper('.detail-thumb__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
-      slidesPerView: 1
-    }, _defineProperty(_Swiper2, "slidesPerView", 1), _defineProperty(_Swiper2, "pagination", {
-      el: ".detail-thumb__pagination",
-      type: "fraction"
-    }), _defineProperty(_Swiper2, "navigation", {
-      nextEl: ".detail-thumb--next",
-      prevEl: ".detail-thumb--prev"
-    }), _Swiper2));
+      slidesPerView: 1,
+      pagination: {
+        el: ".detail-thumb__pagination",
+        type: "fraction"
+      },
+      navigation: {
+        nextEl: ".detail-thumb--next",
+        prevEl: ".detail-thumb--prev"
+      }
+    });
   } // //메인 배너슬라이드
   // if($('.js-first-slide').length == 0){   //첫번째 슬라이드
   //     $('.main-banner__pagination').hide();
@@ -833,7 +837,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                   $('.main-banner__progressbar').removeClass("animate");
+                    $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");

@@ -621,6 +621,10 @@ jQuery(function(){
                 el: ".special-slide__pagination",
                 type: "fraction",
             },
+            navigation: {
+                nextEl: ".special-slide__next",
+                prevEl: ".special-slide__prev",
+            }
         });
     }
 
@@ -644,7 +648,6 @@ jQuery(function(){
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            slidesPerView: 1,
             slidesPerView: 1,
             pagination: {
                 el: ".detail-thumb__pagination",
@@ -1025,6 +1028,7 @@ jQuery(function(){
             mainNewSlide.autoplay.stop();
         });
     }
+
 
     //best 배너슬라이드
     if($('.best-thumb').length > 0 && $('.best-thumb__item').length > 1){
