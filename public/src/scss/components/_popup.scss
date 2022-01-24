@@ -2355,12 +2355,12 @@
 }
 
 // 메인공지팝업
-#mainPop{
-}
-
 .notice-popup{
+    left: 50%;
     position: absolute;
-    width: 100%;
+    width: 80%;
+    transform: translate(-50%, 40%);
+
     &__img{
         width: 100%;
         display: block;
