@@ -1397,4 +1397,19 @@ if (copyBtn) {
     copyBtn.addEventListener('click', CopyUrlToClipboard);
 } 
 
+// mobile 디바이스 브라우저 네비게이션 바 계산
+var vh = window.innerHeight * 0.01;  
+document.documentElement.style.setProperty('--vh', vh+'px');
 
+$(document).ready(function(){
+    vh = window.innerHeight * 0.01;  
+    document.documentElement.style.setProperty('--vh', vh+'px');
+})
+window.addEventListener('resize', function(){
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh+'px');
+});
+window.addEventListener('touchmove', function(){
+    var vh = window.innerHeight * 0.01 //window.innerHeight/100;
+    document.documentElement.style.setProperty('--vh', vh+'px');
+});
