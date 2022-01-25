@@ -489,6 +489,7 @@
 //------- 640fixed  -----------------
 .main-banner,.main-banner2,.main-new{
 	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100); 
 	// max-height: 640px;
 	// box-sizing: border-box;
 	.main-banner__inner{
@@ -497,6 +498,7 @@
 
 	.main-banner__source--img{
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100); 
 	}
 	.main-banner__video,
 	.main-banner2__video{
