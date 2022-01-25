@@ -185,6 +185,9 @@
                     background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
                     z-index: 100;
                 }
+
+                &-next,
+                &-prev{ display: none; }   
             }
         }
         &__detail{

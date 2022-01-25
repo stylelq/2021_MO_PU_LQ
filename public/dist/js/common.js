@@ -390,18 +390,18 @@ jQuery(function () {
 
     if ($('.collection-more-slide').length > 0) {
       var eventSliderTouch = false;
-      var collectionSlide = new Swiper('.collection-more__container', {
+      var collectionMoreSlide = new Swiper('.collection-more__container', {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1,
         centeredSlides: true,
         rewind: true,
-        speed: 10000,
+        speed: 8000,
         loop: true,
         autoplay: {
           delay: 0,
-          disableOnInteraction: true
+          disableOnInteraction: false
         },
         navigation: {
           nextEl: ".more-next-btn",
@@ -424,17 +424,24 @@ jQuery(function () {
             if (eventSliderTouch) {
               eventSliderTouch = false;
               this.params.speed = 500;
+              this.params.autoplay.delay = 1000;
             }
           },
           transitionEnd: function transitionEnd() {
-            this.params.speed = 10000;
+            this.params.speed = 8000;
+            this.params.autoplay.delay = 0;
+          },
+          sliderFirstMove: function sliderFirstMove() {
+            console.log('dd : ', this.activeIndex);
           }
         }
       });
       /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
       $(document).on('click', collectionMoreSlide, function () {
-        collectionMoreSlide.autoplay.stop();
+        // collectionMoreSlide.autoplay.stop();
+        collectionMoreSlide.autoplay.delay = 1000;
+        console.log(collectionMoreSlide.autoplay);
       });
     } // 컬렉션 모델슬라이드(상단)
 
