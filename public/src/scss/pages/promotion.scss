@@ -111,6 +111,7 @@
         }
         &__iframe{
           width: 100%;
+          height: calcRem(210rem);
           display: block;
         }
         &__video{
