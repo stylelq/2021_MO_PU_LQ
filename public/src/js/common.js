@@ -488,11 +488,7 @@ jQuery(function(){
                 autoplay: {
                     delay: 3000,
                     disableOnInteraction : false,
-                },
-                pagination : {
-                    el : '.promotion-slide-pagination',
-                    clickable : true
-                },
+                }
             });
         }
 

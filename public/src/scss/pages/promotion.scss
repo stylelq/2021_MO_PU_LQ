@@ -92,10 +92,32 @@
           img{
             @include imageBlock;
           }
+          &--play{
+            position: relative;
+          }
         }
         &__iframe{
           width: 100%;
           display: block;
+        }
+        &__video{
+          width: 100%;
+          display: block;
+        }
+        &__sound{
+          display: block;
+          position: absolute;
+          right: calcRem(20rem);
+          bottom: calcRem(25rem);
+          overflow: hidden;
+          width: calcRem(30rem);
+          height: calcRem(30rem);
+          background: url(https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png) no-repeat center center/contain;
+          text-indent: -9999px;
+          -webkit-user-select: auto;
+          -moz-user-select: auto;
+          -ms-user-select: auto;
+          user-select: auto;
         }
     }
 

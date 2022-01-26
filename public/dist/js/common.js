@@ -505,10 +505,6 @@ jQuery(function () {
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
-        },
-        pagination: {
-          el: '.promotion-slide-pagination',
-          clickable: true
         }
       });
     } // 컬렉션 썸네일 슬라이드
