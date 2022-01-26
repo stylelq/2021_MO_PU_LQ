@@ -144,6 +144,17 @@
         }
     }
 
+    // 프로모션 모델슬라이드
+    &-model{
+      position: relative;
+      &__wrap{
+        width: 100%;
+      }
+      &__img{
+        display: block;
+        width: 100%;
+      }
+    }
 }
 
 

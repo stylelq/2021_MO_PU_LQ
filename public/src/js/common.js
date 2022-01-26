@@ -476,6 +476,26 @@ jQuery(function(){
             });
         }
 
+        // 프로모션 모델슬라이드(상단)
+        if($('.promotion-model-slide').length > 0){
+            var promotionModelSlide = new Swiper('.promotion-model__container', {
+                effect: 'fade',
+                observer: true,
+                observeParents: true,
+                watchOverflow: true,
+                slidesPerView: 1,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction : false,
+                },
+                pagination : {
+                    el : '.promotion-slide-pagination',
+                    clickable : true
+                },
+            });
+        }
+
         // 컬렉션 썸네일 슬라이드
         if($('.gallery-thumbs').length > 0){
             var galleryThumbs = new Swiper('.gallery-thumbs', {
