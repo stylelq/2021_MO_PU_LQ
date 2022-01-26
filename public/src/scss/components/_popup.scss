@@ -569,6 +569,9 @@
         z-index: $childZindex;
         padding:calcRem(30rem) calcRem(40rem) calcRem(40rem);
         box-sizing: border-box;
+        &.platforml-only{
+            padding: 0;
+        }
     }
 
     &__header{
@@ -653,6 +656,28 @@
             text-align: center;
 
             font-size: calcRem(11rem);
+        }
+    }
+}
+
+//판매가 별도문의 안내
+.pop-special{
+    &__link{
+        display: block;
+    }
+    &__top{
+        padding: calcRem(24rem) 0;
+        background-color: #cac0b3;
+        text-align: center;
+    }
+    &__bottom{
+        padding: calcRem(24rem) 0;
+        background-color: #f06035;
+        text-align: center;
+    }
+    &__time{
+        &--lunch{
+            font-size: calcRem(12rem);
         }
     }
 }

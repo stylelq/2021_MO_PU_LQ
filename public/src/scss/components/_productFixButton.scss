@@ -146,6 +146,12 @@
         display: inline-block;
         @include body2;
     }
+
+    &.platforml-only{
+        .fix-button__item{
+            width: 100%;
+        }
+    }
 }
 
 
