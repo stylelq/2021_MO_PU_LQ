@@ -7,6 +7,19 @@
   width:100%;
 }
 
+@keyframes objRotate{
+  0%{
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+  }
+}
+
 .promotion{
     // 프로모션 리스트
     // 프로모션 메인배너
@@ -175,6 +188,34 @@
       &__img{
         display: block;
         width: 100%;
+      }
+    }
+
+    // 프로모션 flash추가 시
+    &-flash{
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 96.11%;
+      background: url('https://mcdn.louisclub.com/static/mo/img/specialty/20210614/bg.jpg') no-repeat center center/cover;
+      &__img {
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        &.is-rotate{
+          animation-name: objRotate;
+          animation-duration: 10000ms;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          -ms-animation-name: objRotate;
+          -ms-animation-duration: 10000ms;
+          -ms-animation-timing-function: linear;
+          -webkit-animation-name: objRotate;
+          -webkit-animation-duration: 10000ms;
+          -webkit-animation-timing-function: linear;
+        }
       }
     }
 }
