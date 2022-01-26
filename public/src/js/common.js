@@ -1425,7 +1425,7 @@ window.addEventListener('resize', function(){
     var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', vh+'px');
 });
-window.addEventListener('touchmove', function(){
-    var vh = window.innerHeight * 0.01 //window.innerHeight/100;
-    document.documentElement.style.setProperty('--vh', vh+'px');
-});
+// window.addEventListener('touchmove', function(){
+//     var vh = window.innerHeight * 0.01 //window.innerHeight/100;
+//     document.documentElement.style.setProperty('--vh', vh+'px');
+// });
