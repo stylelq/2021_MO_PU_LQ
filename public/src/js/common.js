@@ -1437,8 +1437,11 @@ if (copyBtn) {
 // --------------------------
 // [2021-01-25] 
 // mobile 디바이스 브라우저 네비게이션 바 계산
-var vh = window.innerHeight * 0.01;  
-document.documentElement.style.setProperty('--vh', vh+'px');
+$('.page-main').each(function(){
+    var vh = window.innerHeight * 0.01;  
+    document.documentElement.style.setProperty('--vh', vh+'px');
+})
+
 
 // // 디바이스별 풀사이즈 조정
 // var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
@@ -1457,13 +1460,3 @@ document.documentElement.style.setProperty('--vh', vh+'px');
 //     });
 // }
 // --------------------------
-
-//상품 리뷰:: 데이터 없는경우
-// if( $('.crema-reviews').length > 0 ){
-//     $('.crema-reviews iframe').on('load',function(){
-//         var head = $(this).contents().find("head");
-//         var css = '< style>/* 여기에 css 코드를 쓰세요 */< /style>';
-//         $(head).append(css);
-//     })
-// }
-
