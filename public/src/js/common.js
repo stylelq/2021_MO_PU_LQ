@@ -493,20 +493,24 @@ jQuery(function(){
         }
 
         // 컬렉션,프로모션 비디오 재생버튼 액션추가
-        var playBtn = document.querySelector('.promotion-view__visual--btn');
-        var videoElem = document.querySelector('.promotion-view__videoNew');
-        var videoThum = document.querySelector('.promotion-view__visual--thumb');
-        playBtn.addEventListener('click',videoPlay)
-        videoElem.addEventListener('click',videoPause)
-        function videoPlay(e){
-            e.preventDefault();
-            videoElem.play();
-            videoThum.classList.add('is-hide');
-        }
-        function videoPause(){
-            videoElem.pause();
-            videoThum.classList.remove('is-hide');
-            videoThum.classList.add('is-nobg')
+        if($('.promotion-view__visual--play').length > 0) {
+            var playBtn = document.querySelector('.promotion-view__visual--btn');
+            var videoElem = document.querySelector('.promotion-view__videoNew');
+            var videoThum = document.querySelector('.promotion-view__visual--thumb');
+            playBtn.addEventListener('click', videoPlay)
+            videoElem.addEventListener('click', videoPause)
+
+            function videoPlay(e) {
+                e.preventDefault();
+                videoElem.play();
+                videoThum.classList.add('is-hide');
+            }
+
+            function videoPause() {
+                videoElem.pause();
+                videoThum.classList.remove('is-hide');
+                videoThum.classList.add('is-nobg')
+            }
         }
 
         // 컬렉션 썸네일 슬라이드
