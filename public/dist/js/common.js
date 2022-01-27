@@ -1412,27 +1412,24 @@ if (copyBtn) {
   copyBtn.addEventListener('click', CopyUrlToClipboard);
 } // --------------------------
 // [2021-01-25] 
-// 디바이스별 풀사이즈 조정
+// mobile 디바이스 브라우저 네비게이션 바 계산
 
-
-var mobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase());
-var agt = navigator.userAgent.toLowerCase();
-var mobileType = ['android', 'iphone']; // mobile 디바이스 브라우저 네비게이션 바 계산
 
 var vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', vh + 'px');
-
-if (mobile && agt.indexOf(mobileType[0]) > -1) {
-  //안드로이드 일 경우
-  window.addEventListener('touchmove', function () {
-    var vh = window.innerHeight * 0.01; //window.innerHeight/100;
-
-    document.documentElement.style.setProperty('--vh', vh + 'px');
-  });
-  window.addEventListener('resize', function () {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', vh + 'px');
-  });
-}
-
-console.log(agt); // --------------------------
+document.documentElement.style.setProperty('--vh', vh + 'px'); // // 디바이스별 풀사이즈 조정
+// var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+// var agt = navigator.userAgent.toLowerCase();
+// var mobileType = ['android','iphone'];
+// if( mobile &&  agt.indexOf(mobileType[1]) > -1 ){
+// }else{
+//     //안드로이드 일 경우
+//     // window.addEventListener('touchmove', function(){
+//     //     var vh = window.innerHeight * 0.01 //window.innerHeight/100;
+//     //     document.documentElement.style.setProperty('--vh', vh+'px');
+//     // });
+//     window.addEventListener('resize', function(){
+//         var vh = window.innerHeight * 0.01;
+//         document.documentElement.style.setProperty('--vh', vh+'px');
+//     });
+// }
+// --------------------------
