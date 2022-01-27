@@ -1635,6 +1635,10 @@
     transform: translateY(110%);
     transition-property: transform,opacity,visibility;
     transition-duration: 0.3s;
+
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); 
+
     &.is-active{
         opacity: 1;
         visibility: visible;
