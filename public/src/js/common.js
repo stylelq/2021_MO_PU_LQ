@@ -1457,3 +1457,13 @@ document.documentElement.style.setProperty('--vh', vh+'px');
 //     });
 // }
 // --------------------------
+
+//상품 리뷰:: 데이터 없는경우
+// if( $('.crema-reviews').length > 0 ){
+//     $('.crema-reviews iframe').on('load',function(){
+//         var head = $(this).contents().find("head");
+//         var css = '< style>/* 여기에 css 코드를 쓰세요 */< /style>';
+//         $(head).append(css);
+//     })
+// }
+
