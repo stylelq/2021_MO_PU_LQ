@@ -200,20 +200,20 @@ jQuery(function () {
     //상품상세 상단 배너슬라이드
 
     if ($('.detail-thumb').length > 0) {
-      var _ref;
+      var _Swiper;
 
-      var detailThumbSlide = new Swiper('.detail-thumb__container', (_ref = {
+      var detailThumbSlide = new Swiper('.detail-thumb__container', (_Swiper = {
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1
-      }, _defineProperty(_ref, "slidesPerView", 1), _defineProperty(_ref, "pagination", {
+      }, _defineProperty(_Swiper, "slidesPerView", 1), _defineProperty(_Swiper, "pagination", {
         el: ".detail-thumb__pagination",
         type: "fraction"
-      }), _defineProperty(_ref, "navigation", {
+      }), _defineProperty(_Swiper, "navigation", {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
-      }), _ref));
+      }), _Swiper));
     } //상품상세 쉐어 버튼 열기/닫기
 
 
@@ -879,7 +879,7 @@ jQuery(function () {
                       $('body').removeClass('is-white');
                       $('body').addClass('is-black');
                   }
-                    $('.main-banner__progressbar').removeClass("animate");
+                   $('.main-banner__progressbar').removeClass("animate");
                   $('.main-banner__progressbar').removeClass("active");
                   $('.main-banner__progressbar').eq(0).addClass("animate");
                   $('.main-banner__progressbar').eq(0).addClass("active");
