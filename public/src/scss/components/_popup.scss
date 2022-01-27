@@ -1636,13 +1636,14 @@
     transition-property: transform,opacity,visibility;
     transition-duration: 0.3s;
 
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100); 
-
     &.is-active{
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+    }
+
+    .popup__body{
+        height: calc(var(--vh, 1vh) * 100); 
     }
 }
 .lookbook-wrap{
@@ -1665,6 +1666,10 @@
     &__list{
         position: relative;
         padding-bottom: calcRem(40rem);
+
+        &:last-child{
+            padding-bottom: calcRem(150rem);
+        }
     }
     &__img{
         width: 100%;
