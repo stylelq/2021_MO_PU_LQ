@@ -624,7 +624,7 @@
 	}
 	&__button{
 		margin: 0 calcRem(20rem);
-		padding: calcRem(14rem) 0 calcRem(10rem);
+		padding: calcRem(14rem) 0;
 		color: #fff;
 		border: 1px solid #fff;
 		text-transform: uppercase;
@@ -1096,7 +1096,7 @@
 		// font-size: calcRem(11rem);
 		font-size: calcRem(12rem);
 		font-weight: 300;
-		line-height: 1;
+		line-height: normal;
 		box-sizing: border-box;
 		padding: 5px 7px;
 		color:  #000;
