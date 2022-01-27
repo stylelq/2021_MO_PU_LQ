@@ -8,6 +8,18 @@
     width:100%;
 }
 
+// 슬라이드되는 애니메이션
+@keyframes photoline{
+    0%{
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    100%{
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
 // collection main
 .collection{
     &-wrap{
@@ -396,6 +408,50 @@
             width: 50%;
             float: left;
             padding-top: calcRem(40rem);
+        }
+    }
+
+    &-motion{
+        overflow: hidden;
+        &__wrap{
+            font-size: 0;
+            width: 5324px;
+            white-space: nowrap;
+            -webkit-animation: photoline 20s infinite linear;
+            animation: photoline 20s infinite linear;
+        }
+    }
+
+    &-play{
+        position: relative;
+        img{
+            @include imageBlock;
+        }
+        &__thumb{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/video_thumnail.jpg') no-repeat center center/cover;
+            z-index: 1;
+            &.is-nobg{
+                background-image: none;
+            }
+        }
+        &__btn{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 17.77%;
+            margin: 0 auto;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        &__video{
+            width: 100%;
+            display: block;
         }
     }
 }

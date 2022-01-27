@@ -507,7 +507,7 @@ jQuery(function () {
           disableOnInteraction: false
         }
       });
-    } // 프로모션 비디오 재생버튼 액션추가
+    } // 컬렉션,프로모션 비디오 재생버튼 액션추가
 
 
     var playBtn = document.querySelector('.promotion-view__visual--btn');

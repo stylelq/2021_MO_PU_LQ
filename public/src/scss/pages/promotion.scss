@@ -7,6 +7,7 @@
   width:100%;
 }
 
+// 회전 애니메이션
 @keyframes objRotate{
   0%{
     transform:rotate(0deg);
@@ -20,6 +21,7 @@
   }
 }
 
+// 슬라이드되는 애니메이션
 @keyframes photoline{
   0%{
     -webkit-transform: translateX(0%);
