@@ -35,10 +35,11 @@
 }
 
 //비밀번호 변경
-.myPass-cont{
+.myPass-center{
     padding:0 calcRem(20rem);
     &__text{ @include body3; }
-
+}
+.myPass-cont{
     .input-list{
         &__item{
             margin: 0;padding:0;
@@ -57,4 +58,8 @@
         }
         &__item+.btn-v1{ margin-top: calcRem(10rem);}
     }
+}
+.myPass-infoSearch{
+    margin-top: calcRem(20rem);
+    p{@include body3;}
 }
