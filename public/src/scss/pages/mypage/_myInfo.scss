@@ -33,3 +33,28 @@
         }
     }
 }
+
+//비밀번호 변경
+.myPass-cont{
+    padding:0 calcRem(20rem);
+    &__text{ @include body3; }
+
+    .input-list{
+        &__item{
+            margin: 0;padding:0;
+            .input-v1{
+                margin-bottom: calcRem(20rem);
+            }
+            &:first-child{
+                border-bottom: 1px solid $lightgray4;
+                margin-bottom: calcRem(20rem); 
+            }
+        }
+        &__inner{
+            .input-v1{
+                margin-bottom: calcRem(10rem);
+            } 
+        }
+        &__item+.btn-v1{ margin-top: calcRem(10rem);}
+    }
+}
