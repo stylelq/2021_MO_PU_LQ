@@ -61,5 +61,8 @@
 }
 .myPass-infoSearch{
     margin-top: calcRem(20rem);
-    p{@include body3;}
+    p{
+        @include body3;
+        color: $point1;
+    }
 }
