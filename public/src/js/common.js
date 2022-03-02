@@ -778,7 +778,6 @@ jQuery(function(){
                     $('body').removeClass('is-white');
                     $('body').addClass('is-black');
                 }*/
-
                 if($('body').hasClass('is-black')) {
                     $('.main-banner__pagination').removeClass('is-black');
                     $('.main-banner__pagination').addClass('is-white');
