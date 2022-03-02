@@ -792,13 +792,20 @@ jQuery(function () {
       init: function init() {
         var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
         var bg = slide.data("bg");
-
-        if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
-          $('body').removeClass('is-black');
-          $('body').addClass('is-white');
+        /*if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
         } else {
-          $('body').removeClass('is-white');
-          $('body').addClass('is-black');
+            $('body').removeClass('is-white');
+            $('body').addClass('is-black');
+        }*/
+
+        if ($('body').hasClass('is-black')) {
+          $('.main-banner__pagination').removeClass('is-black');
+          $('.main-banner__pagination').addClass('is-white');
+        } else if ($('body').hasClass('is-white')) {
+          $('.main-banner__pagination').removeClass('is-white');
+          $('.main-banner__pagination').addClass('is-black');
         }
 
         $('.main-banner__progressbar').removeClass("animate");
