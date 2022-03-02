@@ -53,6 +53,17 @@
 		font-size:0;
 		line-height:0;
 
+		&.is-white{
+			color: #000;
+			.swiper-pagination-current:after{
+				background-color: #000;
+			}
+		}
+
+		&.is-black{
+			color: #fff;
+		}
+
 		&.disabled{
 			display: none !important;
 		}
@@ -68,7 +79,7 @@
 					content: "";
 					width: 1px;
 					height: calcRem(10rem);
-					background-color: $gray1;
+					background-color: #fff;
 					position: absolute;
 					right: 0;
 					@include vertical-center;
