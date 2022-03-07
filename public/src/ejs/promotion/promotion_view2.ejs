@@ -1,0 +1,439 @@
+<%
+type = "promotion"
+page = "promotion"
+popup = "false"
+lnbTitle = "PROMOTION"
+%>
+
+<% include ../_include/_header %>
+
+<style>
+    .event{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .event-wrap{
+        overflow: hidden;
+    }
+    /*이벤트 상단 비주얼*/
+    .event-visual{
+        width: 100%;
+        height: auto;
+    }
+    .event-visual__wrap{
+        position: relative;
+        width: 100%;
+    }
+    .event-visual__img{
+        width: 100%;
+    }
+
+    /*이벤트 내용*/
+    .event-contents{
+        position: relative;
+        width: 100%;
+        background: url('https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_bg01.png') no-repeat center center/cover;
+    }
+    .event-contents__wrap{
+        margin: 0 auto;
+        padding: 65px 0;
+    }
+    .event-contents__txt{
+        padding-bottom: 60px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 2;
+    }
+    .event-contents__message{
+        width: 100%;
+        text-align: center;
+    }
+    .event-contents__item{
+        position: relative;
+    }
+    .event-contents__item:first-child{
+        left: 40px;
+    }
+    .event-contents__item:nth-child(2){
+        right: 50px;
+        top: 30px;
+    }
+    .event-contents__item:last-child{
+        top: 60px;
+        left: 70px;
+    }
+    .event-contents__bag{
+        padding-top: 120px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .event-contents__img{
+        margin: 0 auto;
+        display: block;
+    }
+    .event-contents__circle{
+        margin: 0 auto;
+        position: relative;
+        width: 214px;
+        height: 214px;
+        border-radius: 100%;
+        background-color: #ede1ee;
+        text-align: center;
+    }
+    .event-contents__inner{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #8e4db3;
+    }
+    .event-contents__percent{
+        margin: 0;
+        font-size: 70px;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    .event-contents__span{
+        font-size: 60px;
+    }
+    .event-contents__bottom{
+        margin: 0;
+        font-size: 25px;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
+    .event-contents__info{
+        padding-top: 30px;
+        color: #8e4db3;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    /*이벤트 기간 및 참여방법*/
+    .event-date{
+        position: relative;
+        width: 100%;
+        padding-bottom: 65px;
+    }
+    .event-date__wrap{
+        margin: 0 auto;
+    }
+    .event-date__img{
+        margin: 0 auto;
+        display: block;
+    }
+    .event-date__cont{
+        position: relative;
+    }
+    .event-date__cont + .event-date__cont{
+        margin-top: 4px;
+    }
+    .event-date__howto{
+        position: relative;
+        display: inline-block;
+    }
+    .event-date__howto:first-child{
+        width: 80px;
+    }
+    .event-date__howto + .event-date__howto{
+        padding-left: 11px;
+    }
+    .event-date__howto + .event-date__howto:before{
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 0;
+        height: 11px;
+        border-left: 1px solid #d2d2d2;
+        content: "";
+    }
+    .common-span:before{
+        width: 15px;
+        height: 15px;
+        margin-right: 3px;
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        background-color: #8e4db3;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 1.3;
+    }
+    .event-date__span:first-child:before{
+        content: '1';
+    }
+    .event-date__span:nth-child(2):before{
+        content: '2';
+    }
+    .event-date__span:last-child:before{
+        content: '3';
+    }
+
+    /*이벤트 댓글게시판*/
+    .event-notice{
+        margin: 0 auto;
+        position: relative;
+    }
+    .event-notice__box{
+        padding: 40px 15px;
+        background-color: #fbf0ff;
+    }
+    .event-notice__title{
+        margin: 0;
+        padding-bottom: 25px;
+        color: #8e4db3;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .event-notice__area{
+        width: 100%;
+        height: 126px;
+        padding: 15px;
+        border: 1px solid #d3d3d3;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: #000;
+        outline: none;
+        resize: none;
+    }
+    .event-notice__byte{
+        float:right;
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
+    .event-notice__btn{
+        display: block;
+        width: 160px;
+        height: 40px;
+        margin: 25px auto 0;
+        line-height: 40px;
+        color: #fff !important;
+        text-align: center;
+        font-size: 12px;
+        background-color: #8e4db3;
+    }
+    .event-notice__list{
+        padding: 0 15px;
+        border-top: none;
+    }
+    .event-notice__item{
+        padding: 20px 0;
+        list-style: none;
+        border-bottom: 1px solid #d2d2d2;
+    }
+    .event-notice__txt{
+        overflow: hidden;
+        display: inline-block;
+        margin: 0;
+        text-overflow: inherit;
+        white-space: normal;
+        vertical-align: middle;
+        font-size: 10px;
+    }
+    .event-notice__date{
+        float: left;
+        margin-bottom: 5px;
+    }
+    .event-notice__date--span{
+        position: relative;
+        font-size: 10px;
+    }
+
+    .event-notice__date--span + .event-notice__date--span{
+        margin-left: 10px;
+        padding-left: 11px;
+    }
+
+    .event-notice__date--span + .event-notice__date--span:before {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 0;
+        height: 13px;
+        border-left: 1px solid #d2d2d2;
+        content: "";
+    }
+    .pagination{
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+    .pagination__list{
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+    .event-important{
+        background-color: #f9f9f9;
+    }
+    .event-important__wrap{
+        margin: 0 auto;
+        padding: 24px 15px;
+        color: #9d9d9d;
+        font-size: 10px;
+        font-weight: 300;
+        word-break: keep-all;
+        text-align: justify;
+    }
+
+    /*모션 delay css*/
+    .type-delay5{
+        transition-delay: 0.5s;
+    }
+    .type-delay10{
+        transition-delay: 1s;
+    }
+    .type-delay15{
+        transition-delay: 1.5s;
+    }
+    .type-delay20{
+        transition-delay: 2s;
+    }
+</style>
+
+
+<div class="container">
+    <% include ../_include/_lnbSelect.ejs %>
+    <div class="site-promotion">
+        <!--프로모션 뷰 비주얼-->
+        <div class="promotion-view is-notice">
+            <div class="promotion-view__title">
+                <div class="promotion-view__name">Gift for You</div>
+                <div class="promotion-view__date">2021.11.04 ~ 2021.11.14</div>
+            </div>
+            <div class="promotion-view__visual">
+                <img class="promotion-view__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_visual_01.png" alt=""/>
+            </div>
+        </div>
+        <!--//프로모션 뷰 비주얼-->
+
+        <div class="promotion-group">
+            <div class="event">
+                <div class="event-wrap">
+                    <!--이벤트 상단 비주얼-->
+                    <!-- <div class="event-visual">
+                        <div class="event-visual__wrap">
+                            <img class="event-visual__img" src="./img/mo_visual_01.png" alt="">
+                        </div>
+                    </div> -->
+                    <!--//이벤트 상단 비주얼-->
+
+                    <!--이벤트 내용-->
+                    <div class="event-contents">
+                        <div class="event-contents__wrap">
+                            <div class="event-contents__txt">
+                                루이까또즈 공식몰 베스트셀러,<br />
+                                미니캐비어 마이크로백만의 메시지를 만들어주세요.
+                            </div>
+                            <div class="event-contents__message">
+                                <div class="event-contents__item js-scroll-motion type-delay5">
+                                    <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_message01.png" alt="나만의 미니캐비어" />
+                                </div>
+                                <div class="event-contents__item js-scroll-motion type-delay10">
+                                    <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_message02.png" alt="하늘을 닮은 가방" />
+                                </div>
+                                <div class="event-contents__item js-scroll-motion type-delay15">
+                                    <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_message03.png" alt="스무살 첫 가방" />
+                                </div>
+                            </div>
+
+                            <div class="event-contents__bag">
+                                <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_bag01.png" alt="" />
+                            </div>
+
+                            <div class="event-contents__coupon jsContCoupon">
+                                <div class="event-contents__circle">
+                                    <div class="event-contents__inner">
+                                        <h1 class="event-contents__percent memberCountCon">0<span class="event-contents__span">%</span></h1>
+                                        <p class="event-contents__bottom">coupon</p>
+                                    </div>
+                                </div>
+                                <div class="event-contents__info">
+                                    미니캐비어 마이크로백<br />90% 할인 쿠폰 증정(3명)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//이벤트 내용-->
+
+                    <!--이벤트 기간 및 참여방법-->
+                    <div class="event-date">
+                        <div class="event-date__wrap">
+                            <img class="event-date__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_date01.png" alt="" />
+                        </div>
+                    </div>
+                    <!--//이벤트 기간 및 참여방법-->
+
+                    <!--이벤트 댓글게시판-->
+                    <div class="event-notice">
+                        <div class="event-notice__box">
+                            <h3 class="event-notice__title">미니캐비어 마이크로백은 OOO 이다.</h3>
+                            <div class="event-notice__byte">
+                                (<span class="js-byte">0</span>/500byte)
+                            </div>
+                            <textarea class="event-notice__area" id="FirstTwentyText" placeholder="마이크로백의 특별한 메시지를 함께 만들어요.&#13;&#10;ex) 스무살 첫 가방 / 하늘을 닮은 가방 등 " onkeyup="javascript:fnChkByte(this,'500')"></textarea>
+                            <a onclick="fn_FirstTwentyInply();" class="event-notice__btn" style="cursor: pointer;">등록</a>
+                        </div>
+                    </div>
+                    <!--//이벤트 댓글게시판-->
+
+                    <!--이벤트 유의사항-->
+                    <div class="event-important">
+                        <div class="event-important__wrap">
+                            유의사항<br />
+                            · 공식 직영몰 (stylelq.com) 한정 이벤트입니다. · 회원 한정 이벤트입니다. · 한 ID당 1회 댓글 작성이 가능합니다. · 당첨자 발표는 공지사항 게시판을 통해 확인해주세요. 당첨자에게는 개별 연락드립니다. · 본 이벤트는 당사 사정에 따라 사전 고지없이 변경 및 종료될 수 있습니다.
+                        </div>
+                    </div>
+                    <!--//이벤트 유의사항-->
+                </div>
+            </div>
+        </div>
+
+        <div class="promotion-wrap">
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/18/74480173-3dde-4aa5-a288-e70221b13deb.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">KAREL MARTENS BAG</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/19/35143dfb-abad-4ac5-b3f5-183ffe2a0b71.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">L-Quilting mini</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+
+            <!--프로모션 배너 리스트-->
+            <div class="promotion-list">
+                <a class="promotion-list__link" href="promotion_view.html">
+                    <div class="promotion-list__box">
+                        <img class="promotion-list__img" src="https://mcdn.louisclub.com/static/upload/marketing/2021/11/17/becb0eb7-fa17-4ac9-9997-c266de64dde9.jpg" alt=""/>
+                    </div>
+                    <div class="promotion-list__name">LALA WALLET</div>
+                </a>
+            </div>
+            <!--//프로모션 배너 리스트-->
+        </div>
+    </div>
+</div>
+
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
