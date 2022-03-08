@@ -61,7 +61,10 @@ lnbTitle = "PROMOTION"
     }
     .event-contents__item:last-child{
         top: 60px;
-        left: 70px;
+        left: 65px;
+    }
+    .event-contents__item img{
+        width: 120px;
     }
     .event-contents__bag{
         padding-top: 120px;
@@ -123,7 +126,10 @@ lnbTitle = "PROMOTION"
         padding-bottom: 65px;
     }
     .event-date__wrap{
-        margin: 0 auto;
+        margin: 0 30px auto;
+        padding: 30px 50px 70px 50px;
+        background-color: #f9f9f9;
+        font-size: 11px;
     }
     .event-date__img{
         margin: 0 auto;
@@ -139,15 +145,23 @@ lnbTitle = "PROMOTION"
         position: relative;
         display: inline-block;
     }
+    .event-date__howto.last-cont{
+        position: absolute;
+        display: inline-block;
+        line-height: 1.8;
+    }
+    .event-date__howto.last-title{
+        width: 62px !important;
+    }
     .event-date__howto:first-child{
-        width: 80px;
+        width: 60px;
     }
     .event-date__howto + .event-date__howto{
         padding-left: 11px;
     }
     .event-date__howto + .event-date__howto:before{
         position: absolute;
-        top: 7px;
+        top: 1px;
         left: 0;
         width: 0;
         height: 11px;
@@ -169,7 +183,7 @@ lnbTitle = "PROMOTION"
     .event-date__span:first-child:before{
         content: '1';
     }
-    .event-date__span:nth-child(2):before{
+    .event-date__span.second:before{
         content: '2';
     }
     .event-date__span:last-child:before{
@@ -335,13 +349,13 @@ lnbTitle = "PROMOTION"
                             </div>
                             <div class="event-contents__message">
                                 <div class="event-contents__item js-scroll-motion type-delay5">
-                                    <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_message01.png" alt="나만의 미니캐비어" />
+                                    <img class="event-contents__img" src="../../images/promotion/mo_message01_new.png" alt="나만의 미니캐비어" />
                                 </div>
                                 <div class="event-contents__item js-scroll-motion type-delay10">
-                                    <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_message02.png" alt="하늘을 닮은 가방" />
+                                    <img class="event-contents__img" src="../../images/promotion/mo_message02_new.png" alt="하늘을 닮은 가방" />
                                 </div>
                                 <div class="event-contents__item js-scroll-motion type-delay15">
-                                    <img class="event-contents__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_message03.png" alt="스무살 첫 가방" />
+                                    <img class="event-contents__img" src="../../images/promotion/mo_message03_new.png" alt="스무살 첫 가방" />
                                 </div>
                             </div>
 
@@ -367,7 +381,22 @@ lnbTitle = "PROMOTION"
                     <!--이벤트 기간 및 참여방법-->
                     <div class="event-date">
                         <div class="event-date__wrap">
-                            <img class="event-date__img" src="https://mcdn.louisclub.com/static/mo/img/specialty/20220310/mo_date01.png" alt="" />
+                            <div class="event-date__cont">
+                                <div class="event-date__howto">참여기간</div>
+                                <div class="event-date__howto">03.10 - 03.24</div>
+                            </div>
+                            <div class="event-date__cont">
+                                <div class="event-date__howto">당첨자 발표</div>
+                                <div class="event-date__howto">03.31</div>
+                            </div>
+                            <div class="event-date__cont">
+                                <div class="event-date__howto last-title">참여방법</div>
+                                <div class="event-date__howto last-cont">
+                                    <span class="event-date__span common-span"></span>회원가입 및 로그인<br />
+                                    <span class="event-date__span common-span second"></span>댓글 <br />
+                                    <span class="event-date__span common-span"></span>응모완료
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--//이벤트 기간 및 참여방법-->
