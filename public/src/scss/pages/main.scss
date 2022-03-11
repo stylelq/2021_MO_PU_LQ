@@ -39,9 +39,14 @@
 		position: absolute;
 	}
 	&__name{
-		color: #fff;
 		font-size: calcRem(17rem); //16
 		line-height: calcRem(28rem);
+		&.is-white{
+			color: #000;
+		}
+		&.is-black{
+			color: #fff;
+		}
 	}
 	&__pagination{
 		bottom: calcRem(20rem);
