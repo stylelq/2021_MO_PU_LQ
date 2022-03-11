@@ -787,18 +787,13 @@ jQuery(function () {
 
 
   function pagingOptionChange() {
-    if ($('body').hasClass('is-black')) {
-      $('.main-banner__pagination').removeClass('is-black');
-      $('.main-banner__pagination').addClass('is-white');
-      $('.main-banner__name').removeClass('is-black');
-      $('.main-banner__name').addClass('is-white');
+    /*if ($('body').hasClass('is-black')) {
+        $('.main-banner__pagination').removeClass('is-black');
+        $('.main-banner__pagination').addClass('is-white');
     } else {
-      $('.main-banner__pagination').removeClass('is-white');
-      $('.main-banner__pagination').addClass('is-black');
-      $('.main-banner__name').removeClass('is-white');
-      $('.main-banner__name').addClass('is-black');
-    }
-
+        $('.main-banner__pagination').removeClass('is-white');
+        $('.main-banner__pagination').addClass('is-black');
+    }*/
     if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
       $('body').removeClass('is-black');
       $('body').addClass('is-white');
