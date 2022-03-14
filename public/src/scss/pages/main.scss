@@ -37,6 +37,12 @@
 	&__content{
 		bottom: calcRem(50rem);
 		position: absolute;
+		&.is-white{
+			color: #000;
+		}
+		&.is-black{
+			color: #fff;
+		}
 	}
 	&__name{
 		font-size: calcRem(17rem); //16
@@ -173,9 +179,14 @@
 	&__content{
 		bottom: calcRem(50rem);
 		position: absolute;
+		&.is-white{
+			color: #000;
+		}
+		&.is-black{
+			color: #fff;
+		}
 	}
 	&__name{
-		color: #fff;
 		font-size: calcRem(16rem);
 		line-height: calcRem(28rem);
 	}
@@ -303,11 +314,16 @@
 	&__content{
 		bottom: calcRem(50rem);
 		position: absolute;
+		&.is-white{
+			color: #000;
+		}
+		&.is-black{
+			color: #fff;
+		}
 	}
 	&__name{
 		font-size: calcRem(16rem);
 		line-height: calcRem(28rem);
-		color: #fff;
 	}
 	&__pagination{
 		bottom: calcRem(22rem);
