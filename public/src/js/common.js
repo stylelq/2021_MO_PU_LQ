@@ -863,7 +863,7 @@ jQuery(function(){
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
 
-                    if($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                    if($('.main-banner2__item').find('.swiper-slide-active').data('bg') === 'white'){
                         $('.main-banner2__pagination').removeClass('is-black');
                         $('.main-banner2__pagination').addClass('is-white');
                         $('.main-banner2__content').removeClass('is-black');
@@ -892,7 +892,7 @@ jQuery(function(){
                 beforeTransitionStart: function () {
                    var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
-                    if($('.main-banner2__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                    if($('.main-banner2__item').find('.swiper-slide-active').data('bg') === 'white'){
                         $('.main-banner2__pagination').removeClass('is-black');
                         $('.main-banner2__pagination').addClass('is-white');
                         $('.main-banner2__content').removeClass('is-black');
@@ -928,7 +928,7 @@ jQuery(function(){
                 init: function(){
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
-                    if($('.main-banner3__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                    if($('.main-banner3__item').find('.swiper-slide-active').data('bg') === 'white'){
                         $('.main-banner3__pagination').removeClass('is-black');
                         $('.main-banner3__pagination').addClass('is-white');
                         $('.main-banner3__content').removeClass('is-black');
@@ -957,7 +957,7 @@ jQuery(function(){
                 beforeTransitionStart: function () {
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
-                    if($('.main-banner3__item[data-bg="white"]').hasClass('swiper-slide-active')){
+                    if($('.main-banner3__item').find('.swiper-slide-active').data('bg') === 'white'){
                         $('.main-banner3__pagination').removeClass('is-black');
                         $('.main-banner3__pagination').addClass('is-white');
                         $('.main-banner3__content').removeClass('is-black');
