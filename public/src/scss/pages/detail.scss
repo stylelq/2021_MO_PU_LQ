@@ -303,7 +303,7 @@
         }
 
         &--sale{
-            @include title2;
+            @include title4;
             color:$throughColor;
             text-decoration: line-through;
             margin-left:calcRem(20rem);
