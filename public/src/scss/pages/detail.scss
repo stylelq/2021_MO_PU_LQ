@@ -297,7 +297,7 @@
         padding-right:calcRem(30rem);
 
         &--current{
-            @include title2;
+            @include title4;
             display: inline-block;
             vertical-align: middle;
         }
