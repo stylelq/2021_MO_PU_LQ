@@ -792,15 +792,11 @@ jQuery(function () {
       $('body').addClass('is-white');
       $('.main-banner__pagination').removeClass('is-black');
       $('.main-banner__pagination').addClass('is-white');
-      $('.main-banner__content').removeClass('is-black');
-      $('.main-banner__content').addClass('is-white');
     } else {
       $('body').removeClass('is-white');
       $('body').addClass('is-black');
       $('.main-banner__pagination').removeClass('is-white');
       $('.main-banner__pagination').addClass('is-black');
-      $('.main-banner__content').removeClass('is-white');
-      $('.main-banner__content').addClass('is-black');
     }
   } // 메인 배너슬라이드
 
@@ -884,13 +880,9 @@ jQuery(function () {
           if ($('.main-banner2__item').find('.swiper-slide-active').data('bg') === 'white') {
             $('.main-banner2__pagination').removeClass('is-black');
             $('.main-banner2__pagination').addClass('is-white');
-            $('.main-banner2__content').removeClass('is-black');
-            $('.main-banner2__content').addClass('is-white');
           } else {
             $('.main-banner2__pagination').removeClass('is-white');
             $('.main-banner2__pagination').addClass('is-black');
-            $('.main-banner2__content').removeClass('is-white');
-            $('.main-banner2__content').addClass('is-black');
           }
 
           $('.main-banner2__progressbar').removeClass("animate");
@@ -913,13 +905,9 @@ jQuery(function () {
           if ($('.main-banner2__item').find('.swiper-slide-active').data('bg') === 'white') {
             $('.main-banner2__pagination').removeClass('is-black');
             $('.main-banner2__pagination').addClass('is-white');
-            $('.main-banner2__content').removeClass('is-black');
-            $('.main-banner2__content').addClass('is-white');
           } else {
             $('.main-banner2__pagination').removeClass('is-white');
             $('.main-banner2__pagination').addClass('is-black');
-            $('.main-banner2__content').removeClass('is-white');
-            $('.main-banner2__content').addClass('is-black');
           }
         }
       }
@@ -950,13 +938,9 @@ jQuery(function () {
           if ($('.main-banner3__item').find('.swiper-slide-active').data('bg') === 'white') {
             $('.main-banner3__pagination').removeClass('is-black');
             $('.main-banner3__pagination').addClass('is-white');
-            $('.main-banner3__content').removeClass('is-black');
-            $('.main-banner3__content').addClass('is-white');
           } else {
             $('.main-banner3__pagination').removeClass('is-white');
             $('.main-banner3__pagination').addClass('is-black');
-            $('.main-banner3__content').removeClass('is-white');
-            $('.main-banner3__content').addClass('is-black');
           }
 
           $('.main-banner3__progressbar').removeClass("animate");
@@ -979,13 +963,9 @@ jQuery(function () {
           if ($('.main-banner3__item').find('.swiper-slide-active').data('bg') === 'white') {
             $('.main-banner3__pagination').removeClass('is-black');
             $('.main-banner3__pagination').addClass('is-white');
-            $('.main-banner3__content').removeClass('is-black');
-            $('.main-banner3__content').addClass('is-white');
           } else {
             $('.main-banner3__pagination').removeClass('is-white');
             $('.main-banner3__pagination').addClass('is-black');
-            $('.main-banner3__content').removeClass('is-white');
-            $('.main-banner3__content').addClass('is-black');
           }
         }
       }
