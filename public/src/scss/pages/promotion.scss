@@ -103,6 +103,9 @@
 
         &__product{
           padding: calcRem(50rem) calcRem(50rem) 0;
+          .promotion-view__img:last-child{
+            margin-top: calcRem(-90rem);
+          }
         }
         &__whitebox{
           margin: 0 calcRem(50rem);
