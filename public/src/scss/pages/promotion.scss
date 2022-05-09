@@ -156,6 +156,12 @@
           }
         }
 
+        &__list{
+          &.miniwallet-only{
+            margin: 0 calcRem(10rem);
+          }
+        }
+
         &__item{
           display: block;
           font-size: calcRem(12rem);
@@ -178,7 +184,9 @@
           }
 
           &.minibag{
-            display: flex;
+            display: inline-block;
+            width: 100%;
+
             &:before{
               content: none;
             }
@@ -214,6 +222,10 @@
             margin: 0 auto;
             width: calcRem(96rem) !important;
           }
+          &--miniwallet{
+            margin: 0 auto;
+            width: calcRem(119rem) !important;
+          }
         }
         &__txt{
           display: block;
@@ -237,24 +249,57 @@
         }
 
         &__left{
-          flex: 1;
-          img{
+          float: left;
+          display: inline-block;
+          width: 30%;
+
+          &.miniwallet{
+            margin-left: calcRem(-12rem);
+          }
+
+          &.miniwallet-only{
             width: auto !important;
+            padding-right: calcRem(14rem);
+          }
+
+          .img-minibag01{
+            margin: 0 auto;
+            width: calcRem(84rem) !important;
+          }
+          .img-minibag02{
+            margin: 0 auto;
+            width: calcRem(82rem) !important;
+          }
+          .img-minibag03{
+            margin: 0 auto;
+            width: calcRem(68rem) !important;
+          }
+
+          .img-miniwallet01{
+            width: calcRem(80rem) !important;
+          }
+          .img-miniwallet02{
+            width: calcRem(69rem) !important;
+          }
+          .img-miniwallet03{
+            width: calcRem(68rem) !important;
           }
         }
 
         &__right{
-          flex: 2.5;
+          float: left;
+          display: inline-block;
           position: relative;
           left: calcRem(20rem);
           &--txt{
             margin: 0;
-            padding-bottom: calcRem(10rem);
+            padding-bottom: calcRem(6rem);
             color: #5f5f5f;
             font-size: calcRem(11rem);
             font-weight: 500;
             text-align: left;
-            line-height: calcRem(17rem);
+            line-height: calcRem(14rem);
+            letter-spacing: 0;
           }
           &--btn{
             display: block;
