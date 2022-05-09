@@ -100,12 +100,9 @@
     // 프로모션 뷰 비주얼
     &-view{
         padding: calcRem(17rem) 0 calcRem(41rem);
-
         &__product{
           padding: calcRem(50rem) calcRem(50rem) 0;
         }
-
-
         &__whitebox{
           margin: 0 calcRem(50rem);
           padding: calcRem(40rem) 0;
@@ -180,6 +177,20 @@
             font-weight: 400;
           }
 
+          &.minibag{
+            display: flex;
+            &:before{
+              content: none;
+            }
+            &:first-child{
+              padding-top: calcRem(40rem);
+            }
+          }
+
+          &.minibag + &.minibag{
+            padding-top: calcRem(40rem);
+          }
+
         }
         &__contents{
           &.comment-only{
@@ -198,6 +209,12 @@
           margin: 0 auto;
           width: calcRem(110rem);
         }
+        &__tit{
+          &--minibag{
+            margin: 0 auto;
+            width: calcRem(96rem) !important;
+          }
+        }
         &__txt{
           display: block;
           padding: calcRem(27rem) 0 calcRem(30rem);
@@ -209,6 +226,41 @@
           letter-spacing: calcRem(1rem);
           &--bold{
             font-weight: 400;
+          }
+        }
+
+        &__minibag{
+          margin: calcRem(47rem) calcRem(22rem) 0;
+          padding: calcRem(40rem) calcRem(20rem);
+          display: block;
+          background-color: #fff;
+        }
+
+        &__left{
+          flex: 1;
+          img{
+            width: auto !important;
+          }
+        }
+
+        &__right{
+          flex: 2.5;
+          position: relative;
+          left: calcRem(20rem);
+          &--txt{
+            margin: 0;
+            padding-bottom: calcRem(10rem);
+            color: #5f5f5f;
+            font-size: calcRem(11rem);
+            font-weight: 500;
+            text-align: left;
+            line-height: calcRem(17rem);
+          }
+          &--btn{
+            display: block;
+            img{
+              width: calcRem(59rem) !important;
+            }
           }
         }
 
@@ -310,7 +362,14 @@
           padding-top: calcRem(34rem);
           text-align: center;
           background-color: #fff;
+
+          &.minibag{
+            padding-bottom: calcRem(48rem);
+            background:url('../../images/promotion/minibag/img_background.png') no-repeat center;
+            background-size: cover;
+          }
         }
+
         &__header{
           color: #2C5497;
 
@@ -331,6 +390,21 @@
             line-height: calcRem(22rem);
             letter-spacing: calcRem(0.5rem);
             text-transform: uppercase;
+          }
+        }
+        &__coupon{
+          display: block;
+          &--img{
+            margin: 0 auto;
+            width: calcRem(170rem) !important;
+          }
+        }
+        &__btn{
+          display: block;
+          &--img{
+            margin: 0 auto;
+            padding-top: calcRem(30rem);
+            width: calcRem(113rem) !important;
           }
         }
     }
