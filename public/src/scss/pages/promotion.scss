@@ -187,11 +187,17 @@
             display: inline-block;
             width: 100%;
 
+            &.minibag-last{
+              .promotion-view__right{
+                padding-top: calcRem(30rem);
+              }
+            }
+
             &:before{
               content: none;
             }
             &:first-child{
-              padding-top: calcRem(40rem);
+              padding-top: calcRem(45rem);
             }
           }
 
@@ -246,6 +252,7 @@
           padding: calcRem(40rem) calcRem(20rem);
           display: block;
           background-color: #fff;
+          border-radius: calcRem(30rem);
         }
 
         &__left{
@@ -259,16 +266,17 @@
 
           &.miniwallet-only{
             width: auto !important;
-            padding-right: calcRem(14rem);
+            //padding-right: calcRem(14rem);
           }
 
           .img-minibag01{
             margin: 0 auto;
-            width: calcRem(84rem) !important;
+            width: calcRem(80rem) !important;
           }
           .img-minibag02{
             margin: 0 auto;
             width: calcRem(82rem) !important;
+            margin-left: calcRem(5rem);
           }
           .img-minibag03{
             margin: 0 auto;
@@ -276,13 +284,16 @@
           }
 
           .img-miniwallet01{
-            width: calcRem(80rem) !important;
+            width: calcRem(75rem) !important;
+            margin-right: calcRem(10rem);
           }
           .img-miniwallet02{
-            width: calcRem(69rem) !important;
+            width: calcRem(64rem) !important;
+            margin-right: calcRem(10rem);
           }
           .img-miniwallet03{
-            width: calcRem(68rem) !important;
+            width: calcRem(63rem) !important;
+            margin-right: calcRem(10rem);
           }
         }
 
@@ -291,6 +302,7 @@
           display: inline-block;
           position: relative;
           left: calcRem(20rem);
+          //padding-top: calcRem(15rem);
           &--txt{
             margin: 0;
             padding-bottom: calcRem(6rem);
@@ -298,8 +310,8 @@
             font-size: calcRem(11rem);
             font-weight: 500;
             text-align: left;
-            line-height: calcRem(14rem);
-            letter-spacing: 0;
+            line-height: calcRem(16rem);
+            letter-spacing: calcRem(0.5rem);
           }
           &--btn{
             display: block;
@@ -409,9 +421,15 @@
           background-color: #fff;
 
           &.minibag{
+            padding-top: 0;
             padding-bottom: calcRem(48rem);
             background:url('../../images/promotion/minibag/img_background.png') no-repeat center;
             background-size: cover;
+            .promotion-view__header--ko{
+              padding: calcRem(10rem) 0 calcRem(20rem);
+              color: #C54141;
+              font-size: calcRem(13rem);
+            }
           }
         }
 
@@ -448,7 +466,7 @@
           display: block;
           &--img{
             margin: 0 auto;
-            padding-top: calcRem(30rem);
+            padding-top: calcRem(15rem);
             width: calcRem(113rem) !important;
           }
         }
