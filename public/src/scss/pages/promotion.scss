@@ -158,7 +158,10 @@
 
         &__list{
           &.miniwallet-only{
-            margin: 0 calcRem(10rem);
+            margin: 0 calcRem(15rem);
+          }
+          &.minibag-only{
+            margin: 0 calcRem(5rem);
           }
         }
 
