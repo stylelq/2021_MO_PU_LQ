@@ -519,7 +519,7 @@ jQuery(function () {
         slidesPerView: 1,
         loop: true,
         autoplay: {
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false
         },
         pagination: {
@@ -529,6 +529,22 @@ jQuery(function () {
         navigation: {
           nextEl: ".model-next-btn",
           prevEl: ".model-prev-btn"
+        },
+        on: {
+          init: function init() {
+            $('.model__progressbar').removeClass("animate");
+            $('.model__progressbar').removeClass("active");
+            $('.model__progressbar').eq(0).addClass("animate");
+            $('.model__progressbar').eq(0).addClass("active");
+          },
+          slideChangeTransitionStart: function slideChangeTransitionStart() {
+            $('.model__progressbar').removeClass("animate");
+            $('.model__progressbar').removeClass("active");
+            $('.model__progressbar').eq(0).addClass("active");
+          },
+          slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+            $('.model__progressbar').eq(0).addClass("animate");
+          }
         }
       });
     } // 컬렉션,프로모션 비디오 재생버튼 액션추가

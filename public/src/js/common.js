@@ -502,7 +502,7 @@ jQuery(function(){
                 slidesPerView: 1,
                 loop: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction : false,
                 },
                 pagination : {
@@ -512,6 +512,22 @@ jQuery(function(){
                 navigation: {
                     nextEl: ".model-next-btn",
                     prevEl: ".model-prev-btn",
+                },
+                on: {
+                    init: function(){
+                        $('.model__progressbar').removeClass("animate");
+                        $('.model__progressbar').removeClass("active");
+                        $('.model__progressbar').eq(0).addClass("animate");
+                        $('.model__progressbar').eq(0).addClass("active");
+                    },
+                    slideChangeTransitionStart: function(){
+                        $('.model__progressbar').removeClass("animate");
+                        $('.model__progressbar').removeClass("active");
+                        $('.model__progressbar').eq(0).addClass("active");
+                    },
+                    slideChangeTransitionEnd: function(){
+                        $('.model__progressbar').eq(0).addClass("animate");
+                    },
                 }
             });
         }
