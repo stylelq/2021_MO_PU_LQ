@@ -39,33 +39,33 @@
 		position: absolute;
 	}
 	&__name{
-		font-size: calcRem(17rem); //16
+		font-size: calcRem(16rem); //16
 		line-height: calcRem(28rem);
 		&.is-white{
-			color: #000;
+			color: #fff;
 		}
 		&.is-black{
-			color: #fff;
+			color: #000;
 		}
 	}
 	&__pagination{
 		bottom: calcRem(20rem);
 		width: 100%;
 		position: absolute;
-		color: #fff;
+		//color: #fff;
 		text-align: center;
 		z-index: 100;
 		font-size:0;
 		line-height:0;
 		&.is-white{
-			color: #000;
+			color: #fff;
 			.swiper-pagination-current:after{
-				background-color: #000;
+				background-color: #fff;
 			}
 		}
 
 		&.is-black{
-			color: #fff;
+			color: #000;
 		}
 
 		&.disabled{
@@ -83,7 +83,7 @@
 					content: "";
 					width: 1px;
 					height: calcRem(10rem);
-					background-color: #fff;
+					background-color: #000;
 					position: absolute;
 					right: 0;
 					@include vertical-center;
@@ -184,28 +184,33 @@
 	&__name {
 		font-size: calcRem(16rem);
 		line-height: calcRem(28rem);
+		&.is-white{
+			color: #fff;
+		}
+		&.is-black{
+			color: #000;
+		}
 	}
 
 	&__pagination {
 		bottom: calcRem(22rem);
 		width: 100%;
 		position: absolute;
-		color: #fff;
+		//color: #fff;
 		text-align: center;
 		z-index: 100;
 		font-size: 0;
 		line-height: 0;
 
 		&.is-white {
-			color: #000;
-
+			color: #fff;
 			.swiper-pagination-current:after {
-				background-color: #000;
+				background-color: #fff;
 			}
 		}
 
 		&.is-black {
-			color: #fff;
+			color: #000;
 		}
 
 		.swiper-pagination {
@@ -219,7 +224,7 @@
 					content: "";
 					width: 1px;
 					height: calcRem(10rem);
-					background-color: $gray1;
+					background-color: #000;
 					position: absolute;
 					right: 0;
 					@include vertical-center;
@@ -326,13 +331,19 @@
 	&__name {
 		font-size: calcRem(16rem);
 		line-height: calcRem(28rem);
+		&.is-white{
+			color: #fff;
+		}
+		&.is-black{
+			color: #000;
+		}
 	}
 
 	&__pagination {
 		bottom: calcRem(22rem);
 		width: 100%;
 		position: absolute;
-		color: #000;
+		//color: #000;
 		text-align: center;
 		z-index: 100;
 		font-size: 0;
@@ -340,15 +351,15 @@
 		color: #fff;
 
 		&.is-white {
-			color: #000;
+			color: #fff;
 
 			.swiper-pagination-current:after {
-				background-color: #000;
+				background-color: #fff;
 			}
 		}
 
 		&.is-black {
-			color: #fff;
+			color: #000;
 		}
 
 		.swiper-pagination {
@@ -362,7 +373,7 @@
 					content: "";
 					width: 1px;
 					height: calcRem(10rem);
-					background-color: #fff;
+					background-color: #000;
 					position: absolute;
 					right: 0;
 					@include vertical-center;
