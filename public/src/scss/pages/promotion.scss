@@ -83,6 +83,19 @@
         left: calcRem(12rem);
         background: url("../../images/collection/collection_slide_prev.png") no-repeat center center/contain;
       }
+
+      .pochebag-next-btn{
+        right: calcRem(12rem);
+        width: calcRem(34rem);
+        height: calcRem(24rem);
+        background: url("../../images/collection/pochebag_slide_next.png") no-repeat center center/contain;
+      }
+      .pochebag-prev-btn{
+        left: calcRem(12rem);
+        width: calcRem(34rem);
+        height: calcRem(24rem);
+        background: url("../../images/collection/pochebag_slide_prev.png") no-repeat center center/contain;
+      }
     }
 
     // 프로모션 리스트
@@ -836,6 +849,36 @@
 }
 .model-prev-btn{
   background: url('../../images/collection/collection_slide_prev_brown.png') no-repeat center center /contain !important;
+}
+
+.pochebag{
+  &-pagination{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calcVw(20vw) !important;
+    text-align: center;
+    width: 100%;
+    z-index: 50;
+    line-height: 0;
+    font-size: 0;
+
+    .swiper-pagination-bullet {
+      margin-left: calcVw(7vw);
+      width: calcVw(6vw);
+      height: calcVw(6vw);
+      background: #fff !important;
+      opacity: 1 !important;
+      display: inline-block;
+      border-radius: 100%;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+    .swiper-pagination-bullet-active{
+      background: #000 !important;
+    }
+  }
 }
 
 // 프로그래스바
