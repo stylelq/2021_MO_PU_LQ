@@ -85,15 +85,15 @@
       }
 
       .pochebag-next-btn{
-        right: calcRem(12rem);
-        width: calcRem(34rem);
-        height: calcRem(24rem);
+        right: calcRem(0rem);
+        width: calcRem(60rem);
+        height: calcRem(50rem);
         background: url("../../images/collection/pochebag_slide_next.png") no-repeat center center/contain;
       }
       .pochebag-prev-btn{
-        left: calcRem(12rem);
-        width: calcRem(34rem);
-        height: calcRem(24rem);
+        left: calcRem(0rem);
+        width: calcRem(60rem);
+        height: calcRem(50rem);
         background: url("../../images/collection/pochebag_slide_prev.png") no-repeat center center/contain;
       }
     }
