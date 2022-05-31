@@ -851,33 +851,31 @@
   background: url('../../images/collection/collection_slide_prev_brown.png') no-repeat center center /contain !important;
 }
 
-.pochebag{
-  &-pagination{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: calcVw(20vw) !important;
-    text-align: center;
-    width: 100%;
-    z-index: 50;
-    line-height: 0;
-    font-size: 0;
+.pochebag-slide-pagination{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calcVw(20vw) !important;
+  text-align: center;
+  width: 100%;
+  z-index: 50;
+  line-height: 0;
+  font-size: 0;
 
-    .swiper-pagination-bullet {
-      margin-left: calcVw(7vw);
-      width: calcVw(6vw);
-      height: calcVw(6vw);
-      background: #fff !important;
-      opacity: 1 !important;
-      display: inline-block;
-      border-radius: 100%;
-      &:first-child{
-        margin-left: 0;
-      }
+  .swiper-pagination-bullet {
+    margin-left: calcVw(5vw);
+    width: calcVw(8vw);
+    height: calcVw(9vw);
+    background: #636363 !important;
+    opacity: 0.3 !important;
+    display: inline-block;
+    border-radius: 100%;
+    &:first-child{
+      margin-left: 0;
     }
-    .swiper-pagination-bullet-active{
-      background: #000 !important;
-    }
+  }
+  .swiper-pagination-bullet-active{
+    background: #0095F6 !important;
   }
 }
 
