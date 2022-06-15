@@ -572,6 +572,17 @@
         &.platforml-only{
             padding: 0;
         }
+        &.live-pop{
+            padding: 0;
+            width:calc(100% - #{calcRem(50rem)});
+            .small-popup__header{
+                padding-top: calcRem(30rem);
+                margin: 0 calcRem(40rem);
+            }
+            .btn-group__item{
+                padding-left: 0;
+            }
+        }
     }
 
     &__header{
@@ -2438,5 +2449,19 @@
         -webkit-appearance: checkbox;
         -webkit-border-radius: 0;
         border-radius: 0;
+    }
+}
+
+/*라이브 팝업 추가*/
+.pop-live{
+    padding: 0 calcRem(40rem);
+    &__txt{
+        margin: 0;
+        padding: calcRem(27rem) 0 calcRem(50rem);
+        color: #000;
+        font-size: calcRem(12rem);
+        font-weight: 300;
+        text-align: center;
+        line-height: calcRem(20rem);
     }
 }
