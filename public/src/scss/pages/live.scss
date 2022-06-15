@@ -15,15 +15,17 @@
       &--date{
         margin: 0;
         color: #fff;
+        font-weight: 500;
       }
       &--title{
         font-size: calcRem(26rem);
-        font-weight: 500;
         line-height: calcRem(42rem);
+        letter-spacing: calcRem(1rem);
       }
       &--date{
         font-size: calcRem(20rem);
         line-height: calcRem(32rem);
+        letter-spacing: calcRem(0.5rem);
       }
     }
     &__header{
@@ -58,12 +60,14 @@
       &.btn-blk{
         padding: calcRem(8rem) 0;
         color: #fff;
+        font-size: calcRem(12rem);
         background-color: #000;
         line-height: calcRem(10rem);
       }
       &.btn-white{
         padding: calcRem(8rem) 0;
         color: #000;
+        font-size: calcRem(12rem);
         background-color: #fff;
         border: 1px solid #000;
         line-height: calcRem(10rem);
