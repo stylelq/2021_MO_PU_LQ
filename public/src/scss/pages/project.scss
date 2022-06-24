@@ -26,6 +26,9 @@
             }
             &-head{
                 background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_ctn1_img1.jpg") no-repeat center center/cover;
+                &.art-only{
+                    background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/art/section1_ctn1_img1.jpg") no-repeat center center/cover;
+                }
                 //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
             }
             &-info{
@@ -428,6 +431,8 @@
         left:70%;
     } @else if $position == view {
         left:61%;
+    }@else if $position == art {
+        left:78%;
     }@else {
         display:none;
     }
@@ -1142,6 +1147,11 @@
     //타이틀
     &-number{
         position: relative;
+        &.art-only{
+            &:after{
+                @include projectLine(art);
+            }
+        }
         &:after{
             @include projectLine(number);
         }
