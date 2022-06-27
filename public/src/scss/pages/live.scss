@@ -54,7 +54,7 @@
     }
     &__button{
       margin: 0 auto;
-      padding-top: calcRem(25rem);
+      padding: calcRem(25rem) 0;
       position: relative;
       background-color: #9B192F;
       text-align: center;
@@ -86,7 +86,7 @@
       }
     }
     &__coupon{
-      padding: calcRem(32rem) 0 calcRem(54rem);
+      padding: calcRem(20rem) 0 calcRem(54rem);
       background-color: #9B192F;
     }
     &__download{
