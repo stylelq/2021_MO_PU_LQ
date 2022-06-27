@@ -575,6 +575,7 @@
         &.live-pop{
             padding: 0;
             width:calc(100% - #{calcRem(50rem)});
+            z-index: 1000;
             .small-popup__header{
                 padding-top: calcRem(30rem);
                 margin: 0 calcRem(40rem);
