@@ -326,7 +326,46 @@ jQuery(function () {
       $('.cart-fix').addClass('is-up');
       $('.footer').addClass('bottom-fix');
     } //연관제품 슬라이드
+    // 프로모션 - 스크롤 시 패럴랙스 효과
 
+
+    if ($('.parallax-wrap').length > 0) {
+      $(window).scroll(function () {
+        var scroll = $(this).scrollTop(); //var pinkScroll = -scroll/3
+
+        var yellowScroll = -scroll / 1;
+        $('.parallax-01').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-02').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-03').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-04').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-05').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-06').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-07').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-08').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-09').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        });
+        $('.parallax-10').css({
+          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+        }); //$('.parallax-02').css({'transform' : 'matrix3d(0,'+ yellowScroll +'px,0)'})
+      });
+    }
 
     if ($('.recommended-slide').length > 0) {
       var recommendeSlide = new Swiper('.recommended-slide__container', {
