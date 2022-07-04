@@ -371,10 +371,13 @@ jQuery(function () {
 
 
     function bubbleEvent() {
-      $('.js-bubble').fadeIn(1000).fadeOut(1000);
+      $('.js-bubble1').fadeIn(1000);
+      setTimeout(function () {
+        $('.js-bubble1').fadeOut(1000);
+      }, 200);
     }
 
-    $(document).on('click', '.js-bubble', bubbleEvent);
+    $(document).on('click', '.js-bubble1', bubbleEvent);
 
     if ($('.recommended-slide').length > 0) {
       var recommendeSlide = new Swiper('.recommended-slide__container', {
