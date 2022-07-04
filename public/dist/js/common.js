@@ -333,10 +333,12 @@ jQuery(function () {
       $(window).scroll(function () {
         var scroll = $(this).scrollTop(); //var pinkScroll = -scroll/3
 
-        var yellowScroll = -scroll / 1;
+        var yellowScroll = -scroll / 1; //$('.parallax-01').css({'transform' : 'matrix(0,'+ scroll +'px,0)'});
+
         $('.parallax-01').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
-        });
+          'transform': 'matrix(2,1,-1,1.5,30,-45)'
+        }); //$('.parallax-02').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
+
         $('.parallax-02').css({
           'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
         });
@@ -365,7 +367,14 @@ jQuery(function () {
           'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
         }); //$('.parallax-02').css({'transform' : 'matrix3d(0,'+ yellowScroll +'px,0)'})
       });
+    } // 말풍선 클릭 시 효과
+
+
+    function bubbleEvent() {
+      $('.js-bubble').fadeIn(1000).fadeOut(1000);
     }
+
+    $(document).on('click', '.js-bubble', bubbleEvent);
 
     if ($('.recommended-slide').length > 0) {
       var recommendeSlide = new Swiper('.recommended-slide__container', {
