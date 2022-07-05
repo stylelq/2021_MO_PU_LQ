@@ -339,15 +339,29 @@ jQuery(function () {
         }
 
         // 말풍선 클릭 시 효과
-        function bubbleEvent() {
-            $('.js-bubble1').fadeIn(1000);
+        var bubbleItem = document.querySelectorAll('.bubble-01');
+        Array.prototype.forEach.call(bubbleItem, function (bubbleElem) {
+            bubbleElem.addEventListener('click', function (e) {
+                e.preventDefault();
+                setTimeout(function(){
+                    $('.bubble-01').fadeOut(1000);
+                    $('.bubble-01').fadeIn(2000);
+                },300);
+            });
+        }); // bubble event
 
+        /*
+        function bubbleEvent() {
             setTimeout(function(){
-                $('.js-bubble1').fadeOut(1000);
-            },200);
+                $('.js-bubble').fadeOut(1000);
+                $('.js-bubble').fadeIn(2000);
+            },300);
         }
 
-        $(document).on('click', '.js-bubble1', bubbleEvent);
+        const bubbleItem = document.querySelector('.js-bubble');
+        bubbleItem.addEventListener('click', bubbleEvent);*/
+
+        //$(document).on('click', '.js-bubble', bubbleEvent);
 
         if ($('.recommended-slide').length > 0) {
             var recommendeSlide = new Swiper('.recommended-slide__container', {
