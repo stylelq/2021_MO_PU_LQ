@@ -334,7 +334,6 @@ jQuery(function () {
                 $('.parallax-08').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
                 $('.parallax-09').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
                 $('.parallax-10').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
-                //$('.parallax-02').css({'transform' : 'matrix3d(0,'+ yellowScroll +'px,0)'})
             });
         }
 
