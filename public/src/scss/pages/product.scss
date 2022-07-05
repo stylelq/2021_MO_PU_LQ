@@ -89,6 +89,10 @@
         display: block;
     }
 
+    &__state + &__state{
+        margin-top: calcRem(16rem);
+    }
+
     &__state{
         font-size:calcRem(10rem);
         line-height:calclH(16,10);
