@@ -323,8 +323,8 @@ jQuery(function () {
                 //var pinkScroll = -scroll/3
                 var yellowScroll = -scroll/1
                 //$('.parallax-01').css({'transform' : 'matrix(0,'+ scroll +'px,0)'});
-                $('.parallax-01').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
-                //$('.parallax-02').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
+                //$('.parallax-01').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
+                $('.parallax-01').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
                 $('.parallax-02').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
                 $('.parallax-03').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
                 $('.parallax-04').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
@@ -345,8 +345,8 @@ jQuery(function () {
                 e.preventDefault();
                 setTimeout(function(){
                     $('.bubble-01').fadeOut(1000);
-                    $('.bubble-01').fadeIn(2000);
-                },300);
+                    $('.bubble-01').fadeIn(1000);
+                },400);
             });
         }); // bubble event
 

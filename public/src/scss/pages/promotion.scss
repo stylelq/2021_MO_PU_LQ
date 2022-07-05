@@ -571,7 +571,8 @@
           margin: 0;
           padding-right: calcRem(15rem);
           color: #8a6463;
-          font-size: calcRem(12rem);
+          font-size: calcRem(11rem);
+          font-family: 'Noto Sans KR', sans-serif;
           text-align: right;
         }
       }
@@ -897,68 +898,69 @@
 .parallax {
   &-wrap {
     display: block;
+    padding-top: calcRem(200rem);
 
     &__item {
       display: block;
 
-      .parallax-01 {
+      .parallax-img{
         position: absolute;
-        left: calcRem(-27rem);
-        top: calcRem(150rem);
+      }
+
+      .parallax-01 {
+        left: calcRem(10rem);
         transition: all 0.5s;
       }
 
       .parallax-02 {
-        position: absolute;
-        left: 25%;
-        top: calcRem(154rem);
+        left: calcRem(66rem);
+        transition: all 0.5s;
       }
 
       .parallax-03 {
-        position: absolute;
-        left: 40%;
-        top: calcRem(158rem);
+        bottom: calcRem(120rem);
+        right: calcRem(64rem);
+        transition: all 0.5s;
       }
 
       .parallax-04 {
-        position: absolute;
-        left: 55%;
-        top: calcRem(180rem);
+        bottom: calcRem(105rem);
+        right: calcRem(25rem);
+        transition: all 0.5s;
       }
 
       .parallax-05 {
-        position: absolute;
-        left: 10%;
-        top: calcRem(250rem);
+        bottom: calcRem(10rem);
+        left: calcRem(10rem);
+        transition: all 0.5s;
       }
 
       .parallax-06 {
-        position: absolute;
-        left: 25%;
-        top: calcRem(250rem);
+        bottom: calcRem(-20rem);
+        left: calcRem(48rem);
+        transition: all 0.5s;
       }
 
       .parallax-07 {
-        position: absolute;
-        left: 40%;
-        top: calcRem(250rem);
+        bottom: calcRem(20rem);
+        right: calcRem(100rem);
+        transition: all 0.5s;
       }
 
       .parallax-08 {
-        position: absolute;
-        left: 55%;
-        top: calcRem(250rem);
+        bottom: calcRem(-20rem);
+        right: calcRem(64rem);
+        transition: all 0.5s;
       }
       .parallax-09 {
-        position: absolute;
-        left: 40%;
-        top: calcRem(250rem);
+        bottom: calcRem(20rem);
+        right: calcRem(15rem);
+        transition: all 0.5s;
       }
-
       .parallax-10 {
-        position: absolute;
-        left: 55%;
-        top: calcRem(250rem);
+        bottom: calcRem(-20rem);
+        right: 0;
+        transition: all 0.5s;
       }
     }
   }
