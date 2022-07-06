@@ -322,8 +322,8 @@ jQuery(function () {
                 var scroll = $(this).scrollTop();
                 //var pinkScroll = -scroll/3
                 //var yellowScroll = -scroll/1
-                //$('.parallax-01').css({'transform' : 'matrix(0,'+ scroll +'px,0)'});
-                //$('.parallax-01').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
+                //$('.parallax-01').css({'transform' : 'matrix(1,2,-1,1,'+scroll+',80)'});
+                //.replace("translate(","matrix(1, 0, 0, 1,"))
                 $('.parallax-01').css({'transform' : 'translate3d(0,'+ scroll +'px,0)'});
                 $('.parallax-02').css({'transform' : 'translate3d(0,'+ scroll +'px,0)'});
                 $('.parallax-03').css({'transform' : 'translate3d(0,'+ scroll +'px,0)'});
