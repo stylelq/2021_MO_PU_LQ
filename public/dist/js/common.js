@@ -332,39 +332,39 @@ jQuery(function () {
     if ($('.parallax-wrap').length > 0) {
       $(window).scroll(function () {
         var scroll = $(this).scrollTop(); //var pinkScroll = -scroll/3
-
-        var yellowScroll = -scroll / 1; //$('.parallax-01').css({'transform' : 'matrix(0,'+ scroll +'px,0)'});
+        //var yellowScroll = -scroll/1
+        //$('.parallax-01').css({'transform' : 'matrix(0,'+ scroll +'px,0)'});
         //$('.parallax-01').css({'transform' : 'matrix(2,1,-1,1.5,30,-45)'});
 
         $('.parallax-01').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-02').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-03').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-04').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-05').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-06').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-07').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-08').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-09').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
         $('.parallax-10').css({
-          'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+          'transform': 'translate3d(0,' + scroll + 'px,0)'
         });
       });
     } // 말풍선 클릭 시 이벤트
