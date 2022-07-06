@@ -913,19 +913,20 @@
       }
 
       .parallax-02 {
-        left: calcRem(66rem);
+        bottom: calcRem(140rem);
+        left: calcRem(118rem);
         transition: all 0.5s;
       }
 
       .parallax-03 {
-        bottom: calcRem(120rem);
-        right: calcRem(64rem);
+        bottom: calcRem(100rem);
+        right: calcRem(38rem);
         transition: all 0.5s;
       }
 
       .parallax-04 {
-        bottom: calcRem(105rem);
-        right: calcRem(25rem);
+        bottom: calcRem(80rem);
+        right: calcRem(-10rem);
         transition: all 0.5s;
       }
 
