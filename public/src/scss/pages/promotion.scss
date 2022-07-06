@@ -909,59 +909,59 @@
 
       .parallax-01 {
         left: calcRem(10rem);
-        transition: all 0.5s;
+        animation-delay: 0s;
       }
 
       .parallax-02 {
         bottom: calcRem(140rem);
         left: calcRem(118rem);
-        transition: all 0.5s;
+        animation-delay: 0.25s;
       }
 
       .parallax-03 {
         bottom: calcRem(100rem);
         right: calcRem(38rem);
-        transition: all 0.5s;
+        animation-delay: 0.5s;
       }
 
       .parallax-04 {
         bottom: calcRem(80rem);
         right: 0;
-        transition: all 0.5s;
+        animation-delay: 0.75s;
       }
 
       .parallax-05 {
         bottom: calcRem(20rem);
         left: 0;
-        transition: all 0.5s;
+        animation-delay: 1s;
       }
 
       .parallax-06 {
         bottom: calcRem(-12rem);
         left: calcRem(36rem);
-        transition: all 0.5s;
+        animation-delay: 1.25s;
       }
 
       .parallax-07 {
         bottom: calcRem(34rem);
         right: calcRem(110rem);
-        transition: all 0.5s;
+        animation-delay: 1.5s;
       }
 
       .parallax-08 {
         bottom: calcRem(-20rem);
         right: calcRem(82rem);
-        transition: all 0.5s;
+        animation-delay: 1.75s;
       }
       .parallax-09 {
         bottom: calcRem(25rem);
         right: calcRem(38rem);
-        transition: all 0.5s;
+        animation-delay: 2s;
       }
       .parallax-10 {
         bottom: calcRem(-20rem);
         right: 0;
-        transition: all 0.5s;
+        animation-delay: 2.25s;
       }
     }
   }
