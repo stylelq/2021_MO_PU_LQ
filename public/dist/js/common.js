@@ -378,7 +378,7 @@ jQuery(function () {
       }, 300);
     }
 
-    $(document).on('click', '.js-click-bubble', bubbleEvent);
+    $(document).on('click', '.js-click-bubble', bubbleEvent); //말풍선 클릭이벤트
 
     if ($('.recommended-slide').length > 0) {
       var recommendeSlide = new Swiper('.recommended-slide__container', {

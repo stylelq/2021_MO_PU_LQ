@@ -545,7 +545,7 @@
       display: block;
       &__wrap{
         //background: linear-gradient(217deg, rgba(92, 249, 225), rgba(255, 179, 182) 70%);
-        background: linear-gradient(#5cf9e1, #fcb8b9);
+        background: linear-gradient(#68f8e0, #fcb8b9);
         height: calcRem(500rem);
         position: relative;
       }
@@ -926,36 +926,36 @@
 
       .parallax-04 {
         bottom: calcRem(80rem);
-        right: calcRem(-10rem);
+        right: 0;
         transition: all 0.5s;
       }
 
       .parallax-05 {
-        bottom: calcRem(10rem);
-        left: calcRem(10rem);
+        bottom: calcRem(20rem);
+        left: 0;
         transition: all 0.5s;
       }
 
       .parallax-06 {
-        bottom: calcRem(-20rem);
-        left: calcRem(48rem);
+        bottom: calcRem(-12rem);
+        left: calcRem(36rem);
         transition: all 0.5s;
       }
 
       .parallax-07 {
-        bottom: calcRem(20rem);
-        right: calcRem(100rem);
+        bottom: calcRem(34rem);
+        right: calcRem(110rem);
         transition: all 0.5s;
       }
 
       .parallax-08 {
         bottom: calcRem(-20rem);
-        right: calcRem(64rem);
+        right: calcRem(82rem);
         transition: all 0.5s;
       }
       .parallax-09 {
-        bottom: calcRem(20rem);
-        right: calcRem(15rem);
+        bottom: calcRem(25rem);
+        right: calcRem(38rem);
         transition: all 0.5s;
       }
       .parallax-10 {
