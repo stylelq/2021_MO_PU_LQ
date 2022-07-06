@@ -89,6 +89,7 @@
         display: block;
     }
 
+
     &__state + &__state{
         margin-top: calcRem(16rem);
     }
