@@ -579,14 +579,11 @@
 
       &__speech{
         padding: calcRem(50rem) 0;
-        &--txt{
-          text-align: center;
-          text-transform: uppercase;
-          font-size: calcRem(60rem);
-          font-weight: 500;
-          font-family: 'Noto Sans KR', sans-serif;
-          line-height: 1.0;
-          letter-spacing: calcRem(2.2rem);
+      }
+      &__txt{
+        &--img{
+          margin: 0 auto;
+          width: auto !important;
         }
       }
     }
@@ -943,8 +940,8 @@
       }
 
       .parallax-07 {
-        bottom: calcRem(34rem);
-        right: calcRem(110rem);
+        bottom: calcRem(10rem);
+        right: calcRem(140rem);
         animation-delay: 0.5s;
       }
 
@@ -976,7 +973,7 @@
         top: 0;
         left: calcRem(43rem);
         width: calcRem(137rem);
-        z-index: 999;
+        z-index: 9;
       }
       &.bubble-02{
         top: calcRem(24rem);
@@ -1004,6 +1001,7 @@
         top: calcRem(54rem);
         right: calcRem(25rem);
         width: calcRem(161rem);
+        z-index: 9;
       }
       &.bubble-08{
         top: calcRem(65rem);
