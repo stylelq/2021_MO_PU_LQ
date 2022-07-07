@@ -544,7 +544,6 @@
     &-motion{
       display: block;
       &__wrap{
-        //background: linear-gradient(217deg, rgba(92, 249, 225), rgba(255, 179, 182) 70%);
         background: linear-gradient(#68f8e0, #fcb8b9);
         height: calcRem(500rem);
         position: relative;
@@ -554,7 +553,8 @@
         padding-top: calcRem(18rem);
         color: #ffb3b6;
         font-size: calcRem(14rem);
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: Helvetica Neue, Helvetica,Arial;;
+        //font-family: 'Noto Sans KR', sans-serif;
         font-weight: 500;
         text-transform: uppercase;
         &--left{
@@ -894,14 +894,19 @@
 /* parallax */
 .parallax {
   &-wrap {
+    margin: 0 auto;
     display: block;
-    padding-top: calcRem(220rem);
+    width: calcRem(360rem);
+    min-width: calcRem(360rem);
+    position: relative;
+    padding-top: calcRem(450rem);
 
     &__item {
       display: block;
 
       .parallax-img{
         position: absolute;
+        transition: all 1s;
       }
 
       .parallax-01 {
