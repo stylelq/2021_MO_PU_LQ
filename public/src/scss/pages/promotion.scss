@@ -895,7 +895,7 @@
 .parallax {
   &-wrap {
     display: block;
-    padding-top: calcRem(200rem);
+    padding-top: calcRem(220rem);
 
     &__item {
       display: block;
@@ -905,6 +905,7 @@
       }
 
       .parallax-01 {
+        bottom: calcRem(100rem);
         left: calcRem(10rem);
         animation-delay: 1.5s;
       }
@@ -917,7 +918,7 @@
 
       .parallax-03 {
         bottom: calcRem(100rem);
-        right: calcRem(38rem);
+        right: calcRem(46rem);
         animation-delay: 2s;
       }
 
@@ -941,7 +942,7 @@
 
       .parallax-07 {
         bottom: calcRem(10rem);
-        right: calcRem(140rem);
+        right: calcRem(120rem);
         animation-delay: 0.5s;
       }
 
