@@ -976,58 +976,64 @@
     &__img{
       position: absolute;
       &.bubble-01{
-        top: 0;
-        left: calcRem(43rem);
+        top: calcRem(-6rem);
+        left: calcRem(46rem);
         width: calcRem(137rem);
         z-index: 9;
       }
       &.bubble-02{
-        top: calcRem(24rem);
+        top: calcRem(30rem);
+        left: calcRem(-14rem);
         width: calcRem(136rem);
       }
       &.bubble-03{
-        top: calcRem(70rem);
+        left: calcRem(10rem);
+        top: calcRem(66rem);
         width: calcRem(149rem);
       }
       &.bubble-04{
+        left: calcRem(-10rem);
         top: calcRem(140rem);
         width: calcRem(101rem);
+        z-index: 9;
       }
       &.bubble-05{
-        top: calcRem(210rem);
-        left: calcRem(20rem);
+        top: calcRem(180rem);
+        left: calcRem(16rem);
         width: calcRem(138rem);
       }
       &.bubble-06{
-        top: calcRem(20rem);
+        top: calcRem(6rem);
         right: calcRem(10rem);
         width: calcRem(117rem);
       }
       &.bubble-07{
-        top: calcRem(54rem);
-        right: calcRem(25rem);
+        top: calcRem(40rem);
+        right: calcRem(24rem);
         width: calcRem(161rem);
         z-index: 9;
       }
       &.bubble-08{
-        top: calcRem(65rem);
-        right: 0;
+        top: calcRem(70rem);
+        right: calcRem(-16rem);
         width: calcRem(117rem);
       }
       &.bubble-09{
-        top: calcRem(146rem);
-        right: calcRem(100rem);
+        top: calcRem(130rem);
+        right: calcRem(90rem);
         width: calcRem(114rem);
       }
       &.bubble-10{
         bottom: calcRem(40rem);
-        right: 0;
+        right: calcRem(-10rem);
         width: calcRem(162rem);
+        z-index: 9;
       }
       &.bubble-11{
-        bottom: calcRem(6rem);
+        bottom: calcRem(-4rem);
         right: calcRem(25rem);
         width: calcRem(151rem);
+        z-index: 10;
       }
       .js-bubble{
         //opacity: 1;
