@@ -567,7 +567,6 @@
       &__bubble{
         position: relative;
         background-color: #fcb8b9;
-        //overflow: hidden;
         &--notice{
           margin: 0;
           top: calcRem(-10rem);
@@ -581,7 +580,9 @@
       }
 
       &__speech{
+        position: relative;
         padding: calcRem(64rem) 0;
+        overflow: hidden;
       }
       &__txt{
         &--img{
