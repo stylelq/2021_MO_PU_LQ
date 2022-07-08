@@ -567,9 +567,13 @@
       &__bubble{
         position: relative;
         background-color: #fcb8b9;
+        overflow: hidden;
         &--notice{
           margin: 0;
-          padding-right: calcRem(15rem);
+          top: calcRem(-30rem);
+          bottom: calcRem(20rem);
+          position: absolute;
+          right: calcRem(15rem);
           color: #8a6463;
           font-size: calcRem(11rem);
           font-family: 'Noto Sans KR', sans-serif;
@@ -929,7 +933,7 @@
 
       .parallax-04 {
         bottom: calcRem(70rem);
-        right: 0;
+        right: calcRem(10rem);
         animation-delay: 2.25s;
       }
 
