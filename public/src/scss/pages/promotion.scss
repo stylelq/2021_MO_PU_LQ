@@ -545,7 +545,7 @@
       display: block;
       &__wrap{
         background: linear-gradient(#68f8e0, #fcb8b9);
-        height: calcRem(500rem);
+        //height: calcRem(500rem);
         position: relative;
       }
       &__header{
@@ -567,13 +567,12 @@
       &__bubble{
         position: relative;
         background-color: #fcb8b9;
-        overflow: hidden;
+        //overflow: hidden;
         &--notice{
           margin: 0;
-          top: calcRem(-30rem);
-          bottom: calcRem(20rem);
-          position: absolute;
+          top: calcRem(-10rem);
           right: calcRem(15rem);
+          position: absolute;
           color: #8a6463;
           font-size: calcRem(11rem);
           font-family: 'Noto Sans KR', sans-serif;
@@ -582,7 +581,7 @@
       }
 
       &__speech{
-        padding: calcRem(50rem) 0;
+        padding: calcRem(64rem) 0;
       }
       &__txt{
         &--img{
