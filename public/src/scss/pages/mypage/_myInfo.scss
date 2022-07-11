@@ -25,6 +25,11 @@
     }
 
     .input-list{
+        &__title{
+            margin: 0;
+            padding-bottom: calcRem(4rem);
+            font-size: calcRem(14rem);
+        }
         &__item{
             margin: 0;padding:0;
             .input-v1{
