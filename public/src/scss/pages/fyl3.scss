@@ -15,404 +15,19 @@
     font-style: normal;
 }
 
-//mixin
-@mixin projectBg($color) {
-    @if $color == green {
-        .project{
-            &-number{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
-                //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
-            }
-            &-head{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_ctn1_img1.jpg") no-repeat center center/cover;
-                &.art-only{
-                    background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/art/section1_ctn1_img1.jpg") no-repeat center center/cover;
-                }
-                //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
-            }
-            &-info{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_mid_bg.jpg") no-repeat center center/cover;
-                //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
-            }
-            &-video{
-                &__intro{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_1.jpg") no-repeat center center/cover;
-                }
-                &__play{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
+@import url("https://use.typekit.net/fln0ron.css");
 
-    } @else if $color == orange {
-        .project {
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video{
-                &__intro{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_2.jpg") no-repeat center center/cover;
-                }
-                &__play{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    } @else if $color == yellow {
-        .project{
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video{
-                &__intro{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_3.jpg") no-repeat center center/cover;
-                }
-                &__play{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == darkgreen {
-        .project{
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video{
-                &__intro{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_4.jpg") no-repeat center center/cover;
-                }
-                &__play{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == red{
-        .project{
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video{
-                &__intro{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_5.jpg") no-repeat center center/cover;
-                }
-                &__play{
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button{
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == purple {
-        .project {
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video {
-                &__intro {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_6.jpg") no-repeat center center/cover;
-                }
-
-                &__play {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == blue {
-        .project {
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video {
-                &__intro {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_7.jpg") no-repeat center center/cover;
-                }
-
-                &__play {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == pink {
-        .project {
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video {
-                &__intro {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_8.jpg") no-repeat center center/cover;
-                }
-
-                &__play {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == darkorange {
-        .project {
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video {
-                &__intro {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_9.jpg") no-repeat center center/cover;
-                }
-
-                &__play {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
-    }@else if $color == lime {
-        .project {
-            &-number {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-head {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_ctn1_img1.jpg") no-repeat center center/cover;
-            }
-            &-info {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_mid_bg.jpg") no-repeat center center/cover;
-            }
-            &-video {
-                &__intro {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_10.jpg") no-repeat center center/cover;
-                }
-
-                &__play {
-                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
-                }
-            }
-            &-name {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-view {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-point {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-place {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section2_bg.jpg") no-repeat center center/cover;
-            }
-            &-address {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-            &-button {
-                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
-            }
-        }
+//옆으로 이동
+@keyframes moving{
+    0%{
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
     }
-
+    100%{
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
 }
-
 
 @mixin imageBlock {
     display:block;
@@ -427,6 +42,12 @@
     position: relative;
 }
 
+//옆으로 이동
+.move-txt{
+    animation: moving 5s infinite linear;
+}
+
+
 .fyl{
     // 섹션1(영상)
     &-section1{
@@ -435,11 +56,64 @@
             line-height: 0;
             &--source{
                 width: 100%;
+                position: relative;
+            }
+
+            .btn-play{
+                top: 50%;
+                left: 50%;
+                display: inline-block;
+                position: absolute;
+                width: calcRem(100rem);
+                height: calcRem(100rem);
+                transform: translate(-50%, -50%);
+                border: none;
+                &.is-play{
+                    @include pageBackground('/images/project/fyl3/icon_play_btn.png','no-repeat center center / cover')
+                }
             }
         }
     }
 
     // 섹션2(타이핑)
+    &-section2{
+        background-color: #ffe100;
+
+        &__wrap{
+            padding: calcRem(87rem) 0 calcRem(95rem);
+        }
+
+        &__fix{
+            margin:0 auto;
+            text-align: center;
+            &--word{
+                color: #000;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: calcRem(14rem);
+                line-height: calcRem(14rem);
+                &:nth-child(2){
+                    padding: 0 calcRem(86rem);
+                }
+            }
+        }
+        &__moving{
+            overflow: hidden;
+            &--word{
+                margin: 0;
+                display: inline-block;
+                font-family: retiro-std-48pt, sans-serif;
+                font-weight: 400;
+                font-size: calcRem(100rem);
+                line-height: 100%;
+                text-transform: uppercase;
+            }
+        }
+
+        &__content{
+            padding: calcRem(48rem) 0 0 calcRem(20rem);
+        }
+    }
 
     // 섹셩3(작가 리스트)
 
@@ -447,6 +121,7 @@
 
     // 색상5(하단 소개)
 }
+
 
 
 
